@@ -1,31 +1,63 @@
-document.addEventListener('DOMContentLoaded', () => {
-  let loggedInUser
-  let authDiv = document.querySelector('#authStatus')
-  console.log(authDiv)
+document.addEventListener('DOMContentLoaded', function() {
+  // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+  // firebase.auth().onAuthStateChanged(user => { });
+  // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+  // firebase.messaging().requestPermission().then(() => { });
+  // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+  // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
+  try {
+    firebaseInit()
+    let loggedInUser
+    getAuthStatus()
+  } catch (e) {
+    console.error(e)
+    document.getElementById('load').innerHTML =
+      'Error loading the Firebase SDK, check the console.'
+  }
+})
+
+function firebaseInit() {
+  app = firebase.app()
+  features = ['auth', 'database', 'messaging', 'storage'].filter(
+    feature => typeof app[feature] === 'function'
+  )
+  document.getElementById(
+    'load'
+  ).innerHTML = `Firebase SDK loaded with ${features.join(', ')}`
+  firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION) // SESSION, LOCAL
+  firestore = firebase.firestore()
+  settings = { /* your settings... */ timestampsInSnapshots: true }
+  firestore.settings(settings)
+}
+
+function getAuthStatus() {
   firebase.auth().onAuthStateChanged(function(user) {
+    let authStatus = document.querySelector('#authStatus')
     if (user) {
       loggedInUser = user
       renderPage(user)
-      authDiv.innerHTML = loggedInUser.displayName + ' is logged in.'
+      authStatus.innerHTML = `<p>Logged in as ${
+        loggedInUser.displayName
+      } <button onclick="googleLogout()">Log Out</button></p>`
     } else {
-      authDiv.innerHTML = 'No user is signed in.'
+      authStatus.innerHTML = `<p>Not logged in <button onclick="googleLogin()">Google Log In</button></p>`
     }
   })
-})
+}
 
 function googleLogin() {
   const provider = new firebase.auth.GoogleAuthProvider()
-
   firebase
     .auth()
     .signInWithPopup(provider)
-
     .then(result => {
       loggedInUser = result.user
       renderPage(result)
     })
-    .catch(console.log)
+    .catch(err => {
+      authStatus.innerHTML = err
+    })
 }
 
 function googleLogout() {
@@ -33,21 +65,14 @@ function googleLogout() {
     .auth()
     .signOut()
     .then(function() {
-      console.log('Signed out')
       location.reload()
     })
-    .catch(function(error) {
-      console.log(error)
+    .catch(err => {
+      authStatus.innerHTML = err
     })
 }
 
 function renderPage(res) {
-  const app = firebase.app()
-  console.log(app)
-
-  const firestore = firebase.firestore()
-  const settings = { /* your settings... */ timestampsInSnapshots: true }
-  firestore.settings(settings)
   const myPost = firestore.collection('notes').doc('kqrOIlpWlbPrk6ZQNrmi')
   myPost.get().then(doc => {
     const data = doc.data()
@@ -66,16 +91,15 @@ function renderPage(res) {
       'December'
     ]
     let ts = data.createdAt.toDate()
-    ts =
-      monthNames[ts.getMonth()] + ' ' + ts.getDate() + ', ' + ts.getFullYear()
+    ts = `${monthNames[ts.getMonth()]} ${ts.getDate()}, ${ts.getFullYear()}`
 
-    // <code>Hello ${user.displayName}</code>
     let pageContent = document.querySelector('#pageContent')
     pageContent.innerHTML = `
-      <h1>${data.title}</h1>
-      <p>${data.body}</p>
-      <code>${ts}</code>
-      <button onclick="googleLogout()">Logout </button>
+      <div class="note">
+        <h1>${data.title}</h1>
+        <p>${data.body}</p>
+        <code>${ts}</code>
+      </div>
     `
   })
 }
