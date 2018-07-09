@@ -73,33 +73,60 @@ function googleLogout() {
 }
 
 function renderPage(res) {
-  const myPost = firestore.collection('notes').doc('kqrOIlpWlbPrk6ZQNrmi')
-  myPost.get().then(doc => {
+  myNote = firestore.collection('notes').doc('kqrOIlpWlbPrk6ZQNrmi')
+  myNote.get().then(doc => {
     const data = doc.data()
-    const monthNames = [
-      'January',
-      'February',
-      'March',
-      'April',
-      'May',
-      'June',
-      'July',
-      'August',
-      'September',
-      'October',
-      'November',
-      'December'
-    ]
-    let ts = data.createdAt.toDate()
-    ts = `${monthNames[ts.getMonth()]} ${ts.getDate()}, ${ts.getFullYear()}`
 
     let pageContent = document.querySelector('#pageContent')
     pageContent.innerHTML = `
       <div class="note">
-        <h1>${data.title}</h1>
-        <p>${data.body}</p>
-        <code>${ts}</code>
+        <h1 id="title">${data.title}</h1>
+        <p id="body">${data.body}</p>
+        <code id="createdAt">${data.createdAt}</code>
       </div>
     `
+    createUpdateForm()
   })
+}
+//////////////////////////////////////////////////////////////////////////////////
+
+function createUpdateForm() {
+  // CREATE FORM DOM
+  pageContent.innerHTML += `
+    <div id="updateForm">
+      <input id="updateTitle" type="text" placeholder="Update note title">
+      <input id="updateBody" type="text" placeholder="Update note body">
+      <button id="updateCreatedAt" type="text">Update timestamp</button>
+    </div>
+  `
+
+  const myNote = firestore.collection('notes').doc('kqrOIlpWlbPrk6ZQNrmi')
+
+  // EVENT LISTENERS FOR FORM
+  const titleInput = document.getElementById('updateTitle')
+  titleInput.onkeyup = updateTitle
+  const bodyInput = document.getElementById('updateBody')
+  bodyInput.onkeyup = updateBody
+  const createdAtInput = document.getElementById('updateCreatedAt')
+  createdAtInput.onclick = updateCreatedAt
+
+  myNote.onSnapshot(doc => {
+    const data = doc.data()
+    document.querySelector('#title').innerHTML = data.title
+    document.querySelector('#body').innerHTML = data.body
+    document.querySelector('#createdAt').innerHTML = data.createdAt
+  })
+
+  function updateTitle(e) {
+    const myNote = firestore.collection('notes').doc('kqrOIlpWlbPrk6ZQNrmi')
+    myNote.update({ title: e.target.value })
+  }
+  function updateBody(e) {
+    const myNote = firestore.collection('notes').doc('kqrOIlpWlbPrk6ZQNrmi')
+    myNote.update({ body: e.target.value })
+  }
+  function updateCreatedAt(e) {
+    const myNote = firestore.collection('notes').doc('kqrOIlpWlbPrk6ZQNrmi')
+    myNote.update({ createdAt: Date(Date.now()).toString() })
+  }
 }
