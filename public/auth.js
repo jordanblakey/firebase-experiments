@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
   try {
-    firebaseInit()
     let loggedInUser
     getAuthStatus()
   } catch (e) {
@@ -16,20 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
       'Error loading the Firebase SDK, check the console.'
   }
 })
-
-function firebaseInit() {
-  app = firebase.app()
-  features = ['auth', 'database', 'messaging', 'storage'].filter(
-    feature => typeof app[feature] === 'function'
-  )
-  document.getElementById(
-    'load'
-  ).innerHTML = `Firebase SDK loaded with ${features.join(', ')}`
-  firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION) // SESSION, LOCAL
-  firestore = firebase.firestore()
-  settings = { /* your settings... */ timestampsInSnapshots: true }
-  firestore.settings(settings)
-}
 
 function getAuthStatus() {
   firebase.auth().onAuthStateChanged(function(user) {
