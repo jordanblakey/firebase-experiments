@@ -70,12 +70,16 @@ function renderPage(res) {
         <code id="createdAt">${data.createdAt}</code>
       </div>
     `
-    createUpdateForm()
+    FileUploader()
+    Scratchpad()
+    FormUpdater()
   })
 }
-//////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+// NOTE UPDATE FORM
+////////////////////////////////////////////////////////////////////////////////
 
-function createUpdateForm() {
+function FormUpdater() {
   // CREATE FORM DOM
   pageContent.innerHTML += `
     <div id="updateForm">
@@ -103,15 +107,64 @@ function createUpdateForm() {
   })
 
   function updateTitle(e) {
-    const myNote = firestore.collection('notes').doc('kqrOIlpWlbPrk6ZQNrmi')
     myNote.update({ title: e.target.value })
   }
   function updateBody(e) {
-    const myNote = firestore.collection('notes').doc('kqrOIlpWlbPrk6ZQNrmi')
     myNote.update({ body: e.target.value })
   }
   function updateCreatedAt(e) {
-    const myNote = firestore.collection('notes').doc('kqrOIlpWlbPrk6ZQNrmi')
     myNote.update({ createdAt: Date(Date.now()).toString() })
   }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// SCRATCHPAD
+////////////////////////////////////////////////////////////////////////////////
+
+function Scratchpad() {
+  pageContent.innerHTML += `
+    <div class="scratchpad" id="sp1">
+      <h3>Scratchpad</h3>
+    </div>
+  `
+
+  const productsRef = firestore.collection('products')
+
+  let query
+  // query = productsRef.where('price', '>', 10)
+  // query = productsRef.orderBy('price', 'desc')
+  query = productsRef.orderBy('price', 'desc').limit(2)
+  query.get().then(products => {
+    products.forEach(doc => {
+      data = doc.data()
+      document.querySelector('#sp1').innerHTML += `${data.name} at $${
+        data.price
+      }<br>`
+    })
+  })
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// FILE UPLOADER
+////////////////////////////////////////////////////////////////////////////////
+
+function FileUploader() {
+  pageContent.innerHTML += `
+    <div class="scratchpad" id="sp2">
+      <h3>FB Storage Upload</h3>
+      <input type="file" onchange="uploadFile(this.files)">
+      <hr>
+      <img id="imgUpload" src="" width="100%" />
+    </div>
+  `
+}
+
+function uploadFile(files) {
+  const file = files.item(0)
+  const ref = firebase
+    .storage()
+    .ref()
+    .child(file.name)
+  const img = document.querySelector('#imgUpload')
+  ref.put(file).then(sshot => ref.getDownloadURL().then(url => (img.src = url)))
 }

@@ -129,7 +129,7 @@ body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
 }
 
-#scratchpad {
+.scratchpad {
   border: 2px dashed #ddd;
   display: flex;
   flex-direction: column;
@@ -141,7 +141,7 @@ body {
   color: rgba(0, 0, 0, 0.4);
   max-width: 40rem;
 }
-#scratchpad h3 {
+.scratchpad h3 {
   margin-top: 0;
 }
 

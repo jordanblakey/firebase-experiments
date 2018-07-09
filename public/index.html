@@ -32,50 +32,7 @@
     <p id="load">Firebase SDK Loading&hellip;</p>
   </div>
 
-  <div id="scratchpad">
-    <h3>Scratchpad</h3>
-  </div>
-
-  <!-- <script src="auth.js"></script> -->
-  <script>
-
-    document.addEventListener('DOMContentLoaded', event => {
-
-      const productsRef = firestore.collection('products')
-      const scratchpad = document.querySelector('#scratchpad')
-
-      let query
-      // query = productsRef.where('price', '>', 10)
-      // query = productsRef.orderBy('price', 'desc')
-      query = productsRef.orderBy('price', 'desc').limit(2)
-      query.get()
-        .then(products => {
-          products.forEach(doc => {
-            data = doc.data()
-            scratchpad.innerHTML += `${data.name} at $${data.price}<br>`
-          })
-        })
-
-      scratchpad.innerHTML += `
-        <h3>FB Storage Upload</h3>
-        <input type="file" onchange="uploadFile(this.files)">
-        <hr>
-        <img id="imgUpload" src="" width="100%" />
-      `
-    })
-
-    function uploadFile(files) {
-      const file = files.item(0)
-      const ref = firebase.storage().ref().child(file.name)
-      const img = document.querySelector('#imgUpload')
-
-      ref.put(file)
-        .then(sshot => ref.getDownloadURL()
-          .then(url => img.src = url))
-    }
-
-  </script>
-
+  <script src="app.js"></script>
 </body>
 
 </html>
