@@ -1,7 +1,7 @@
 body {
   background: #f8f8f8;
   color: rgba(0, 0, 0, 0.87);
-  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-family: 'Roboto Condensed', Roboto, Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -19,7 +19,7 @@ body {
 }
 
 #message {
-  background: white;
+  background: #fafafa;
   max-width: 360px;
   margin: 100px auto 16px;
   padding: 32px 24px;
@@ -40,10 +40,44 @@ body {
   margin: 0 0 16px;
 }
 
-#message p {
+#message p,
+li,
+.scratchpad {
   line-height: 140%;
   margin: 16px 0 24px;
   font-size: 14px;
+  list-style: none;
+}
+
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+a,
+button,
+input,
+textarea {
+  color: rgba(0, 0, 0, 0.6);
+  font-family: 'Roboto Condensed', Roboto, Helvetica, Arial, sans-serif;
+}
+
+code,
+pre {
+  color: rgba(0, 0, 0, 0.6);
+  font-family: 'Roboto Mono', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+#message h4 {
+  margin-bottom: 0.4rem;
+}
+
+#message li,
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 #message .button {
@@ -52,7 +86,7 @@ body {
   background: #ffa100;
   text-transform: uppercase;
   text-decoration: none;
-  color: white;
+  color: #e5e5e5;
   padding: 16px;
   border-radius: 4px;
 }
@@ -80,7 +114,7 @@ body {
 
 #authStatus {
   display: flex;
-  background-color: #c4c4c4;
+  background-color: #e5e5e5;
   align-items: center;
   justify-content: center;
 }
@@ -104,7 +138,7 @@ body {
   border-radius: 0.4rem;
   margin: 1rem auto;
   padding: 1rem;
-  background: #fff;
+  background: #fafafa;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
   color: rgba(0, 0, 0, 0.8);
   max-width: 40rem;

@@ -6,18 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Scorched: Secure, Portable Notes</title>
 
-  <!-- update the version number as needed -->
+  <!-- FIREBASE -->
   <script defer src="/__/firebase/5.2.0/firebase-app.js"></script>
   <script defer src="/__/firebase/5.2.0/firebase-firestore.js"></script>
   <script defer src="/__/firebase/5.2.0/firebase-auth.js"></script>
-  <!-- <script defer src="/__/firebase/5.2.0/firebase-database.js"></script> -->
-  <!-- <script defer src="/__/firebase/5.2.0/firebase-messaging.js"></script> -->
   <script defer src="/__/firebase/5.2.0/firebase-storage.js"></script>
-  <!-- initialize the SDK after all desired features are loaded -->
   <script defer src="/__/firebase/init.js"></script>
   <script defer src="settings.js"></script>
-  <link rel="stylesheet" href="css/style.css" />
 
+  <!-- STYLE -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,600" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300" rel="stylesheet">
+
+  <!-- ICONS -->
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
@@ -29,25 +31,31 @@
 </head>
 
 <body>
+
   <div id="authStatus"></div>
+
   <div id="pageContent">
     <div id="message">
       <img id="logo" src="./img/logo-scorched.svg">
       <h1>Secure, Portable Notes.</h1>
       <p>Currently in pre-alpha.
-        <br> Built with Firebase &amp; and React Native.
-        <br> For web, Android, &amp iOS.
-        <br>
-        <a href="https://github.com/jordanblakey/scorched-site">On Github.</a>
-        <br>
-        <br>
-        <b>Builds</b>
-        <br> Android App:
-        <a href="https://firebasestorage.googleapis.com/v0/b/native-notes-2b16e.appspot.com/o/scorched-notes-0.0.1.apk?alt=media&token=fd85528a-bb94-429b-8ab0-e44c2c1d95c3">scorched-notes-0.0.1.apk</a>
-        <br> Web:
-        <a href="./app/">scorched.site/app</a>
-
-      </p>
+        <br> Built with Firebase and React Native.
+        <br> For web, Android, and iOS.</p>
+      <h4>Builds</h4>
+      <ul>
+        <li>Web:
+          <a href="app">scorched.site/app</a>
+        </li>
+        <li> Android:
+          <a href="https://firebasestorage.googleapis.com/v0/b/native-notes-2b16e.appspot.com/o/scorched-notes-0.0.1.apk?alt=media&token=fd85528a-bb94-429b-8ab0-e44c2c1d95c3">scorched-notes-0.0.1.apk</a>
+        </li>
+        <li> iOS:
+          <a href="#">Coming soon</a>
+        </li>
+        <li>Source:
+          <a href="https://github.com/jordanblakey/scorched-site">Github</a>
+        </li>
+      </ul>
     </div>
     <p id="load">Firebase SDK Loading&hellip;</p>
   </div>
