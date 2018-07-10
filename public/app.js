@@ -22,7 +22,7 @@ function getAuthStatus() {
     if (user) {
       loggedInUser = user
       renderPage(user)
-      authStatus.innerHTML = `<p>Logged in as ${
+      authStatus.innerHTML = `<img id="logo-small" src="./img/logo-scorched.svg"><p>Logged in as ${
         loggedInUser.displayName
       } <button onclick="googleLogout()">Log Out</button></p>`
     } else {
@@ -64,8 +64,8 @@ function renderPage(res) {
 
     let pageContent = document.querySelector('#pageContent')
     pageContent.innerHTML = `
-      <div class="note">
-        <h1 id="title">${data.title}</h1>
+    <div class="note">
+        <h1 id="title">arst${data.title}</h1>
         <p id="body">${data.body}</p>
         <code id="createdAt">${data.createdAt}</code>
       </div>
