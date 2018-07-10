@@ -1,3 +1,29 @@
+body {
+  background: #c4c4c4;
+}
+
+.loading-background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 5rem;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.loading-logo {
+  flex: 1;
+  height: 6rem;
+  width: 100%;
+  background: url('./assets/logo-scorched.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
 #root {
   display: flex;
   flex-direction: column;
