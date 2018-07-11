@@ -1,4 +1,7 @@
 body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
   background: #c4c4c4;
 }
 
@@ -18,7 +21,7 @@ body {
   flex: 1;
   height: 6rem;
   width: 100%;
-  background: url('./assets/logo-scorched.svg');
+  background: url('./assets/logo-scorched.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
