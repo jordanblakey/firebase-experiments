@@ -8,37 +8,24 @@
 
   <!-- FIREBASE -->
   <script defer src="/__/firebase/5.2.0/firebase-app.js"></script>
+  <script defer src="/__/firebase/5.2.0/firebase-database.js"></script>
   <script defer src="/__/firebase/5.2.0/firebase-firestore.js"></script>
   <script defer src="/__/firebase/5.2.0/firebase-auth.js"></script>
   <script defer src="/__/firebase/5.2.0/firebase-storage.js"></script>
   <script defer src="/__/firebase/init.js"></script>
-  <script defer src="settings.js"></script>
-
-  <script>
-    app = firebase.app()
-    features = ['auth', 'database', 'messaging', 'storage'].filter(
-      feature => typeof app[feature] === 'function'
-    )
-    document.getElementById(
-      'load'
-    ).innerHTML = `Firebase SDK loaded with ${features.join(', ')}`
-    firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION) // SESSION, LOCAL
-    settings = { timestampsInSnapshots: true }
-    firebase.firestore.settings(settings)
-  </script>
 
   <!-- STYLE -->
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,600" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300" rel="stylesheet">
 
   <!-- ICONS -->
-  <link rel="shortcut icon" href="favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+  <link rel="shortcut icon" href="assets/icon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icon/favicon-16x16.png">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="mask-icon" href="icon/safari-pinned-tab.svg" color="#c4c4c4">
+  <link rel="mask-icon" href="assets/icon/safari-pinned-tab.svg" color="#c4c4c4">
   <meta name="msapplication-TileColor" content="#c4c4c4">
   <meta name="theme-color" content="#e5e5e5">
 </head>
@@ -49,7 +36,7 @@
 
   <div id="pageContent">
     <div id="message">
-      <img id="logo" src="./img/logo-scorched.svg">
+      <img id="logo" src="assets/img/logo-scorched.svg">
       <h1>Secure, Portable Notes.</h1>
       <p>Currently in pre-alpha.
         <br> Built with Firebase and React Native.
@@ -73,22 +60,14 @@
     <p id="load">Firebase SDK Loading&hellip;</p>
   </div>
 
+  <script src="assets/js/firebase-status.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-      // firebase.auth().onAuthStateChanged(user => { });
-      // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-      // firebase.messaging().requestPermission().then(() => { });
-      // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-      // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
       try {
         let loggedInUser
         getAuthStatus(loggedInUser)
       } catch (e) {
         console.error(e)
-        document.getElementById('load').innerHTML =
-          'Error loading the Firebase SDK, check the console.'
       }
     })
 
@@ -98,7 +77,7 @@
         if (user) {
           loggedInUser = user
           renderPage(user)
-          authStatus.innerHTML = `<img id="logo-small" src="./img/logo-scorched.svg"><p>Logged in as ${
+          authStatus.innerHTML = `<img id="logo-small" src="assets/img/logo-scorched-dark.svg"><p>Logged in as ${
             loggedInUser.displayName
             } <button onclick="googleLogout()">Log Out</button></p>`
         } else {
@@ -107,17 +86,26 @@
       })
     }
 
-    function googleLogin(loggedInUser) {
+    function googleLogin() {
       const provider = new firebase.auth.GoogleAuthProvider()
-      firebase.auth
-        .signInWithPopup(provider)
-        .then(result => {
-          loggedInUser = result.user
-          renderPage(result)
-        })
-        .catch(err => {
-          authStatus.innerHTML = err
-        })
+      firebase.auth().signInWithPopup(provider).then(function (result) {
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        var token = result.credential.accessToken;
+        // The signed-in user info.
+        var user = result.user;
+        renderPage(result)
+        // ...
+      }).catch(function (error) {
+        authStatus.innerHTML = error
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // The email of the user's account used.
+        var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+        // ...
+      });
     }
 
     function googleLogout() {
@@ -132,7 +120,7 @@
     }
 
     function renderPage(res) {
-      myNote = firebase.firestore.collection('notes').doc('kqrOIlpWlbPrk6ZQNrmi')
+      myNote = firebase.firestore().collection('notes').doc('note-0000001')
       myNote.get().then(doc => {
         const data = doc.data()
 
@@ -163,9 +151,9 @@
         </div>
       `
 
-      const myNote = firebase.firestore
+      const myNote = firebase.firestore()
         .collection('notes')
-        .doc('kqrOIlpWlbPrk6ZQNrmi')
+        .doc('note-0000001')
 
       // EVENT LISTENERS FOR FORM
       const titleInput = document.getElementById('updateTitle')
@@ -204,12 +192,12 @@
         </div>
       `
 
-      const productsRef = firebase.firestore.collection('products')
+      const productsRef = firebase.firestore().collection('products')
 
       let query
-      // query = productsRef.where('price', '>', 10)
+      query = productsRef.where('price', '>', 10)
       // query = productsRef.orderBy('price', 'desc')
-      query = productsRef.orderBy('price', 'desc').limit(2)
+      // query = productsRef.orderBy('price', 'desc').limit(1)
       query.get().then(products => {
         products.forEach(doc => {
           data = doc.data()
@@ -228,7 +216,7 @@
       pageContent.innerHTML += `
         <div class="scratchpad" id="sp2">
           <h3>FB Storage Upload</h3>
-          <input type="file" onchange="${uploadFile(this.files)}">
+          <input type="file" onchange="uploadFile(this.files)">
           <hr>
           <img id="imgUpload" src="" width="100%" />
         </div>
