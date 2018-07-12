@@ -1,3 +1,57 @@
+/*//////////////////////////////////////////////////////////////////////////////
+// CODE MIRROR/EDITOR
+//////////////////////////////////////////////////////////////////////////////*/
+
+.editor-toolbar {
+  padding: 0 1rem
+}
+
+.editor-toolbar a:before {
+  line-height: 24px;
+  color: #c4c4c4;
+}
+
+.CodeMirror, .cm-s-paper .cm-atom, .cm-s-paper .cm-number {
+  font-family: 'Roboto Mono';
+  font-weight: 500;
+  font-size: 14px;
+  color: #333 !important;
+}
+
+.cm-s-paper .cm-header, .cm-s-paper .cm-strong {
+  color: #000 !important;
+  font-weight: 700;
+}
+
+.cm-s-paper .cm-em {
+  color: #333 !important;
+}
+
+.cm-s-paper .cm-string {
+  color: #999 !important;
+}
+
+.CodeMirror-scroll {
+  padding: 1rem 1rem 0
+}
+
+.save-note-button {
+  margin-left: 1rem;
+}
+
+.editor-preview h1, .editor-preview h2, .editor-preview h3, .editor-preview h4, .editor-preview h5, .editor-preview h6{
+  padding: 0 1rem;
+}
+
+.editor-preview hr {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////
+// CODE MIRROR/EDITOR
+//////////////////////////////////////////////////////////////////////////////*/
+
 body {
   background: #f8f8f8;
   color: rgba(0, 0, 0, 0.87);
@@ -5,6 +59,27 @@ body {
   margin: 0;
   padding: 0;
 }
+
+body h2 {
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+  border-radius: 0.4rem;
+  margin: 3rem auto 0;
+  color: #e5e5e5;
+  padding: 0;
+}
+
+button, input[type='file'] {
+  cursor: pointer;
+}
+
+#page {
+  margin: 0 1rem;
+}
+
 
 #logo {
   display: flex;
@@ -19,11 +94,11 @@ body {
 }
 
 #message {
-  background: #fafafa;
   max-width: 360px;
   margin: 100px auto 16px;
   padding: 32px 24px;
   border-radius: 3px;
+
 }
 
 #message h2 {
@@ -149,39 +224,84 @@ ul {
   margin: 0;
 }
 
-#updateForm {
+.noteHeader {
   display: flex;
-  flex-direction: row;
-  align-self: center;
-  justify-self: center;
-  border-radius: 0.4rem;
-  margin: 1rem auto;
-  padding: 1rem;
-  background: #ccc;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
-  color: rgba(0, 0, 0, 0.8);
-  max-width: 40rem;
+  justify-content: space-between;
 }
 
-#updateForm input {
+.note .noteButton {
+  padding: 6px;
+  height: 30px;
+  width: 30px;
+}
+
+.noteButton:hover {
+  background: #c4c4c4;
+  color: white;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+  position: relative;
+}
+.noteButton:hover::after {
+  background: #c4c4c4;
+  color: white;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+  content: 'Edit';
+  padding: 7.5px;
+  border-radius: 4px;
+  position: absolute;
+  left: 35px;
+  top: 0;
+  pointer-events: none;
+
+}
+
+.delete:hover {
+  background: #ff4400;
+  color: white
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+  position: relative;
+}
+.delete:hover::after {
+  background: #ff4400;
+  color: white;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+  content: 'Delete';
+  padding: 7.5px;
+  position: absolute;
+  border-radius: 4px;
+  left: 35px;
+  top: 0;
+  pointer-events: none;
+}
+
+.updateForm {
+  display: flex;
+  flex-direction: row;
+  border-radius: 0.4rem;
+  margin: 0;
+  padding: 1rem 0;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.updateForm input {
   margin-right: 0.4rem;
   padding: 16px;
   border: 0;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06),
+    inset 0 1px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   flex: 1;
 }
 
-#updateForm button {
+.note button {
   border: 0;
   border-radius: 3px;
-  background: #ddd;
-  text-decoration: none;
-  color: white;
+  background: #fff;
   padding: 16px;
   border-radius: 4px;
   color: rgba(0, 0, 0, 0.4);
-
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
 }
 
 .scratchpad {
@@ -205,5 +325,8 @@ ul {
   #message {
     margin-top: 0;
     box-shadow: none;
+  }
+  #message {
+    margin-top: 20px;
   }
 }

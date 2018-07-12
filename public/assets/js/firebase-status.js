@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
       'load'
     ).innerHTML = `Firebase SDK loaded with ${features.join(', ')}`
 
-    firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION) // SESSION, LOCAL
+    firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION) // SESSION, LOCAL, NONE
     firebase.firestore().settings({ timestampsInSnapshots: true })
   } catch (e) {
     console.error(e)
