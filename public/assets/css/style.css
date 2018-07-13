@@ -1,55 +1,5 @@
 /*//////////////////////////////////////////////////////////////////////////////
-// CODE MIRROR/EDITOR
-//////////////////////////////////////////////////////////////////////////////*/
-
-.editor-toolbar {
-  padding: 0 1rem
-}
-
-.editor-toolbar a:before {
-  line-height: 24px;
-  color: #c4c4c4;
-}
-
-.CodeMirror, .cm-s-paper .cm-atom, .cm-s-paper .cm-number {
-  font-family: 'Roboto Mono';
-  font-weight: 500;
-  font-size: 14px;
-  color: #333 !important;
-}
-
-.cm-s-paper .cm-header, .cm-s-paper .cm-strong {
-  color: #000 !important;
-  font-weight: 700;
-}
-
-.cm-s-paper .cm-em {
-  color: #333 !important;
-}
-
-.cm-s-paper .cm-string {
-  color: #999 !important;
-}
-
-.CodeMirror-scroll {
-  padding: 1rem 1rem 0
-}
-
-.save-note-button {
-  margin-left: 1rem;
-}
-
-.editor-preview h1, .editor-preview h2, .editor-preview h3, .editor-preview h4, .editor-preview h5, .editor-preview h6{
-  padding: 0 1rem;
-}
-
-.editor-preview hr {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-/*//////////////////////////////////////////////////////////////////////////////
-// CODE MIRROR/EDITOR
+// BASIC STYLES
 //////////////////////////////////////////////////////////////////////////////*/
 
 body {
@@ -72,14 +22,31 @@ body h2 {
   padding: 0;
 }
 
-button, input[type='file'] {
+button,
+input[type='file'] {
   cursor: pointer;
+}
+
+button:hover,
+#authStatus button:hover {
+  background: #e5e5e5;
+  transition: all 0.3s;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  /* color: #fff; */
+  background: #ddd;
+}
+
+::selection {
+  /* color: #fff; */
+  background: #ddd;
 }
 
 #page {
   margin: 0 1rem;
 }
-
 
 #logo {
   display: flex;
@@ -93,25 +60,45 @@ button, input[type='file'] {
   padding: 0 1rem 6px;
 }
 
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+a,
+button,
+input,
+textarea {
+  color: #666;
+  font-family: 'Roboto Condensed', Roboto, Helvetica, Arial, sans-serif;
+}
+
+button {
+  border: 0;
+  border-radius: 3px;
+  background: #fff;
+  padding: 16px;
+  border-radius: 4px;
+  color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////
+// LOGIN MESSAGE
+//////////////////////////////////////////////////////////////////////////////*/
 #message {
   max-width: 360px;
   margin: 100px auto 16px;
   padding: 32px 24px;
   border-radius: 3px;
-
-}
-
-#message h2 {
-  color: #ffa100;
-  font-weight: bold;
-  font-size: 16px;
-  margin: 0 0 8px;
 }
 
 #message h1 {
   font-size: 22px;
   font-weight: 300;
-  color: rgba(0, 0, 0, 0.6);
+  color: #666;
   margin: 0 0 16px;
 }
 
@@ -124,27 +111,6 @@ li,
   list-style: none;
 }
 
-li,
-p,
-h1,
-h2,
-h3,
-h4,
-a,
-button,
-input,
-textarea {
-  color: rgba(0, 0, 0, 0.6);
-  font-family: 'Roboto Condensed', Roboto, Helvetica, Arial, sans-serif;
-}
-
-code,
-pre {
-  color: rgba(0, 0, 0, 0.6);
-  font-family: 'Roboto Mono', Roboto, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-}
-
 #message h4 {
   margin-bottom: 0.4rem;
 }
@@ -155,30 +121,18 @@ ul {
   padding: 0;
 }
 
-#message .button {
-  display: block;
-  text-align: center;
-  background: #ffa100;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #e5e5e5;
-  padding: 16px;
-  border-radius: 4px;
-}
-
 #message a {
   text-decoration: none;
   color: #ffa100;
 }
 
-#message,
-#message .button {
+#message {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-#message p:last-child {
-  margin-bottom: 0;
-}
+/*//////////////////////////////////////////////////////////////////////////////
+// AUTH STATUS
+//////////////////////////////////////////////////////////////////////////////*/
 
 #load,
 #authStatus {
@@ -204,6 +158,70 @@ ul {
   border: none;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
+
+/*//////////////////////////////////////////////////////////////////////////////
+// EDITOR OVERRIDES
+//////////////////////////////////////////////////////////////////////////////*/
+
+.save-note-button {
+  margin-left: 1rem;
+}
+
+.CodeMirror div.CodeMirror-cursor {
+  border-left: 1px solid #000;
+  z-index: 3;
+  animation: opacityPulse 1s ease-out;
+  animation-iteration-count: infinite;
+  opacity: 0;
+}
+
+@keyframes opacityPulse {
+  0% {
+    opacity: 0.25;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.25;
+  }
+}
+
+@-webkit-keyframes opacityPulse {
+  0% {
+    opacity: 0.25;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+/*//////////////////////////////////////////////////////////////////////////////
+// ACTIVE CODEMIRROR OVERRIDES
+//////////////////////////////////////////////////////////////////////////////*/
+.CodeMirror pre {
+  font-family: 'Roboto Mono', monospace;
+}
+.CodeMirror-scroll {
+  padding: 10px 40px 0 10px;
+}
+.editor-toolbar {
+  padding: 0 10px;
+}
+.editor-toolbar a:before {
+  color: #c4c4c4;
+}
+.editor-toolbar a.icon-fullscreen {
+  position: absolute;
+  right: 10px;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////
+// NOTE
+//////////////////////////////////////////////////////////////////////////////*/
 
 .note {
   display: flex;
@@ -241,7 +259,7 @@ ul {
   transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
   position: relative;
 }
-.noteButton:hover::after {
+.note .noteButton:hover::after {
   background: #c4c4c4;
   color: white;
   transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
@@ -252,20 +270,20 @@ ul {
   left: 35px;
   top: 0;
   pointer-events: none;
-
 }
 
-.delete:hover {
-  background: #ff4400;
-  color: white
-  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
-  position: relative;
-}
-.delete:hover::after {
+.note .delete:hover {
   background: #ff4400;
   color: white;
   transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
-  content: 'Delete';
+  position: relative;
+}
+
+.note .delete:hover::after {
+  background: #ff4400 !important;
+  color: white;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+  content: 'Delete' !important;
   padding: 7.5px;
   position: absolute;
   border-radius: 4px;
@@ -274,35 +292,9 @@ ul {
   pointer-events: none;
 }
 
-.updateForm {
-  display: flex;
-  flex-direction: row;
-  border-radius: 0.4rem;
-  margin: 0;
-  padding: 1rem 0;
-  color: rgba(0, 0, 0, 0.8);
-}
-
-.updateForm input {
-  margin-right: 0.4rem;
-  padding: 16px;
-  border: 0;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06),
-    inset 0 1px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  flex: 1;
-}
-
-.note button {
-  border: 0;
-  border-radius: 3px;
-  background: #fff;
-  padding: 16px;
-  border-radius: 4px;
-  color: rgba(0, 0, 0, 0.4);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
-  cursor: pointer;
-}
+/* /////////////////////////////////////////////////////////////////////////////
+// UPDATE FORM
+//////////////////////////////////////////////////////////////////////////////*/
 
 .scratchpad {
   border: 2px dashed #ddd;
@@ -319,6 +311,143 @@ ul {
 .scratchpad h3 {
   margin-top: 0;
 }
+
+pre#outputField {
+  overflow: scroll;
+  padding-bottom: 20px;
+  font-size: 1em;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////
+// SCORCHED BUTTON (ALL DATA DELETION)
+//////////////////////////////////////////////////////////////////////////////*/
+
+.scorch:hover {
+  background: #ff4400;
+  color: white;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+  position: relative;
+}
+
+.scorched {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3vw;
+  font-weight: 700;
+  margin: 0;
+  overflow: hidden;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  color: transparent;
+  text-shadow: 0 0 0 #c4c4c4;
+  background: #e5e5e5;
+}
+
+.scorched-text {
+  color: #c4c4c4;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+.scorched-text span {
+  color: #c4c4c4 !important;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    text-shadow: 0 0 0 #c4c4c4;
+  }
+  99% {
+    opacity: 1;
+    text-shadow: 0 0 0 #c4c4c4;
+    background: #e5e5e5;
+    color: transparent;
+  }
+  100% {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    background: #000;
+    color: transparent;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    text-shadow: 0 0 0 #c4c4c4;
+  }
+  99% {
+    opacity: 1;
+    text-shadow: 0 0 0 #c4c4c4;
+    background: #e5e5e5;
+    color: transparent;
+  }
+  100% {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    background: #000;
+    color: transparent;
+  }
+}
+
+/* /////////////////////////////////////////////////////////////////////////////
+// SPLASH SCREEN
+//////////////////////////////////////////////////////////////////////////////*/
+
+#splash {
+  position: fixed;
+  top: 0;
+  display: flex;
+  background: #fafafa;
+  height: 100vh;
+  width: 100vw;
+  z-index: 9;
+  background-image: url('../img/logo-scorched.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 30vw auto;
+  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+  pointer-events: none;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* /////////////////////////////////////////////////////////////////////////////
+// RESPONSIVE
+//////////////////////////////////////////////////////////////////////////////*/
 
 @media (max-width: 600px) {
   body,
