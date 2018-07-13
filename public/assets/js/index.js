@@ -22,12 +22,15 @@ function renderPage() {
   noteContainer.innerHTML = '<h2>All Notes</h2>'
   renderNotes(noteContainer)
 
-  let extraContent = document.querySelector('#extraContent')
-  extraContent.innerHTML = '<h2>Unfinished Features</h2>'
-  fileUploader(extraContent)
-  scratchPad(extraContent)
-  renderRealtimeDatabaseExplorer(extraContent)
-  renderScorch(extraContent)
+  let stegoContainer = document.querySelector('#stegoContainer')
+  renderSteganography(stegoContainer)
+
+  let extrasContainer = document.querySelector('#extrasContainer')
+  extrasContainer.innerHTML = '<h2>Unfinished Features</h2>'
+  fileUploader(extrasContainer)
+  scratchPad(extrasContainer)
+  renderRealtimeDatabaseExplorer(extrasContainer)
+  renderScorch(extrasContainer)
 }
 
 ////////////////////////////////////////////////////////////////////////////////

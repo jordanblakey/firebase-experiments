@@ -17,9 +17,14 @@ body h2 {
   align-self: center;
   justify-self: center;
   border-radius: 0.4rem;
-  margin: 3rem auto 0;
+  margin: 0 auto;
   color: #e5e5e5;
   padding: 0;
+}
+
+#noteContainer,
+#extrasContainer, #stegoContainer {
+  margin-top: 2rem;
 }
 
 button,
@@ -163,10 +168,6 @@ ul {
 // EDITOR OVERRIDES
 //////////////////////////////////////////////////////////////////////////////*/
 
-.save-note-button {
-  margin-left: 1rem;
-}
-
 .CodeMirror div.CodeMirror-cursor {
   border-left: 1px solid #000;
   z-index: 3;
@@ -197,6 +198,30 @@ ul {
   100% {
     opacity: 0.5;
   }
+}
+
+.editorInstructions {
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.editorInstructions button {
+  margin-right: 8px;
+}
+
+.editorInstructions div {
+  margin: 1rem 0;
+}
+
+.editorInstructions span {
+  background: #e5e5e5;
+  font-size: 14px;
+  font-family: 'Roboto Mono';
+  color: #aaa;
+  padding: 3px 14px;
+  border-radius: 20px;
 }
 
 /*//////////////////////////////////////////////////////////////////////////////
@@ -457,5 +482,9 @@ pre#outputField {
   }
   #message {
     margin-top: 20px;
+  }
+
+  #splash {
+    background-size: 50vw auto;
   }
 }

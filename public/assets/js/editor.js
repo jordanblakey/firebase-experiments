@@ -1,9 +1,14 @@
 function renderEditor(editorContainer) {
   editorContainer.innerHTML = `
     <textarea id="editor"></textarea>
-    <button class="save-note-button" onclick="saveNote(editor)">Log Markdown to Console</button>
-    <span class="editorInstructions">ctrl+shift+z: Toggle Zen</span>
-    <span class="editorInstructions">ctrl+shift+z: Toggle Preview</span>
+    <div class="editorInstructions">
+      <button class="save-note-button" onclick="saveNote(editor)">Log to Console</button>
+      <button class="save-note-button" onclick="loadMDTutorial(editor)">MD Tutorial</button>
+      <div>
+        <span>alt+z&nbsp;Zen</span>
+        <span>alt+x&nbsp;Preview</span>
+      </div>
+    </div>
   `
 
   window.editor = new Editor({
@@ -21,10 +26,6 @@ function renderEditor(editorContainer) {
 ////////////////////////////////////////////////////////////////////////////////
 
 function saveNote() {
-  // Get the full value out of the editor
-  // let val = window.editor.codemirror.getValue()
-  // console.log(val)
-
   // Parse Title
   let noteTitle = window.editor.codemirror.getLine(0)
   console.log('Note Title:', noteTitle)
@@ -39,6 +40,28 @@ function saveNote() {
     )
   let noteBody = lines.join('\n')
   console.log('Note Body:', noteBody)
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+function loadMDTutorial() {
+  editor.codemirror.setValue(`# Scorched Uses Markdown
+
+## Here's a Self-documenting Formatting Tutorial.
+
+If you need to **bold** something, *consider italics instead*.
+
+> This blockquote introduces an unordered list.
+
+- \`let code = inline\`
+- [Link Text](https://google.com)
+
+1. alt+z to enter Zen
+2. alt+x to see your work.
+
+### Safety First, ~~Then Teamwork~~.
+
+![Image Caption](https://media1.giphy.com/media/dh2XvZthDl7ag/giphy.gif)`)
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -66,7 +89,7 @@ window.zenMode = false
 window.previewMode = false
 window.addEventListener('keydown', checkKeyPressed, false)
 function checkKeyPressed(e) {
-  if (e.keyCode === 90 && e.ctrlKey && e.shiftKey) {
+  if (e.keyCode === 90 && e.altKey) {
     if (window.zenMode === false) {
       window.zenMode = true
       window.editor.toggleFullScreen()
@@ -83,7 +106,7 @@ function checkKeyPressed(e) {
         console.log(null)
       }
     }
-  } else if (e.keyCode === 88 && e.ctrlKey && e.shiftKey) {
+  } else if (e.keyCode === 88 && e.altKey) {
     if (window.previewMode === false) {
       window.previewMode = true
       window.editor.togglePreview()

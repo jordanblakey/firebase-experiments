@@ -19,11 +19,13 @@
   <script src="//cdn.jsdelivr.net/editor/0.1.0/editor.js"></script>
   <script src="//cdn.jsdelivr.net/editor/0.1.0/marked.js"></script>
 
+  <!-- STEGANOGRAPHY -->
+  <link rel="stylesheet" href="assets/css/steganography.css"></link>
+
   <!-- STYLE -->
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,600" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300, 500, 700" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="assets/css/editor-override.css">
 
   <!-- ICONS -->
   <link rel="shortcut icon" href="assets/icon/favicon.ico">
@@ -43,8 +45,6 @@
   <div id="editorContainer"></div>
 
   <div id="page">
-
-    <div id="noteContainer"></div>
 
     <div id="pageContent">
       <div id="message">
@@ -72,17 +72,24 @@
       <p id="load">Firebase SDK Loading&hellip;</p>
     </div>
 
-    <div id="extraContent"></div>
+    <div id="noteContainer"></div>
+
+    <div id="stegoContainer"></div>
+
+    <div id="extrasContainer"></div>
+
 
   </div>
-
 
   <script src="assets/js/firebase-status.js"></script>
   <script src="assets/js/auth.js"></script>
   <script src="assets/js/index.js"></script>
   <script src="assets/js/editor.js"></script>
   <script src="assets/js/unfinished-features.js"></script>
-  <script src=" assets/js/scorch.js "></script>
+  <script src="assets/js/scorch.js "></script>
+  <script src="assets/js/stego-lib.js"></script>
+  <script src="assets/js/stego-ui.js"></script>
+
 </body>
 
 </html>
