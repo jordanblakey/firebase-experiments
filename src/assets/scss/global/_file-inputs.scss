@@ -17,6 +17,8 @@ input[type="file"] + label {
   color: $white;
   transition: $global-transition;
   user-select: none;
+  z-index: 2;
+  position: relative;
 
   span {
     background: #666;
@@ -24,6 +26,7 @@ input[type="file"] + label {
     display: inline-block;
     padding: 4px 16px 3px 16px;
     border-radius: 0 3px 3px 0;
+    z-index: 2;
   }
 }
 
@@ -38,7 +41,6 @@ input[type="file"] + label:hover {
   border-radius: 0 10rem 10rem 0;
   padding: 9px 24px 9px 16px;
   position: relative;
-  z-index: -1;
 
   &.shown {
     transition: all .2s ease-out;

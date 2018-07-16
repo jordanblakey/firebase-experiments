@@ -3,7 +3,8 @@ import { getAuthStatus } from './modules/auth'
 import renderEditor from './components/editor'
 import renderSteganography from './components/steganography'
 import renderScorch from './components/scorch'
-import fileUploader from './components/file-uploader'
+import './components/file-uploader'
+import './components/database-explorer'
 import './modules/macy'
 
 // Just for testing

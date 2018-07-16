@@ -37,7 +37,6 @@ function styleFileInputs() {
   })
 }
 
-
 ////////////////////////////////////////////////////////////////////////////////
 // FIREBASE STORAGE UPLOAD
 ////////////////////////////////////////////////////////////////////////////////
@@ -46,46 +45,54 @@ document.addEventListener('DOMContentLoaded', () => {
   let qs = q => document.querySelector(q)
   let uploader = qs('.file-uploader-container .uploader')
   let filename = qs('.file-uploader-container label span')
-  console.log(filename)
   let status = qs('.file-uploader-container .status')
   let viewer = qs('.file-uploader-container .viewer')
   if (uploader) {
-    uploader.addEventListener('change', e => uploadFile(e, status, viewer, filename))
+    uploader.addEventListener('change', e =>
+      uploadFile(e, status, viewer, filename)
+    )
   }
 })
 
 function uploadFile(e, status, viewer, filename) {
+  status.classList.remove('shown')
+  status.classList.add('hidden')
   let file = e.target.files.item(0)
   let uploadTask = firebase
     .storage()
     .ref()
-    .child(file.name).put(file)
+    .child(file.name)
+    .put(file)
 
-  uploadTask.on('state_changed', function(snapshot){
-    let progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-    console.log('Upload is ' + progress + '% done');
-    filename.innerHTML = `${file.name}: ${parseInt(progress)}%`
-    switch (snapshot.state) {
-      case firebase.storage.TaskState.PAUSED:
-        console.log('Upload is paused');
-        break;
-      case firebase.storage.TaskState.RUNNING:
-        console.log('Upload is running');
-        break;
-    }
-  }, function(error) {
-    status.innerHTML = `Error: ${error}`
-  }, function() {
-    uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
-      console.log('File available at', downloadURL);
-      if (file.name.match(/\.(jpeg|jpg|gif|png|svg)$/) != null) {
-        viewer.src = downloadURL
+  uploadTask.on(
+    'state_changed',
+    function(snapshot) {
+      let progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+      console.log('Upload is ' + progress + '% done')
+      filename.innerHTML = `${file.name}: ${parseInt(progress)}%`
+      switch (snapshot.state) {
+        case firebase.storage.TaskState.PAUSED:
+          console.log('Upload is paused')
+          break
+        case firebase.storage.TaskState.RUNNING:
+          console.log('Upload is running')
+          break
       }
-      e.target.value = ''
+    },
+    function(error) {
+      status.innerHTML = `Error: ${error}`
+    },
+    function() {
+      uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
+        console.log('File available at', downloadURL)
+        if (file.name.match(/\.(jpeg|jpg|gif|png|svg)$/) != null) {
+          viewer.src = downloadURL
+        }
+        e.target.value = ''
         status.innerHTML = `Success.&nbsp;&nbsp;<a href="${downloadURL}">Download</a>`
-        status.classList.remove('alert', 'hidden')
-        status.classList.add('success', 'shown')
-    });
-  });
+        status.classList.remove('hidden')
+        status.classList.add('shown')
+      })
+    }
+  )
 }
-
