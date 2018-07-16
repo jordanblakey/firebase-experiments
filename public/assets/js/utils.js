@@ -60,26 +60,26 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 32);
+/******/ 	return __webpack_require__(__webpack_require__.s = 34);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 32:
+/***/ 34:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(33);
+module.exports = __webpack_require__(35);
 
 
 /***/ }),
 
-/***/ 33:
+/***/ 35:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _ffjs = __webpack_require__(34);
+var _ffjs = __webpack_require__(36);
 
 var _ffjs2 = _interopRequireDefault(_ffjs);
 
@@ -87,13 +87,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /***/ }),
 
-/***/ 34:
+/***/ 36:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _ffjs = __webpack_require__(35);
+var _ffjs = __webpack_require__(37);
 
 var _ffjs2 = _interopRequireDefault(_ffjs);
 
@@ -290,7 +290,7 @@ var log = console.log;
 
 /***/ }),
 
-/***/ 35:
+/***/ 37:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -301,31 +301,31 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.util = exports.string = exports.math = exports.func = exports.date = exports.browser = exports.array = undefined;
 
-var _array = __webpack_require__(36);
+var _array = __webpack_require__(38);
 
 var _array2 = _interopRequireDefault(_array);
 
-var _browser = __webpack_require__(37);
+var _browser = __webpack_require__(39);
 
 var _browser2 = _interopRequireDefault(_browser);
 
-var _date = __webpack_require__(38);
+var _date = __webpack_require__(40);
 
 var _date2 = _interopRequireDefault(_date);
 
-var _func = __webpack_require__(39);
+var _func = __webpack_require__(41);
 
 var _func2 = _interopRequireDefault(_func);
 
-var _math = __webpack_require__(40);
+var _math = __webpack_require__(42);
 
 var _math2 = _interopRequireDefault(_math);
 
-var _string = __webpack_require__(41);
+var _string = __webpack_require__(43);
 
 var _string2 = _interopRequireDefault(_string);
 
-var _util = __webpack_require__(42);
+var _util = __webpack_require__(44);
 
 var _util2 = _interopRequireDefault(_util);
 
@@ -525,7 +525,7 @@ exports.util = _util2.default;
 
 /***/ }),
 
-/***/ 36:
+/***/ 38:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -776,7 +776,7 @@ exports.default = array = {
 
 /***/ }),
 
-/***/ 37:
+/***/ 39:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -840,7 +840,7 @@ exports.default = browser = {
 
 /***/ }),
 
-/***/ 38:
+/***/ 40:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -873,7 +873,7 @@ exports.default = date = {
 
 /***/ }),
 
-/***/ 39:
+/***/ 41:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -950,7 +950,7 @@ exports.default = func = {
 
 /***/ }),
 
-/***/ 40:
+/***/ 42:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1096,7 +1096,7 @@ exports.default = math = {
 
 /***/ }),
 
-/***/ 41:
+/***/ 43:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1177,7 +1177,7 @@ exports.default = string = {
 
 /***/ }),
 
-/***/ 42:
+/***/ 44:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

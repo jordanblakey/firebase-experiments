@@ -10,6 +10,9 @@ import {
 } from './components/unfinished-features'
 import renderScorch from './components/scorch'
 
+import macy from './modules/macy'
+typeof macy !== undefined ? qs('#macy-container').style.columnCount = 'unset' : null
+
 document.addEventListener('DOMContentLoaded', function() {
   getAuthStatus()
   sessionStorage.getItem('user') ? renderPage() : null

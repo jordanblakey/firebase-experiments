@@ -24,6 +24,7 @@
     "firebase": "^5.2.0",
     "foundation-sites": "~6.4.1",
     "lodash": "^4.17.4",
+    "macy": "^2.3.0",
     "nanobar": "^0.4.2",
     "rellax": "^1.4.0",
     "scrollreveal": "^3.3.6",

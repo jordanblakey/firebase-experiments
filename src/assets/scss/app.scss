@@ -6,12 +6,9 @@
 // @import './utils/prism';
 
 ////////////////////////////////////////////////////////////////////////////////
-
 // @import './partials/steganography';
-// @import './partials/interim';
 // @import './partials/scorched-button';
 // @import './partials/splashscreen';
-
 
 ////////////////////////////////////////////////////////////////////////////////
 // COMPONENTS
@@ -19,8 +16,8 @@
 @import './components/login-panel';
 @import './components/top-bar';
 @import './components/editor';
-@import './components/masonry-grid';
-
+@import './components/tooltip';
+@import './components/note';
 
 ////////////////////////////////////////////////////////////////////////////////
 // GLOBAL
@@ -109,8 +106,8 @@ h4, h5, h6 {
   border: 0;
   padding: 2rem;
   background-color: #e8e8e8;
-  color: #444;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  color: $black;
+  box-shadow: $global-shadow;
 
   &.alert {
     background: $alert-color;
@@ -138,7 +135,7 @@ a.button, .button-group a.button, button.button, .button-group button.button {
   margin: 0 4px;
   padding: 8px 16px 6px 16px;
   border-radius: $global-radius;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: $global-shadow;
   transition: all .1s ease-in-out !important;
 
   &:first-child {
@@ -152,7 +149,7 @@ a.button, .button-group a.button, button.button, .button-group button.button {
   &.secondary {
     background: $white;
     color: $medium-gray;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+    box-shadow: $global-shadow-light;
   }
 
   &.alert {
@@ -163,4 +160,20 @@ a.button, .button-group a.button, button.button, .button-group button.button {
     background: $alert-color;
     color: $white;
   }
+}
+
+
+// BREAKPOINT //////////////////////////////////////////////////////////////////
+@include breakpoint(small) {
+}
+@include breakpoint(medium) {
+}
+@include breakpoint(large) {
+}
+
+@include breakpoint(small only) {
+}
+@include breakpoint(medium only) {
+}
+@include breakpoint(large only) {
 }
