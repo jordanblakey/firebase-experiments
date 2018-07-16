@@ -1,0 +1,87 @@
+---
+layout: default
+title: Badges, Labels, & Progress
+---
+
+{{> top-bar}}
+
+<div class="grid-container">
+  <div class="grid-x grid-margin-x">
+
+    <div class="cell callout">
+      <h4>Text .badge</h4>
+      <p>
+        <span class="badge primary">1</span> Unread Primary &nbsp;&nbsp;
+        <span class="badge secondary">2</span> Unread Secondary &nbsp;&nbsp;
+        <span class="badge success"><b>3</b></span> Unread Success &nbsp;&nbsp;
+        <span class="badge alert">A</span> Unread Alert &nbsp;&nbsp;
+        <span class="badge warning">B</span> Unread Warning
+      </p>
+    </div>
+
+    <div class="cell callout">
+      <h4>Icon .badge</h4>
+      <p>
+        Share <span class="badge secondary"><i class="fi-share"></i></span> &nbsp;&nbsp;
+        Success <span class="badge success"><i class="fi-check"></i></span> &nbsp;&nbsp;
+        Warning <span class="badge warning"><i class="fi-wrench"></i></span>
+      </p>
+    </div>
+
+    <div class="cell callout">
+      <h4>Text .label</h4>
+      <span class="label">Default Label</span>
+      <span class="label primary">Primary Label</span>
+      <span class="label secondary">Secondary Label</span>
+      <span class="label success">Success Label</span>
+      <span class="label alert">Alert Label</span>
+      <span class="label warning">Warning Label</span>
+    </div>
+
+    <div class="cell callout">
+      <h4>Icon .label</h4>
+      <span class="label alert"><i class="fi-x-circle"></i>Alert Label</span>
+      <span class="label warning"><i class="fi-x"></i>Warning Label</span>
+      <span class="label info"><i class="fi-widget"></i>Info Label</span>
+    </div>
+
+    <div class="cell callout">
+      <h4>.progress Bar</h4>
+      <div class="progress" role="progressbar" tabindex="0" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-meter"></div>
+      </div>
+
+      <div class="progress" role="progressbar" tabindex="0" aria-valuenow="50" aria-valuemin="0" aria-valuetext="50 percent" aria-valuemax="100">
+        <div class="progress-meter" style="width: 50%"></div>
+      </div>
+
+      <div class="secondary progress" role="progressbar" tabindex="0" aria-valuenow="25" aria-valuemin="0" aria-valuetext="25 percent"
+        aria-valuemax="100">
+        <div class="progress-meter" style="width: 25%"></div>
+      </div>
+
+      <div class="success progress">
+        <div class="progress-meter" style="width: 50%"></div>
+      </div>
+
+      <div class="warning progress">
+        <div class="progress-meter" style="width: 50%"></div>
+      </div>
+
+      <div class="alert progress">
+        <div class="progress-meter" style="width: 75%"></div>
+      </div>
+
+      <div class="progress" role="progressbar" tabindex="0" aria-valuenow="20" aria-valuemin="0" aria-valuetext="25 percent" aria-valuemax="100">
+        <span class="progress-meter" style="width: 25%">
+          <p class="progress-meter-text">25%</p>
+        </span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+

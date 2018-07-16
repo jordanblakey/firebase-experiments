@@ -1,30 +1,178 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="app.css">
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scorched: Secure, Portable Notes</title>
 
-  <link defer rel="shortcut icon" href="favicon.ico">
-  <link defer rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+  <!-- EDITOR -->
+  <link defer rel="stylesheet" href="//cdn.jsdelivr.net/editor/0.1.0/editor.css">
+  <script defer src="//cdn.jsdelivr.net/editor/0.1.0/editor.js"></script>
+  <script defer src="//cdn.jsdelivr.net/editor/0.1.0/marked.js"></script>
+
+  <!-- STYLE -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,600" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300, 500, 700" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/app.css" />
+
+  <!-- ICONS -->
+  <link defer rel="shortcut icon" href="../assets/icon/favicon.ico">
+  <link defer rel="apple-touch-icon" sizes="180x180" href="../assets/icon/apple-touch-icon.png">
+  <link defer rel="icon" type="image/png" sizes="32x32" href="../assets/icon/favicon-32x32.png">
+  <link defer rel="icon" type="image/png" sizes="16x16" href="../assets/icon/favicon-16x16.png">
   <link defer rel="manifest" href="site.webmanifest">
-  <link defer rel="mask-icon" href="icon/safari-pinned-tab.svg" color="#c4c4c4">
+  <link defer rel="mask-icon" href="../assets/icon/safari-pinned-tab.svg" color="#c4c4c4">
   <meta name="msapplication-TileColor" content="#c4c4c4">
   <meta name="theme-color" content="#e5e5e5">
-  <title>Scorched: Secure, Portable Notes</title>
+
+
+  <script>
+    // If visitor doesn't have a user and token, bounce them to the home page.
+    let user = sessionStorage.getItem('user')
+    let token = sessionStorage.getItem('token')
+    if ((typeof user === "undefined" || user === null) || sessionStorage.getItem('token') === null) {
+      let href = window.location.href
+      href = href.substring(0, href.length - 1)
+      href === window.location.origin ? null : window.location.href = '/'
+    }
+  </script>
+
+
 </head>
 
 <body>
-  <noscript>
-    You need to enable JavaScript to run Scorched.
-  </noscript>
-  <div id="root">
-    <div class="loading-background">
-      <div class="loading-logo"></div>
+
+  
+  <header class="grid-container-full">
+    <div class="grid-x grid-padding-x top-bar align-middle">
+      <div class="cell">
+        <a href="../">
+          <img class="logo" src="../assets/img/logo-scorched-dark.svg">
+        </a>
+        <span class="log-in-status">Logged out</span>
+        <button class="log-in button secondary">Log In</button>
+      </div>
+    </div>
+  </header>
+  
+  
+  <div class="grid-container-full" id="editor-container">
+    <textarea id="editor"></textarea>
+    <div class="cell small-12 editor-buttons-container">
+      <div class="editor-buttons">
+        <div class="button-group align-left">
+          <span class="badge secondary preview-shortcut">Preview: alt+x</span>
+          <span class="badge secondary zen-shortcut">Zen: alt+z</span>
+        </div>
+        <div class="button-group text-right align-right">
+          <button class="markdown-tutorial-button button secondary">Tutorial</button>
+          <button class="save-button button primary">Save</button>
+        </div>
+      </div>
     </div>
   </div>
+  <div class="grid-container app-page">
+    <div class="grid-x grid-margin-x">
+      <div class="cell small-12 masonry-grid">
+        <div class="callout secondary masonry-grid-item">
+          <h4>To Do List</h4>
+          <ul>
+            <li>Import to-dos from pre-ffront project.</li>
+            <li>Import Scorch, Spashscreen on first load.</li>
+            <li>Clean out scss/partials</li>
+            <li>Finish integrating app.js. Break note functions into module.</li>
+            <li>Convert any remaining inline event handlers to event listeners.</li>
+            <li>Integrate library to handle MD -> HTML conversion for note list.</li>
+            <li>Implement labels.</li>
+            <li>Implement sorting by labels, modified, created.</li>
+            <li>Create feature: save current note as stego file.</li>
+            <li>Include cover image library and randomized selection if no image supplied.</li>
+            <li>Integrate Firestore explorer.</li>
+            <li>Import/Export note(s) with ability to encrypt archive with PGP.</li>
+          </ul>
+        </div>
+        <div class="callout secondary masonry-grid-item">
+          <h4>Note Title</h4>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis eos ipsum sed, nisi officia totam asperiores id
+            consequuntur atque consectetur. Similique consequatur inventore veritatis consectetur sint ipsum enim, voluptate
+            officia nulla eaque voluptates vel aspernatur vero, reprehenderit voluptatum maxime qui dignissimos neque! Totam,
+            corporis. Autem perferendis eveniet illum, ab dolorum soluta excepturi quia voluptas tenetur deserunt. Reiciendis
+            corporis molestiae animi corrupti dolor nihil hic quaerat non quos deleniti, illum quam voluptatum enim? Deleniti
+            officiis error obcaecati tenetur reiciendis vel quasi, eaque totam nobis animi dolores hic natus voluptas corrupti.
+            Accusamus molestiae enim odit vero tempora iusto praesentium quasi dolor rem!</p>
+        </div>
+        <div class="callout secondary masonry-grid-item">
+          <h4>Note Title</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic pariatur cum, vel illo tempore unde necessitatibus
+            debitis dolor atque accusamus.</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, similique?</p>
+        </div>
+        <div class="callout secondary masonry-grid-item">
+          <h4>Note Title</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit magnam aspernatur facilis exercitationem! Beatae
+            dolor, ipsa illo, ut tempora earum odit sapiente hic, consequatur neque qui alias optio. Sit consequatur pariatur
+            dignissimos, voluptatem ullam omnis quaerat temporibus. Tenetur quisquam temporibus voluptas dolores sunt vel necessitatibus
+            cumque, quaerat modi ipsa repellendus sapiente eligendi explicabo facilis voluptatum facere similique, mollitia
+            cupiditate accusamus.</p>
+        </div>
+        <div class="callout secondary masonry-grid-item">
+          <h4>Note Title</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic pariatur cum, vel illo tempore unde necessitatibus
+            debitis dolor atque accusamus.</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, similique?</p>
+        </div>
+        <div class="callout secondary masonry-grid-item">
+          <h4>Note Title</h4>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis eos ipsum sed, nisi officia totam asperiores id
+            consequuntur atque consectetur. Similique consequatur inventore veritatis consectetur sint ipsum enim, voluptate
+            officia nulla eaque voluptates vel aspernatur vero, reprehenderit voluptatum maxime qui dignissimos neque! Totam,
+            corporis. Autem perferendis eveniet illum, ab dolorum soluta excepturi quia voluptas tenetur deserunt. Reiciendis
+            corporis molestiae animi corrupti dolor nihil hic quaerat non quos deleniti, illum quam voluptatum enim? Deleniti
+            officiis error obcaecati tenetur reiciendis vel quasi, eaque totam nobis animi dolores hic natus voluptas corrupti.
+            Accusamus molestiae enim odit vero tempora iusto praesentium quasi dolor rem!</p>
+        </div>
+        <div class="callout secondary masonry-grid-item">
+          <h4>Note Title</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit magnam aspernatur facilis exercitationem! Beatae
+            dolor, ipsa illo, ut tempora earum odit sapiente hic, consequatur neque qui alias optio. Sit consequatur pariatur
+            dignissimos, voluptatem ullam omnis quaerat temporibus. Tenetur quisquam temporibus voluptas dolores sunt vel necessitatibus
+            cumque, quaerat modi ipsa repellendus sapiente eligendi explicabo facilis voluptatum facere similique, mollitia
+            cupiditate accusamus.</p>
+        </div>
+        <div class="callout secondary masonry-grid-item">
+          <h4>Note Title</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit magnam aspernatur facilis exercitationem! Beatae
+            dolor, ipsa illo, ut tempora earum odit sapiente hic, consequatur neque qui alias optio. Sit consequatur pariatur
+            dignissimos, voluptatem ullam omnis quaerat temporibus. Tenetur quisquam temporibus voluptas dolores sunt vel necessitatibus
+            cumque, quaerat modi ipsa repellendus sapiente eligendi explicabo facilis voluptatum facere similique, mollitia
+            cupiditate accusamus.</p>
+        </div>
+        <div class="callout secondary masonry-grid-item">
+          <h4>Note Title</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic pariatur cum, vel illo tempore unde necessitatibus
+            debitis dolor atque accusamus.</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, similique?</p>
+        </div>
+        <div class="callout secondary masonry-grid-item">
+          <h4>Note Title</h4>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis eos ipsum sed, nisi officia totam asperiores id
+            consequuntur atque consectetur. Similique consequatur inventore veritatis consectetur sint ipsum enim, voluptate
+            officia nulla eaque voluptates vel aspernatur vero, reprehenderit voluptatum maxime qui dignissimos neque! Totam,
+            corporis. Autem perferendis eveniet illum, ab dolorum soluta excepturi quia voluptas tenetur deserunt. Reiciendis
+            corporis molestiae animi corrupti dolor nihil hic quaerat non quos deleniti, illum quam voluptatum enim? Deleniti
+            officiis error obcaecati tenetur reiciendis vel quasi, eaque totam nobis animi dolores hic natus voluptas corrupti.
+            Accusamus molestiae enim odit vero tempora iusto praesentium quasi dolor rem!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script defer src="../assets/js/polyfill.js"></script>
+  <script defer src="../assets/js/utils.js"></script>
+  <script defer src="../assets/js/app.js"></script>
+
 </body>
-<script defer src="assets/bundle.js"></script>
 
 </html>

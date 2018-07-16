@@ -1,0 +1,257 @@
+/*//////////////////////////////////////////////////////////////////////////////
+// EDITOR OVERRIDES
+//////////////////////////////////////////////////////////////////////////////*/
+
+// BUTTONS & HELPERS ///////////////////////////////////////////////////////////
+.editor-buttons-container {
+  border-top: 1px solid $light-gray;
+
+  .editor-buttons {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 12px 0 1rem 0;
+
+    div {
+      margin: 0.5rem;
+      display: flex;
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-wrap: wrap;
+
+      .zen-shortcut, .preview-shortcut {
+        &:hover {
+          background: $light-gray;
+          color: $dark-gray;
+          transition: all .1s ease-in-out;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .editor-statusbar {
+      border: 0;
+      padding: 6px 0;
+      margin: 0;
+
+      span {
+        font-size: 14;
+        color: $medium-gray;
+        min-width: unset;
+      }
+    }
+  }
+}
+
+#editor {
+  display: none;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// EDITOR PREVIEW
+////////////////////////////////////////////////////////////////////////////////
+
+.editor-preview {
+  padding: 1rem 1.8rem 1rem 1rem;
+  max-width: 1200px;
+  padding: 1rem calc(50% - 600px);
+  -webkit-transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  width: calc(100%);
+  box-sizing: content-box;
+  background: #f8f8f8;
+
+  :-webkit-full-screen {
+    background: #f9f9f9;
+    padding: 2rem 2rem;
+    width: 100%;
+    height: 100%;
+  }
+  :-moz-full-screen {
+    padding: 2rem 2rem;
+    background: #f9f9f9;
+    width: 100%;
+    height: 100%;
+  }
+
+  > *:last-child {
+    margin-bottom: 4rem;
+  }
+
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6,
+  > p,
+  > ul,
+  > ol {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  > blockquote {
+    margin-left: 1.1rem;
+  }
+
+  li > p {
+    margin-bottom: 0;
+  }
+
+  li > code {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    display: inline-block;
+  }
+
+  code {
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+/*//////////////////////////////////////////////////////////////////////////////
+// CODEMIRROR OVERRIDES
+//////////////////////////////////////////////////////////////////////////////*/
+
+// VIEWPORT ////////////////////////////////////////////////////////////////////
+.CodeMirror-clipping-mask {
+  max-width: 1200px;
+  overflow: hidden;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.CodeMirror-scroll {
+  width: calc(100% + 17px);
+  padding: 10px 26px 2rem 10px;
+}
+
+.editor-toolbar-container {
+  border-bottom: 1px solid $light-gray;
+
+  .editor-toolbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+
+    &:after {
+      background: none;
+    }
+
+    a:before {
+      color: $medium-gray;
+    }
+
+    a.active, a:hover {
+      color: $alert-color !important;
+      border: 0;
+      &:before{
+        color: $alert-color !important;
+      }
+    }
+
+    a.icon-fullscreen {
+      position: absolute;
+      right: 10px;
+    }
+  }
+}
+
+// CURSOR //////////////////////////////////////////////////////////////////////
+.CodeMirror div.CodeMirror-cursor {
+  border-left: 1px solid #000;
+  z-index: 3;
+  animation: opacityPulse 1s ease-out;
+  animation-iteration-count: infinite;
+  opacity: 0;
+}
+
+@keyframes opacityPulse {
+  0% {
+    opacity: 0.25;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.25;
+  }
+}
+
+@-webkit-keyframes opacityPulse {
+  0% {
+    opacity: 0.25;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+// SYNTAX //////////////////////////////////////////////////////////////////////
+.CodeMirror pre {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.cm-s-paper .cm-builtin,
+.cm-s-paper .cm-attribute,
+.cm-s-paper .cm-header,
+.cm-s-paper .cm-atom,
+.cm-s-paper .cm-variable,
+.cm-s-paper .cm-operator,
+.cm-s-paper .cm-property {
+  color: $black;
+}
+.cm-s-paper .cm-number,
+.cm-s-paper .cm-comment,
+.cm-s-paper .cm-string,
+.cm-s-paper .cm-bracket,
+.cm-s-paper .cm-quote,
+.cm-s-paper .cm-hr {
+  color: $medium-gray;
+}
+
+.cm-s-paper .cm-meta,
+.cm-s-paper .cm-keyword,
+.cm-s-paper .cm-variable-2,
+.cm-s-paper .cm-qualifier,
+.cm-s-paper .cm-tag {
+  color: $dark-gray;
+}
+
+.cm-s-paper .cm-def,
+.cm-s-paper .cm-variable-3,
+.cm-positive,
+div.CodeMirror span.CodeMirror-matchingbracket {
+  color: $warning-color;
+}
+
+.cm-s-paper .cm-link,
+.cm-s-paper .cm-string-2,
+.cm-negative,
+.cm-s-paper .cm-error,
+div.CodeMirror span.CodeMirror-nonmatchingbracket,
+.cm-invalidchar {
+  color: $alert-color;
+}
+
+.CodeMirror-selected {
+  background: $lighter-gray;
+}
+.CodeMirror-focused .CodeMirror-selected {
+  background: $light-gray;
+}
+.CodeMirror-lines {
+  padding: 4px 0;
+}

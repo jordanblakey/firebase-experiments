@@ -1,0 +1,324 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buttons</title>
+
+  <!-- EDITOR -->
+  <link defer rel="stylesheet" href="//cdn.jsdelivr.net/editor/0.1.0/editor.css">
+  <script defer src="//cdn.jsdelivr.net/editor/0.1.0/editor.js"></script>
+  <script defer src="//cdn.jsdelivr.net/editor/0.1.0/marked.js"></script>
+
+  <!-- STYLE -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,600" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300, 500, 700" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/app.css" />
+
+  <!-- ICONS -->
+  <link defer rel="shortcut icon" href="../assets/icon/favicon.ico">
+  <link defer rel="apple-touch-icon" sizes="180x180" href="../assets/icon/apple-touch-icon.png">
+  <link defer rel="icon" type="image/png" sizes="32x32" href="../assets/icon/favicon-32x32.png">
+  <link defer rel="icon" type="image/png" sizes="16x16" href="../assets/icon/favicon-16x16.png">
+  <link defer rel="manifest" href="site.webmanifest">
+  <link defer rel="mask-icon" href="../assets/icon/safari-pinned-tab.svg" color="#c4c4c4">
+  <meta name="msapplication-TileColor" content="#c4c4c4">
+  <meta name="theme-color" content="#e5e5e5">
+
+
+  <script>
+    // If visitor doesn't have a user and token, bounce them to the home page.
+    let user = sessionStorage.getItem('user')
+    let token = sessionStorage.getItem('token')
+    if ((typeof user === "undefined" || user === null) || sessionStorage.getItem('token') === null) {
+      let href = window.location.href
+      href = href.substring(0, href.length - 1)
+      href === window.location.origin ? null : window.location.href = '/'
+    }
+  </script>
+
+
+</head>
+
+<body>
+
+  
+  <header class="grid-container-full">
+    <div class="grid-x grid-padding-x top-bar align-middle">
+      <div class="cell">
+        <a href="../">
+          <img class="logo" src="../assets/img/logo-scorched-dark.svg">
+        </a>
+        <span class="log-in-status">Logged out</span>
+        <button class="log-in button secondary">Log In</button>
+      </div>
+    </div>
+  </header>
+  
+  
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x">
+      <div class="callout cell shrink">
+        <h4>a.button vs button.button</h4>
+        <div class="button-group">
+          <!-- Anchors (links) -->
+          <a href="about.html" class="button">Learn More</a>
+          <a href="#features" class="button">View All Features</a>
+        </div>
+        <div class="button-group">
+          <!-- Buttons (actions) -->
+          <button type="button" class="success button">Save</button>
+          <button type="button" class="alert button">Delete</button>
+        </div>
+      </div>
+  
+      <div class="callout cell auto">
+        <h4>.tiny, .small, .large, .expanded, .small.expanded</h4>
+        <a class="button tiny" href="#">So Tiny</a>
+        <a class="button small" href="#">So Small</a>
+        <a class="button" href="#">So Basic</a>
+        <a class="button large" href="#">So Large</a>
+        <a class="button expanded" href="#">Such Expand</a>
+        <a class="button small expanded" href="#">Wow, Small Expand</a>
+      </div>
+    </div>
+  
+  
+    <div class="grid-x grid-margin-x">
+      <div class="callout cell auto">
+        <h4>.primary, .secondary, .success, .alert, .warning</h4>
+        <div class="button-group">
+          <a class="button primary" href="#">Primary</a>
+          <a class="button secondary" href="#">Secondary</a>
+          <a class="button success" href="#">Success</a>
+          <a class="button alert" href="#">Alert</a>
+          <a class="button warning" href="#">Warning</a>
+        </div>
+      </div>
+  
+      <div class="callout cell auto">
+        <h4>.button.hollow</h4>
+        <div class="button-group">
+          <button class="hollow button" href="#">Primary</button>
+          <button class="hollow button secondary" href="#">Secondary</button>
+          <button class="hollow button success" href="#">Success</button>
+          <button class="hollow button alert" href="#">Alert</button>
+          <button class="hollow button warning" href="#">Warning</button>
+          <button class="hollow button" href="#" disabled>Disabled</button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="grid-x grid-margin-x">
+      <div class="callout cell auto">
+        <h4>.button.disabled</h4>
+        <div class="button-group">
+          <a class="button disabled" href="#" aria-disabled>Disabled</a>
+          <button type="button" class="button primary" disabled>Disabled</button>
+          <button type="button" class="button secondary" disabled>Disabled</button>
+          <button type="button" class="button success" disabled>Disabled</button>
+          <button type="button" class="button alert" disabled>Disabled</button>
+          <button type="button" class="button warning" disabled>Disabled</button>
+        </div>
+      </div>
+  
+      <div class="callout cell auto">
+        <h4>.button.clear</h4>
+        <div class="button-group">
+          <a class="clear button" href="#">Primary</a>
+          <a class="clear button secondary" href="#">Secondary</a>
+          <a class="clear button success" href="#">Success</a>
+          <a class="clear button alert" href="#">Alert</a>
+          <a class="clear button warning" href="#">Warning</a>
+          <a class="clear button" href="#" disabled>Disabled</a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="grid-x grid-margin-x">
+      <div class="callout cell auto">
+        <h4>.button.dropdown</h4>
+        <button class="dropdown button tiny">Dropdown</button>
+        <button class="dropdown button small">Dropdown</button>
+        <button class="dropdown button">Dropdown</button>
+        <button class="dropdown button large">Dropdown</button>
+        <button class="dropdown button expanded">Dropdown</button>
+      </div>
+  
+      <div class="callout cell shrink">
+        <h4>.button-group</h4>
+        <div class="button-group">
+          <a class="button">One</a>
+          <a class="button">Two</a>
+          <a class="button">Three</a>
+        </div>
+      </div>
+  
+      <div class="callout cell shrink">
+        <h4>.small.button-group</h4>
+        <div class="small button-group">
+          <a class="button">Small</a>
+          <a class="button">Button</a>
+          <a class="button">Group</a>
+        </div>
+      </div>
+    </div>
+  
+  
+    <div class="grid-x grid-margin-x">
+      <div class="callout cell auto">
+        <h4>.button-group Individual styling</h4>
+        <div class="button-group">
+          <a class="secondary button">View</a>
+          <a class="success button">Edit</a>
+          <a class="warning button">Share</a>
+          <a class="alert button">Delete</a>
+        </div>
+      </div>
+  
+      <div class="callout cell auto">
+        <h4>.button-group.secondary</h4>
+        <div class="secondary button-group">
+          <a class="button">Harder</a>
+          <a class="button">Better</a>
+          <a class="button">Faster</a>
+          <a class="button">Stronger</a>
+        </div>
+      </div>
+  
+      <div class="callout cell auto">
+        <h4>.button-group.expanded</h4>
+        <div class="expanded button-group">
+          <a class="button">Expanded</a>
+          <a class="button">Button</a>
+          <a class="button">Group</a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="grid-x grid-margin-x">
+      <div class="callout cell auto">
+        <h4>.stacked-for-small, .stacked</h4>
+        <div class="stacked-for-small button-group">
+          <a class="button">How</a>
+          <a class="button">Low</a>
+          <a class="button">Can</a>
+          <a class="button">You</a>
+          <a class="button">Go</a>
+        </div>
+      </div>
+  
+      <div class="callout cell auto">
+        <h4>button.close-button</h4>
+        <div class="callout">
+          <button class="close-button" aria-label="Close alert" type="button">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <p>Look at this close button!</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="grid-x grid-margin-x">
+      <div class="callout cell medium-6">
+        <h4>Need Js to make close buttons work</h4>
+        <div class="callout" data-closable>
+          <p>You can so totally close this!</p>
+          <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+  
+        <div class="success callout" data-closable="slide-out-right">
+          <p>You can close me too, and I close using a Motion UI animation.</p>
+          <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div>
+  
+      <div class="callout cell auto">
+        <h4>Switch</h4>
+        <div class="switch">
+          <input class="switch-input" id="exampleSwitch" type="checkbox" name="exampleSwitch">
+          <label class="switch-paddle" for="exampleSwitch">
+            <span class="show-for-sr">Download Kittens</span>
+          </label>
+        </div>
+      </div>
+  
+      <div class="callout cell auto">
+        <h4>Radio Switches</h4>
+        <div class="switch">
+          <input class="switch-input" id="exampleRadioSwitch1" type="radio" checked name="testGroup">
+          <label class="switch-paddle" for="exampleRadioSwitch1">
+            <span class="show-for-sr">Bulbasaur</span>
+          </label>
+        </div>
+        <div class="switch">
+          <input class="switch-input" id="exampleRadioSwitch2" type="radio" name="testGroup">
+          <label class="switch-paddle" for="exampleRadioSwitch2">
+            <span class="show-for-sr">Bulbasaur</span>
+          </label>
+        </div>
+        <div class="switch">
+          <input class="switch-input" id="exampleRadioSwitch3" type="radio" name="testGroup">
+          <label class="switch-paddle" for="exampleRadioSwitch3">
+            <span class="show-for-sr">Bulbasaur</span>
+          </label>
+        </div>
+      </div>
+  
+      <div class="callout cell auto">
+        <h4>Switch sizes</h4>
+        <div class="switch tiny">
+          <input class="switch-input" id="tinySwitch" type="checkbox" name="exampleSwitch">
+          <label class="switch-paddle" for="tinySwitch">
+            <span class="show-for-sr">Tiny Sandwiches Enabled</span>
+          </label>
+        </div>
+  
+        <div class="switch small">
+          <input class="switch-input" id="smallSwitch" type="checkbox" name="exampleSwitch">
+          <label class="switch-paddle" for="smallSwitch">
+            <span class="show-for-sr">Small Portions Only</span>
+          </label>
+        </div>
+  
+        <div class="switch large">
+          <input class="switch-input" id="largeSwitch" type="checkbox" name="exampleSwitch">
+          <label class="switch-paddle" for="largeSwitch">
+            <span class="show-for-sr">Show Large Elephants</span>
+          </label>
+        </div>
+      </div>
+  
+    </div>
+  
+  
+  
+  
+    <div class="callout cell shrink">
+      <h4>Switch Inner Labels</h4>
+      <p>Do you like me?</p>
+      <div class="switch large">
+        <input class="switch-input" id="yes-no" type="checkbox" name="exampleSwitch">
+        <label class="switch-paddle" for="yes-no">
+          <span class="show-for-sr">Do you like me?</span>
+          <span class="switch-active" aria-hidden="true">Yes</span>
+          <span class="switch-inactive" aria-hidden="true">No</span>
+        </label>
+      </div>
+    </div>
+  
+  </div>
+
+  <script defer src="../assets/js/polyfill.js"></script>
+  <script defer src="../assets/js/utils.js"></script>
+  <script defer src="../assets/js/app.js"></script>
+
+</body>
+
+</html>

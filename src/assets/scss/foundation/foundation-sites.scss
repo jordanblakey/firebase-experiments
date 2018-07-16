@@ -1,0 +1,39 @@
+// FOUNDATION FOR SITES (Custom) ///////////////////////////////////////////////
+// https://foundation.zurb.com/sites/docs
+@charset 'utf-8';
+@import 'settings';
+@import 'foundation';
+
+// CORE FEATURES ///////////////////////////////////////////////////////////////
+@include foundation-global-styles; // Normalize
+@include foundation-grid;
+@include foundation-forms;
+@include foundation-typography;
+@import '_foundation-icons';
+@include foundation-button;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-table;
+
+// UTILITY CLASSES /////////////////////////////////////////////////////////////
+@include foundation-flex-classes;
+@include foundation-xy-grid-classes;
+@include foundation-float-classes;
+@include foundation-visibility-classes;
+
+// CONTROLS ////////////////////////////////////////////////////////////////////
+@include foundation-close-button;
+@include foundation-switch;
+@include foundation-badge;
+@include foundation-label;
+@include foundation-progress-bar;
+
+// NAVIGATION //////////////////////////////////////////////////////////////////
+@include foundation-menu;
+@include foundation-title-bar;
+@include foundation-menu-icon;
+@include foundation-pagination;
+@include foundation-breadcrumbs;
+
+// CONTAINERS //////////////////////////////////////////////////////////////
+@include foundation-card;

@@ -1,0 +1,102 @@
+{
+  "name": "ffront",
+  "version": "1.0.2",
+  "description": "Lightweight, performant, extensible front-end build system.",
+  "homepage": "https://jordanblakey.github.io/ffront/",
+  "repository": "git@github.com:jordanblakey/ffront.git",
+  "bugs": "https://github.com/jordanblakey/ffront/issues",
+  "main": "gulpfile.babel.js",
+  "scripts": {
+    "prestart": "node src/assets/js/lib/fx.js",
+    "postinstall": "node src/assets/js/lib/fx.js",
+    "start": "gulp",
+    "build": "gulp --production",
+    "test": "jest --coverage --verbose --notify --all"
+  },
+  "author": "Jordan Blakey",
+  "license": "CC0-1.0",
+  "dependencies": {
+    "@firebase/app-types": "^0.3.2",
+    "axios": "^0.17.1",
+    "clipboard": "^1.7.1",
+    "date-fns": "^1.29.0",
+    "ffjs": "^1.0.11",
+    "firebase": "^5.2.0",
+    "foundation-sites": "~6.4.1",
+    "lodash": "^4.17.4",
+    "nanobar": "^0.4.2",
+    "rellax": "^1.4.0",
+    "scrollreveal": "^3.3.6",
+    "what-input": "^5.0.3",
+    "zingtouch": "^1.0.5"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.18.13",
+    "chalk": "^2.3.0",
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-cli": "^1.4.0",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^4.0.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-uncss": "^1.0.6",
+    "imagemin-giflossy": "^5.1.10",
+    "imagemin-mozjpeg": "^6.0.0",
+    "imagemin-pngquant": "^5.0.1",
+    "jasmine-check": "^1.0.0-rc.0",
+    "jest": "^21.2.1",
+    "js-yaml": "^3.10.0",
+    "panini": "^1.5.1",
+    "prettier": "^1.9.2",
+    "rimraf": "^2.6.2",
+    "sfx": "^0.1.1",
+    "testcheck": "^1.0.0-rc.2",
+    "vinyl-named": "^1.1.0",
+    "webpack": "^3.10.0",
+    "webpack-stream": "^4.0.0"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "jest": {
+    "collectCoverage": false,
+    "testEnvironment": "jsdom",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!*.min.js",
+      "!src/**/lib/**/*.js",
+      "!src/**/helpers/**/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": -10
+      }
+    },
+    "coverageDirectory": "node_modules/coverage",
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json",
+      "ts",
+      "tsx"
+    ],
+    "verbose": false,
+    "automock": false,
+    "notify": false,
+    "onlyChanged": true
+  }
+}

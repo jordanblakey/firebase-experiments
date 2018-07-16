@@ -1,0 +1,40 @@
+// TOP BAR /////////////////////////////////////////////////////////////////////
+
+.top-bar {
+  background: $lighter-gray;
+
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  height: 3.5rem;
+
+  .logo {
+    height: 2rem;
+    margin: 0 24px 8px 0;
+
+    &:hover {
+      @extend %flame-on;
+    }
+  }
+
+  .log-in-status {
+    color: $medium-gray;
+    font-size: 14px;
+    margin-right: 4px;
+  }
+
+  .log-in.button {
+    margin: 0 0 0 4px;
+    color: $dark-gray;
+    background: $white;
+    font-size: 14px;
+
+    &:hover {
+      background: $alert-color;
+      color: $white;
+    }
+  }
+}

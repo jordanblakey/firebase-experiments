@@ -1,0 +1,53 @@
+# Your project's server will run on localhost:xxxx at these ports
+PORT: 4444 # Your project
+UIPORT: 7777 # Browsersync dashboad
+WPORT: 9999 # Weinre port for remote debugging
+
+# Autoprefixer will make sure your CSS works with these browsers
+COMPAT:
+  - "last 2 versions"
+  - "ie >= 9"
+  - "ios >= 7"
+
+# UnCSS will use these settings
+UNCSS_OPTIONS:
+  html:
+    - "src/**/*.html"
+  ignore:
+    - !!js/regexp .foundation-mq
+    - !!js/regexp ^\.is-.*
+    - !!js/regexp (.toolbar|.token|.comment)
+
+# Gulp will reference these paths when it copies files
+PATHS:
+  # Path to build folder
+  build: "public"
+  # Paths to static assets that aren't images, CSS, or JavaScript
+  assets:
+    - "src/assets/**/*"
+    - "!src/assets/{img,js,scss}"
+    - "!src/assets/{img,js,scss}/**/*"
+  root:
+    - "src/root/**/*"
+  # Paths to Sass libraries, which can then be loaded with @import
+  sass:
+    - "node_modules/foundation-sites/scss"
+    - "node_modules/motion-ui/src"
+  # Paths to JavaScript entry points for webpack to bundle modules
+  entries:
+    - "node_modules/babel-polyfill/dist/polyfill.js"
+    - "src/assets/js/app.js"
+    - "src/assets/js/utils.js"
+
+# Compression settings tuned to balance process time and file size
+IMAGEMIN:
+  pngquant:
+    'speed': 5
+  giflossy:
+    'optimizationLevel': 3
+    'optimize': 3
+    'lossy': 30
+    'colors': 256
+  mozjpeg:
+    - 'quality': 85
+    - 'fastcrush': true
