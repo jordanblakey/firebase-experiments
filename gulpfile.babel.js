@@ -126,7 +126,7 @@ function sass() {
     .pipe(plumber({ errorHandler: sassError }))
     .pipe(PLUGINS.sass({ includePaths: PATHS.sass }))
     .pipe(PLUGINS.autoprefixer({ browsers: COMPAT }))
-    .pipe(PLUGINS.if(PRODUCTION, PLUGINS.uncss(UNCSS_OPTIONS)))
+    // .pipe(PLUGINS.if(PRODUCTION, PLUGINS.uncss(UNCSS_OPTIONS)))
     .pipe(PLUGINS.if(PRODUCTION, PLUGINS.cleanCss({ compatibility: 'ie9' })))
     .pipe(gulp.dest(PATHS.build + '/assets/css'))
     .pipe(browser.reload({ stream: true }))
@@ -134,7 +134,7 @@ function sass() {
 
 // JS //////////////////////////////////////////////////////////////////////////
 const webpackConfig = {
-  devtool: PRODUCTION ? 'source-map' : 'source-map',
+  devtool: PRODUCTION ? 'eval' : 'source-map',
   module: {
     rules: [{
       exclude: [path.resolve(__dirname, 'node_modules')],

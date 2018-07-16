@@ -244,7 +244,7 @@ div.CodeMirror span.CodeMirror-matchingbracket {
 .cm-s-paper .cm-error,
 div.CodeMirror span.CodeMirror-nonmatchingbracket,
 .cm-invalidchar {
-  color: $alert-color;
+  color: $warning-color;
 }
 
 .CodeMirror-selected {

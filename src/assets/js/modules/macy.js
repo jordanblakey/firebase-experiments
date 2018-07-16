@@ -148,6 +148,8 @@ function initDragAndDrop() {
   function handleDragEnd(e) {
     // this e.target is the source node
     // console.log('Handle Drag End')
-    document.querySelectorAll('.macy-item.over').forEach(elm => elm.classList.remove('over'))
+    document
+      .querySelectorAll('.macy-item.over')
+      .forEach(elm => elm.classList.remove('over'))
   }
 }
