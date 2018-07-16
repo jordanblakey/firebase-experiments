@@ -1,5 +1,4 @@
 import './modules/firebase-init'
-
 import { getAuthStatus } from './modules/auth'
 import renderEditor from './components/editor'
 import renderSteganography from './components/steganography'
@@ -9,9 +8,11 @@ import {
   fileUploader
 } from './components/unfinished-features'
 import renderScorch from './components/scorch'
+import './modules/macy'
 
-import macy from './modules/macy'
-typeof macy !== undefined ? qs('#macy-container').style.columnCount = 'unset' : null
+// Just for testing
+window.Macy = Macy
+import Macy from 'macy'
 
 document.addEventListener('DOMContentLoaded', function() {
   getAuthStatus()
@@ -30,8 +31,6 @@ document.log = log => console.log(log)
 ////////////////////////////////////////////////////////////////////////////////
 
 export function renderPage() {
-  // let pageContent = document.querySelector('#pageContent')
-
   let body = document.querySelector('body')
   body.insertAdjacentHTML('afterbegin', '<div id="splash"></div>')
 

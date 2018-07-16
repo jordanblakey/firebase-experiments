@@ -2,13 +2,10 @@
 @import './foundation/foundation-sites';
 @include add-foundation-colors;
 
-// @import './utils/layout_mode';
-// @import './utils/prism';
-
-////////////////////////////////////////////////////////////////////////////////
-// @import './partials/steganography';
-// @import './partials/scorched-button';
-// @import './partials/splashscreen';
+// TEMP ////////////////////////////////////////////////////////////////////////
+// @import './temp/steganography';
+// @import './temp/scorched-button';
+// @import './temp/splashscreen';
 
 ////////////////////////////////////////////////////////////////////////////////
 // COMPONENTS
@@ -16,12 +13,16 @@
 @import './components/login-panel';
 @import './components/top-bar';
 @import './components/editor';
-@import './components/tooltip';
-@import './components/note';
+@import './components/macy';
 
 ////////////////////////////////////////////////////////////////////////////////
 // GLOBAL
 ////////////////////////////////////////////////////////////////////////////////
+// @import './global/layout_mode';
+// @import './global/prism';
+@import './global/animation';
+@import './global/tooltip';
+
 
 // TYPOGRAPHY //////////////////////////////////////////////////////////////////
 body {
