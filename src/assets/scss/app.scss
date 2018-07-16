@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:00,600,700|Source+Serif+Pro:400,700');
+@import './foundation/foundation-sites';
+@include add-foundation-colors;
+
+// @import './utils/layout_mode';
+// @import './utils/prism';
+
+////////////////////////////////////////////////////////////////////////////////
+
+// @import './partials/steganography';
+// @import './partials/interim';
+// @import './partials/scorched-button';
+// @import './partials/splashscreen';
+
+
+////////////////////////////////////////////////////////////////////////////////
+// COMPONENTS
+////////////////////////////////////////////////////////////////////////////////
+@import './components/login-panel';
+@import './components/top-bar';
+@import './components/editor';
+@import './components/masonry-grid';
+
+
+////////////////////////////////////////////////////////////////////////////////
+// GLOBAL
+////////////////////////////////////////////////////////////////////////////////
+
+// TYPOGRAPHY //////////////////////////////////////////////////////////////////
+body {
+  background: #f8f8f8;
+}
+
+a {
+  color: $warning-color;
+
+  &:hover {
+    transition: color .1s ease-in-out;
+    color: $alert-color !important;
+  }
+}
+
+::selection {
+  background: $light-gray;
+}
+
+code, kbd {
+  border: 0;
+  font-size: 14px;
+  font-family: 'Roboto Mono', monospace;
+  padding: 4px 8px;
+  margin: 0 4px;
+}
+
+dl dt {
+  margin-bottom: 0;
+}
+
+dd {
+  margin-bottom: 1rem;
+}
+
+// BADGES, LABELS, PROGRESS ////////////////////////////////////////////////////
+.label {
+  font-size: 1rem;
+  padding: 8px 12px 7px;
+
+  i {
+    margin: 2px 4px 2px 0;
+    display: inline-block;
+    font-size: 1.2rem;
+  }
+}
+
+span.badge {
+  @extend .label;
+  margin: 0 4px;
+  padding: 8px 16px 8px 16px;
+  border-radius: 10rem;
+  font-size: 14px;
+
+  &.secondary {
+    background-color: $lighter-gray;
+    color: $medium-gray;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.progress, .progress-meter {
+  border-radius: 10rem;
+  height: 6px;
+}
+
+// CALLOUT /////////////////////////////////////////////////////////////////////
+
+h4, h5, h6 {
+  font-weight: 700;
+  color: $dark-gray
+}
+
+.callout {
+  border: 0;
+  padding: 2rem;
+  background-color: #e8e8e8;
+  color: #444;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+  &.alert {
+    background: $alert-color;
+    h4, h5, h6, p {
+      color: $white;
+    }
+    a {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+
+  &.success {
+    @extend .alert;
+    background: $success-color;
+  }
+  &.warning {
+    @extend .alert;
+    background: $warning-color;
+  }
+}
+
+// BUTTONS /////////////////////////////////////////////////////////////////////
+a.button, .button-group a.button, button.button, .button-group button.button {
+  margin: 0 4px;
+  padding: 8px 16px 6px 16px;
+  border-radius: $global-radius;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all .1s ease-in-out !important;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.secondary {
+    background: $white;
+    color: $medium-gray;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  }
+
+  &.alert {
+    color: $white;
+  }
+
+  &:hover {
+    background: $alert-color;
+    color: $white;
+  }
+}

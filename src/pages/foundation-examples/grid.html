@@ -1,0 +1,364 @@
+---
+layout: default
+title: Grid Examples
+---
+
+<style>
+  .grid-container,
+  .container {
+    background: #ddd !important;
+    border: 1px solid #bbb;
+    background-clip: content-box !important;
+    font-family: 'Source Code Pro';
+    font-size: .85rem;
+  }
+
+  .grid-x,
+  .grid-y,
+  .row {
+    background: #eee !important;
+  }
+
+  .cell,
+  .columns {
+    background: #f6f6f6 !important;
+    background-clip: content-box !important;
+  }
+</style>
+
+{{> top-bar}}
+
+<div class="container">
+  .container
+  <div class="row">
+    .row
+    <div class="columns small-6">
+      .columns.small-6
+    </div>
+  </div>
+</div>
+
+<div class="grid-container full">
+  .grid-container.full
+  <div class="grid-x">
+    .grid-x
+    <div class="cell">
+      .cell
+    </div>
+  </div>
+</div>
+
+<div class="grid-container fluid">
+  .grid-container.fluid
+  <div class="grid-x">
+    .grid-x
+    <div class="cell">
+      .cell
+    </div>
+  </div>
+</div>
+
+<div class="grid-container">
+  .grid-container > .grid-x
+  <div class="grid-x">
+    <div class="cell small-6">
+      .cell.small-6
+    </div>
+    <div class="cell small-6">
+      .cell.small-6
+    </div>
+  </div>
+</div>
+
+
+<div class="grid-container">
+  .grid-container > .grid-x.grid-margin-x
+  <div class="grid-x grid-margin-x">
+    <div class="cell small-6">
+      .cell.small-6
+    </div>
+    <div class="cell small-6">
+      .cell.small-6
+    </div>
+  </div>
+
+
+  <div class="container">
+    .container
+    <div class="row">
+      .row
+      <div class="columns medium-6">.columns.medium-6</div>
+    </div>
+  </div>
+
+
+  .grid-x
+  <div class="grid-x">
+    <div class="cell">.cell</div>
+    <div class="cell">.cell</div>
+  </div>
+
+  .grid-x
+  <div class="grid-x">
+    <div class="small-6 cell">.small-6.cell</div>
+    <div class="small-6 cell">.small-6.cell</div>
+  </div>
+
+  .grid-x
+  <div class="grid-x">
+    <div class="medium-6 large-4 cell">.medium-6.large-4.cell</div>
+    <div class="medium-6 large-8 cell">.medium-6.large-8.cell</div>
+  </div>
+
+ .grid-padding-x
+  <div class="grid-x grid-padding-x">
+    <div class="medium-6 large-4 cell">.medium-6.large-4.cell</div>
+    <div class="medium-6 large-8 cell">.medium-6.large-8.cell</div>
+  </div>
+
+ .grid-margin-x
+  <div class="grid-x grid-margin-x">
+    <div class="medium-6 large-4 cell">medium-6.large-4.cell</div>
+    <div class="medium-6 large-8 cell">medium-6.large-8.cell</div>
+  </div>
+  <div class="grid-container">
+    .grid-container > .grid-x.grid-margin-x
+    <div class="grid-x grid-margin-x">
+      <div class="cell small-4">.cell.small-4</div>
+      <div class="cell small-4">.cell.small-4</div>
+      <div class="cell small-4">.cell.small-4</div>
+    </div>
+  </div>
+
+  <div class="grid-container fluid">
+    .grid-container.fluid > .grid-x.grid-margin-x
+    <div class="grid-x grid-margin-x">
+      <div class="cell small-4">.cell.small-4</div>
+      <div class="cell small-4">.cell.small-4</div>
+      <div class="cell small-4">.cell.small-4</div>
+    </div>
+  </div>
+  <div class="grid-container full">
+    .grid-container.full
+    <div class="grid-x grid-margin-x">
+      <div class="cell small-4">.cell.small-4</div>
+      <div class="cell small-4">.cell.small-4</div>
+      <div class="cell small-4">.cell.small-4</div>
+    </div>
+  </div>
+  .grid-x
+  <div class="grid-x grid-margin-x">
+    <div class="small-4 cell">small-4 cell</div>
+    <div class="auto cell">auto cell (flex-grow)</div>
+  </div>
+  .grid-x
+  <div class="grid-x grid-margin-x">
+    <div class="small-4 cell">small-4 cell</div>
+    <div class="auto cell">auto cell</div>
+    <div class="auto cell">auto cell</div>
+  </div>
+  .grid-x
+  <div class="grid-x grid-margin-x">
+    <div class="shrink cell">shrink cell</div>
+    <div class="auto cell">auto cell</div>
+  </div>
+  .grid-x
+  <div class="grid-x">
+    <div class="large-auto small-2 cell">large-auto small-2 cell</div>
+    <div class="large-shrink small-2 cell">large-shrink small-2 cell</div>
+    <div class="large-auto small-2 cell">large-auto small-2 cell</div>
+    <div class="large-shrink small-2 cell">large-shrink small-2 cell</div>
+    <div class="large-auto small-2 cell">large-auto small-2 cell</div>
+    <div class="large-shrink small-2 cell">large-shrink small-2 cell</div>
+  </div>
+  .grid-x.grid-margin-x.medium-margin-collapse
+  <div class="grid-x grid-margin-x medium-margin-collapse">
+    <div class="small-6 cell">
+      Gutters at small no gutters at medium.
+    </div>
+    <div class="small-6 cell">
+      Gutters at small no gutters at medium.
+    </div>
+  </div>
+  .grid-x.grid-margin-x
+  <div class="grid-x grid-margin-x">
+    <div class="small-4 large-offset-2 cell">Cell</div>
+    <div class="small-4 large-offset-2 cell">Cell</div>
+  </div>
+  .grid-x.grid-padding-x.small-up-2.medium-up-3.large-up-6
+  <div class="grid-x grid-padding-x small-up-2 medium-up-3 large-up-6">
+    <div class="cell">.cell</div>
+    <div class="cell">.cell</div>
+    <div class="cell">.cell</div>
+    <div class="cell">.cell</div>
+    <div class="cell">.cell</div>
+    <div class="cell">.cell</div>
+  </div>
+  grid-y
+  <div class="grid-x">
+    <div class="grid-y cell small-6" style="height: 200px;">
+      <div class="cell small-6 medium-8 large-2">
+        6/8/2
+      </div>
+      <div class="cell small-6 medium-4 large-10">
+        6/4/10
+      </div>
+    </div>
+  </div>
+
+
+  <div class="grid-container">
+    <div class="row">
+      <h3>Flexbox Classes
+        <small>(alignment helpers)</small>
+      </h3>
+    </div>
+  </div>
+  .grid-x
+  <div class="grid-x grid-padding-x">
+    <!-- Aligned to the left -->
+    <div class="cell small-4">Aligned to</div>
+    <div class="cell small-4">the left</div>
+  </div>
+  .grid-x.align-right
+  <div class="grid-x grid-padding-x align-right">
+    <!-- Aligned to the right -->
+    <div class="cell small-4">Aligned to</div>
+    <div class="cell small-4">the right</div>
+  </div>
+  .grid-x.align-center
+  <div class="grid-x grid-padding-x align-center">
+    <!-- Aligned to the center -->
+    <div class="cell small-4">Aligned to</div>
+    <div class="cell small-4">the center</div>
+  </div>
+  .grid-x.align-justify
+  <div class="grid-x grid-padding-x align-justify">
+    <!-- Aligned to the edges -->
+    <div class="cell small-4">Aligned to</div>
+    <div class="cell small-4">the edges</div>
+  </div>
+  .grid-x.align-spaced
+  <div class="grid-x grid-padding-x align-spaced">
+    <!-- Aligned to the space around -->
+    <div class="cell small-4">Aligned to</div>
+    <div class="cell small-4">the space around</div>
+  </div>
+  .grid-x.align-top
+  <div class="grid-x grid-padding-x align-top">
+    <div class="cell small-4">I'm at the top (default)</div>
+    <div class="cell small-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, tempora. Impedit eius officia possimus laudantium?</div>
+  </div>
+  .grid-x.align-middle
+  <div class="grid-x grid-padding-x align-middle">
+    <div class="cell small-4">I'm in the middle</div>
+    <div class="cell small-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, tempora. Impedit eius officia possimus laudantium?</div>
+  </div>
+  .grid-x.align-bottom
+  <div class="grid-x grid-padding-x align-bottom">
+    <div class="cell small-4">I'm at the bottom</div>
+    <div class="cell small-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, tempora. Impedit eius officia possimus laudantium?</div>
+  </div>
+  .grid-x.align-center-middle.text-center
+  <div class="grid-x grid-padding-x align-center-middle text-center" style="height: 100px;">
+    <div class="cell small-4">I am in the center-middle</div>
+    <div class="cell small-4">I am also centrally located</div>
+  </div>
+  .callout.clearfix > .button.float-left + .button.float-right
+  <div class="callout clearfix">
+    <a class="button float-left">Left</a>
+    <a class="button float-right">Right</a>
+  </div>
+  <div class="small-6 cell">
+      Gutters at small no gutters at medium.
+  </div>
+  .grid-x.grid-margin-x
+  <div class="grid-x grid-margin-x">
+    <div class="small-4 large-offset-2 cell">Cell</div>
+    <div class="small-4 large-offset-2 cell">Cell</div>
+  </div>
+  .grid-x.grid-padding-x.small-up-2.medium-up-3.large-up-6
+  <div class="grid-x grid-padding-x small-up-2 medium-up-3 large-up-6">
+    <div class="cell">.cell</div>
+    <div class="cell">.cell</div>
+    <div class="cell">.cell</div>
+    <div class="cell">.cell</div>
+    <div class="cell">.cell</div>
+    <div class="cell">.cell</div>
+  </div>
+  .grid-y
+  <div class="grid-x">
+    <div class="grid-y cell small-6" style="height: 200px;">
+      <div class="cell small-6 medium-8 large-2">
+        6/8/2
+      </div>
+      <div class="cell small-6 medium-4 large-10">
+        6/4/10
+      </div>
+    </div>
+  </div>
+
+
+  <div class="grid-container">
+    <div class="row">
+      <h3>Flexbox Classes
+        <small>(alignment helpers)</small>
+      </h3>
+    </div>
+  </div>
+  .grid-x
+  <div class="grid-x grid-padding-x">
+    <!-- Aligned to the left -->
+    <div class="cell small-4">Aligned to</div>
+    <div class="cell small-4">the left</div>
+  </div>
+  .grid-x.align-right
+  <div class="grid-x grid-padding-x align-right">
+    <!-- Aligned to the right -->
+    <div class="cell small-4">Aligned to</div>
+    <div class="cell small-4">the right</div>
+  </div>
+  .grid-x.align-center
+  <div class="grid-x grid-padding-x align-center">
+    <!-- Aligned to the center -->
+    <div class="cell small-4">Aligned to</div>
+    <div class="cell small-4">the center</div>
+  </div>
+  .grid-x.align-justify
+  <div class="grid-x grid-padding-x align-justify">
+    <!-- Aligned to the edges -->
+    <div class="cell small-4">Aligned to</div>
+    <div class="cell small-4">the edges</div>
+  </div>
+  .grid-x.align-spaced
+  <div class="grid-x grid-padding-x align-spaced">
+    <!-- Aligned to the space around -->
+    <div class="cell small-4">Aligned to</div>
+    <div class="cell small-4">the space around</div>
+  </div>
+  .grid-x.align-top
+  <div class="grid-x grid-padding-x align-top">
+    <div class="cell small-4">I'm at the top (default)</div>
+    <div class="cell small-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, tempora. Impedit eius officia possimus laudantium?</div>
+  </div>
+  .grid-x.align-middle
+  <div class="grid-x grid-padding-x align-middle">
+    <div class="cell small-4">I'm in the middle</div>
+    <div class="cell small-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, tempora. Impedit eius officia possimus laudantium?</div>
+  </div>
+  .grid-x.align-bottom
+  <div class="grid-x grid-padding-x align-bottom">
+    <div class="cell small-4">I'm at the bottom</div>
+    <div class="cell small-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, tempora. Impedit eius officia possimus laudantium?</div>
+  </div>
+  .grid-x.align-center-middle.text-center
+  <div class="grid-x grid-padding-x align-center-middle text-center" style="height: 100px;">
+    <div class="cell small-4">I am in the center-middle</div>
+    <div class="cell small-4">I am also centrally located</div>
+  </div>
+  .callout.clearfix > .button .float-left > .button float-right
+  <div class="callout clearfix">
+    <a class="button float-left">Left</a>
+    <a class="button float-right">Right</a>
+  </div>
+</div>

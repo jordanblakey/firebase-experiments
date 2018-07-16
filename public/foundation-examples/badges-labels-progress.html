@@ -1,0 +1,149 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Badges, Labels, &amp; Progress</title>
+
+  <!-- EDITOR -->
+  <link defer rel="stylesheet" href="//cdn.jsdelivr.net/editor/0.1.0/editor.css">
+  <script defer src="//cdn.jsdelivr.net/editor/0.1.0/editor.js"></script>
+  <script defer src="//cdn.jsdelivr.net/editor/0.1.0/marked.js"></script>
+
+  <!-- STYLE -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,600" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300, 500, 700" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/app.css" />
+
+  <!-- ICONS -->
+  <link defer rel="shortcut icon" href="../assets/icon/favicon.ico">
+  <link defer rel="apple-touch-icon" sizes="180x180" href="../assets/icon/apple-touch-icon.png">
+  <link defer rel="icon" type="image/png" sizes="32x32" href="../assets/icon/favicon-32x32.png">
+  <link defer rel="icon" type="image/png" sizes="16x16" href="../assets/icon/favicon-16x16.png">
+  <link defer rel="manifest" href="site.webmanifest">
+  <link defer rel="mask-icon" href="../assets/icon/safari-pinned-tab.svg" color="#c4c4c4">
+  <meta name="msapplication-TileColor" content="#c4c4c4">
+  <meta name="theme-color" content="#e5e5e5">
+
+
+  <script>
+    // If visitor doesn't have a user and token, bounce them to the home page.
+    let user = sessionStorage.getItem('user')
+    let token = sessionStorage.getItem('token')
+    if ((typeof user === "undefined" || user === null) || sessionStorage.getItem('token') === null) {
+      let href = window.location.href
+      href = href.substring(0, href.length - 1)
+      href === window.location.origin ? null : window.location.href = '/'
+    }
+  </script>
+
+
+</head>
+
+<body>
+
+  
+  <header class="grid-container-full">
+    <div class="grid-x grid-padding-x top-bar align-middle">
+      <div class="cell">
+        <a href="../">
+          <img class="logo" src="../assets/img/logo-scorched-dark.svg">
+        </a>
+        <span class="log-in-status">Logged out</span>
+        <button class="log-in button secondary">Log In</button>
+      </div>
+    </div>
+  </header>
+  
+  
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x">
+  
+      <div class="cell callout">
+        <h4>Text .badge</h4>
+        <p>
+          <span class="badge primary">1</span> Unread Primary &nbsp;&nbsp;
+          <span class="badge secondary">2</span> Unread Secondary &nbsp;&nbsp;
+          <span class="badge success"><b>3</b></span> Unread Success &nbsp;&nbsp;
+          <span class="badge alert">A</span> Unread Alert &nbsp;&nbsp;
+          <span class="badge warning">B</span> Unread Warning
+        </p>
+      </div>
+  
+      <div class="cell callout">
+        <h4>Icon .badge</h4>
+        <p>
+          Share <span class="badge secondary"><i class="fi-share"></i></span> &nbsp;&nbsp;
+          Success <span class="badge success"><i class="fi-check"></i></span> &nbsp;&nbsp;
+          Warning <span class="badge warning"><i class="fi-wrench"></i></span>
+        </p>
+      </div>
+  
+      <div class="cell callout">
+        <h4>Text .label</h4>
+        <span class="label">Default Label</span>
+        <span class="label primary">Primary Label</span>
+        <span class="label secondary">Secondary Label</span>
+        <span class="label success">Success Label</span>
+        <span class="label alert">Alert Label</span>
+        <span class="label warning">Warning Label</span>
+      </div>
+  
+      <div class="cell callout">
+        <h4>Icon .label</h4>
+        <span class="label alert"><i class="fi-x-circle"></i>Alert Label</span>
+        <span class="label warning"><i class="fi-x"></i>Warning Label</span>
+        <span class="label info"><i class="fi-widget"></i>Info Label</span>
+      </div>
+  
+      <div class="cell callout">
+        <h4>.progress Bar</h4>
+        <div class="progress" role="progressbar" tabindex="0" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-meter"></div>
+        </div>
+  
+        <div class="progress" role="progressbar" tabindex="0" aria-valuenow="50" aria-valuemin="0" aria-valuetext="50 percent" aria-valuemax="100">
+          <div class="progress-meter" style="width: 50%"></div>
+        </div>
+  
+        <div class="secondary progress" role="progressbar" tabindex="0" aria-valuenow="25" aria-valuemin="0" aria-valuetext="25 percent"
+          aria-valuemax="100">
+          <div class="progress-meter" style="width: 25%"></div>
+        </div>
+  
+        <div class="success progress">
+          <div class="progress-meter" style="width: 50%"></div>
+        </div>
+  
+        <div class="warning progress">
+          <div class="progress-meter" style="width: 50%"></div>
+        </div>
+  
+        <div class="alert progress">
+          <div class="progress-meter" style="width: 75%"></div>
+        </div>
+  
+        <div class="progress" role="progressbar" tabindex="0" aria-valuenow="20" aria-valuemin="0" aria-valuetext="25 percent" aria-valuemax="100">
+          <span class="progress-meter" style="width: 25%">
+            <p class="progress-meter-text">25%</p>
+          </span>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+  
+  
+  
+  
+  
+
+  <script defer src="../assets/js/polyfill.js"></script>
+  <script defer src="../assets/js/utils.js"></script>
+  <script defer src="../assets/js/app.js"></script>
+
+</body>
+
+</html>

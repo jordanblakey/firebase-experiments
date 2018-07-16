@@ -1,0 +1,139 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scorched: Secure, Portable Notes</title>
+
+  <!-- EDITOR -->
+  <link defer rel="stylesheet" href="//cdn.jsdelivr.net/editor/0.1.0/editor.css">
+  <script defer src="//cdn.jsdelivr.net/editor/0.1.0/editor.js"></script>
+  <script defer src="//cdn.jsdelivr.net/editor/0.1.0/marked.js"></script>
+
+  <!-- STYLE -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,600" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300, 500, 700" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/app.css" />
+
+  <!-- ICONS -->
+  <link defer rel="shortcut icon" href="../assets/icon/favicon.ico">
+  <link defer rel="apple-touch-icon" sizes="180x180" href="../assets/icon/apple-touch-icon.png">
+  <link defer rel="icon" type="image/png" sizes="32x32" href="../assets/icon/favicon-32x32.png">
+  <link defer rel="icon" type="image/png" sizes="16x16" href="../assets/icon/favicon-16x16.png">
+  <link defer rel="manifest" href="site.webmanifest">
+  <link defer rel="mask-icon" href="../assets/icon/safari-pinned-tab.svg" color="#c4c4c4">
+  <meta name="msapplication-TileColor" content="#c4c4c4">
+  <meta name="theme-color" content="#e5e5e5">
+
+
+  <script>
+    // If visitor doesn't have a user and token, bounce them to the home page.
+    let user = sessionStorage.getItem('user')
+    let token = sessionStorage.getItem('token')
+    if ((typeof user === "undefined" || user === null) || sessionStorage.getItem('token') === null) {
+      let href = window.location.href
+      href = href.substring(0, href.length - 1)
+      href === window.location.origin ? null : window.location.href = '/'
+    }
+  </script>
+
+
+</head>
+
+<body>
+
+  
+  <header class="grid-container-full">
+    <div class="grid-x grid-padding-x top-bar align-middle">
+      <div class="cell">
+        <span class="log-in-status">Logged out</span>
+        <button class="log-in button secondary">Log In</button>
+      </div>
+    </div>
+  </header>
+  
+  
+  <div id="authStatus"></div>
+  
+  <div id="editorContainer"></div>
+  
+  <div id="page">
+  
+    <div id="pageContent">
+      <div id="message">
+        <img id="logo" src="assets/img/logo-scorched.svg">
+        <h1>Secure, Portable Notes.</h1>
+        <p>Currently in pre-alpha.
+          <br> Built with Firebase and React Native.
+          <br> For web, Android, and iOS.</p>
+        <h4>Builds</h4>
+        <ul>
+          <li>Web:
+            <a href="app">scorched.site/app</a>
+          </li>
+          <li> Android:
+            <a href="https://firebasestorage.googleapis.com/v0/b/native-notes-2b16e.appspot.com/o/scorched-0.0.2.apk?alt=media&token=4c4ec683-a415-4ce5-9746-ede7b42d2532">scorched-0.0.2.apk</a>
+          </li>
+          <li> iOS:
+            <a href="#">Coming soon</a>
+          </li>
+          <li>Source:
+            <a href="https://github.com/jordanblakey/scorched-site">Github</a>
+          </li>
+        </ul>
+      </div>
+      <p id="load">Firebase SDK Loading&hellip;</p>
+    </div>
+  
+    <div id="noteContainer"></div>
+  
+    <div id="stegoContainer"></div>
+  
+    <div id="extrasContainer"></div>
+  
+  
+  </div>
+  <!--  -->
+  
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x">
+      <div class="cell medium-6">
+  
+      </div>
+  
+      <div class="cell medium-6">
+  
+        <div class="callout">
+          <h2 class="h5">Foundation Examples</h2>
+          <p>
+            <small>
+              Foundation 6 For Sites is included for quick layout.
+              <br> To see what's possible, take a look at these examples:
+              <br>
+              <a href="../foundation-examples/grid.html">Grid</a> |
+              <a href="../foundation-examples/form.html">Forms</a> |
+              <a href="../foundation-examples/typography.html">Type</a> |
+              <a href="../foundation-examples/containers.html">Containers</a> |
+              <a href="../foundation-examples/navigation.html">Navigation</a> |
+              <a href="../foundation-examples/buttons.html">Buttons</a> |
+              <a href="../foundation-examples/badges-labels-progress.html">Badges, Labels, &amp; Progress</a> |
+              <a href="../foundation-examples/icons.html">Icons</a> |
+              <a href="../foundation-examples/visibility-classes.html">Visibility</a>
+            </small>
+          </p>
+        </div>
+  
+      </div>
+  
+    </div>
+  </div>
+
+  <script defer src="../assets/js/polyfill.js"></script>
+  <script defer src="../assets/js/utils.js"></script>
+  <script defer src="../assets/js/app.js"></script>
+
+</body>
+
+</html>

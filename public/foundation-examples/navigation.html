@@ -1,0 +1,248 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation Examples</title>
+
+  <!-- EDITOR -->
+  <link defer rel="stylesheet" href="//cdn.jsdelivr.net/editor/0.1.0/editor.css">
+  <script defer src="//cdn.jsdelivr.net/editor/0.1.0/editor.js"></script>
+  <script defer src="//cdn.jsdelivr.net/editor/0.1.0/marked.js"></script>
+
+  <!-- STYLE -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,600" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300, 500, 700" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/app.css" />
+
+  <!-- ICONS -->
+  <link defer rel="shortcut icon" href="../assets/icon/favicon.ico">
+  <link defer rel="apple-touch-icon" sizes="180x180" href="../assets/icon/apple-touch-icon.png">
+  <link defer rel="icon" type="image/png" sizes="32x32" href="../assets/icon/favicon-32x32.png">
+  <link defer rel="icon" type="image/png" sizes="16x16" href="../assets/icon/favicon-16x16.png">
+  <link defer rel="manifest" href="site.webmanifest">
+  <link defer rel="mask-icon" href="../assets/icon/safari-pinned-tab.svg" color="#c4c4c4">
+  <meta name="msapplication-TileColor" content="#c4c4c4">
+  <meta name="theme-color" content="#e5e5e5">
+
+
+  <script>
+    // If visitor doesn't have a user and token, bounce them to the home page.
+    let user = sessionStorage.getItem('user')
+    let token = sessionStorage.getItem('token')
+    if ((typeof user === "undefined" || user === null) || sessionStorage.getItem('token') === null) {
+      let href = window.location.href
+      href = href.substring(0, href.length - 1)
+      href === window.location.origin ? null : window.location.href = '/'
+    }
+  </script>
+
+
+</head>
+
+<body>
+
+  
+  <header class="grid-container-full">
+    <div class="grid-x grid-padding-x top-bar align-middle">
+      <div class="cell">
+        <a href="../">
+          <img class="logo" src="../assets/img/logo-scorched-dark.svg">
+        </a>
+        <span class="log-in-status">Logged out</span>
+        <button class="log-in button secondary">Log In</button>
+      </div>
+    </div>
+  </header>
+  
+  
+  <div class="grid-container">
+    <div class="grid-x grid-margin-x">
+      <div class="cell shrink callout">
+        <h4>ul.menu</h4>
+        <ul class="menu">
+          <li><a href="#">One</a></li>
+          <li><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+          <li><a href="#">Four</a></li>
+        </ul>
+  
+      </div>
+  
+      <div class="cell shrink callout">
+        <h4>ul.menu.align-right</h4>
+        <ul class="menu align-right">
+          <li><a href="#">One</a></li>
+          <li><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+          <li><a href="#">Four</a></li>
+        </ul>
+      </div>
+  
+      <div class="cell shrink callout">
+        <h4>ul.menu.expanded</h4>
+        <ul class="menu expanded">
+          <li><a href="#">One</a></li>
+          <li><a href="#">Two</a></li>
+        </ul>
+      </div>
+  
+      <div class="cell shrink callout">
+        <h4>.vertical.menu</h4>
+        <ul class="vertical menu">
+          <li><a href="#">One</a></li>
+          <li><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+          <li><a href="#">Four</a></li>
+        </ul>
+      </div>
+  
+      <div class="cell shrink callout">
+        <h4>.vertical.menu.align-right</h4>
+        <ul class="vertical menu align-right">
+          <li><a href="#">One</a></li>
+          <li><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+          <li><a href="#">Four</a></li>
+        </ul>
+      </div>
+  
+      <div class="cell shrink callout">
+        <h4>.vertical.menu.align-center</h4>
+        <ul class="vertical menu align-center">
+          <li><a href="#">One</a></li>
+          <li><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+          <li><a href="#">Four</a></li>
+        </ul>
+      </div>
+  
+      <div class="cell shrink callout">
+        <h4>.menu.simple</h4>
+        <ul class="menu simple">
+          <li>One</li>
+          <li><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+          <li><a href="#">Four</a></li>
+        </ul>
+      </div>
+  
+      <div class="cell shrink callout">
+        <h4>ul.vertical.menu, ul.nested.vertical.menu</h4>
+        <ul class="vertical menu">
+          <li><a href="#">One</a><ul class="nested vertical menu">
+              <li><a href="#">One</a></li>
+              <li><a href="#">Two</a></li>
+              <li><a href="#">Three</a></li>
+              <li><a href="#">Four</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+          <li><a href="#">Four</a></li>
+        </ul>
+      </div>
+  
+      <div class="cell shrink callout">
+        <h4>ul.menu, li.is-active</h4>
+        <ul class="menu">
+          <li class="is-active">
+            <a>Home</a>
+          </li>
+          <li><a>About</a></li>
+          <li><a>Nachos</a></li>
+        </ul>
+      </div>
+  
+      <div class="cell shrink callout">
+        <h4>ul.menu, li.menu-text (no &lt;a&gt; tag)</h4>
+        <ul class="menu">
+          <li class="menu-text">Site Title</li>
+          <li><a href="#">One</a></li>
+          <li><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+        </ul>
+      </div>
+  
+      <div class="cell shrink callout">
+        <h4>i.fi-list</h4>
+        <ul class="menu">
+          <li><a href="#"><i class="fi-list"></i><span>One</span></a></li>
+          <li><a href="#"><i class="fi-list"></i><span>Two</span></a></li>
+          <li><a href="#"><i class="fi-list"></i><span>Three</span></a></li>
+          <li><a href="#"><i class="fi-list"></i><span>Four</span></a></li>
+        </ul>
+      </div>
+  
+      <div class="cell shrink callout">
+        <h4>ul.menu.icons.icon-top</h4>
+        <ul class="menu icons icon-top">
+          <li><a href="#"><i class="fi-list"></i><span>One</span></a></li>
+          <li><a href="#"><i class="fi-list"></i><span>Two</span></a></li>
+          <li><a href="#"><i class="fi-list"></i><span>Three</span></a></li>
+          <li><a href="#"><i class="fi-list"></i><span>Four</span></a></li>
+        </ul>
+      </div>
+  
+      <div class="cell shrink callout">
+        <h4>ul.menu.icons.icon-right</h4>
+        <ul class="menu icons icon-right">
+          <li><a href="#"><span>One</span>
+              <i class="fi-list"></i></a></li><li><a href="#"><span>Two</span>
+              <i class="fi-list"></i></a></li><li><a href="#"><span>Three</span>
+              <i class="fi-list"></i></a></li><li><a href="#"><span>Four</span>
+              <i class="fi-list"></i></a></li></ul>
+      </div>
+  
+      <div class="cell shrink callout">
+        <h4>ul.menu.icons.icon-bottom</h4>
+        <ul class="menu icons icon-bottom">
+          <li><a href="#"><span>One</span>
+              <i class="fi-list"></i></a></li><li><a href="#"><span>Two</span>
+              <i class="fi-list"></i></a></li><li><a href="#"><span>Three</span>
+              <i class="fi-list"></i></a></li><li><a href="#"><span>Four</span>
+              <i class="fi-list"></i></a></li></ul>
+      </div>
+  
+      <div class="cell shrink callout">
+        <h4>ul.menu.icons.icon-left </h4>
+        <ul class="menu icons icon-left">
+          <li><a href="#"><i class="fi-list"></i><span>One</span></a></li>
+          <li><a href="#"><i class="fi-list"></i><span>Two</span></a></li>
+          <li><a href="#"><i class="fi-list"></i><span>Three</span></a></li>
+          <li><a href="#"><i class="fi-list"></i><span>Four</span></a></li>
+        </ul>
+      </div>
+  
+    </div>
+    <div class="grid-container">
+      <div class="grid-x">
+        <div class="cell shrink callout">
+          <div class="top-bar">
+            <div class="top-bar-left">
+              <ul class="menu float-left">
+                <li class="menu-text">Site Title</li>
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+              </ul>
+              <ul class="menu float-right">
+                <li><input type="search" placeholder="Search"></li>
+                <li><button type="button" class="button">Search</button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script defer src="../assets/js/polyfill.js"></script>
+  <script defer src="../assets/js/utils.js"></script>
+  <script defer src="../assets/js/app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+// BREAKPOINT INDICATORS ///////////////////////////////////////////////////////
+html {
+  &:before {
+    font-family: 'Helvetica Neue', Helvetica, Roboto, sans-serif;
+    color: white;
+    font-weight: bold;
+    display: block;
+    padding: 0.5em 1em;
+    position:fixed;
+    z-index: 1;
+    opacity: .8
+  }
+
+  @include breakpoint(small only) {
+    &:before {
+      content: 'Small/Mobile: less than 40em';
+      background: #f85959;
+      background: rgb(248,89,89);
+    }
+    .cell {
+      border: 1px solid rgb(248,89,89);
+      border-color: rgb(248,89,89) !important;
+      border-style: solid !important;
+    }
+    div, p, h1, h2, h3, h4, h5, h6, pre, ol, ul, blockquote, dl, fieldset, form, hr, table {
+      border: 1px dashed rgba(248,89,89, .4);
+      border-color: rgba(248,89,89, .4) !important;
+      background: rgba(248,89,89, .06) !important;
+      background-clip: content-box !important;
+    }
+    a, span, small, code, button, i, img, input, label, select, small, strong, sub, sup, textarea {
+      border: 1px dotted rgba(248,89,89, .4);
+      border-color: rgba(248,89,89, .4) !important;
+      background: rgba(248,89,89, .1) !important;
+      background-clip: content-box !important;
+    }
+  }
+
+  @include breakpoint(medium only) {
+    &:before {
+      content: 'Medium/Tablet: greater than 40em';
+      background: rgb(152,112,252);
+    }
+    .cell {
+      border: 1px solid rgb(152,112,252);
+      border-color: rgb(152,112,252) !important;
+      border-style: solid !important;
+    }
+    div, p, h1, h2, h3, h4, h5, h6, pre, ol, ul, blockquote, dl, fieldset, form, hr, table {
+      border: 1px dashed rgba(152,112,252, .4);
+      border-color: rgba(152,112,252, .4) !important;
+      background: rgba(152,112,252, .06) !important;
+      background-clip: content-box !important;
+    }
+    a, span, small, code, button, i, img, input, label, select, small, strong, sub, sup, textarea {
+      border: 1px dotted rgba(152,112,252, .4);
+      border-color: rgba(152,112,252, .4) !important;
+      background: rgba(152,112,252, .1) !important;
+      background-clip: content-box !important;
+    }
+  }
+
+  @include breakpoint(large up) {
+    &:before {
+      content: 'Large/Desktop: greater than 64em';
+      background: rgb(0,136,255);
+    }
+    .cell {
+      border: 1px solid rgb(0,136,255);
+      border-color: rgb(0,136,255) !important;
+      border-style: solid !important;
+    }
+    div, p, h1, h2, h3, h4, h5, h6, pre, ol, ul, blockquote, dl, fieldset, form, hr, table {
+      border: 1px dashed rgba(0,136,255, .4);
+      border-color: rgba(0,136,255, .4) !important;
+      background: rgba(0,136,255, .06) !important;
+      background-clip: content-box !important;
+    }
+    a, span, small, code, button, i, img, input, label, select, small, strong, sub, sup, textarea {
+      border: 1px dotted rgba(0,136,255, .4);
+      border-color: rgba(0,136,255, .4) !important;
+      background: rgba(0,136,255, .06) !important;
+      background-clip: content-box !important;
+    }
+  }
+}
+
+// FOUNDATION GRID /////////////////////////////////////////////////////////////
+.grid-container,
+.container {
+  background: #bbb !important;
+  border: 0 !important;
+}
+.grid-x,
+.grid-y,
+.row {
+  background: #ddd !important;
+  border: 0 !important;
+}
+.cell,
+.columns {
+  background: #eee !important;
+  background-clip: content-box !important;
+}
+
+// NESTING INDICATORS //////////////////////////////////////////////////////////
+div, p, h1, h2, h3, h4, h5, h6, pre, ol, ul, blockquote, dl, fieldset, form, hr, table, code, span {
+  border-radius: 0 !important;
+  > *:hover {
+    border-color: $warning-color !important;
+    border-style: solid !important;
+
+  }
+}
