@@ -22,6 +22,7 @@
 // @import './global/prism';
 @import './global/animation';
 @import './global/tooltip';
+@import './global/file-inputs';
 
 
 // TYPOGRAPHY //////////////////////////////////////////////////////////////////
@@ -60,8 +61,8 @@ dd {
 
 // BADGES, LABELS, PROGRESS ////////////////////////////////////////////////////
 .label {
-  font-size: 1rem;
-  padding: 8px 12px 7px;
+  font-size: 14px;
+  padding: 9px 12px 9px;
 
   i {
     margin: 2px 4px 2px 0;
@@ -157,9 +158,10 @@ a.button, .button-group a.button, button.button, .button-group button.button {
     color: $white;
   }
 
-  &:hover {
+  &:hover, &:focus {
     background: $alert-color;
     color: $white;
+    outline: none;
   }
 }
 

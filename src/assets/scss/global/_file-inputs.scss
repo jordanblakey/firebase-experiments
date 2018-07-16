@@ -1,0 +1,56 @@
+input[type="file"] {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+input[type="file"] + label {
+  cursor: pointer;
+  display: inline-block;
+  padding: 4px 16px 3px 16px;
+  box-shadow: $global-shadow;
+  border-radius: $global-radius;
+  background: $black;
+  color: $white;
+  transition: $global-transition;
+  user-select: none;
+
+  span {
+    background: #666;
+    margin: -6px -16px -6px 12px;
+    display: inline-block;
+    padding: 4px 16px 3px 16px;
+    border-radius: 0 3px 3px 0;
+  }
+}
+
+input[type="file"]:focus + label,
+input[type="file"] + label:hover {
+    background-color: $alert-color;
+}
+
+.label.status {
+  opacity: 1;
+  margin-left: -4px;
+  border-radius: 0 10rem 10rem 0;
+  padding: 9px 24px 9px 16px;
+  position: relative;
+  z-index: -1;
+
+  &.shown {
+    transition: all .2s ease-out;
+    opacity: 1;
+    transform: translateX(0px);
+    background: $lighter-gray;
+    color: $dark-gray;
+  }
+
+  &.hidden {
+    transition: all .2s ease-in;
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+}

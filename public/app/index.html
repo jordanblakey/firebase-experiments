@@ -92,6 +92,11 @@
             <li>Include cover image library and randomized selection if no image supplied.</li>
             <li>Integrate Firestore explorer.</li>
             <li>Import/Export note(s) with ability to encrypt archive with PGP.</li>
+            <li>Generate prefixed UID</li>
+            <li>Save to FB as doc:UID - Editor and title contents, w/current timestamp</li>
+            <li>Fix saving to FB with newlines</li>
+            <li>User Profile card or modal</li>
+            <li>Create Firebase Storage list for images to link in notes or use as cover files</li>
           </ul>
         </div>
         <div class="callout secondary macy-item">
@@ -166,6 +171,19 @@
             officiis error obcaecati tenetur reiciendis vel quasi, eaque totam nobis animi dolores hic natus voluptas corrupti.
             Accusamus molestiae enim odit vero tempora iusto praesentium quasi dolor rem!</p>
         </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="grid-container">
+    <div class="grid-x">
+      <div class="cell file-uploader-container">
+        <hr>
+        <h3>Firebase Storage Upload</h3>
+        <input id="file" type="file" multiple class="file uploader" />
+        <label for="file">Choose a file <span class="hide"></span></label>
+        <p class="status label hidden">&nbsp;</p>
+        <img class="viewer" src="" width="100%" />
       </div>
     </div>
   </div>

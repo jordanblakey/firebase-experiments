@@ -3,21 +3,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 export function scratchPad(targetElem) {
-  targetElem.innerHTML += `
-    <div class="scratchpad" id="sp1">
-      <h3>Scratchpad</h3>
-      <p>
-        ☐ CSS for editor preview
-        ☐ Generate prefixed UID<br>
-        ☐ Save to FB as doc:UID - Editor and title contents, w/current timestamp<br>
-        ☐ Fix saving to FB with newlines<br>
-        ☐ User Profile card or modal<br>
-        ☐ Create Firebase explorer<br>
-        ☐ Inline editing of notes, sync on blur to Firebase.<br>
-      </p>
-    </div>
-  `
-
   const productsRef = firebase.firestore().collection('products')
 
   let query
@@ -73,24 +58,3 @@ window.getRef = function(ref = '/users') {
 // //////////////////////////////////////////////////////////////////////////////
 // FILE UPLOADER
 // //////////////////////////////////////////////////////////////////////////////
-
-export function fileUploader(targetElem) {
-  targetElem.innerHTML += `
-    <div class="scratchpad" id="sp2">
-      <h3>FB Storage Upload</h3>
-      <input type="file" onchange="uploadFile(this.files)">
-      <hr>
-      <img id="imgUpload" src="" width="100%" />
-    </div>
-  `
-}
-
-window.uploadFile = function(files) {
-  const file = files.item(0)
-  const ref = firebase
-    .storage()
-    .ref()
-    .child(file.name)
-  const img = document.querySelector('#imgUpload')
-  ref.put(file).then(ref.getDownloadURL().then(url => (img.src = url)))
-}

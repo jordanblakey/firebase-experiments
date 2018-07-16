@@ -1,1 +1,1279 @@
-!function(r){var t={};function a(n){if(t[n])return t[n].exports;var e=t[n]={i:n,l:!1,exports:{}};return r[n].call(e.exports,e,e.exports,a),e.l=!0,e.exports}a.m=r,a.c=t,a.d=function(n,e,r){a.o(n,e)||Object.defineProperty(n,e,{configurable:!1,enumerable:!0,get:r})},a.n=function(n){var e=n&&n.__esModule?function(){return n.default}:function(){return n};return a.d(e,"a",e),e},a.o=function(n,e){return Object.prototype.hasOwnProperty.call(n,e)},a.p="",a(a.s=30)}({30:function(module,exports,__webpack_require__){eval("module.exports = __webpack_require__(31);\n\n\n//////////////////\n// WEBPACK FOOTER\n// multi ./src/assets/js/utils.js\n// module id = 30\n// module chunks = 1\n\n//# sourceURL=webpack:///multi_./src/assets/js/utils.js?")},31:function(module,exports,__webpack_require__){"use strict";eval("\n\nvar _ffjs = __webpack_require__(32);\n\nvar _ffjs2 = _interopRequireDefault(_ffjs);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/assets/js/utils.js\n// module id = 31\n// module chunks = 1\n\n//# sourceURL=webpack:///./src/assets/js/utils.js?")},32:function(module,exports,__webpack_require__){"use strict";eval("\n\nvar _ffjs = __webpack_require__(33);\n\nvar _ffjs2 = _interopRequireDefault(_ffjs);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// IMPORT FUNCTIONS BY CATEGORY ////////////////////////////////////////////////\n// import {\n//   array,\n//   browser,\n//   date,\n//   func,\n//   math,\n//   string,\n//   util\n// } from 'ffjs'\n\n\n// TEST IMPORTS ////////////////////////////////////////////////////////////////\nvar log = console.log;\n// log(ff)\n// log(array)\n// log(browser)\n// log(date)\n// log(func)\n// log(math)\n// log(string)\n// log(util)\n\n// // TEST ARRAY FUNCTIONS ////////////////////////////////////////////////////////\n// log('arrayGcd:', array.arrayGcd([4, 8, 12]))\n// log('arrayMax:', array.arrayMax([10, 1, 5]))\n// log('arrayMin:', array.arrayMin([10, 1, 5]))\n// log('chunk:', array.chunk([1, 2, 3, 4, 5], 2))\n// log('compact:', array.compact([0, 1, false, 2, '', 3, 'a', 'e' * 23, NaN, 's', 34]))\n// log('countOccurences:', array.countOccurences([1, 1, 2, 1, 2, 3], 1))\n// log('flatten:', array.flatten([1, [2], [3, [4]]]))\n// log('flattenDepth:', array.flattenDepth([1, [2], [[[3], 4], 5]], 2))\n// log('deepFlatten', array.deepFlatten([1, [2], [[3], 4], 5]))\n// log('difference:', array.difference([1, 2, 3], [1, 2, 4]))\n// log('differenceWith:', array.differenceWith([1, 1.2, 1.5, 3], [1.9, 3], (a, b) => Math.round(a) === Math.round(b)))\n// log('distictValuesOfArray:', array.distinceValuesOfArray([1, 2, 2, 3, 4, 4, 5]))\n// log('dropElements:', array.dropElements([1, 2, 3, 4], n => n >= 3))\n// log('dropRight:', array.dropRight([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 4))\n// log('everyNth:', array.everyNth([1, 2, 3, 4, 5, 6], 2))\n// log('filterNonUnique', array.filterNonUnique([1, 2, 2, 3, 4, 4, 5]))\n// log('groupBy:', array.groupBy([6.1, 4.2, 6.3], Math.floor))\n// log('head:', array.head([1, 2, 3]))\n// log('initial:', array.initial([1, 2, 3]))\n// log('initArrayRange:', array.initArrayRange(7, 3))\n// log('initArrayFill:', array.initArrayFill(5, 2))\n// log('init2DArray:', array.init2dArray(3, 3, 0))\n// log('intersection:', array.intersection([1, 2, 3], [4, 3, 2]))\n// log('last:', array.last([1, 2, 3]))\n// log('mapObject:', array.mapObject([1, 2, 3, 4], a => a * a))\n// log('pick:', array.pick({'a':1, 'b':'2', 'c': 3}, ['a', 'c']))\n// log('pull:', array.pull(['a', 'b', 'c'], 'a'))\n// log('sample:', array.sample([3, 7, 9, 11]))\n// log('shuffle:', array.shuffle([1, 2, 3]))\n// log('similarity:', array.similarity([1, 2, 3], [1, 2, 4]))\n// log('symmetricDifference:', array.symmetricDifference([1, 2, 3], [1, 2, 4]))\n// log('tail:', array.tail([1, 2, 3]))\n// log('take:', array.take([1, 2, 3, 4, 5], 3))\n// log('takeRight:', array.takeRight([1, 2, 3, 4, 5], 3))\n// log('union:', array.union([1, 2, 3], [4, 3, 2]))\n// log('without:', array.without([2, 1, 2, 3], 1, 2))\n// log('zip:', array.zip(['a'], [1, 2], [true, false]))\n\n\n// // TEST BROWSER FUNCTIONS //////////////////////////////////////////////////////\n// // log('arrayToHtmlList:', browser.arrayToHtmlList(['item 1', 'item 2'],'myListID'))\n// // log('bottomVisible:', browser.bottomVisible())\n// // log('currentUrl:', browser.currentUrl())\n// // log('elementIsVisibleInViewport:', browser.elementIsVisibleInViewport(el))\n// // log('elementIsVisibleInViewport:', browser.elementIsVisibleInViewport(el, true))\n// // log('getScrollPosition:', browser.getScrollPosition())\n// // log('getURLParameters:', browser.getURLParameters('http://url.com/page?name=Adam&surname=Smith'))\n// // log('redirect:', browser.redirect('https://google.com'))\n// // log('scrollToTop:', browser.scrollToTop())\n\n\n// // TEST DATE FUNCTIONS /////////////////////////////////////////////////////////\n// log('getDaysDiffBetweenDates:', date.getDaysDiffBetweenDates(new Date(\"2017-12-13\"), new Date(\"2017-12-22\")))\n// log('JSONToDate:', date.JSONToDate(/Date(1489525200000)/))\n// log('toEnglishDate:', date.toEnglishDate('09/21/2010'))\n\n\n// // TEST FUNCTION FUNCTIONS /////////////////////////////////////////////////////\n// func.chainAsync([\n//   next => { console.log('0 seconds'); setTimeout(next, 1000); },\n//   next => { console.log('1 second'); setTimeout(next, 1000); },\n//   next => { console.log('2 seconds'); }\n// ])\n\n// const add5 = x => x + 5\n// const multiply = (x, y) => x * y\n// const multiplyAndAdd5 = func.compose(add5, multiply)\n// log(multiplyAndAdd5(5, 2))\n\n// func.curry(Math.pow)(2)(10)\n// func.curry(Math.min, 3)(10)(50)(2)\n\n// const add6 = x => x + 6\n// const multiply2 = (x, y) => x * y\n// const multiplyAndAdd6 = func.pipeFunctions(multiply2, add6)\n// log(multiplyAndAdd6(5, 2))\n\n// const delay = func.promisify((d, cb) => setTimeout(cb, d))\n// delay(2000).then(() => console.log('Hi!'))\n\n// const delay2 = (d) => new Promise(r => setTimeout(r, d))\n// func.runPromisesInSeries([() => delay2(1000), () => delay2(2000)])\n\n\n// // TEST MATH FUNCTIONS /////////////////////////////////////////////////////////\n// log('arrayAverage:', math.arrayAverage([1, 2, 3]))\n// log('arraySum:', math.arraySum([1, 2, 3, 4]))\n// log('collatz:', math.collatz(8))\n// log('digitize:', math.digitize(2334))\n// log('distance:', math.distance(1, 1, 2, 3))\n// log('factorial:', math.factorial(6))\n// log('fibonacci:', math.fibonacci(5))\n// log('gcd:', math.gcd(8, 36))\n// log('hammingDisance:', math.hammingDistance(2, 3))\n// log('isArmstrongNumber:', math.isArmstrongNumber(1634))\n// log('isArmstrongNumber:', math.isArmstrongNumber(371))\n// log('isArmstrongNumber:', math.isArmstrongNumber(56))\n// log('isDivisible:', math.isDivisible(6, 3))\n// log('isEven:', math.isEven(3))\n// log('isPrime:', math.isPrime(11))\n// log('isPrime:', math.isPrime(12))\n// log('isPrime:', math.isPrime(11))\n// log('lcm:', math.lcm(12, 7))\n// log('median:', math.median(5, 6, 50, 1, -5))\n// log('palindrome:', math.palindrome('taco cat'))\n// log('percentile:', math.percentile([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 6))\n// log('powerset:', math.powerset([1, 2]))\n// log('randomIntegerInRange:', math.randomIntegerInRange(0, 5))\n// log('randomNumberInRange:', math.randomNumberInRange(2, 10))\n// log('round:', math.round(1.005, 2))\n// log('standardDeviation:', math.standardDeviation([10, 2, 38, 23, 38, 23, 21]))\n// log('standardDeviation:', math.standardDeviation([10, 2, 38, 23, 38, 23, 21], true))\n\n\n// // TEST STRING FUNCTIONS ///////////////////////////////////////////////////////\n// log('anangrams:', string.anagrams('abc'))\n// log('capitalize:', string.capitalize('john'))\n// log('capitalizeEveryWord:', string.capitalizeEveryWord('hello world'))\n// log('countVowels:', string.countVowels('foobar'))\n// log('countVowels:', string.countVowels('gym'))\n// log('escapeRegExp:', string.escapeRegExp('(test)'))\n// log('fromCamelCase:', string.fromCamelCase('someDatabaseFieldName', ' '))\n// log('fromCamelCase (snake):', string.fromCamelCase('someDatabaseFieldName', '_'))\n// log('fromCamelCase (kebab):', string.fromCamelCase('someDatabaseFieldName', '-'))\n// log('reverseString:', string.reverseString('foobar'))\n// log('sortCharactersInString:', string.sortCharactersInString('cabbage'))\n// log('stringToArrayOfWords:', string.stringToArrayOfWords('I love javaScript!!'))\n// log('stringToArrayOfWords:', string.stringToArrayOfWords('python, javaScript & coffee'))\n// log('toCamelCase:', string.toCamelCase('some_database_field_name'))\n// log('toCamelCase:', string.toCamelCase('Some label that needs to be camelized'))\n// log('toCamelCase:', string.toCamelCase('some-javascript-property'))\n// log('toCamelCase:', string.toCamelCase('some-mixed_string with spaces_underscores-and-hyphens'))\n// log('truncateString:', string.truncateString('boomerang', 7))\n\n\n// // TEST UTILITY FUNCTIONS //////////////////////////////////////////////////////\n// log('coalesce:', util.coalesce(null, undefined, NaN, 'Waldo'))\n// const customCoalesce = util.coalesceFactory(x => ![null, undefined, '', NaN].includes(x))\n// log('coalesceFactory:', customCoalesce(null, undefined, '', NaN, 'Waldo'))\n// log('extendHex:', util.extendHex('#03f'))\n// log('getType:', util.getType(3))\n// log('getType:', util.getType(new Set([1, 2, 3])))\n// log('hexToRGB:', util.hexToRGB('#27ae60ff'))\n// log('hexToRGB:', util.hexToRGB('27ae60'))\n// log('hexToRGB:', util.hexToRGB('#fff'))\n// log('isArray:', util.isArray([1]))\n// log('isArray:', util.isArray(1))\n// log('isBoolean:', util.isBoolean(null))\n// log('isBoolean:', util.isBoolean(true))\n// log('isFunction:', util.isFunction('x'))\n// log('isFunction:', util.isFunction(x => x))\n// log('isNumber:', util.isNumber('1'))\n// log('isNumber:', util.isNumber(1))\n// log('isString:', util.isString(10))\n// log('isString:', util.isString('10'))\n// log('isSymbol:', util.isSymbol('x'))\n// log('isSymbol:', util.isSymbol(Symbol('x')))\n// log('toOrdinalSuffix:', util.toOrdinalSuffix(123))\n// log('validateEmail:', util.validateEmail('example@example.com'))\n// log('validateEmail:', util.validateEmail('example'))\n// log('validateNumber:', util.validateNumber('129387.987987'))\n// log('validateNumber:', util.validateNumber(129387.987987))\n// IMPORT ALL FUNCTIONS ////////////////////////////////////////////////////////\n// Using this, the below examples will have to be namespaced under the import alias 'ff' e.g. ff.arrayMax([1, 2, 3])\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/assets/js/lib/ffjs.js\n// module id = 32\n// module chunks = 1\n\n//# sourceURL=webpack:///./src/assets/js/lib/ffjs.js?")},33:function(module,exports,__webpack_require__){"use strict";eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.util = exports.string = exports.math = exports.func = exports.date = exports.browser = exports.array = undefined;\n\nvar _array = __webpack_require__(34);\n\nvar _array2 = _interopRequireDefault(_array);\n\nvar _browser = __webpack_require__(35);\n\nvar _browser2 = _interopRequireDefault(_browser);\n\nvar _date = __webpack_require__(36);\n\nvar _date2 = _interopRequireDefault(_date);\n\nvar _func = __webpack_require__(37);\n\nvar _func2 = _interopRequireDefault(_func);\n\nvar _math = __webpack_require__(38);\n\nvar _math2 = _interopRequireDefault(_math);\n\nvar _string = __webpack_require__(39);\n\nvar _string2 = _interopRequireDefault(_string);\n\nvar _util = __webpack_require__(40);\n\nvar _util2 = _interopRequireDefault(_util);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar log = console.log;\n\n// // TEST ARRAY METHODS //////////////////////////////////////////////////////////\n// log('arrayGcd:', array.arrayGcd([4, 8, 12]))\n// log('arrayMax:', array.arrayMax([10, 1, 5]))\n// log('arrayMin:', array.arrayMin([10, 1, 5]))\n// log('chunk:', array.chunk([1, 2, 3, 4, 5], 2))\n// log('compact:', array.compact([0, 1, false, 2, '', 3, 'a', 'e' * 23, NaN, 's', 34]))\n// log('countOccurences:', array.countOccurences([1, 1, 2, 1, 2, 3], 1))\n// log('flatten:', array.flatten([1, [2], [3, [4]]]))\n// log('flattenDepth:', array.flattenDepth([1, [2], [[[3], 4], 5]], 2))\n// log('deepFlatten', array.deepFlatten([1, [2], [[3], 4], 5]))\n// log('difference:', array.difference([1, 2, 3], [1, 2, 4]))\n// log('differenceWith:', array.differenceWith([1, 1.2, 1.5, 3], [1.9, 3], (a, b) => Math.round(a) === Math.round(b)))\n// log('distictValuesOfArray:', array.distinceValuesOfArray([1, 2, 2, 3, 4, 4, 5]))\n// log('dropElements:', array.dropElements([1, 2, 3, 4], n => n >= 3))\n// log('dropRight:', array.dropRight([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 4))\n// log('everyNth:', array.everyNth([1, 2, 3, 4, 5, 6], 2))\n// log('filterNonUnique', array.filterNonUnique([1, 2, 2, 3, 4, 4, 5]))\n// log('groupBy:', array.groupBy([6.1, 4.2, 6.3], Math.floor))\n// log('head:', array.head([1, 2, 3]))\n// log('initial:', array.initial([1, 2, 3]))\n// log('initArrayRange:', array.initArrayRange(7, 3))\n// log('initArrayFill:', array.initArrayFill(5, 2))\n// log('init2DArray:', array.init2dArray(3, 3, 0))\n// log('intersection:', array.intersection([1, 2, 3], [4, 3, 2]))\n// log('last:', array.last([1, 2, 3]))\n// log('mapObject:', array.mapObject([1, 2, 3, 4], a => a * a))\n// log('pick:', array.pick({'a':1, 'b':'2', 'c': 3}, ['a', 'c']))\n// log('pull:', array.pull(['a', 'b', 'c'], 'a'))\n// log('sample:', array.sample([3, 7, 9, 11]))\n// log('shuffle:', array.shuffle([1, 2, 3]))\n// log('similarity:', array.similarity([1, 2, 3], [1, 2, 4]))\n// log('symmetricDifference:', array.symmetricDifference([1, 2, 3], [1, 2, 4]))\n// log('tail:', array.tail([1, 2, 3]))\n// log('take:', array.take([1, 2, 3, 4, 5], 3))\n// log('takeRight:', array.takeRight([1, 2, 3, 4, 5], 3))\n// log('union:', array.union([1, 2, 3], [4, 3, 2]))\n// log('without:', array.without([2, 1, 2, 3], 1, 2))\n// log('zip:', array.zip(['a'], [1, 2], [true, false]))\n\n\n// // TEST BROWSER METHODS ////////////////////////////////////////////////////////\n// // THESE WON'T RUN UNLESS IN BROWSER\n// // log('arrayToHtmlList:', browser.arrayToHtmlList(['item 1', 'item 2'],'myListID'))\n// // log('bottomVisible:', browser.bottomVisible())\n// // log('currentUrl:', browser.currentUrl())\n// // log('elementIsVisibleInViewport:', browser.elementIsVisibleInViewport(el))\n// // log('elementIsVisibleInViewport:', browser.elementIsVisibleInViewport(el, true))\n// // log('getScrollPosition:', browser.getScrollPosition())\n// // log('getURLParameters:', browser.getURLParameters('http://url.com/page?name=Adam&surname=Smith'))\n// // log('redirect:', browser.redirect('https://google.com'))\n// // log('scrollToTop:', browser.scrollToTop())\n\n\n// // TEST DATE METHODS ///////////////////////////////////////////////////////////\n// log('getDaysDiffBetweenDates:', date.getDaysDiffBetweenDates(new Date(\"2017-12-13\"), new Date(\"2017-12-22\")))\n// log('JSONToDate:', date.JSONToDate(/Date(1489525200000)/))\n// log('toEnglishDate:', date.toEnglishDate('09/21/2010'))\n\n\n// // TEST FUNCTION METHODS ///////////////////////////////////////////////////////\n// func.chainAsync([\n//   next => { console.log('0 seconds'); setTimeout(next, 1000); },\n//   next => { console.log('1 second'); setTimeout(next, 1000); },\n//   next => { console.log('2 seconds'); }\n// ])\n\n// const add5 = x => x + 5\n// const multiply = (x, y) => x * y\n// const multiplyAndAdd5 = func.compose(add5, multiply)\n// log(multiplyAndAdd5(5, 2))\n\n// func.curry(Math.pow)(2)(10)\n// func.curry(Math.min, 3)(10)(50)(2)\n\n// const add6 = x => x + 6\n// const multiply2 = (x, y) => x * y\n// const multiplyAndAdd6 = func.pipeFunctions(multiply2, add6)\n// log(multiplyAndAdd6(5, 2))\n\n// const delay = func.promisify((d, cb) => setTimeout(cb, d))\n// delay(2000).then(() => console.log('Hi!'))\n\n// const delay2 = (d) => new Promise(r => setTimeout(r, d))\n// func.runPromisesInSeries([() => delay2(1000), () => delay2(2000)])\n\n\n// // TEST MATH METHODS ///////////////////////////////////////////////////////////\n// log('arrayAverage:', math.arrayAverage([1, 2, 3]))\n// log('arraySum:', math.arraySum([1, 2, 3, 4]))\n// log('collatz:', math.collatz(8))\n// log('digitize:', math.digitize(2334))\n// log('distance:', math.distance(1, 1, 2, 3))\n// log('factorial:', math.factorial(6))\n// log('fibonacci:', math.fibonacci(5))\n// log('gcd:', math.gcd(8, 36))\n// log('hammingDisance:', math.hammingDistance(2, 3))\n// log('isArmstrongNumber:', math.isArmstrongNumber(1634))\n// log('isArmstrongNumber:', math.isArmstrongNumber(371))\n// log('isArmstrongNumber:', math.isArmstrongNumber(56))\n// log('isDivisible:', math.isDivisible(6, 3))\n// log('isEven:', math.isEven(3))\n// log('isPrime:', math.isPrime(11))\n// log('isPrime:', math.isPrime(12))\n// log('isPrime:', math.isPrime(11))\n// log('lcm:', math.lcm(12, 7))\n// log('median:', math.median(5, 6, 50, 1, -5))\n// log('palindrome:', math.palindrome('taco cat'))\n// log('percentile:', math.percentile([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 6))\n// log('powerset:', math.powerset([1, 2]))\n// log('randomIntegerInRange:', math.randomIntegerInRange(0, 5))\n// log('randomNumberInRange:', math.randomNumberInRange(2, 10))\n// log('round:', math.round(1.005, 2))\n// log('standardDeviation:', math.standardDeviation([10, 2, 38, 23, 38, 23, 21]))\n// log('standardDeviation:', math.standardDeviation([10, 2, 38, 23, 38, 23, 21], true))\n\n\n// // TEST STRING METHODS ///////////////////////////////////////////////////////////\n// log('anangrams:', string.anagrams('abc'))\n// log('capitalize:', string.capitalize('john'))\n// log('capitalizeEveryWord:', string.capitalizeEveryWord('hello world'))\n// log('countVowels:', string.countVowels('foobar'))\n// log('countVowels:', string.countVowels('gym'))\n// log('escapeRegExp:', string.escapeRegExp('(test)'))\n// log('fromCamelCase:', string.fromCamelCase('someDatabaseFieldName', ' '))\n// log('fromCamelCase (snake):', string.fromCamelCase('someDatabaseFieldName', '_'))\n// log('fromCamelCase (kebab):', string.fromCamelCase('someDatabaseFieldName', '-'))\n// log('reverseString:', string.reverseString('foobar'))\n// log('sortCharactersInString:', string.sortCharactersInString('cabbage'))\n// log('stringToArrayOfWords:', string.stringToArrayOfWords('I love javaScript!!'))\n// log('stringToArrayOfWords:', string.stringToArrayOfWords('python, javaScript & coffee'))\n// log('toCamelCase:', string.toCamelCase('some_database_field_name'))\n// log('toCamelCase:', string.toCamelCase('Some label that needs to be camelized'))\n// log('toCamelCase:', string.toCamelCase('some-javascript-property'))\n// log('toCamelCase:', string.toCamelCase('some-mixed_string with spaces_underscores-and-hyphens'))\n// log('truncateString:', string.truncateString('boomerang', 7))\n\n\n// // TEST UTILITY METHODS ///////////////////////////////////////////////////////////\n// log('coalesce:', util.coalesce(null, undefined, NaN, 'Waldo'))\n// const customCoalesce = util.coalesceFactory(x => ![null, undefined, '', NaN].includes(x))\n// log('coalesceFactory:', customCoalesce(null, undefined, '', NaN, 'Waldo'))\n// log('extendHex:', util.extendHex('#03f'))\n// log('getType:', util.getType(3))\n// log('getType:', util.getType(new Set([1, 2, 3])))\n// log('hexToRGB:', util.hexToRGB('#27ae60ff'))\n// log('hexToRGB:', util.hexToRGB('27ae60'))\n// log('hexToRGB:', util.hexToRGB('#fff'))\n// log('isArray:', util.isArray([1]))\n// log('isArray:', util.isArray(1))\n// log('isBoolean:', util.isBoolean(null))\n// log('isBoolean:', util.isBoolean(true))\n// log('isFunction:', util.isFunction('x'))\n// log('isFunction:', util.isFunction(x => x))\n// log('isNumber:', util.isNumber('1'))\n// log('isNumber:', util.isNumber(1))\n// log('isString:', util.isString(10))\n// log('isString:', util.isString('10'))\n// log('isSymbol:', util.isSymbol('x'))\n// log('isSymbol:', util.isSymbol(Symbol('x')))\n// log('toOrdinalSuffix:', util.toOrdinalSuffix(123))\n// log('validateEmail:', util.validateEmail('example@example.com'))\n// log('validateEmail:', util.validateEmail('example'))\n// log('validateNumber:', util.validateNumber('129387.987987'))\n// log('validateNumber:', util.validateNumber(129387.987987))\n\n\n// COMBINE IMPORTED MODULES INTO A DEFAULT EXPORT //////////////////////////////\nvar _module = {};\n_module = Object.assign(_module, _array2.default);\n_module = Object.assign(_module, _browser2.default);\n_module = Object.assign(_module, _date2.default);\n_module = Object.assign(_module, _func2.default);\n_module = Object.assign(_module, _math2.default);\n_module = Object.assign(_module, _string2.default);\n_module = Object.assign(_module, _util2.default);\n\n// Check methods added\n// console.log(module)\nexports.default = _module;\n\n// ALSO ALLOW THEM TO BE IMPORTED INDEPENDENTLY ////////////////////////////////\n\nexports.array = _array2.default;\nexports.browser = _browser2.default;\nexports.date = _date2.default;\nexports.func = _func2.default;\nexports.math = _math2.default;\nexports.string = _string2.default;\nexports.util = _util2.default;\n\n//////////////////\n// WEBPACK FOOTER\n// ./node_modules/ffjs/dist/ff.js\n// module id = 33\n// module chunks = 1\n\n//# sourceURL=webpack:///./node_modules/ffjs/dist/ff.js?")},34:function(module,exports,__webpack_require__){"use strict";eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nfunction _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }\n\n// ARRAY METHODS ///////////////////////////////////////////////////////////////\nvar array = void 0;\nexports.default = array = {\n  // Calculates the greatest common denominator of an array of numbers\n  arrayGcd: function arrayGcd(arr) {\n    var gcd = function gcd(x, y) {\n      return !y ? x : gcd(y, x % y);\n    };return arr.reduce(function (a, b) {\n      return gcd(a, b);\n    });\n  },\n  // Get the max val of an array by spreading its vals as args to Math.max.\n  arrayMax: function arrayMax(arr) {\n    return Math.max.apply(Math, _toConsumableArray(arr));\n  },\n  // Returns the minimum value in an array\n  arrayMin: function arrayMin(arr) {\n    return Math.min.apply(Math, _toConsumableArray(arr));\n  },\n  // Chunks an array into smaller arrays of a specified size.\n  chunk: function chunk(arr, size) {\n    return Array.from({ length: Math.ceil(arr.length / size) }, function (v, i) {\n      return arr.slice(i * size, i * size + size);\n    });\n  },\n  // Remove falsey values from an array.\n  compact: function compact(arr) {\n    return arr.filter(Boolean);\n  },\n  // Count the occurences of an value in an array\n  countOccurences: function countOccurences(arr, val) {\n    return arr.reduce(function (acc, v) {\n      return v === val ? acc + 1 : acc + 0;\n    }, 0);\n  },\n  // Flatten an array\n  flatten: function flatten(arr) {\n    return arr.reduce(function (a, v) {\n      return a.concat(v);\n    }, []);\n  },\n  // Flattens an array up to the specified depth.\n  flattenDepth: function flattenDepth(arr) {\n    var depth = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;\n    return depth !== 1 ? arr.reduce(function (a, v) {\n      return a.concat(Array.isArray(v) ? array.flattenDepth(v, depth - 1) : v);\n    }, []) : arr.reduce(function (a, v) {\n      return a.concat(v);\n    }, []);\n  },\n  // Deep flattens an array.\n  deepFlatten: function deepFlatten(arr) {\n    var _ref;\n\n    return (_ref = []).concat.apply(_ref, _toConsumableArray(arr.map(function (v) {\n      return Array.isArray(v) ? array.deepFlatten(v) : v;\n    })));\n  },\n  // Returns the difference between two arrays.\n  difference: function difference(a, b) {\n    var s = new Set(b);return a.filter(function (x) {\n      return !s.has(x);\n    });\n  },\n  // Filters out all values from an array for which the comparator function does not return true.\n  differenceWith: function differenceWith(arr, val, comp) {\n    return arr.filter(function (a) {\n      return !val.find(function (b) {\n        return comp(a, b);\n      });\n    });\n  },\n  // Returns all the distinct values of an array.\n  distinceValuesOfArray: function distinceValuesOfArray(arr) {\n    return [].concat(_toConsumableArray(new Set(arr)));\n  },\n  // Removes elements in an array untill the passed function returns true. Returns the remaining elements in the array.\n  dropElements: function dropElements(arr, func) {\n    while (arr.length > 0 && !func(arr[0])) {\n      arr = arr.slice(1);\n    }return arr;\n  },\n  // Returns a new array with n elements removed from the right.\n  dropRight: function dropRight(arr) {\n    var n = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;\n    return n < arr.length ? arr.slice(0, arr.length - n) : [];\n  },\n  // Returns every nth element in an array.\n  everyNth: function everyNth(arr, nth) {\n    return arr.filter(function (e, i) {\n      return i % nth === 0;\n    });\n  },\n  // Filters out the non-unique values in an array.\n  filterNonUnique: function filterNonUnique(arr) {\n    return arr.filter(function (i) {\n      return arr.indexOf(i) === arr.lastIndexOf(i);\n    });\n  },\n  // Groups the elements of an array based on the given function\n  groupBy: function groupBy(arr, func) {\n    return arr.map(typeof func === 'function' ? func : function (val) {\n      return val[func];\n    }).reduce(function (acc, val, i) {\n      acc[val] = (acc[val] || []).concat(arr[i]);return acc;\n    }, {});\n  },\n  // Returns the head of a list\n  head: function head(arr) {\n    return arr[0];\n  },\n  // Returns all the elements of an array except the last one\n  initial: function initial(arr) {\n    return arr.slice(0, -1);\n  },\n  // Initializes an array containing the numbers in th especified range where start and end are inclusive\n  initArrayRange: function initArrayRange(end) {\n    var start = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;\n    return Array.from({ length: end + 1 - start }).map(function (v, i) {\n      return i + start;\n    });\n  },\n  // Initializes an array of n length, with 'value' at each index.\n  initArrayFill: function initArrayFill(n) {\n    var value = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;\n    return Array(n).fill(value);\n  },\n  // Intializes a 2D array of given width and height and value.\n  init2dArray: function init2dArray(w, h) {\n    var val = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;\n    return Array(h).fill().map(function () {\n      return Array(w).fill(val);\n    });\n  },\n  // Returns a list of elements that exist in both arrays\n  intersection: function intersection(a, b) {\n    var s = new Set(b);return a.filter(function (x) {\n      return s.has(x);\n    });\n  },\n  // Returns the last element in an array.\n  last: function last(arr) {\n    return arr[arr.length - 1];\n  },\n  // Maps the values of an array to an object using a function, where the key-value pairs consist of the original value as the key and the mapped value.\n  mapObject: function mapObject(arr, fn) {\n    return function (a) {\n      return a = [arr, arr.map(fn)], a[0].reduce(function (acc, val, i) {\n        return acc[val] = a[1][i], acc;\n      }, {});\n    }();\n  },\n  // Picks the key-value pair corresponding to the given keys from an object\n  pick: function pick(obj, arr) {\n    return arr.reduce(function (acc, curr) {\n      return curr in obj && (acc[curr] = obj[curr]), acc;\n    }, {});\n  },\n  // filter out the values specified\n  pull: function pull(arr) {\n    for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {\n      args[_key - 1] = arguments[_key];\n    }\n\n    return arr.filter(function (v) {\n      return !args.toString().split(',').includes(v);\n    });\n  },\n  // Returns a random element from an array\n  sample: function sample(arr) {\n    return arr[Math.floor(Math.random() * arr.length)];\n  },\n  // Randomizes the order of the values of an array.\n  shuffle: function shuffle(arr) {\n    return arr.sort(function () {\n      return Math.random() - 0.5;\n    });\n  },\n  // Returns an array of elements that appear in both arrays.\n  similarity: function similarity(arr, values) {\n    return arr.filter(function (v) {\n      return values.includes(v);\n    });\n  },\n  // Returns the symmetric difference betreen two arrays.\n  symmetricDifference: function symmetricDifference(a, b) {\n    var sA = new Set(a),\n        sB = new Set(b);return [].concat(_toConsumableArray(a.filter(function (x) {\n      return !sB.has(x);\n    })), _toConsumableArray(b.filter(function (x) {\n      return !sA.has(x);\n    })));\n  },\n  // Returns all elements in an array except for the first one.\n  tail: function tail(arr) {\n    return arr.length > 1 ? arr.slice(1) : arr;\n  },\n  // Returns an array with n elements removed from the beginning\n  take: function take(arr) {\n    var n = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;\n    return arr.slice(0, n);\n  },\n  // Returns an array with n elements removed from the end\n  takeRight: function takeRight(arr) {\n    var n = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;\n    return arr.slice(arr.length - n, arr.length);\n  },\n  // Returns every element that exists in any of the two arrays once.\n  union: function union(a, b) {\n    return Array.from(new Set([].concat(_toConsumableArray(a), _toConsumableArray(b))));\n  },\n  // Filters out the elements of an array that have one of the specified values\n  without: function without(arr) {\n    for (var _len2 = arguments.length, args = Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {\n      args[_key2 - 1] = arguments[_key2];\n    }\n\n    return arr.filter(function (v) {\n      return !args.includes(v);\n    });\n  },\n  // Creates an array of elements, grouped based on the position in the original arrays.\n  zip: function zip() {\n    for (var _len3 = arguments.length, arrs = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {\n      arrs[_key3] = arguments[_key3];\n    }\n\n    return Array.from({ length: Math.max.apply(Math, _toConsumableArray(arrs.map(function (x) {\n        return x.length;\n      }))) }).map(function (_, i) {\n      return Array.from({ length: arrs.length }, function (_, k) {\n        return arrs[k][i];\n      });\n    });\n  }\n};\n\n//////////////////\n// WEBPACK FOOTER\n// ./node_modules/ffjs/dist/lib/array.js\n// module id = 34\n// module chunks = 1\n\n//# sourceURL=webpack:///./node_modules/ffjs/dist/lib/array.js?")},35:function(module,exports,__webpack_require__){"use strict";eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n// BROWSER METHODS /////////////////////////////////////////////////////////////\nvar browser = void 0;\nexports.default = browser = {\n  // Converts the given array elements into <li> tags and appends them to the list of the given id.\n  arrayToHtmlList: function arrayToHtmlList(arr, listID) {\n    return arr.map(function (item) {\n      return document.querySelector(\"#\" + listID).innerHTML += '<li>' + item + '</li>';\n    });\n  },\n  // Returns true if the bottom of the page is visible, false otherwise.\n  bottomVisible: function bottomVisible() {\n    return document.documentElement.clientHeight + window.scrollY >= (document.documentElement.scrollHeight || document.documentElement.clientHeight);\n  },\n  // Returns the current URL.\n  currentURL: function currentURL() {\n    return window.location.href;\n  },\n  // Returns true if the element specified is visible in the viewport, false otherwise.\n  elementIsVisibleInViewport: function elementIsVisibleInViewport(el) {\n    var partiallyVisible = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;\n\n    var _el$getBoundingClient = el.getBoundingClientRect(),\n        top = _el$getBoundingClient.top,\n        left = _el$getBoundingClient.left,\n        bottom = _el$getBoundingClient.bottom,\n        right = _el$getBoundingClient.right;\n\n    return partiallyVisible ? (top > 0 && top < innerHeight || bottom > 0 && bottom < innerHeight) && (left > 0 && left < innerWidth || right > 0 && right < innerWidth) : top >= 0 && left >= 0 && bottom <= innerHeight && right <= innerWidth;\n  },\n  // Returns the scroll position of the current page.\n  getScrollPosition: function getScrollPosition() {\n    var el = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : window;\n    return { x: el.pageXOffset !== undefined ? el.pageXOffset : el.scrollLeft, y: el.pageYOffset !== undefined ? el.pageYOffset : el.scrollTop };\n  },\n  // Returns an object containing the parameters of the current URL.\n  getURLParameters: function getURLParameters(url) {\n    return url.match(/([^?=&]+)(=([^&]*))/g).reduce(function (a, v) {\n      return a[v.slice(0, v.indexOf('='))] = v.slice(v.indexOf('=') + 1), a;\n    }, {});\n  },\n  // Redirects to a specified URL.\n  redirect: function redirect(url) {\n    var asLink = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;\n    return asLink ? window.location.href = url : window.location.replace(url);\n  },\n  // Smooth-scrolls to the top of the page.\n  scrollToTop: function scrollToTop() {\n    var c = document.documentElement.scrollTop || document.body.scrollTop;if (c > 0) {\n      window.requestAnimationFrame(browser.scrollToTop);window.scrollTo(0, c - c / 8);\n    }\n  }\n};\n\n//////////////////\n// WEBPACK FOOTER\n// ./node_modules/ffjs/dist/lib/browser.js\n// module id = 35\n// module chunks = 1\n\n//# sourceURL=webpack:///./node_modules/ffjs/dist/lib/browser.js?")},36:function(module,exports,__webpack_require__){"use strict";eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n// DATE METHODS /////////////////////////////////////////////////////////////\nvar date = void 0;\nexports.default = date = {\n  // Returns the difference (in days) between two dates.\n  getDaysDiffBetweenDates: function getDaysDiffBetweenDates(dateInitial, dateFinal) {\n    return (dateFinal - dateInitial) / (1000 * 3600 * 24);\n  },\n  // Converts a JSON object to a date.\n  JSONToDate: function JSONToDate(arr) {\n    var dt = new Date(parseInt(arr.toString().substr(6), 10));\n    return dt.getDate() + '/' + (dt.getMonth() + 1) + '/' + dt.getFullYear();\n  },\n  // Converts a date from American format to English format.\n  toEnglishDate: function toEnglishDate(time) {\n    try {\n      return new Date(time).toISOString().split('T')[0].replace(/-/g, '/');\n    } catch (e) {\n      return null;\n    }\n  }\n};\n\n//////////////////\n// WEBPACK FOOTER\n// ./node_modules/ffjs/dist/lib/date.js\n// module id = 36\n// module chunks = 1\n\n//# sourceURL=webpack:///./node_modules/ffjs/dist/lib/date.js?")},37:function(module,exports,__webpack_require__){"use strict";eval('\n\nObject.defineProperty(exports, "__esModule", {\n  value: true\n});\n// FUNCTION METHODS ////////////////////////////////////////////////////////////\nvar func = void 0;\nexports.default = func = {\n  // Chains asynchronous functions.\n  chainAsync: function chainAsync(fns) {\n    var curr = 0;var next = function next() {\n      return fns[curr++](next);\n    };next();\n  },\n  // Performs right-to-left function composition.\n  compose: function compose() {\n    for (var _len = arguments.length, fns = Array(_len), _key = 0; _key < _len; _key++) {\n      fns[_key] = arguments[_key];\n    }\n\n    return fns.reduce(function (f, g) {\n      return function () {\n        return f(g.apply(undefined, arguments));\n      };\n    });\n  },\n  // Curries a function.\n  curry: function curry(fn) {\n    for (var _len2 = arguments.length, args = Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {\n      args[_key2 - 2] = arguments[_key2];\n    }\n\n    var _func$curry;\n\n    var arity = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : fn.length;\n    return arity <= args.length ? fn.apply(undefined, args) : (_func$curry = func.curry).bind.apply(_func$curry, [null, fn, arity].concat(args));\n  },\n  // Performs left-to-right function composition.\n  pipeFunctions: function pipeFunctions() {\n    for (var _len3 = arguments.length, fns = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {\n      fns[_key3] = arguments[_key3];\n    }\n\n    return fns.reduce(function (f, g) {\n      return function () {\n        return g(f.apply(undefined, arguments));\n      };\n    });\n  },\n  // Converts an asynchronous function to return a promise.\n  promisify: function promisify(funct) {\n    return function () {\n      for (var _len4 = arguments.length, args = Array(_len4), _key4 = 0; _key4 < _len4; _key4++) {\n        args[_key4] = arguments[_key4];\n      }\n\n      return new Promise(function (resolve, reject) {\n        return funct.apply(undefined, args.concat([function (err, result) {\n          return err ? reject(err) : resolve(result);\n        }]));\n      });\n    };\n  },\n  // Runs an array of promises in series.\n  runPromisesInSeries: function runPromisesInSeries(ps) {\n    return ps.reduce(function (p, next) {\n      return p.then(next);\n    }, Promise.resolve());\n  }\n};\n\n//////////////////\n// WEBPACK FOOTER\n// ./node_modules/ffjs/dist/lib/func.js\n// module id = 37\n// module chunks = 1\n\n//# sourceURL=webpack:///./node_modules/ffjs/dist/lib/func.js?')},38:function(module,exports,__webpack_require__){"use strict";eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nfunction _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }\n\n// MATH METHODS ////////////////////////////////////////////////////////////////\nvar math = void 0;\nexports.default = math = {\n  // Returns the average of an array of numbers.\n  arrayAverage: function arrayAverage(x) {\n    return x.reduce(function (acc, val) {\n      return acc + val;\n    }, 0) / x.length;\n  },\n  // Returns the sum of an array of numbers.\n  arraySum: function arraySum(x) {\n    return x.reduce(function (acc, val) {\n      return acc + val;\n    }, 0);\n  },\n  // Applies the Collatz algorithm.\n  collatz: function collatz(x) {\n    return x % 2 === 0 ? x / 2 : 3 * n + 1;\n  },\n  // Converts a number to an array of digits.\n  digitize: function digitize(x) {\n    return [].concat(_toConsumableArray('' + x)).map(function (i) {\n      return parseInt(i, 10);\n    });\n  },\n  // Returns the distance between two points.\n  distance: function distance(x0, y0, x1, y1) {\n    return Math.hypot(x1 - x0, y1 - y0);\n  },\n  // Calculates the factorial of a number\n  factorial: function factorial(x) {\n    return x < 0 ? function () {\n      throw new TypeError('Negative numbers are not allowed.');\n    }() : x <= 1 ? 1 : x * math.factorial(x - 1);\n  },\n  // Generates an array, containing the Fibonacci sequence, up until the nth term.\n  fibonacci: function fibonacci(x) {\n    return Array(x).fill(0).reduce(function (acc, val, i) {\n      return acc.concat(i > 1 ? acc[i - 1] + acc[i - 2] : i);\n    }, []);\n  },\n  // Calculates the greatest common divisor between two numbers.\n  gcd: function gcd(x, y) {\n    return !x ? x : math.gcd(y, x % y);\n  },\n  // Calculates the Hamming distance between two values.\n  hammingDistance: function hammingDistance(x, y) {\n    return ((x ^ y).toString(2).match(/1/g) || '').length;\n  },\n  // Checks if the given number is an armstrong number or not.\n  isArmstrongNumber: function isArmstrongNumber(digits) {\n    return function (arr) {\n      return arr.reduce(function (a, d) {\n        return a + Math.pow(parseInt(d, 10), arr.length);\n      }, 0) === digits ? true : false;\n    }((digits + '').split(''));\n  },\n  // Checks if the first numberic argument is divisible by the second one.\n  isDivisible: function isDivisible(dividend, divisor) {\n    return dividend % divisor === 0;\n  },\n  // Returns true if the given number is even, false otherwise.\n  isEven: function isEven(x) {\n    return x % 2 === 0;\n  },\n  // Checks if the provided integer is a prime number.\n  isPrime: function isPrime(x) {\n    for (var i = 2; i < x; i++) {\n      if (x % i === 0) {\n        return false;\n      }\n    }return x >= 2;\n  },\n  // Returns the least common multiple of two numbers.\n  lcm: function lcm(x, y) {\n    var gcd = function gcd(a, b) {\n      return !b ? a : gcd(b, a % b);\n    };return Math.abs(x * y) / gcd(x, y);\n  },\n  // Returns the median of an array of numbers.\n  median: function median(arr) {\n    var mid = Math.floor(arr.length / 2),\n        nums = [].concat(_toConsumableArray(arr)).sort(function (a, b) {\n      return a - b;\n    });return arr.length % 2 !== 0 ? nums[mid] : (nums[mid - 1] + nums[mid]) / 2;\n  },\n  // Returns true if the given string is a palindrome, false otherwise\n  palindrome: function palindrome(str) {\n    var s = str.toLowerCase().replace(/[\\W_]/g, '');return s === s.split('').reverse().join('');\n  },\n  // Uses the percentile formula to calculate how many numbers in the given array are less or equal to the given value.\n  percentile: function percentile(arr, val) {\n    return 100 * arr.reduce(function (acc, v) {\n      return acc + (v < val ? 1 : 0) + (v === val ? 0.5 : 0);\n    }, 0) / arr.length;\n  },\n  // Returns the powerset of a given array of numbers.\n  powerset: function powerset(arr) {\n    return arr.reduce(function (a, v) {\n      return a.concat(a.map(function (r) {\n        return [v].concat(r);\n      }));\n    }, [[]]);\n  },\n  // Returns a random integer in a specified range.\n  randomIntegerInRange: function randomIntegerInRange(min, max) {\n    return Math.floor(Math.random() * (max - min + 1)) + min;\n  },\n  // Returnas a randome number in a specified range.\n  randomNumberInRange: function randomNumberInRange(min, max) {\n    return Math.random() * (max - min) + min;\n  },\n  // Rounds a number to a specified amount of digits.\n  round: function round(x) {\n    var decimals = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;\n    return Number(Math.round(x + 'e' + decimals) + 'e-' + decimals);\n  },\n  // Returns the standard deviation of an array of numbers.\n  standardDeviation: function standardDeviation(arr) {\n    var usePopulation = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;\n\n    var mean = arr.reduce(function (acc, val) {\n      return acc + val;\n    }, 0) / arr.length;\n    return Math.sqrt(arr.reduce(function (acc, val) {\n      return acc.concat(Math.pow(val - mean, 2));\n    }, []).reduce(function (acc, val) {\n      return acc + val;\n    }, 0) / (arr.length - (usePopulation ? 0 : 1)));\n  }\n};\n\n//////////////////\n// WEBPACK FOOTER\n// ./node_modules/ffjs/dist/lib/math.js\n// module id = 38\n// module chunks = 1\n\n//# sourceURL=webpack:///./node_modules/ffjs/dist/lib/math.js?")},39:function(module,exports,__webpack_require__){"use strict";eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nfunction _toArray(arr) { return Array.isArray(arr) ? arr : Array.from(arr); }\n\n// STRING METHODS //////////////////////////////////////////////////////////////\nvar string = void 0;\nexports.default = string = {\n  // Generates all anagrams of a string (contains duplicates).\n  anagrams: function anagrams(str) {\n    if (str.length <= 2) return string.length === 2 ? [str, str[1] + str[0]] : [str];\n    return str.split('').reduce(function (acc, letter, i) {\n      return acc.concat(string.anagrams(str.slice(0, i) + str.slice(i + 1)).map(function (val) {\n        return letter + val;\n      }));\n    }, []);\n  },\n  // Capitalizes the first letter of a string.\n  capitalize: function capitalize(_ref) {\n    var _ref2 = _toArray(_ref),\n        first = _ref2[0],\n        rest = _ref2.slice(1);\n\n    var lowerRest = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;\n    return first.toUpperCase() + (lowerRest ? rest.join('').toLowerCase() : rest.join(''));\n  },\n  // Capitaizes the first letter of every word in a string.\n  capitalizeEveryWord: function capitalizeEveryWord(str) {\n    return str.replace(/\\b[a-z]/g, function (char) {\n      return char.toUpperCase();\n    });\n  },\n  // Returns number of vowels in provided string.\n  countVowels: function countVowels(str) {\n    return (str.match(/[aeiou]/ig) || []).length;\n  },\n  // Escapes a string to use in a regular expression.\n  escapeRegExp: function escapeRegExp(str) {\n    return str.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&');\n  },\n  // Converts a string from camelcase\n  fromCamelCase: function fromCamelCase(str) {\n    var separator = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '_';\n    return str.replace(/([a-z\\d])([A-Z])/g, '$1' + separator + '$2').replace(/([A-Z]+)([A-Z][a-z\\d]+)/g, '$1' + separator + '$2').toLowerCase();\n  },\n  // Reverses a string.\n  reverseString: function reverseString(str) {\n    return str.split('').reverse().join('');\n  },\n  // Alphabetically sorts the characters in a string.\n  sortCharactersInString: function sortCharactersInString(str) {\n    return str.split('').sort(function (a, b) {\n      return a.localeCompare(b);\n    }).join('');\n  },\n  // Converts a given string into an array of words.\n  stringToArrayOfWords: function stringToArrayOfWords(str) {\n    var pattern = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : /[^a-zA-Z-]+/;\n    return str.split(pattern).filter(Boolean);\n  },\n  // Converts a string to camelcase.\n  toCamelCase: function toCamelCase(str) {\n    return str.replace(/^([A-Z])|[\\s-_]+(\\w)/g, function (match, p1, p2, offset) {\n      return p2 ? p2.toUpperCase() : p1.toLowerCase();\n    });\n  },\n  // Truncates a string up to a specified length.\n  truncateString: function truncateString(str, num) {\n    return str.length > num ? str.slice(0, num > 3 ? num - 3 : num) + '...' : str;\n  }\n};\n\n//////////////////\n// WEBPACK FOOTER\n// ./node_modules/ffjs/dist/lib/string.js\n// module id = 39\n// module chunks = 1\n\n//# sourceURL=webpack:///./node_modules/ffjs/dist/lib/string.js?")},40:function(module,exports,__webpack_require__){"use strict";eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _typeof = typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; };\n\nfunction _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }\n\n// UTILITY METHODS /////////////////////////////////////////////////////////////\nvar util = void 0;\nexports.default = util = {\n  // Tests that the module was imported correctly\n  test: function test() {\n    return 'Hello from util module';\n  },\n  // Returns the first non-null/undefined argument\n  coalesce: function coalesce() {\n    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {\n      args[_key] = arguments[_key];\n    }\n\n    return args.find(function (x) {\n      return ![undefined, null].includes(x);\n    });\n  },\n  // Returns a customized coalesce function that returns the first argument that returns true from the provided argument validation function\n  coalesceFactory: function coalesceFactory(valid) {\n    return function () {\n      for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {\n        args[_key2] = arguments[_key2];\n      }\n\n      return args.find(valid);\n    };\n  },\n  // Extends a 3-digit color code to a 6-digit color code.\n  extendHex: function extendHex(shortHex) {\n    return '#' + shortHex.slice(shortHex.startsWith('#') ? 1 : 0).split('').map(function (x) {\n      return x + x;\n    }).join('');\n  },\n  // Returns the native type of a value.\n  getType: function getType(v) {\n    return v === undefined ? 'undefined' : v === null ? 'null' : v.constructor.name.toLowerCase();\n  },\n  // Converts a color code to an rgb() or rgba() string if alpha value is provided\n  hexToRGB: function hexToRGB(hex) {\n    var alpha = false,\n        h = hex.slice(hex.startsWith('#') ? 1 : 0);\n    if (h.length === 3) h = [].concat(_toConsumableArray(h)).map(function (x) {\n      return x + x;\n    }).join('');else if (h.length === 8) alpha = true;\n    h = parseInt(h, 16);\n    return 'rgb' + (alpha ? 'a' : '') + '(' + (h >>> (alpha ? 24 : 16)) + ', ' + ((h & (alpha ? 0x00ff0000 : 0x00ff00)) >>> (alpha ? 16 : 8)) + ', ' + ((h & (alpha ? 0x0000ff00 : 0x0000ff)) >>> (alpha ? 8 : 0)) + (alpha ? ', ' + (h & 0x000000ff) : '') + ')';\n  },\n  isArray: function isArray(val) {\n    return !!val && Array.isArray(val);\n  },\n  isBoolean: function isBoolean(val) {\n    return typeof val === 'boolean';\n  },\n  isFunction: function isFunction(val) {\n    return val && typeof val === 'function';\n  },\n  isNumber: function isNumber(val) {\n    return typeof val === 'number';\n  },\n  isString: function isString(val) {\n    return typeof val === 'string';\n  },\n  isSymbol: function isSymbol(val) {\n    return (typeof val === 'undefined' ? 'undefined' : _typeof(val)) === 'symbol';\n  },\n  toOrdinalSuffix: function toOrdinalSuffix(num) {\n    var int = parseInt(num),\n        digits = [int % 10, int % 100],\n        ordinals = ['st', 'nd', 'rd', 'th'],\n        oPattern = [1, 2, 3, 4],\n        tPattern = [11, 12, 13, 14, 15, 16, 17, 18, 19];\n    return oPattern.includes(digits[0]) && !tPattern.includes(digits[1]) ? int + ordinals[digits[0] - 1] : int + ordinals[3];\n  },\n  validateEmail: function validateEmail(str) {\n    return (/^(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/.test(str)\n    );\n  },\n  validateNumber: function validateNumber(n) {\n    return !isNaN(parseFloat(n)) && isFinite(n) && Number(n) === n;\n  }\n};\n\n//////////////////\n// WEBPACK FOOTER\n// ./node_modules/ffjs/dist/lib/util.js\n// module id = 40\n// module chunks = 1\n\n//# sourceURL=webpack:///./node_modules/ffjs/dist/lib/util.js?")}});
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 32);
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ 32:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(33);
+
+
+/***/ }),
+
+/***/ 33:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ffjs = __webpack_require__(34);
+
+var _ffjs2 = _interopRequireDefault(_ffjs);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+
+/***/ 34:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _ffjs = __webpack_require__(35);
+
+var _ffjs2 = _interopRequireDefault(_ffjs);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// IMPORT FUNCTIONS BY CATEGORY ////////////////////////////////////////////////
+// import {
+//   array,
+//   browser,
+//   date,
+//   func,
+//   math,
+//   string,
+//   util
+// } from 'ffjs'
+
+
+// TEST IMPORTS ////////////////////////////////////////////////////////////////
+var log = console.log;
+// log(ff)
+// log(array)
+// log(browser)
+// log(date)
+// log(func)
+// log(math)
+// log(string)
+// log(util)
+
+// // TEST ARRAY FUNCTIONS ////////////////////////////////////////////////////////
+// log('arrayGcd:', array.arrayGcd([4, 8, 12]))
+// log('arrayMax:', array.arrayMax([10, 1, 5]))
+// log('arrayMin:', array.arrayMin([10, 1, 5]))
+// log('chunk:', array.chunk([1, 2, 3, 4, 5], 2))
+// log('compact:', array.compact([0, 1, false, 2, '', 3, 'a', 'e' * 23, NaN, 's', 34]))
+// log('countOccurences:', array.countOccurences([1, 1, 2, 1, 2, 3], 1))
+// log('flatten:', array.flatten([1, [2], [3, [4]]]))
+// log('flattenDepth:', array.flattenDepth([1, [2], [[[3], 4], 5]], 2))
+// log('deepFlatten', array.deepFlatten([1, [2], [[3], 4], 5]))
+// log('difference:', array.difference([1, 2, 3], [1, 2, 4]))
+// log('differenceWith:', array.differenceWith([1, 1.2, 1.5, 3], [1.9, 3], (a, b) => Math.round(a) === Math.round(b)))
+// log('distictValuesOfArray:', array.distinceValuesOfArray([1, 2, 2, 3, 4, 4, 5]))
+// log('dropElements:', array.dropElements([1, 2, 3, 4], n => n >= 3))
+// log('dropRight:', array.dropRight([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 4))
+// log('everyNth:', array.everyNth([1, 2, 3, 4, 5, 6], 2))
+// log('filterNonUnique', array.filterNonUnique([1, 2, 2, 3, 4, 4, 5]))
+// log('groupBy:', array.groupBy([6.1, 4.2, 6.3], Math.floor))
+// log('head:', array.head([1, 2, 3]))
+// log('initial:', array.initial([1, 2, 3]))
+// log('initArrayRange:', array.initArrayRange(7, 3))
+// log('initArrayFill:', array.initArrayFill(5, 2))
+// log('init2DArray:', array.init2dArray(3, 3, 0))
+// log('intersection:', array.intersection([1, 2, 3], [4, 3, 2]))
+// log('last:', array.last([1, 2, 3]))
+// log('mapObject:', array.mapObject([1, 2, 3, 4], a => a * a))
+// log('pick:', array.pick({'a':1, 'b':'2', 'c': 3}, ['a', 'c']))
+// log('pull:', array.pull(['a', 'b', 'c'], 'a'))
+// log('sample:', array.sample([3, 7, 9, 11]))
+// log('shuffle:', array.shuffle([1, 2, 3]))
+// log('similarity:', array.similarity([1, 2, 3], [1, 2, 4]))
+// log('symmetricDifference:', array.symmetricDifference([1, 2, 3], [1, 2, 4]))
+// log('tail:', array.tail([1, 2, 3]))
+// log('take:', array.take([1, 2, 3, 4, 5], 3))
+// log('takeRight:', array.takeRight([1, 2, 3, 4, 5], 3))
+// log('union:', array.union([1, 2, 3], [4, 3, 2]))
+// log('without:', array.without([2, 1, 2, 3], 1, 2))
+// log('zip:', array.zip(['a'], [1, 2], [true, false]))
+
+
+// // TEST BROWSER FUNCTIONS //////////////////////////////////////////////////////
+// // log('arrayToHtmlList:', browser.arrayToHtmlList(['item 1', 'item 2'],'myListID'))
+// // log('bottomVisible:', browser.bottomVisible())
+// // log('currentUrl:', browser.currentUrl())
+// // log('elementIsVisibleInViewport:', browser.elementIsVisibleInViewport(el))
+// // log('elementIsVisibleInViewport:', browser.elementIsVisibleInViewport(el, true))
+// // log('getScrollPosition:', browser.getScrollPosition())
+// // log('getURLParameters:', browser.getURLParameters('http://url.com/page?name=Adam&surname=Smith'))
+// // log('redirect:', browser.redirect('https://google.com'))
+// // log('scrollToTop:', browser.scrollToTop())
+
+
+// // TEST DATE FUNCTIONS /////////////////////////////////////////////////////////
+// log('getDaysDiffBetweenDates:', date.getDaysDiffBetweenDates(new Date("2017-12-13"), new Date("2017-12-22")))
+// log('JSONToDate:', date.JSONToDate(/Date(1489525200000)/))
+// log('toEnglishDate:', date.toEnglishDate('09/21/2010'))
+
+
+// // TEST FUNCTION FUNCTIONS /////////////////////////////////////////////////////
+// func.chainAsync([
+//   next => { console.log('0 seconds'); setTimeout(next, 1000); },
+//   next => { console.log('1 second'); setTimeout(next, 1000); },
+//   next => { console.log('2 seconds'); }
+// ])
+
+// const add5 = x => x + 5
+// const multiply = (x, y) => x * y
+// const multiplyAndAdd5 = func.compose(add5, multiply)
+// log(multiplyAndAdd5(5, 2))
+
+// func.curry(Math.pow)(2)(10)
+// func.curry(Math.min, 3)(10)(50)(2)
+
+// const add6 = x => x + 6
+// const multiply2 = (x, y) => x * y
+// const multiplyAndAdd6 = func.pipeFunctions(multiply2, add6)
+// log(multiplyAndAdd6(5, 2))
+
+// const delay = func.promisify((d, cb) => setTimeout(cb, d))
+// delay(2000).then(() => console.log('Hi!'))
+
+// const delay2 = (d) => new Promise(r => setTimeout(r, d))
+// func.runPromisesInSeries([() => delay2(1000), () => delay2(2000)])
+
+
+// // TEST MATH FUNCTIONS /////////////////////////////////////////////////////////
+// log('arrayAverage:', math.arrayAverage([1, 2, 3]))
+// log('arraySum:', math.arraySum([1, 2, 3, 4]))
+// log('collatz:', math.collatz(8))
+// log('digitize:', math.digitize(2334))
+// log('distance:', math.distance(1, 1, 2, 3))
+// log('factorial:', math.factorial(6))
+// log('fibonacci:', math.fibonacci(5))
+// log('gcd:', math.gcd(8, 36))
+// log('hammingDisance:', math.hammingDistance(2, 3))
+// log('isArmstrongNumber:', math.isArmstrongNumber(1634))
+// log('isArmstrongNumber:', math.isArmstrongNumber(371))
+// log('isArmstrongNumber:', math.isArmstrongNumber(56))
+// log('isDivisible:', math.isDivisible(6, 3))
+// log('isEven:', math.isEven(3))
+// log('isPrime:', math.isPrime(11))
+// log('isPrime:', math.isPrime(12))
+// log('isPrime:', math.isPrime(11))
+// log('lcm:', math.lcm(12, 7))
+// log('median:', math.median(5, 6, 50, 1, -5))
+// log('palindrome:', math.palindrome('taco cat'))
+// log('percentile:', math.percentile([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 6))
+// log('powerset:', math.powerset([1, 2]))
+// log('randomIntegerInRange:', math.randomIntegerInRange(0, 5))
+// log('randomNumberInRange:', math.randomNumberInRange(2, 10))
+// log('round:', math.round(1.005, 2))
+// log('standardDeviation:', math.standardDeviation([10, 2, 38, 23, 38, 23, 21]))
+// log('standardDeviation:', math.standardDeviation([10, 2, 38, 23, 38, 23, 21], true))
+
+
+// // TEST STRING FUNCTIONS ///////////////////////////////////////////////////////
+// log('anangrams:', string.anagrams('abc'))
+// log('capitalize:', string.capitalize('john'))
+// log('capitalizeEveryWord:', string.capitalizeEveryWord('hello world'))
+// log('countVowels:', string.countVowels('foobar'))
+// log('countVowels:', string.countVowels('gym'))
+// log('escapeRegExp:', string.escapeRegExp('(test)'))
+// log('fromCamelCase:', string.fromCamelCase('someDatabaseFieldName', ' '))
+// log('fromCamelCase (snake):', string.fromCamelCase('someDatabaseFieldName', '_'))
+// log('fromCamelCase (kebab):', string.fromCamelCase('someDatabaseFieldName', '-'))
+// log('reverseString:', string.reverseString('foobar'))
+// log('sortCharactersInString:', string.sortCharactersInString('cabbage'))
+// log('stringToArrayOfWords:', string.stringToArrayOfWords('I love javaScript!!'))
+// log('stringToArrayOfWords:', string.stringToArrayOfWords('python, javaScript & coffee'))
+// log('toCamelCase:', string.toCamelCase('some_database_field_name'))
+// log('toCamelCase:', string.toCamelCase('Some label that needs to be camelized'))
+// log('toCamelCase:', string.toCamelCase('some-javascript-property'))
+// log('toCamelCase:', string.toCamelCase('some-mixed_string with spaces_underscores-and-hyphens'))
+// log('truncateString:', string.truncateString('boomerang', 7))
+
+
+// // TEST UTILITY FUNCTIONS //////////////////////////////////////////////////////
+// log('coalesce:', util.coalesce(null, undefined, NaN, 'Waldo'))
+// const customCoalesce = util.coalesceFactory(x => ![null, undefined, '', NaN].includes(x))
+// log('coalesceFactory:', customCoalesce(null, undefined, '', NaN, 'Waldo'))
+// log('extendHex:', util.extendHex('#03f'))
+// log('getType:', util.getType(3))
+// log('getType:', util.getType(new Set([1, 2, 3])))
+// log('hexToRGB:', util.hexToRGB('#27ae60ff'))
+// log('hexToRGB:', util.hexToRGB('27ae60'))
+// log('hexToRGB:', util.hexToRGB('#fff'))
+// log('isArray:', util.isArray([1]))
+// log('isArray:', util.isArray(1))
+// log('isBoolean:', util.isBoolean(null))
+// log('isBoolean:', util.isBoolean(true))
+// log('isFunction:', util.isFunction('x'))
+// log('isFunction:', util.isFunction(x => x))
+// log('isNumber:', util.isNumber('1'))
+// log('isNumber:', util.isNumber(1))
+// log('isString:', util.isString(10))
+// log('isString:', util.isString('10'))
+// log('isSymbol:', util.isSymbol('x'))
+// log('isSymbol:', util.isSymbol(Symbol('x')))
+// log('toOrdinalSuffix:', util.toOrdinalSuffix(123))
+// log('validateEmail:', util.validateEmail('example@example.com'))
+// log('validateEmail:', util.validateEmail('example'))
+// log('validateNumber:', util.validateNumber('129387.987987'))
+// log('validateNumber:', util.validateNumber(129387.987987))
+// IMPORT ALL FUNCTIONS ////////////////////////////////////////////////////////
+// Using this, the below examples will have to be namespaced under the import alias 'ff' e.g. ff.arrayMax([1, 2, 3])
+
+/***/ }),
+
+/***/ 35:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.util = exports.string = exports.math = exports.func = exports.date = exports.browser = exports.array = undefined;
+
+var _array = __webpack_require__(36);
+
+var _array2 = _interopRequireDefault(_array);
+
+var _browser = __webpack_require__(37);
+
+var _browser2 = _interopRequireDefault(_browser);
+
+var _date = __webpack_require__(38);
+
+var _date2 = _interopRequireDefault(_date);
+
+var _func = __webpack_require__(39);
+
+var _func2 = _interopRequireDefault(_func);
+
+var _math = __webpack_require__(40);
+
+var _math2 = _interopRequireDefault(_math);
+
+var _string = __webpack_require__(41);
+
+var _string2 = _interopRequireDefault(_string);
+
+var _util = __webpack_require__(42);
+
+var _util2 = _interopRequireDefault(_util);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var log = console.log;
+
+// // TEST ARRAY METHODS //////////////////////////////////////////////////////////
+// log('arrayGcd:', array.arrayGcd([4, 8, 12]))
+// log('arrayMax:', array.arrayMax([10, 1, 5]))
+// log('arrayMin:', array.arrayMin([10, 1, 5]))
+// log('chunk:', array.chunk([1, 2, 3, 4, 5], 2))
+// log('compact:', array.compact([0, 1, false, 2, '', 3, 'a', 'e' * 23, NaN, 's', 34]))
+// log('countOccurences:', array.countOccurences([1, 1, 2, 1, 2, 3], 1))
+// log('flatten:', array.flatten([1, [2], [3, [4]]]))
+// log('flattenDepth:', array.flattenDepth([1, [2], [[[3], 4], 5]], 2))
+// log('deepFlatten', array.deepFlatten([1, [2], [[3], 4], 5]))
+// log('difference:', array.difference([1, 2, 3], [1, 2, 4]))
+// log('differenceWith:', array.differenceWith([1, 1.2, 1.5, 3], [1.9, 3], (a, b) => Math.round(a) === Math.round(b)))
+// log('distictValuesOfArray:', array.distinceValuesOfArray([1, 2, 2, 3, 4, 4, 5]))
+// log('dropElements:', array.dropElements([1, 2, 3, 4], n => n >= 3))
+// log('dropRight:', array.dropRight([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 4))
+// log('everyNth:', array.everyNth([1, 2, 3, 4, 5, 6], 2))
+// log('filterNonUnique', array.filterNonUnique([1, 2, 2, 3, 4, 4, 5]))
+// log('groupBy:', array.groupBy([6.1, 4.2, 6.3], Math.floor))
+// log('head:', array.head([1, 2, 3]))
+// log('initial:', array.initial([1, 2, 3]))
+// log('initArrayRange:', array.initArrayRange(7, 3))
+// log('initArrayFill:', array.initArrayFill(5, 2))
+// log('init2DArray:', array.init2dArray(3, 3, 0))
+// log('intersection:', array.intersection([1, 2, 3], [4, 3, 2]))
+// log('last:', array.last([1, 2, 3]))
+// log('mapObject:', array.mapObject([1, 2, 3, 4], a => a * a))
+// log('pick:', array.pick({'a':1, 'b':'2', 'c': 3}, ['a', 'c']))
+// log('pull:', array.pull(['a', 'b', 'c'], 'a'))
+// log('sample:', array.sample([3, 7, 9, 11]))
+// log('shuffle:', array.shuffle([1, 2, 3]))
+// log('similarity:', array.similarity([1, 2, 3], [1, 2, 4]))
+// log('symmetricDifference:', array.symmetricDifference([1, 2, 3], [1, 2, 4]))
+// log('tail:', array.tail([1, 2, 3]))
+// log('take:', array.take([1, 2, 3, 4, 5], 3))
+// log('takeRight:', array.takeRight([1, 2, 3, 4, 5], 3))
+// log('union:', array.union([1, 2, 3], [4, 3, 2]))
+// log('without:', array.without([2, 1, 2, 3], 1, 2))
+// log('zip:', array.zip(['a'], [1, 2], [true, false]))
+
+
+// // TEST BROWSER METHODS ////////////////////////////////////////////////////////
+// // THESE WON'T RUN UNLESS IN BROWSER
+// // log('arrayToHtmlList:', browser.arrayToHtmlList(['item 1', 'item 2'],'myListID'))
+// // log('bottomVisible:', browser.bottomVisible())
+// // log('currentUrl:', browser.currentUrl())
+// // log('elementIsVisibleInViewport:', browser.elementIsVisibleInViewport(el))
+// // log('elementIsVisibleInViewport:', browser.elementIsVisibleInViewport(el, true))
+// // log('getScrollPosition:', browser.getScrollPosition())
+// // log('getURLParameters:', browser.getURLParameters('http://url.com/page?name=Adam&surname=Smith'))
+// // log('redirect:', browser.redirect('https://google.com'))
+// // log('scrollToTop:', browser.scrollToTop())
+
+
+// // TEST DATE METHODS ///////////////////////////////////////////////////////////
+// log('getDaysDiffBetweenDates:', date.getDaysDiffBetweenDates(new Date("2017-12-13"), new Date("2017-12-22")))
+// log('JSONToDate:', date.JSONToDate(/Date(1489525200000)/))
+// log('toEnglishDate:', date.toEnglishDate('09/21/2010'))
+
+
+// // TEST FUNCTION METHODS ///////////////////////////////////////////////////////
+// func.chainAsync([
+//   next => { console.log('0 seconds'); setTimeout(next, 1000); },
+//   next => { console.log('1 second'); setTimeout(next, 1000); },
+//   next => { console.log('2 seconds'); }
+// ])
+
+// const add5 = x => x + 5
+// const multiply = (x, y) => x * y
+// const multiplyAndAdd5 = func.compose(add5, multiply)
+// log(multiplyAndAdd5(5, 2))
+
+// func.curry(Math.pow)(2)(10)
+// func.curry(Math.min, 3)(10)(50)(2)
+
+// const add6 = x => x + 6
+// const multiply2 = (x, y) => x * y
+// const multiplyAndAdd6 = func.pipeFunctions(multiply2, add6)
+// log(multiplyAndAdd6(5, 2))
+
+// const delay = func.promisify((d, cb) => setTimeout(cb, d))
+// delay(2000).then(() => console.log('Hi!'))
+
+// const delay2 = (d) => new Promise(r => setTimeout(r, d))
+// func.runPromisesInSeries([() => delay2(1000), () => delay2(2000)])
+
+
+// // TEST MATH METHODS ///////////////////////////////////////////////////////////
+// log('arrayAverage:', math.arrayAverage([1, 2, 3]))
+// log('arraySum:', math.arraySum([1, 2, 3, 4]))
+// log('collatz:', math.collatz(8))
+// log('digitize:', math.digitize(2334))
+// log('distance:', math.distance(1, 1, 2, 3))
+// log('factorial:', math.factorial(6))
+// log('fibonacci:', math.fibonacci(5))
+// log('gcd:', math.gcd(8, 36))
+// log('hammingDisance:', math.hammingDistance(2, 3))
+// log('isArmstrongNumber:', math.isArmstrongNumber(1634))
+// log('isArmstrongNumber:', math.isArmstrongNumber(371))
+// log('isArmstrongNumber:', math.isArmstrongNumber(56))
+// log('isDivisible:', math.isDivisible(6, 3))
+// log('isEven:', math.isEven(3))
+// log('isPrime:', math.isPrime(11))
+// log('isPrime:', math.isPrime(12))
+// log('isPrime:', math.isPrime(11))
+// log('lcm:', math.lcm(12, 7))
+// log('median:', math.median(5, 6, 50, 1, -5))
+// log('palindrome:', math.palindrome('taco cat'))
+// log('percentile:', math.percentile([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 6))
+// log('powerset:', math.powerset([1, 2]))
+// log('randomIntegerInRange:', math.randomIntegerInRange(0, 5))
+// log('randomNumberInRange:', math.randomNumberInRange(2, 10))
+// log('round:', math.round(1.005, 2))
+// log('standardDeviation:', math.standardDeviation([10, 2, 38, 23, 38, 23, 21]))
+// log('standardDeviation:', math.standardDeviation([10, 2, 38, 23, 38, 23, 21], true))
+
+
+// // TEST STRING METHODS ///////////////////////////////////////////////////////////
+// log('anangrams:', string.anagrams('abc'))
+// log('capitalize:', string.capitalize('john'))
+// log('capitalizeEveryWord:', string.capitalizeEveryWord('hello world'))
+// log('countVowels:', string.countVowels('foobar'))
+// log('countVowels:', string.countVowels('gym'))
+// log('escapeRegExp:', string.escapeRegExp('(test)'))
+// log('fromCamelCase:', string.fromCamelCase('someDatabaseFieldName', ' '))
+// log('fromCamelCase (snake):', string.fromCamelCase('someDatabaseFieldName', '_'))
+// log('fromCamelCase (kebab):', string.fromCamelCase('someDatabaseFieldName', '-'))
+// log('reverseString:', string.reverseString('foobar'))
+// log('sortCharactersInString:', string.sortCharactersInString('cabbage'))
+// log('stringToArrayOfWords:', string.stringToArrayOfWords('I love javaScript!!'))
+// log('stringToArrayOfWords:', string.stringToArrayOfWords('python, javaScript & coffee'))
+// log('toCamelCase:', string.toCamelCase('some_database_field_name'))
+// log('toCamelCase:', string.toCamelCase('Some label that needs to be camelized'))
+// log('toCamelCase:', string.toCamelCase('some-javascript-property'))
+// log('toCamelCase:', string.toCamelCase('some-mixed_string with spaces_underscores-and-hyphens'))
+// log('truncateString:', string.truncateString('boomerang', 7))
+
+
+// // TEST UTILITY METHODS ///////////////////////////////////////////////////////////
+// log('coalesce:', util.coalesce(null, undefined, NaN, 'Waldo'))
+// const customCoalesce = util.coalesceFactory(x => ![null, undefined, '', NaN].includes(x))
+// log('coalesceFactory:', customCoalesce(null, undefined, '', NaN, 'Waldo'))
+// log('extendHex:', util.extendHex('#03f'))
+// log('getType:', util.getType(3))
+// log('getType:', util.getType(new Set([1, 2, 3])))
+// log('hexToRGB:', util.hexToRGB('#27ae60ff'))
+// log('hexToRGB:', util.hexToRGB('27ae60'))
+// log('hexToRGB:', util.hexToRGB('#fff'))
+// log('isArray:', util.isArray([1]))
+// log('isArray:', util.isArray(1))
+// log('isBoolean:', util.isBoolean(null))
+// log('isBoolean:', util.isBoolean(true))
+// log('isFunction:', util.isFunction('x'))
+// log('isFunction:', util.isFunction(x => x))
+// log('isNumber:', util.isNumber('1'))
+// log('isNumber:', util.isNumber(1))
+// log('isString:', util.isString(10))
+// log('isString:', util.isString('10'))
+// log('isSymbol:', util.isSymbol('x'))
+// log('isSymbol:', util.isSymbol(Symbol('x')))
+// log('toOrdinalSuffix:', util.toOrdinalSuffix(123))
+// log('validateEmail:', util.validateEmail('example@example.com'))
+// log('validateEmail:', util.validateEmail('example'))
+// log('validateNumber:', util.validateNumber('129387.987987'))
+// log('validateNumber:', util.validateNumber(129387.987987))
+
+
+// COMBINE IMPORTED MODULES INTO A DEFAULT EXPORT //////////////////////////////
+var _module = {};
+_module = Object.assign(_module, _array2.default);
+_module = Object.assign(_module, _browser2.default);
+_module = Object.assign(_module, _date2.default);
+_module = Object.assign(_module, _func2.default);
+_module = Object.assign(_module, _math2.default);
+_module = Object.assign(_module, _string2.default);
+_module = Object.assign(_module, _util2.default);
+
+// Check methods added
+// console.log(module)
+exports.default = _module;
+
+// ALSO ALLOW THEM TO BE IMPORTED INDEPENDENTLY ////////////////////////////////
+
+exports.array = _array2.default;
+exports.browser = _browser2.default;
+exports.date = _date2.default;
+exports.func = _func2.default;
+exports.math = _math2.default;
+exports.string = _string2.default;
+exports.util = _util2.default;
+
+/***/ }),
+
+/***/ 36:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+// ARRAY METHODS ///////////////////////////////////////////////////////////////
+var array = void 0;
+exports.default = array = {
+  // Calculates the greatest common denominator of an array of numbers
+  arrayGcd: function arrayGcd(arr) {
+    var gcd = function gcd(x, y) {
+      return !y ? x : gcd(y, x % y);
+    };return arr.reduce(function (a, b) {
+      return gcd(a, b);
+    });
+  },
+  // Get the max val of an array by spreading its vals as args to Math.max.
+  arrayMax: function arrayMax(arr) {
+    return Math.max.apply(Math, _toConsumableArray(arr));
+  },
+  // Returns the minimum value in an array
+  arrayMin: function arrayMin(arr) {
+    return Math.min.apply(Math, _toConsumableArray(arr));
+  },
+  // Chunks an array into smaller arrays of a specified size.
+  chunk: function chunk(arr, size) {
+    return Array.from({ length: Math.ceil(arr.length / size) }, function (v, i) {
+      return arr.slice(i * size, i * size + size);
+    });
+  },
+  // Remove falsey values from an array.
+  compact: function compact(arr) {
+    return arr.filter(Boolean);
+  },
+  // Count the occurences of an value in an array
+  countOccurences: function countOccurences(arr, val) {
+    return arr.reduce(function (acc, v) {
+      return v === val ? acc + 1 : acc + 0;
+    }, 0);
+  },
+  // Flatten an array
+  flatten: function flatten(arr) {
+    return arr.reduce(function (a, v) {
+      return a.concat(v);
+    }, []);
+  },
+  // Flattens an array up to the specified depth.
+  flattenDepth: function flattenDepth(arr) {
+    var depth = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+    return depth !== 1 ? arr.reduce(function (a, v) {
+      return a.concat(Array.isArray(v) ? array.flattenDepth(v, depth - 1) : v);
+    }, []) : arr.reduce(function (a, v) {
+      return a.concat(v);
+    }, []);
+  },
+  // Deep flattens an array.
+  deepFlatten: function deepFlatten(arr) {
+    var _ref;
+
+    return (_ref = []).concat.apply(_ref, _toConsumableArray(arr.map(function (v) {
+      return Array.isArray(v) ? array.deepFlatten(v) : v;
+    })));
+  },
+  // Returns the difference between two arrays.
+  difference: function difference(a, b) {
+    var s = new Set(b);return a.filter(function (x) {
+      return !s.has(x);
+    });
+  },
+  // Filters out all values from an array for which the comparator function does not return true.
+  differenceWith: function differenceWith(arr, val, comp) {
+    return arr.filter(function (a) {
+      return !val.find(function (b) {
+        return comp(a, b);
+      });
+    });
+  },
+  // Returns all the distinct values of an array.
+  distinceValuesOfArray: function distinceValuesOfArray(arr) {
+    return [].concat(_toConsumableArray(new Set(arr)));
+  },
+  // Removes elements in an array untill the passed function returns true. Returns the remaining elements in the array.
+  dropElements: function dropElements(arr, func) {
+    while (arr.length > 0 && !func(arr[0])) {
+      arr = arr.slice(1);
+    }return arr;
+  },
+  // Returns a new array with n elements removed from the right.
+  dropRight: function dropRight(arr) {
+    var n = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+    return n < arr.length ? arr.slice(0, arr.length - n) : [];
+  },
+  // Returns every nth element in an array.
+  everyNth: function everyNth(arr, nth) {
+    return arr.filter(function (e, i) {
+      return i % nth === 0;
+    });
+  },
+  // Filters out the non-unique values in an array.
+  filterNonUnique: function filterNonUnique(arr) {
+    return arr.filter(function (i) {
+      return arr.indexOf(i) === arr.lastIndexOf(i);
+    });
+  },
+  // Groups the elements of an array based on the given function
+  groupBy: function groupBy(arr, func) {
+    return arr.map(typeof func === 'function' ? func : function (val) {
+      return val[func];
+    }).reduce(function (acc, val, i) {
+      acc[val] = (acc[val] || []).concat(arr[i]);return acc;
+    }, {});
+  },
+  // Returns the head of a list
+  head: function head(arr) {
+    return arr[0];
+  },
+  // Returns all the elements of an array except the last one
+  initial: function initial(arr) {
+    return arr.slice(0, -1);
+  },
+  // Initializes an array containing the numbers in th especified range where start and end are inclusive
+  initArrayRange: function initArrayRange(end) {
+    var start = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+    return Array.from({ length: end + 1 - start }).map(function (v, i) {
+      return i + start;
+    });
+  },
+  // Initializes an array of n length, with 'value' at each index.
+  initArrayFill: function initArrayFill(n) {
+    var value = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+    return Array(n).fill(value);
+  },
+  // Intializes a 2D array of given width and height and value.
+  init2dArray: function init2dArray(w, h) {
+    var val = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+    return Array(h).fill().map(function () {
+      return Array(w).fill(val);
+    });
+  },
+  // Returns a list of elements that exist in both arrays
+  intersection: function intersection(a, b) {
+    var s = new Set(b);return a.filter(function (x) {
+      return s.has(x);
+    });
+  },
+  // Returns the last element in an array.
+  last: function last(arr) {
+    return arr[arr.length - 1];
+  },
+  // Maps the values of an array to an object using a function, where the key-value pairs consist of the original value as the key and the mapped value.
+  mapObject: function mapObject(arr, fn) {
+    return function (a) {
+      return a = [arr, arr.map(fn)], a[0].reduce(function (acc, val, i) {
+        return acc[val] = a[1][i], acc;
+      }, {});
+    }();
+  },
+  // Picks the key-value pair corresponding to the given keys from an object
+  pick: function pick(obj, arr) {
+    return arr.reduce(function (acc, curr) {
+      return curr in obj && (acc[curr] = obj[curr]), acc;
+    }, {});
+  },
+  // filter out the values specified
+  pull: function pull(arr) {
+    for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+      args[_key - 1] = arguments[_key];
+    }
+
+    return arr.filter(function (v) {
+      return !args.toString().split(',').includes(v);
+    });
+  },
+  // Returns a random element from an array
+  sample: function sample(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+  },
+  // Randomizes the order of the values of an array.
+  shuffle: function shuffle(arr) {
+    return arr.sort(function () {
+      return Math.random() - 0.5;
+    });
+  },
+  // Returns an array of elements that appear in both arrays.
+  similarity: function similarity(arr, values) {
+    return arr.filter(function (v) {
+      return values.includes(v);
+    });
+  },
+  // Returns the symmetric difference betreen two arrays.
+  symmetricDifference: function symmetricDifference(a, b) {
+    var sA = new Set(a),
+        sB = new Set(b);return [].concat(_toConsumableArray(a.filter(function (x) {
+      return !sB.has(x);
+    })), _toConsumableArray(b.filter(function (x) {
+      return !sA.has(x);
+    })));
+  },
+  // Returns all elements in an array except for the first one.
+  tail: function tail(arr) {
+    return arr.length > 1 ? arr.slice(1) : arr;
+  },
+  // Returns an array with n elements removed from the beginning
+  take: function take(arr) {
+    var n = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+    return arr.slice(0, n);
+  },
+  // Returns an array with n elements removed from the end
+  takeRight: function takeRight(arr) {
+    var n = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+    return arr.slice(arr.length - n, arr.length);
+  },
+  // Returns every element that exists in any of the two arrays once.
+  union: function union(a, b) {
+    return Array.from(new Set([].concat(_toConsumableArray(a), _toConsumableArray(b))));
+  },
+  // Filters out the elements of an array that have one of the specified values
+  without: function without(arr) {
+    for (var _len2 = arguments.length, args = Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
+      args[_key2 - 1] = arguments[_key2];
+    }
+
+    return arr.filter(function (v) {
+      return !args.includes(v);
+    });
+  },
+  // Creates an array of elements, grouped based on the position in the original arrays.
+  zip: function zip() {
+    for (var _len3 = arguments.length, arrs = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+      arrs[_key3] = arguments[_key3];
+    }
+
+    return Array.from({ length: Math.max.apply(Math, _toConsumableArray(arrs.map(function (x) {
+        return x.length;
+      }))) }).map(function (_, i) {
+      return Array.from({ length: arrs.length }, function (_, k) {
+        return arrs[k][i];
+      });
+    });
+  }
+};
+
+/***/ }),
+
+/***/ 37:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// BROWSER METHODS /////////////////////////////////////////////////////////////
+var browser = void 0;
+exports.default = browser = {
+  // Converts the given array elements into <li> tags and appends them to the list of the given id.
+  arrayToHtmlList: function arrayToHtmlList(arr, listID) {
+    return arr.map(function (item) {
+      return document.querySelector("#" + listID).innerHTML += '<li>' + item + '</li>';
+    });
+  },
+  // Returns true if the bottom of the page is visible, false otherwise.
+  bottomVisible: function bottomVisible() {
+    return document.documentElement.clientHeight + window.scrollY >= (document.documentElement.scrollHeight || document.documentElement.clientHeight);
+  },
+  // Returns the current URL.
+  currentURL: function currentURL() {
+    return window.location.href;
+  },
+  // Returns true if the element specified is visible in the viewport, false otherwise.
+  elementIsVisibleInViewport: function elementIsVisibleInViewport(el) {
+    var partiallyVisible = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+    var _el$getBoundingClient = el.getBoundingClientRect(),
+        top = _el$getBoundingClient.top,
+        left = _el$getBoundingClient.left,
+        bottom = _el$getBoundingClient.bottom,
+        right = _el$getBoundingClient.right;
+
+    return partiallyVisible ? (top > 0 && top < innerHeight || bottom > 0 && bottom < innerHeight) && (left > 0 && left < innerWidth || right > 0 && right < innerWidth) : top >= 0 && left >= 0 && bottom <= innerHeight && right <= innerWidth;
+  },
+  // Returns the scroll position of the current page.
+  getScrollPosition: function getScrollPosition() {
+    var el = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : window;
+    return { x: el.pageXOffset !== undefined ? el.pageXOffset : el.scrollLeft, y: el.pageYOffset !== undefined ? el.pageYOffset : el.scrollTop };
+  },
+  // Returns an object containing the parameters of the current URL.
+  getURLParameters: function getURLParameters(url) {
+    return url.match(/([^?=&]+)(=([^&]*))/g).reduce(function (a, v) {
+      return a[v.slice(0, v.indexOf('='))] = v.slice(v.indexOf('=') + 1), a;
+    }, {});
+  },
+  // Redirects to a specified URL.
+  redirect: function redirect(url) {
+    var asLink = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+    return asLink ? window.location.href = url : window.location.replace(url);
+  },
+  // Smooth-scrolls to the top of the page.
+  scrollToTop: function scrollToTop() {
+    var c = document.documentElement.scrollTop || document.body.scrollTop;if (c > 0) {
+      window.requestAnimationFrame(browser.scrollToTop);window.scrollTo(0, c - c / 8);
+    }
+  }
+};
+
+/***/ }),
+
+/***/ 38:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// DATE METHODS /////////////////////////////////////////////////////////////
+var date = void 0;
+exports.default = date = {
+  // Returns the difference (in days) between two dates.
+  getDaysDiffBetweenDates: function getDaysDiffBetweenDates(dateInitial, dateFinal) {
+    return (dateFinal - dateInitial) / (1000 * 3600 * 24);
+  },
+  // Converts a JSON object to a date.
+  JSONToDate: function JSONToDate(arr) {
+    var dt = new Date(parseInt(arr.toString().substr(6), 10));
+    return dt.getDate() + '/' + (dt.getMonth() + 1) + '/' + dt.getFullYear();
+  },
+  // Converts a date from American format to English format.
+  toEnglishDate: function toEnglishDate(time) {
+    try {
+      return new Date(time).toISOString().split('T')[0].replace(/-/g, '/');
+    } catch (e) {
+      return null;
+    }
+  }
+};
+
+/***/ }),
+
+/***/ 39:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// FUNCTION METHODS ////////////////////////////////////////////////////////////
+var func = void 0;
+exports.default = func = {
+  // Chains asynchronous functions.
+  chainAsync: function chainAsync(fns) {
+    var curr = 0;var next = function next() {
+      return fns[curr++](next);
+    };next();
+  },
+  // Performs right-to-left function composition.
+  compose: function compose() {
+    for (var _len = arguments.length, fns = Array(_len), _key = 0; _key < _len; _key++) {
+      fns[_key] = arguments[_key];
+    }
+
+    return fns.reduce(function (f, g) {
+      return function () {
+        return f(g.apply(undefined, arguments));
+      };
+    });
+  },
+  // Curries a function.
+  curry: function curry(fn) {
+    for (var _len2 = arguments.length, args = Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
+      args[_key2 - 2] = arguments[_key2];
+    }
+
+    var _func$curry;
+
+    var arity = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : fn.length;
+    return arity <= args.length ? fn.apply(undefined, args) : (_func$curry = func.curry).bind.apply(_func$curry, [null, fn, arity].concat(args));
+  },
+  // Performs left-to-right function composition.
+  pipeFunctions: function pipeFunctions() {
+    for (var _len3 = arguments.length, fns = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+      fns[_key3] = arguments[_key3];
+    }
+
+    return fns.reduce(function (f, g) {
+      return function () {
+        return g(f.apply(undefined, arguments));
+      };
+    });
+  },
+  // Converts an asynchronous function to return a promise.
+  promisify: function promisify(funct) {
+    return function () {
+      for (var _len4 = arguments.length, args = Array(_len4), _key4 = 0; _key4 < _len4; _key4++) {
+        args[_key4] = arguments[_key4];
+      }
+
+      return new Promise(function (resolve, reject) {
+        return funct.apply(undefined, args.concat([function (err, result) {
+          return err ? reject(err) : resolve(result);
+        }]));
+      });
+    };
+  },
+  // Runs an array of promises in series.
+  runPromisesInSeries: function runPromisesInSeries(ps) {
+    return ps.reduce(function (p, next) {
+      return p.then(next);
+    }, Promise.resolve());
+  }
+};
+
+/***/ }),
+
+/***/ 40:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+// MATH METHODS ////////////////////////////////////////////////////////////////
+var math = void 0;
+exports.default = math = {
+  // Returns the average of an array of numbers.
+  arrayAverage: function arrayAverage(x) {
+    return x.reduce(function (acc, val) {
+      return acc + val;
+    }, 0) / x.length;
+  },
+  // Returns the sum of an array of numbers.
+  arraySum: function arraySum(x) {
+    return x.reduce(function (acc, val) {
+      return acc + val;
+    }, 0);
+  },
+  // Applies the Collatz algorithm.
+  collatz: function collatz(x) {
+    return x % 2 === 0 ? x / 2 : 3 * n + 1;
+  },
+  // Converts a number to an array of digits.
+  digitize: function digitize(x) {
+    return [].concat(_toConsumableArray('' + x)).map(function (i) {
+      return parseInt(i, 10);
+    });
+  },
+  // Returns the distance between two points.
+  distance: function distance(x0, y0, x1, y1) {
+    return Math.hypot(x1 - x0, y1 - y0);
+  },
+  // Calculates the factorial of a number
+  factorial: function factorial(x) {
+    return x < 0 ? function () {
+      throw new TypeError('Negative numbers are not allowed.');
+    }() : x <= 1 ? 1 : x * math.factorial(x - 1);
+  },
+  // Generates an array, containing the Fibonacci sequence, up until the nth term.
+  fibonacci: function fibonacci(x) {
+    return Array(x).fill(0).reduce(function (acc, val, i) {
+      return acc.concat(i > 1 ? acc[i - 1] + acc[i - 2] : i);
+    }, []);
+  },
+  // Calculates the greatest common divisor between two numbers.
+  gcd: function gcd(x, y) {
+    return !x ? x : math.gcd(y, x % y);
+  },
+  // Calculates the Hamming distance between two values.
+  hammingDistance: function hammingDistance(x, y) {
+    return ((x ^ y).toString(2).match(/1/g) || '').length;
+  },
+  // Checks if the given number is an armstrong number or not.
+  isArmstrongNumber: function isArmstrongNumber(digits) {
+    return function (arr) {
+      return arr.reduce(function (a, d) {
+        return a + Math.pow(parseInt(d, 10), arr.length);
+      }, 0) === digits ? true : false;
+    }((digits + '').split(''));
+  },
+  // Checks if the first numberic argument is divisible by the second one.
+  isDivisible: function isDivisible(dividend, divisor) {
+    return dividend % divisor === 0;
+  },
+  // Returns true if the given number is even, false otherwise.
+  isEven: function isEven(x) {
+    return x % 2 === 0;
+  },
+  // Checks if the provided integer is a prime number.
+  isPrime: function isPrime(x) {
+    for (var i = 2; i < x; i++) {
+      if (x % i === 0) {
+        return false;
+      }
+    }return x >= 2;
+  },
+  // Returns the least common multiple of two numbers.
+  lcm: function lcm(x, y) {
+    var gcd = function gcd(a, b) {
+      return !b ? a : gcd(b, a % b);
+    };return Math.abs(x * y) / gcd(x, y);
+  },
+  // Returns the median of an array of numbers.
+  median: function median(arr) {
+    var mid = Math.floor(arr.length / 2),
+        nums = [].concat(_toConsumableArray(arr)).sort(function (a, b) {
+      return a - b;
+    });return arr.length % 2 !== 0 ? nums[mid] : (nums[mid - 1] + nums[mid]) / 2;
+  },
+  // Returns true if the given string is a palindrome, false otherwise
+  palindrome: function palindrome(str) {
+    var s = str.toLowerCase().replace(/[\W_]/g, '');return s === s.split('').reverse().join('');
+  },
+  // Uses the percentile formula to calculate how many numbers in the given array are less or equal to the given value.
+  percentile: function percentile(arr, val) {
+    return 100 * arr.reduce(function (acc, v) {
+      return acc + (v < val ? 1 : 0) + (v === val ? 0.5 : 0);
+    }, 0) / arr.length;
+  },
+  // Returns the powerset of a given array of numbers.
+  powerset: function powerset(arr) {
+    return arr.reduce(function (a, v) {
+      return a.concat(a.map(function (r) {
+        return [v].concat(r);
+      }));
+    }, [[]]);
+  },
+  // Returns a random integer in a specified range.
+  randomIntegerInRange: function randomIntegerInRange(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  },
+  // Returnas a randome number in a specified range.
+  randomNumberInRange: function randomNumberInRange(min, max) {
+    return Math.random() * (max - min) + min;
+  },
+  // Rounds a number to a specified amount of digits.
+  round: function round(x) {
+    var decimals = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+    return Number(Math.round(x + 'e' + decimals) + 'e-' + decimals);
+  },
+  // Returns the standard deviation of an array of numbers.
+  standardDeviation: function standardDeviation(arr) {
+    var usePopulation = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+    var mean = arr.reduce(function (acc, val) {
+      return acc + val;
+    }, 0) / arr.length;
+    return Math.sqrt(arr.reduce(function (acc, val) {
+      return acc.concat(Math.pow(val - mean, 2));
+    }, []).reduce(function (acc, val) {
+      return acc + val;
+    }, 0) / (arr.length - (usePopulation ? 0 : 1)));
+  }
+};
+
+/***/ }),
+
+/***/ 41:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+function _toArray(arr) { return Array.isArray(arr) ? arr : Array.from(arr); }
+
+// STRING METHODS //////////////////////////////////////////////////////////////
+var string = void 0;
+exports.default = string = {
+  // Generates all anagrams of a string (contains duplicates).
+  anagrams: function anagrams(str) {
+    if (str.length <= 2) return string.length === 2 ? [str, str[1] + str[0]] : [str];
+    return str.split('').reduce(function (acc, letter, i) {
+      return acc.concat(string.anagrams(str.slice(0, i) + str.slice(i + 1)).map(function (val) {
+        return letter + val;
+      }));
+    }, []);
+  },
+  // Capitalizes the first letter of a string.
+  capitalize: function capitalize(_ref) {
+    var _ref2 = _toArray(_ref),
+        first = _ref2[0],
+        rest = _ref2.slice(1);
+
+    var lowerRest = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+    return first.toUpperCase() + (lowerRest ? rest.join('').toLowerCase() : rest.join(''));
+  },
+  // Capitaizes the first letter of every word in a string.
+  capitalizeEveryWord: function capitalizeEveryWord(str) {
+    return str.replace(/\b[a-z]/g, function (char) {
+      return char.toUpperCase();
+    });
+  },
+  // Returns number of vowels in provided string.
+  countVowels: function countVowels(str) {
+    return (str.match(/[aeiou]/ig) || []).length;
+  },
+  // Escapes a string to use in a regular expression.
+  escapeRegExp: function escapeRegExp(str) {
+    return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  },
+  // Converts a string from camelcase
+  fromCamelCase: function fromCamelCase(str) {
+    var separator = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '_';
+    return str.replace(/([a-z\d])([A-Z])/g, '$1' + separator + '$2').replace(/([A-Z]+)([A-Z][a-z\d]+)/g, '$1' + separator + '$2').toLowerCase();
+  },
+  // Reverses a string.
+  reverseString: function reverseString(str) {
+    return str.split('').reverse().join('');
+  },
+  // Alphabetically sorts the characters in a string.
+  sortCharactersInString: function sortCharactersInString(str) {
+    return str.split('').sort(function (a, b) {
+      return a.localeCompare(b);
+    }).join('');
+  },
+  // Converts a given string into an array of words.
+  stringToArrayOfWords: function stringToArrayOfWords(str) {
+    var pattern = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : /[^a-zA-Z-]+/;
+    return str.split(pattern).filter(Boolean);
+  },
+  // Converts a string to camelcase.
+  toCamelCase: function toCamelCase(str) {
+    return str.replace(/^([A-Z])|[\s-_]+(\w)/g, function (match, p1, p2, offset) {
+      return p2 ? p2.toUpperCase() : p1.toLowerCase();
+    });
+  },
+  // Truncates a string up to a specified length.
+  truncateString: function truncateString(str, num) {
+    return str.length > num ? str.slice(0, num > 3 ? num - 3 : num) + '...' : str;
+  }
+};
+
+/***/ }),
+
+/***/ 42:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+// UTILITY METHODS /////////////////////////////////////////////////////////////
+var util = void 0;
+exports.default = util = {
+  // Tests that the module was imported correctly
+  test: function test() {
+    return 'Hello from util module';
+  },
+  // Returns the first non-null/undefined argument
+  coalesce: function coalesce() {
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return args.find(function (x) {
+      return ![undefined, null].includes(x);
+    });
+  },
+  // Returns a customized coalesce function that returns the first argument that returns true from the provided argument validation function
+  coalesceFactory: function coalesceFactory(valid) {
+    return function () {
+      for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+        args[_key2] = arguments[_key2];
+      }
+
+      return args.find(valid);
+    };
+  },
+  // Extends a 3-digit color code to a 6-digit color code.
+  extendHex: function extendHex(shortHex) {
+    return '#' + shortHex.slice(shortHex.startsWith('#') ? 1 : 0).split('').map(function (x) {
+      return x + x;
+    }).join('');
+  },
+  // Returns the native type of a value.
+  getType: function getType(v) {
+    return v === undefined ? 'undefined' : v === null ? 'null' : v.constructor.name.toLowerCase();
+  },
+  // Converts a color code to an rgb() or rgba() string if alpha value is provided
+  hexToRGB: function hexToRGB(hex) {
+    var alpha = false,
+        h = hex.slice(hex.startsWith('#') ? 1 : 0);
+    if (h.length === 3) h = [].concat(_toConsumableArray(h)).map(function (x) {
+      return x + x;
+    }).join('');else if (h.length === 8) alpha = true;
+    h = parseInt(h, 16);
+    return 'rgb' + (alpha ? 'a' : '') + '(' + (h >>> (alpha ? 24 : 16)) + ', ' + ((h & (alpha ? 0x00ff0000 : 0x00ff00)) >>> (alpha ? 16 : 8)) + ', ' + ((h & (alpha ? 0x0000ff00 : 0x0000ff)) >>> (alpha ? 8 : 0)) + (alpha ? ', ' + (h & 0x000000ff) : '') + ')';
+  },
+  isArray: function isArray(val) {
+    return !!val && Array.isArray(val);
+  },
+  isBoolean: function isBoolean(val) {
+    return typeof val === 'boolean';
+  },
+  isFunction: function isFunction(val) {
+    return val && typeof val === 'function';
+  },
+  isNumber: function isNumber(val) {
+    return typeof val === 'number';
+  },
+  isString: function isString(val) {
+    return typeof val === 'string';
+  },
+  isSymbol: function isSymbol(val) {
+    return (typeof val === 'undefined' ? 'undefined' : _typeof(val)) === 'symbol';
+  },
+  toOrdinalSuffix: function toOrdinalSuffix(num) {
+    var int = parseInt(num),
+        digits = [int % 10, int % 100],
+        ordinals = ['st', 'nd', 'rd', 'th'],
+        oPattern = [1, 2, 3, 4],
+        tPattern = [11, 12, 13, 14, 15, 16, 17, 18, 19];
+    return oPattern.includes(digits[0]) && !tPattern.includes(digits[1]) ? int + ordinals[digits[0] - 1] : int + ordinals[3];
+  },
+  validateEmail: function validateEmail(str) {
+    return (/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(str)
+    );
+  },
+  validateNumber: function validateNumber(n) {
+    return !isNaN(parseFloat(n)) && isFinite(n) && Number(n) === n;
+  }
+};
+
+/***/ })
+
+/******/ });
+//# sourceMappingURL=utils.js.map

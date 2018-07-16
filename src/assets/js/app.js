@@ -2,12 +2,8 @@ import './modules/firebase-init'
 import { getAuthStatus } from './modules/auth'
 import renderEditor from './components/editor'
 import renderSteganography from './components/steganography'
-import {
-  scratchPad,
-  renderRealtimeDatabaseExplorer,
-  fileUploader
-} from './components/unfinished-features'
 import renderScorch from './components/scorch'
+import fileUploader from './components/file-uploader'
 import './modules/macy'
 
 // Just for testing
