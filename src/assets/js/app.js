@@ -1,16 +1,17 @@
+// MODULES /////////////////////////////////////////////////////////////////////
 import './modules/firebase-init'
+import './modules/macy'
 import { getAuthStatus } from './modules/auth'
+
+// COMPONENTS //////////////////////////////////////////////////////////////////
 import renderEditor from './components/editor'
-import renderSteganography from './components/steganography'
-import renderScorch from './components/scorch'
 import './components/file-uploader'
 import './components/database-explorer'
-import './modules/macy'
 
-// Just for testing
-window.Macy = Macy
-import Macy from 'macy'
+import renderSteganography from './components/steganography'
+import renderScorch from './components/scorch'
 
+// HANDLE AUTH /////////////////////////////////////////////////////////////////
 document.addEventListener('DOMContentLoaded', function() {
   getAuthStatus()
   sessionStorage.getItem('user') ? renderPage() : null
@@ -21,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
 ////////////////////////////////////////////////////////////////////////////////
 document.qs = sel => document.querySelector(sel)
 document.qsa = sel => document.querySelectorAll(sel)
-document.log = log => console.log(log)
 
 ////////////////////////////////////////////////////////////////////////////////
 // RENDER PAGE

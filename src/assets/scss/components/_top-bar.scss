@@ -11,13 +11,19 @@
 
   height: 3.5rem;
 
+  a:hover, a:focus {
+    outline: none !important;
+
+    .logo {
+      @extend %flame-on;
+    }
+  }
+
   .logo {
     height: 2rem;
     margin: 0 24px 8px 0;
-
-    &:hover {
-      @extend %flame-on;
-    }
+    outline: none !important;
+    // @extend %flame-on;
   }
 
   .log-in-status {

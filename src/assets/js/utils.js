@@ -36,7 +36,7 @@ import ffjs from './lib/ffjs.js'
 
 // PRISMJS: Code Highlighting for <pre> and <code> /////////////////////////////
 // http://prismjs.com
-// import './lib/prism.js'
+import './lib/prism.js'
 
 // WHATINPUT: Utility to track the current input method ////////////////////////
 // https://github.com/ten1seven/what-input

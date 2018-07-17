@@ -1,0 +1,59 @@
+.db-explorer-container {
+
+  .input-group {
+    margin-bottom: 0;
+    height: 2rem;
+
+    .copy-button, .clear-button, .copy-json-button {
+      font-size: 14px;
+      margin: 0 2px 0 0;
+      border-radius: $global-radius $global-radius 0 0;
+
+      &:hover {
+        background: $alert-color;
+        color: $white;
+      }
+    }
+
+    .clear-button {
+      color: $white;
+      background: $dark-gray;
+      box-shadow: $global-shadow;
+      margin-left: 2px;
+    }
+  }
+
+  a.button.copy-json-button {
+    font-size: 14px;
+    color: $white !important;
+    &:hover {
+      background: $alert-color;
+      color: $white;
+    }
+  }
+
+  .path-field {
+    border: 1px solid $light-gray;
+    border-radius: 0 $global-radius 0 0;
+  }
+
+  .input-group-label {
+    border: 0;
+    border-radius: $global-radius 0 0 0;
+  }
+
+  .token.property {
+    cursor: pointer;
+  }
+
+  .code-toolbar {
+    border-radius: 0 0 $global-radius $global-radius;
+    overflow: hidden;
+
+    pre {
+      margin: 0;
+      height: 300px;
+      max-height: 450px;
+    }
+  }
+}

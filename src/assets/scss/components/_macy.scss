@@ -1,5 +1,6 @@
 #macy-container {
-  column-gap: 16px;
+  column-gap: 10px;
+  padding-bottom: 10px;
 
   @include breakpoint(small) {
     column-count: 1;
@@ -13,12 +14,9 @@
 
   .macy-item {
     break-inside: avoid;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     overflow: hidden;
     // DISALLOW CONTENT SELECTION
-    // -moz-user-select: none;
-    // -khtml-user-select: none;
-    // -webkit-user-select: none;
     // user-select: none;
     -khtml-user-drag: element;
     -webkit-user-drag: element;
@@ -39,6 +37,7 @@
     padding: calc(2rem - 2px);
     opacity: 0.2;
     background: #e5e5e5;
+    transition: $global-transition;
 
     * {
       pointer-events: none;

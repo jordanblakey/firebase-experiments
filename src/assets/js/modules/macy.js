@@ -17,7 +17,7 @@ function initMacy() {
     container: '#macy-container',
     columns: 1,
     trueOrder: false,
-    margin: 16,
+    margin: 10,
     waitForImages: false,
     useOwnImageLoader: false,
     mobileFirst: true,

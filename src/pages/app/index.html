@@ -124,28 +124,41 @@ title: "Scorched: Secure, Portable Notes"
 
 <div class="grid-container">
   <div class="grid-x">
-    <div class="cell file-uploader-container">
-      <hr>
-      <h3>Firebase Storage Upload</h3>
-      <input id="file" type="file" multiple class="file uploader" />
-      <label for="file">Choose a file <span class="hide"></span></label>
-      <p class="status label hidden">&nbsp;</p>
+    <div class="cell file-uploader-container callout secondary medium-12 large-6">
+      <h3>Storage Upload</h3>
+      <form class="input-group">
+        <input id="file" type="file" multiple class="file uploader" />
+        <label for="file">Choose a file
+          <span class="hide"></span>
+        </label>
+        <p class="status label hidden">&nbsp;</p>
+      </form>
       <img class="viewer" src="" width="100%" />
     </div>
   </div>
 </div>
 
 <div class="grid-container">
-<div class="grid-x">
-  <div class="cell db-explorer-container">
-    <hr>
-    <h3>Firebase Realtime Database Explorer</h3>
-    <form>
-      <label for="refField">ref:</label>
-      <input type="text" name="ref" class="ref-field" placeholder="users/" />
-    </form>
-    <h4>Data:</h4>
-    <pre class="output"></pre>
-  </div>`
-</div>
+  <div class="grid-x">
+    <div class="cell db-explorer-container callout secondary">
+      <h3>Realtime Database Explorer</h3>
+      <form class="input-group">
+        <label for="path-field" class="input-group-label">Click JSON keys to append</label>
+        <input type="text" name="path-field" class="input-group-field path-field" />
+        <div class="input-group-button">
+          <button class="button secondary clear-button">Clear</button>
+        </div>
+        <div class="input-group-button">
+          <button class="button primary copy-button">Copy Path</button>
+        </div>
+        <div class="input-group-button">
+        </div>
+      </form>
+      <small>
+        <pre>
+          <code class="language-json output"></code>
+        </pre>
+      </small>
+    </div>
+  </div>
 </div>
