@@ -6,13 +6,15 @@ import { getAuthStatus } from './modules/auth'
 // COMPONENTS //////////////////////////////////////////////////////////////////
 import renderEditor from './components/editor'
 import './components/file-uploader'
-import './components/database-explorer'
+import DBExplorer from './components/database-explorer'
 
-import renderSteganography from './components/steganography'
-import renderScorch from './components/scorch'
+import initTextarea from './components/steganography'
+import Scorch from './components/scorch'
 
 // HANDLE AUTH /////////////////////////////////////////////////////////////////
 document.addEventListener('DOMContentLoaded', function() {
+  let s = document.querySelector('#splash')
+  s ? s.classList.add('hidden') : null
   getAuthStatus()
   sessionStorage.getItem('user') ? renderPage() : null
 })
@@ -28,11 +30,12 @@ document.qsa = sel => document.querySelectorAll(sel)
 ////////////////////////////////////////////////////////////////////////////////
 
 export function renderPage() {
-  let body = document.querySelector('body')
-  body.insertAdjacentHTML('afterbegin', '<div id="splash"></div>')
-
   let editorContainer = document.querySelector('#editor-container')
   renderEditor(editorContainer)
+
+  DBExplorer.init()
+  Scorch.init()
+  initTextarea()
 
   // let saveNote
   // let noteContainer = document.querySelector('#noteContainer')

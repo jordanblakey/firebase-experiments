@@ -27,18 +27,16 @@
   <meta name="msapplication-TileColor" content="#c4c4c4">
   <meta name="theme-color" content="#e5e5e5">
 
-
   <script>
     // If visitor doesn't have a user and token, bounce them to the home page.
     let user = sessionStorage.getItem('user')
     let token = sessionStorage.getItem('token')
-    if ((typeof user === "undefined" || user === null) || sessionStorage.getItem('token') === null) {
+    if ((typeof user === "undefined" || user === null) || token === null) {
       let href = window.location.href
       href = href.substring(0, href.length - 1)
       href === window.location.origin ? null : window.location.href = '/'
     }
   </script>
-
 
 </head>
 
@@ -51,13 +49,11 @@
         <a href="../">
           <img class="logo" src="../assets/img/logo-scorched-dark.svg">
         </a>
-        <span class="log-in-status">Logged out</span>
-        <button class="log-in button secondary">Log In</button>
+        <span class="log-in-status">Welcome</span>
+        <button class="log-in button secondary">Log Out</button>
       </div>
     </div>
   </header>
-  
-  
   <div class="grid-container">
   
     <form class="grid-x grid-padding-x medium-up-4">
@@ -186,9 +182,9 @@
     </form>
   </div>
 
-  <script defer src="../assets/js/polyfill.js"></script>
-  <script defer src="../assets/js/utils.js"></script>
-  <script defer src="../assets/js/app.js"></script>
+  <script src="../assets/js/polyfill.js"></script>
+  <script src="../assets/js/utils.js"></script>
+  <script src="../assets/js/app.js"></script>
 
 </body>
 

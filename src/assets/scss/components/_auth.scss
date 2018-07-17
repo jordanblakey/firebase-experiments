@@ -1,0 +1,104 @@
+/*//////////////////////////////////////////////////////////////////////////////
+// LOGIN PANEL
+//////////////////////////////////////////////////////////////////////////////*/
+
+.login-page {
+  padding-top: 4rem;
+
+  .logo {
+    margin: 1rem 0 2.6rem 0;
+    width: 60%;
+
+    &:hover {
+      @extend %flame-on;
+    }
+  }
+
+  h5 {
+    margin-top: 2rem;
+  }
+
+  .load {
+    background-image: url(../img/vertical-waves.png);
+    background-position: 0px 0px;
+    animation: animatedBackground 20s linear infinite;
+    margin: 2rem -2rem -2rem -2rem;
+    padding: 1rem 2rem;
+    color: $medium-gray;
+    font-size: 14px;
+  }
+}
+
+/* /////////////////////////////////////////////////////////////////////////////
+// TOP BAR
+//////////////////////////////////////////////////////////////////////////////*/
+
+.top-bar {
+  background: $lighter-gray;
+
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  height: 3.5rem;
+
+  a:hover, a:focus {
+    outline: none !important;
+
+    .logo {
+      @extend %flame-on;
+    }
+  }
+
+  .logo {
+    height: 2rem;
+    margin: 0 24px 8px 0;
+    outline: none !important;
+  }
+
+  .log-in-status {
+    color: $medium-gray;
+    font-size: 14px;
+    margin-right: 4px;
+  }
+
+  .log-in.button {
+    margin: 0 0 0 4px;
+    color: $dark-gray;
+    background: $white;
+    font-size: 14px;
+
+    &:hover {
+      background: $alert-color;
+      color: $white;
+    }
+  }
+}
+
+/* /////////////////////////////////////////////////////////////////////////////
+// SPLASH SCREEN
+//////////////////////////////////////////////////////////////////////////////*/
+
+#splash {
+  position: fixed;
+  top: 0;
+  display: flex;
+  background: #fafafa;
+  height: 100vh;
+  width: 100vw;
+  z-index: 9;
+  background-image: url('../img/logo-scorched.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 30vw auto;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity .2s ease-in;
+
+  &.hidden {
+    opacity: 0;
+  }
+}
+

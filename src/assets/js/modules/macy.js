@@ -17,8 +17,8 @@ function initMacy() {
     container: '#macy-container',
     columns: 1,
     trueOrder: false,
-    margin: 10,
-    waitForImages: false,
+    margin: 16,
+    waitForImages: true,
     useOwnImageLoader: false,
     mobileFirst: true,
     breakAt: {
@@ -28,16 +28,16 @@ function initMacy() {
   })
 
   // MACY EVENT LISTENERS ////////////////////////////////////////////////////////
-  let c = macy.constants,
-    listen = (event, message) => {
-      macy.on(
-        event,
-        ctx => {
-          console.log(ctx, message)
-        },
-        true
-      )
-    }
+  let c = macy.constants
+  let listen = (event, message) => {
+    macy.on(
+      event,
+      ctx => {
+        console.log(ctx, message)
+      },
+      true
+    )
+  }
   // listen(c.EVENT_INITIALIZED, ': Macy instance initialized/reinitialized.')
   // listen(c.EVENT_RECALCULATED, ': Macy recalculated layout.')
   // listen(c.EVENT_IMAGE_LOAD, ': Macy detected that an image loaded.')

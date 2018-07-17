@@ -2,18 +2,19 @@
 // SCORCH BUTTON
 ////////////////////////////////////////////////////////////////////////////////
 
-export default function renderScorch(targetElem) {
-  targetElem.innerHTML += `
-  <div class="scratchpad">
-    <button class="noteButton scorch" onclick="scorch()">SCORCH</button>
-  </div>
-  `
-}
+const Scorch = {
+  init: function() {
+    let button = document.querySelector('button.scorch')
+    if (button !== null) {
+      button.addEventListener('click', () => {
+        this.scorch()
+      })
+    }
+  },
 
-window.scorch = function() {
-  let body = document.querySelector('body')
-  body.innerHTML = `
-  <pre class="scorched">
+  scorch: function() {
+    document.querySelector('body').innerHTML = `
+<pre class="scorched">
 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
@@ -59,4 +60,7 @@ D  E  L  E  T  I  O  N    E  V  E  N  T
 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥</pre>`
+  }
 }
+
+export default Scorch

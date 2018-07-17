@@ -1,5 +1,3 @@
-import '../lib/stego'
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // ALIASES
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -8,13 +6,14 @@ window.qs = s => document.querySelector(s)
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // TEXTAREA FILL STATUS
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-function initTextarea() {
+export default function initTextarea() {
   if (qs('#message').getAttribute('maxlength')) {
-    qs('#message').onkeydown = chkLen
+    qs('#message').onkeyup = chkLen
+    qs('#message').change = chkLen
     qs('#message').onblur = chkLen
   }
 }
+result
 
 function chkLen() {
   let maxLen = parseInt(this.getAttribute('maxlength'), 10)
@@ -32,6 +31,13 @@ function chkLen() {
   }
 }
 
+let passToggle = qs('#password-toggle')
+if (passToggle !== null) {
+  passToggle.addEventListener('click', function() {
+    togglePasswordVisibility()
+  })
+}
+
 function togglePasswordVisibility() {
   let elm = qs('#password')
   elm.type === 'password' ? (elm.type = 'text') : (elm.type = 'password')
@@ -41,18 +47,28 @@ function togglePasswordVisibility() {
 // ENCRYPTION AND DECRYPTION
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+let writeButton = qs('.button.write-button')
+if (writeButton !== null) {
+  writeButton.addEventListener('click', function() {
+    writeIMG()
+  })
+}
+
 function writeIMG() {
   qs('#resultimg').src = ''
   qs('#status').innerHTML = 'Processing...'
+  console.info('processing...')
   function writefunc() {
     let t = writeMsgToCanvas(
       'canvas',
       qs('#message').value,
       qs('#password').value
     )
+    console.info('assigned t')
     if (t != null) {
       let myCanvas = qs('#canvas')
       let image = myCanvas.toDataURL('image/png')
+      console.info('got data URL')
       qs('#resultimg').src = image
       qs('#status').innerHTML = 'Successfully encrypted note in image.'
       qs('#result').innerHTML =
@@ -64,7 +80,14 @@ function writeIMG() {
       qs('#download').download = 'download.png'
     }
   }
-  loadIMGtoCanvas('file', 'canvas', writefunc, 500)
+  loadIMGtoCanvas('cover-file', 'canvas', writefunc, 500)
+}
+
+let readButton = qs('.button.read-button')
+if (readButton !== null) {
+  readButton.addEventListener('click', function() {
+    writeIMG()
+  })
 }
 
 function readIMG() {
@@ -92,47 +115,5 @@ function readIMG() {
       qs('#status').innerHTML = 'Error decypting message.'
     }
   }
-  loadIMGtoCanvas('file', 'canvas', readfunc)
-}
-
-export default function renderSteganography(targetElement) {
-  targetElement.innerHTML = `<div class="scratchpad">
-  <h3>Steganography Tool</h3>
-  <form>
-    <div class="input-group">
-      <label for="file">Step 1. Select image</label>
-      <input name="file" type="file" id="file" accept="image/*" />
-    </div>
-    <div class="input-group">
-      <label for="password">Step 2. Create or re-enter encryption password</label>
-      <input name="password" type="password" id="password" value="" placeholder="(Optional)" />
-      <div class="inline">
-        <input type="checkbox" onclick="togglePasswordVisibility()">
-        <span>Show Password</span>
-      </div>
-    </div>
-    <div class="input-group">
-      <label for="message">Step 3: Enter a note to encrypt</label>
-      <textarea rows="20" name="message" id="message" maxlength="8000" placeholder="(Skip for decryption)"></textarea>
-      <p id="msgStatus">
-        <span id="msgCount">8000</span> more characters will fit.
-      </p>
-    </div>
-    <div class="inline">
-      <a href="javascript: writeIMG()" class="button">Encrypt</a>
-      <a href="javascript: readIMG()" class="button">Decrypt</a>
-      <span id="status"></span>
-    </div>
-  </form>
-
-  <p id="output">
-    <b>Output</b>
-    <br>
-    <a href="" style="display:none;" class="button" id="download">Download</a>
-    <span id="result"></span>
-  </p>
-  <img style="display:none;" id="resultimg" />
-</div>`
-
-  initTextarea()
+  loadIMGtoCanvas('cover-file', 'canvas', readfunc)
 }

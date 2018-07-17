@@ -19,6 +19,7 @@ input[type="file"] + label {
   user-select: none;
   z-index: 2;
   position: relative;
+  font-size: .875rem;
 
   span {
     background: #666;

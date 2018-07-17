@@ -1,0 +1,82 @@
+/* /////////////////////////////////////////////////////////////////////////////
+// SCORCHED BUTTON (ALL DATA DELETION)
+//////////////////////////////////////////////////////////////////////////////*/
+
+button.alert.scorch:hover {
+  background: #000 !important;
+  color: white;
+  transition: all 0.1s cubic-bezier(0.77, 0, 0.175, 1);
+  position: relative;
+}
+
+.scorched {
+  font-family: 'Roboto Mono';
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.2vw;
+  overflow: hidden;
+  animation-duration: 8s;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+  color: transparent;
+  text-shadow: 0 0 0 $dark-gray;
+  background: $lighter-gray;
+}
+
+.scorched-text {
+  color: $dark-gray;
+  animation-duration: 8s;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+}
+
+.scorched-text span {
+  color: $light-gray !important;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    text-shadow: 0 0 0 $light-gray;
+  }
+  45% {
+    opacity: 1;
+    background: $lighter-gray;
+    color: transparent;
+    opacity: 1;
+    transition: filter .3s ease-in-out;
+    filter: sepia(0) saturate(0) brightness(100%) hue-rotate(0deg);
+  }
+  46% {
+    opacity: 1;
+    text-shadow: 0 0 0 $light-gray;
+    background: $lighter-gray;
+    filter: sepia(1) saturate(100) brightness(60%) hue-rotate(960deg);
+  }
+  50% {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    background: #000;
+    transition: filter .3s ease-in-out;
+    filter: sepia(1) saturate(1) brightness(100%) hue-rotate(0deg);
+  }
+  97% {
+    transition: all .3s ease-out;
+    letter-spacing: 0px;
+  }
+  99% {
+    opacity: 1;
+    letter-spacing: -1.9vw;
+  }
+  100% {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    background: #000;
+    opacity: 0;
+    color: transparent;
+    transition: all .3s ease-out;
+    letter-spacing: -1.9vw;
+    filter: sepia(1) saturate(1) brightness(100%) hue-rotate(0deg);
+  }
+}

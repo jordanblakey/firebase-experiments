@@ -1,5 +1,3 @@
-import { renderPage } from '../app'
-
 export function getAuthStatus() {
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
@@ -25,15 +23,20 @@ export function getAuthStatus() {
 
 window.googleLogin = function() {
   const provider = new firebase.auth.GoogleAuthProvider()
+  document
+    .querySelector('body')
+    .insertAdjacentHTML('afterbegin', `<div id="splash"></div>`)
+
   firebase
     .auth()
     .signInWithPopup(provider)
     .then(function(res) {
       // You can use it to access the Google API.
       sessionStorage.setItem('token', res.credential.accessToken)
-      sessionStorage.setItem('user', res.user)
+      sessionStorage.setItem('user', JSON.stringify(res.user))
+      sessionStorage.setItem('fresh-login', true)
+
       window.location.href = '/app'
-      // renderPage(res)
     })
     .catch(function(err) {
       console.log(err.code, err.message, err.email, err.credential)

@@ -4,17 +4,6 @@
 
 // TEMP ////////////////////////////////////////////////////////////////////////
 // @import './temp/steganography';
-// @import './temp/scorched-button';
-// @import './temp/splashscreen';
-
-////////////////////////////////////////////////////////////////////////////////
-// COMPONENTS
-////////////////////////////////////////////////////////////////////////////////
-@import './components/login-panel';
-@import './components/top-bar';
-@import './components/editor';
-@import './components/macy';
-@import './components/database-explorer';
 
 ////////////////////////////////////////////////////////////////////////////////
 // GLOBAL
@@ -25,6 +14,15 @@
 @import './global/tooltip';
 @import './global/file-inputs';
 
+////////////////////////////////////////////////////////////////////////////////
+// COMPONENTS
+////////////////////////////////////////////////////////////////////////////////
+@import './components/auth';
+@import './components/editor';
+@import './components/macy';
+@import './components/database-explorer';
+@import './components/scorch';
+@import './components/steganography';
 
 // TYPOGRAPHY //////////////////////////////////////////////////////////////////
 body {
@@ -62,8 +60,10 @@ dd {
 
 // BADGES, LABELS, PROGRESS ////////////////////////////////////////////////////
 .label {
+  margin: 0 4px;
+  padding: 8px 16px 8px 16px;
+  border-radius: $global-radius;
   font-size: 14px;
-  padding: 9px 12px 9px;
 
   i {
     margin: 2px 4px 2px 0;
@@ -135,12 +135,12 @@ h4, h5, h6 {
 
 // BUTTONS /////////////////////////////////////////////////////////////////////
 a.button, .button-group a.button, button.button, .button-group button.button {
-  margin: 0 4px;
+  margin: 0;
   padding: 8px 16px 6px 16px;
   border-radius: $global-radius;
   box-shadow: $global-shadow;
   transition: all .1s ease-in-out !important;
-  font-size: 14px;
+  font-size: .875rem;
   background: $black;
 
   &:first-child {
@@ -151,16 +151,16 @@ a.button, .button-group a.button, button.button, .button-group button.button {
     margin-right: 0;
   }
 
-  &:hover, &:focus {
+  &:hover {
     background: $alert-color !important;
     color: $white;
     outline: none !important;
   }
 
   &.primary, &.secondary, &.success, &.warning {
-    &:hover, &:focus {
+    &:hover {
       background: $alert-color !important;
-      color: $white;
+      color: $white !important;
       outline: none !important;
     }
   }
@@ -174,6 +174,16 @@ a.button, .button-group a.button, button.button, .button-group button.button {
   &.alert {
     color: $white;
   }
+
+  &.save-button {
+    margin-left: 4px;
+  }
+
+  &.black {
+    background: $black;
+  }
+
+
 }
 
 // FORMS ///////////////////////////////////////////////////////////////////////

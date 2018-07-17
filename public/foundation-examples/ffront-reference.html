@@ -27,18 +27,16 @@
   <meta name="msapplication-TileColor" content="#c4c4c4">
   <meta name="theme-color" content="#e5e5e5">
 
-
   <script>
     // If visitor doesn't have a user and token, bounce them to the home page.
     let user = sessionStorage.getItem('user')
     let token = sessionStorage.getItem('token')
-    if ((typeof user === "undefined" || user === null) || sessionStorage.getItem('token') === null) {
+    if ((typeof user === "undefined" || user === null) || token === null) {
       let href = window.location.href
       href = href.substring(0, href.length - 1)
       href === window.location.origin ? null : window.location.href = '/'
     }
   </script>
-
 
 </head>
 
@@ -51,13 +49,11 @@
         <a href="../">
           <img class="logo" src="../assets/img/logo-scorched-dark.svg">
         </a>
-        <span class="log-in-status">Logged out</span>
-        <button class="log-in button secondary">Log In</button>
+        <span class="log-in-status">Welcome</span>
+        <button class="log-in button secondary">Log Out</button>
       </div>
     </div>
   </header>
-  
-  
   <div class="grid-container">
     <div class="grid-x grid-padding-x">
       <div class="cell medium-6">
@@ -187,9 +183,9 @@
     var container = document.querySelector(".connecting-dots"); container.appendChild(document.createElement("canvas")); var canvasDots = function () { function t() { this.x = Math.random() * n.width, this.y = Math.random() * n.height, this.vx = -.5 + Math.random(), this.vy = -.5 + Math.random(), this.radius = Math.random() } var n = document.querySelector("canvas"), o = n.getContext("2d"); n.width = window.innerWidth, n.height = window.innerHeight, n.style.display = "block", o.fillStyle = "#ffdd99", o.lineWidth = .1, o.strokeStyle = "#ffbb00"; var e = { x: 30 * n.width / 100, y: 30 * n.height / 100 }, a = { nb: n.width * n.height / 2e3, distance: 60, d_radius: 100, array: [] }; t.prototype = { create: function () { o.beginPath(), o.arc(this.x, this.y, this.radius, 0, 2 * Math.PI, !1), o.fill() }, animate: function () { for (i = 0; i < a.nb; i++) { var t = a.array[i]; t.y < 0 || t.y > n.height ? (t.vx = t.vx, t.vy = -t.vy) : (t.x < 0 || t.x > n.width) && (t.vx = -t.vx, t.vy = t.vy), t.x += t.vx, t.y += t.vy } }, line: function () { for (i = 0; i < a.nb; i++)for (j = 0; j < a.nb; j++)i_dot = a.array[i], j_dot = a.array[j], i_dot.x - j_dot.x < a.distance && i_dot.y - j_dot.y < a.distance && i_dot.x - j_dot.x > -a.distance && i_dot.y - j_dot.y > -a.distance && i_dot.x - e.x < a.d_radius && i_dot.y - e.y < a.d_radius && i_dot.x - e.x > -a.d_radius && i_dot.y - e.y > -a.d_radius && (o.beginPath(), o.moveTo(i_dot.x, i_dot.y), o.lineTo(j_dot.x, j_dot.y), o.stroke(), o.closePath()) } }, window.onmousemove = function (t) { e.x = t.clientX, e.y = t.clientY }, e.x = window.innerWidth / 2, e.y = window.innerHeight / 2, setInterval(function () { for (o.clearRect(0, 0, n.width, n.height), i = 0; i < a.nb; i++)a.array.push(new t), dot = a.array[i], dot.create(); dot.line(), dot.animate() }, 1e3 / 30) }; window.onload = function () { canvasDots() }, window.onresize = function () { container.removeChild(document.querySelector(".connecting-dots canvas")), container.appendChild(document.createElement("canvas")), canvasDots() };
   </script>
 
-  <script defer src="../assets/js/polyfill.js"></script>
-  <script defer src="../assets/js/utils.js"></script>
-  <script defer src="../assets/js/app.js"></script>
+  <script src="../assets/js/polyfill.js"></script>
+  <script src="../assets/js/utils.js"></script>
+  <script src="../assets/js/app.js"></script>
 
 </body>
 

@@ -5,6 +5,22 @@ title: "Scorched: Secure, Portable Notes"
 
 {{> top-bar}}
 
+<div id="splash">
+  <script>
+    if (sessionStorage.getItem('fresh-login') === true) {
+      sessionStorage.setItem('fresh-login', false)
+    } else {
+      let s = document.querySelector('#splash')
+      s.parentNode.removeChild(document.querySelector('#splash'))
+    }
+  </script>
+</div>
+
+
+
+
+
+
 <div class="grid-container-full" id="editor-container">
   <textarea id="editor"></textarea>
   <div class="cell small-12 editor-buttons-container">
@@ -21,15 +37,13 @@ title: "Scorched: Secure, Portable Notes"
     </div>
   </div>
 </div>
-<div class="grid-container app-page">
+<div class="grid-container" id="notes-container">
   <div class="grid-x grid-margin-x">
     <div class="cell small-12" id="macy-container">
       <div class="callout secondary macy-item">
-        <h4>To Do </h4>
+        <h4>To Do</h4>
         <ul>
-          <li>Import to-dos from pre-ffront project.</li>
-          <li>Import Scorch, Spashscreen on first load.</li>
-          <li>Clean out scss/partials</li>
+          <li>Split modules to partials.</li>
           <li>Finish integrating app.js. Break note functions into module.</li>
           <li>Convert any remaining inline event handlers to event listeners.</li>
           <li>Integrate library to handle MD -> HTML conversion for note list.</li>
@@ -47,14 +61,11 @@ title: "Scorched: Secure, Portable Notes"
         </ul>
       </div>
       <div class="callout secondary macy-item">
-        <h4>Note Title</h4>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis eos ipsum sed, nisi officia totam asperiores id
-          consequuntur atque consectetur. Similique consequatur inventore veritatis consectetur sint ipsum enim, voluptate
-          officia nulla eaque voluptates vel aspernatur vero, reprehenderit voluptatum maxime qui dignissimos neque! Totam,
-          corporis. Autem perferendis eveniet illum, ab dolorum soluta excepturi quia voluptas tenetur deserunt. Reiciendis
-          corporis molestiae animi corrupti dolor nihil hic quaerat non quos deleniti, illum quam voluptatum enim? Deleniti
-          officiis error obcaecati tenetur reiciendis vel quasi, eaque totam nobis animi dolores hic natus voluptas corrupti.
-          Accusamus molestiae enim odit vero tempora iusto praesentium quasi dolor rem!</p>
+        <h4>Bugs</h4>
+        <ul>
+          <li>Vertical spacing on Macy layout is occasionally inconsistent on load. Don't know how to reproduce.</li>
+          <li>Vertical spacing on Macy layout is occasionally inconsistent on load. Don't know how to reproduce.</li>
+        </ul>
       </div>
       <div class="callout secondary macy-item">
         <h4>Note Title</h4>
@@ -123,7 +134,8 @@ title: "Scorched: Secure, Portable Notes"
 </div>
 
 <div class="grid-container">
-  <div class="grid-x">
+  <div class="grid-x grid-margin-x">
+
     <div class="cell file-uploader-container callout secondary medium-12 large-6">
       <h3>Storage Upload</h3>
       <form class="input-group">
@@ -135,8 +147,16 @@ title: "Scorched: Secure, Portable Notes"
       </form>
       <img class="viewer" src="" width="100%" />
     </div>
+
+    <div class="cell callout secondary medium-12 large-6">
+      <h3>Manage Your Data <span class="subheader"></span></h3>
+      <button class="button alert scorch" data-balloon="Annihilate all data &amp; lock your account." data-balloon-pos="up" data-balloon-length="medium">Scorch</button>
+      <button class="button primary">Export Encrypted Archive</button>
+    </div>
+
   </div>
 </div>
+
 
 <div class="grid-container">
   <div class="grid-x">
@@ -152,6 +172,7 @@ title: "Scorched: Secure, Portable Notes"
           <button class="button primary copy-button">Copy Path</button>
         </div>
         <div class="input-group-button">
+          <button class="button copy-json-button" data-clipboard-target=".output">Copy JSON</button>
         </div>
       </form>
       <small>
@@ -162,3 +183,57 @@ title: "Scorched: Secure, Portable Notes"
     </div>
   </div>
 </div>
+
+
+
+
+<div class="grid-container">
+    <div class="grid-x">
+      <div class="cell steganography-container callout secondary">
+        <h3>Steganography Tool</h3>
+        <form>
+          <div class="input-group">
+            <input name="cover-file" type="file" id="cover-file" class="file uploader" accept="image/*" />
+            <label for="cover-file">Step 1. Select image
+              <span class="hide"></span>
+            </label>
+            <!-- <p class="status label hidden">&nbsp;</p> -->
+          </div>
+
+          <div class="input-group">
+            <label for="password">Step 2. Create or re-enter encryption password
+              <input name="password" type="password" id="password" value="" placeholder="(Optional)" />
+            </label>
+            <div>
+              <input type="checkbox" id="password-toggle">
+              <span>Show Password</span>
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="message">Step 3: Enter a note to encrypt
+              <textarea rows="20" name="message" id="message" maxlength="8000" placeholder="(Skip for decryption)"></textarea>
+            </label>
+            <p id="msgStatus">
+              <span id="msgCount">8000</span> more characters will fit.
+            </p>
+          </div>
+          <div class="inline">
+            <a href="#" class="write-button button primary black">Encrypt</a>
+            <a href="#" class="read-button button primary">Decrypt</a>
+            <span id="status"></span>
+          </div>
+        </form>
+
+        <p id="output">
+          <b>Output</b>
+          <br>
+          <a href="" style="display:none;" class="button primary" id="download">Download</a>
+          <span id="result"></span>
+        </p>
+        <img style="display:none;" id="resultimg" />
+        <div id="canvas"></div>
+
+      </div>
+    </div>
+  </div>
+
