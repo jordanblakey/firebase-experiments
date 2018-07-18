@@ -64,6 +64,7 @@
   width: calc(100%);
   box-sizing: content-box;
   background: #f8f8f8;
+  box-shadow: 1px 0px 0px $alert-color inset;
 
   :-webkit-full-screen {
     background: #f8f8f8;
