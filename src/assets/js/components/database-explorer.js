@@ -3,6 +3,7 @@ let qs = (x, y) => document.querySelector(x, y)
 
 const DBExplorer = {
   root: '/',
+  container: qs('.db-explorer-container'),
   output: qs('.db-explorer-container .output'),
   pathField: qs('.db-explorer-container .path-field'),
   clear: qs('.clear-button'),
@@ -10,7 +11,11 @@ const DBExplorer = {
   copyJSON: qs('.copy-json-button'),
 
   init: function() {
-    document.readyState !== 'loading' ? this.config() : null
+    if (document.readyState !== 'loading' && this.container !== null) {
+      this.config()
+    } else {
+      console.info('No .db-explorer-container found.')
+    }
   },
 
   config: function() {

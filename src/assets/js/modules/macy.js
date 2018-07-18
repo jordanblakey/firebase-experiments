@@ -6,12 +6,14 @@
 import Macy from 'macy'
 
 document.addEventListener('DOMContentLoaded', () => {
-  qs('#macy-container') ? initMacy() : null
-  qs('#macy-container .macy-item') ? initDragAndDrop() : null
+  document.querySelector('#macy-container') ? initMacy() : null
+  document.querySelector('#macy-container .macy-item')
+    ? initDragAndDrop()
+    : null
 })
 
 function initMacy() {
-  qs('#macy-container').style.columnCount = 'unset'
+  document.querySelector('#macy-container').style.columnCount = 'unset'
 
   window.macy = Macy({
     container: '#macy-container',

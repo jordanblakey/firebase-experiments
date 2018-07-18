@@ -1,11 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 // STYLE FILE INPUTS
 ////////////////////////////////////////////////////////////////////////////////
-document.addEventListener('DOMContentLoaded', () => {
-  styleFileInputs()
-})
-
-function styleFileInputs() {
+export default function styleFileInputs() {
   let inputs = document.querySelectorAll('input[type="file"]')
   ;[].forEach.call(inputs, input => {
     let label = input.nextElementSibling,

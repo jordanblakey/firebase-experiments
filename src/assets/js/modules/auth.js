@@ -1,3 +1,5 @@
+window.qs = s => document.querySelector(s)
+
 export function getAuthStatus() {
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {

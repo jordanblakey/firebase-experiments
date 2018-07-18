@@ -28,11 +28,13 @@ document.addEventListener('DOMContentLoaded', function() {
       feature => typeof app[feature] === 'function'
     )
     features = features.map(f => f.charAt(0).toUpperCase() + f.substr(1))
-    qs('.load').innerHTML = `Firebase SDK: ${features.join(', ')} loaded.`
+    document.querySelector('.load').innerHTML = `Firebase SDK: ${features.join(
+      ', '
+    )} loaded.`
 
     firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION) // SESSION, LOCAL, NONE
     firebase.firestore().settings({ timestampsInSnapshots: true })
   } catch (e) {
-    qs('.login-page') ? console.error(e) : null
+    document.querySelector('.login-page') ? console.error(e) : null
   }
 })

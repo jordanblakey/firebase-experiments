@@ -34,7 +34,7 @@ a {
 
   &:hover {
     transition: color .1s ease-in-out;
-    color: $alert-color !important;
+    color: $alert-color;
   }
 }
 

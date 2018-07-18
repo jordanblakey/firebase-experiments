@@ -1,43 +1,41 @@
-.steganography-container > form {
-  #cover-file {
-    align-self: flex-start;
-    &+ label {
-      align-self: flex-start;
-      font-size: .875rem;
-    }
+#output {
+  margin-top: 2rem;
+  border-top: 1px solid $light-gray;
+  padding-top: 1rem;
+
+  #download {
+    margin-right: 8px;
   }
-  .input-group {
-    flex-direction: column;
 
-    label {
-      // font-size: 16px;
-      font-size: 1rem;
+  #resultImg {
+    margin-top: 1rem;
+    max-height: 200px;
+    display: block;
+    border: 1px solid $light-gray;
+    border-radius: $global-radius
+  }
+}
+
+.steganography-container
+  > form {
+  #cover-file { align-self: flex-start;
+    &+ label { align-self: flex-start; font-size: .875rem; }
+  }
+
+  .inline {
+    #status { margin-left: 8px; }
+  }
+
+  .input-group { flex-direction: column;
+    label { font-size: 1rem; }
+    #password { margin-bottom: 8px; }
+    input#password-toggle { margin-bottom: 0;
+      &+ span { color: $medium-gray; }
     }
-
-    #password {
-      margin-bottom: 8px;
-    }
-
-    input#password-toggle {
-      margin-bottom: 0;
-
-      &+ span {
-        color: $medium-gray;
-      }
-    }
-
-    #message {
-      height: 300px;
-      margin-bottom: 4px;
-    }
-
-    #msgStatus {
-      color: $medium-gray;
-      margin-bottom: 0;
-
-      &.msgWarn {
-        color: $alert-color;
-      }
+    #message { height: 200px; margin-bottom: 4px; }
+    #msgStatus { color: $medium-gray; margin-bottom: 0;
+      &.msgWarn { color: $alert-color; }
     }
   }
 }
+
