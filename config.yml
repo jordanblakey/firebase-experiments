@@ -18,6 +18,9 @@ UNCSS_OPTIONS:
     - !!js/regexp ^\.is-.*
     - !!js/regexp (.toolbar|.token|.comment)
 
+  timeout:
+    - 10000
+
 # Gulp will reference these paths when it copies files
 PATHS:
   # Path to build folder

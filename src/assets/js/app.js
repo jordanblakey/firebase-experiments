@@ -1,7 +1,7 @@
 // MODULES /////////////////////////////////////////////////////////////////////
 import './modules/firebase-init'
 import './modules/macy'
-import { getAuthStatus } from './modules/auth'
+import './modules/auth'
 
 // COMPONENTS //////////////////////////////////////////////////////////////////
 import renderEditor from './components/editor'
@@ -15,8 +15,7 @@ import Scorch from './components/scorch'
 document.addEventListener('DOMContentLoaded', function() {
   let s = document.querySelector('#splash')
   s ? s.classList.add('hidden') : null
-  getAuthStatus()
-  sessionStorage.getItem('user') ? renderPage() : null
+  renderPage()
 })
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -30,14 +29,10 @@ document.qsa = sel => document.querySelectorAll(sel)
 ////////////////////////////////////////////////////////////////////////////////
 
 export function renderPage() {
-  console.groupCollapsed('Initialization Log')
-
   let editorContainer = document.querySelector('#editor-container')
   renderEditor(editorContainer)
   styleFileInputs()
 
   DBExplorer.init()
   Scorch.init()
-
-  console.groupEnd('Initialization Log')
 }

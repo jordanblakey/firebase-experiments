@@ -2,7 +2,7 @@
 // SCORCHED BUTTON (ALL DATA DELETION)
 //////////////////////////////////////////////////////////////////////////////*/
 
-button.alert.scorch:hover {
+button.alert.scorch:hover, button.alert.scorch:focus {
   background: #000 !important;
   color: white;
   transition: all 0.1s cubic-bezier(0.77, 0, 0.175, 1);

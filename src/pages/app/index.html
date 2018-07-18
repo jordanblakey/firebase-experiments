@@ -5,23 +5,33 @@ title: "Scorched: Secure, Portable Notes"
 
 {{> top-bar}}
 
-<div id="splash">
-  <script>
-    if (sessionStorage.getItem('fresh-login') === true) {
-      sessionStorage.setItem('fresh-login', false)
-    } else {
-      let s = document.querySelector('#splash')
-      s.parentNode.removeChild(document.querySelector('#splash'))
-    }
-  </script>
-</div>
+{{> splash-screen }}
 
 {{> editor}}
 
-{{> steg-tool}}
+<div class="grid-container" id="notes-container">
+  <div class="grid-x grid-margin-x">
+    {{> note-list}}
+  </div>
+</div>
 
-{{> note-list}}
+<div class="grid-container">
+  <div class="grid-x grid-margin-x">
+    {{> steg-tool}}
+  </div>
+</div>
 
-{{> storage-uploader}}
+<div class="grid-container">
+  <div class="grid-x grid-margin-x">
+    {{> database-explorer}}
+  </div>
+</div>
 
-{{> database-explorer}}
+<div class="grid-container">
+  <div class="grid-x grid-margin-x">
+    {{> storage-uploader}}
+    {{> data-manager }}
+    {{> account-details}}
+  </div>
+</div>
+

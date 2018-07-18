@@ -26,15 +26,14 @@
   <link defer rel="mask-icon" href="../assets/icon/safari-pinned-tab.svg" color="#c4c4c4">
   <meta name="msapplication-TileColor" content="#c4c4c4">
   <meta name="theme-color" content="#e5e5e5">
-
   <script>
-    // If visitor doesn't have a user and token, bounce them to the home page.
-    let user = sessionStorage.getItem('user')
-    let token = sessionStorage.getItem('token')
-    if ((typeof user === "undefined" || user === null) || token === null) {
-      let href = window.location.href
-      href = href.substring(0, href.length - 1)
-      href === window.location.origin ? null : window.location.href = '/'
+    if (
+      sessionStorage.getItem('user') === null ||
+      sessionStorage.getItem('accessToken') === null
+    ) {
+      let h = window.location.href
+      h = h.substring(0, h.length - 1)
+      h === window.location.origin ? null : window.location.href = '/'
     }
   </script>
 
@@ -49,7 +48,7 @@
       background: #ddd !important;
       border: 1px solid #bbb;
       background-clip: content-box !important;
-      font-family: 'Source Code Pro';
+      font-family: 'Roboto Mono';
       font-size: .85rem;
     }
   
@@ -72,8 +71,8 @@
         <a href="../">
           <img class="logo" src="../assets/img/logo-scorched-dark.svg">
         </a>
-        <span class="log-in-status">Welcome</span>
-        <button class="log-in button secondary">Log Out</button>
+        <span id="log-in-status">Loading...</span>
+        <button id="log-in" class="button secondary">Log out</button>
       </div>
     </div>
   </header>

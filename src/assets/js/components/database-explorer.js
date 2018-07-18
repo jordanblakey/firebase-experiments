@@ -13,8 +13,6 @@ const DBExplorer = {
   init: function() {
     if (document.readyState !== 'loading' && this.container !== null) {
       this.config()
-    } else {
-      console.info('No .db-explorer-container found.')
     }
   },
 

@@ -86,7 +86,7 @@ function initDragAndDrop() {
 
   let macyC = document.querySelector('#macy-container')
   let macyI = macyC.querySelectorAll('.macy-item')
-  // console.log(macyC, macyI)
+  console.log(macyC, macyI)
   ;[].forEach.call(macyI, function(macyI) {
     macyI.addEventListener('dragstart', handleDragStart, false)
     macyI.addEventListener('dragenter', handleDragEnter, false)
@@ -98,6 +98,7 @@ function initDragAndDrop() {
   macyC.className += ' is-active'
 
   let dragSrcEl = null
+  let dragEnterState = 0
   function handleDragStart(e) {
     // Target (this) element is the source node
     // console.log('Drag Start')
@@ -117,20 +118,24 @@ function initDragAndDrop() {
   }
 
   function handleDragEnter(e) {
-    // this e.target is the current hover target
+    // this e.target is the current hovepreventr target
     // console.log('Drag Enter')
     this.classList.add('over')
+    dragEnterState += 1
   }
 
   function handleDragLeave(e) {
     // this e.target is previous target element
     // console.log('Drag Leave')
-    this.classList.remove('over')
+    dragEnterState -= 1
+    // console.log('dragEnterState: ', dragEnterState)
+    dragEnterState <= 0 ? this.classList.remove('over') : null
   }
 
   function handleDrop(e) {
     // this/e.target is current target element
     // console.log('Handle Drop')
+    dragEnterState = 0
     if (e.stopPropagation) {
       // Stops some browsers from redirecting
       e.stopPropagation()
@@ -149,7 +154,7 @@ function initDragAndDrop() {
 
   function handleDragEnd(e) {
     // this e.target is the source node
-    // console.log('Handle Drag End')
+    console.log('Handle Drag End')
     document
       .querySelectorAll('.macy-item.over')
       .forEach(elm => elm.classList.remove('over'))

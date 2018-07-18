@@ -1,14 +1,16 @@
 export default function renderEditor(editorContainer) {
-  window.editor = new Editor({
-    element: document.getElementById('#editor'),
-    // toolbar: [], // array or false
-    status: ['lines', 'words', 'cursor'] // array or false
-    // actions: {},
-    // shortcuts: {}
-  })
+  if (editorContainer !== null) {
+    window.editor = new Editor({
+      element: document.getElementById('#editor'),
+      // toolbar: [], // array or false
+      status: ['lines', 'words', 'cursor'] // array or false
+      // actions: {},
+      // shortcuts: {}
+    })
 
-  window.editor.render()
-  configEditor()
+    window.editor.render()
+    configEditor()
+  }
 }
 
 ////////////////////////////////////////////////////////////////////////////////

@@ -1,46 +1,42 @@
-<div class="grid-container">
-  <div class="grid-x">
-    <div class="cell steganography-container callout secondary">
-      <h3>Steganography Tool</h3>
-      <form>
-        <div class="input-group">
-          <label for="cover-file">Step 1. Select image</label>
-          <input name="cover-file" type="file" id="cover-file" accept="image/*" />
-          <label for="cover-file">Choose a file
-            <span class="hide"></span>
-          </label>
-        </div>
-        <div class="input-group">
-          <label for="password">Step 2. Create or re-enter encryption password
-            <input name="password" type="password" id="password" value="" placeholder="(Optional)" />
-          </label>
-          <div class="inline">
-            <input type="checkbox" class="show-password">
-            <span>Show Password</span>
-          </div>
-        </div>
-        <div class="input-group">
-          <label for="message">Step 3: Enter a note to encrypt
-            <textarea name="message" id="message" maxlength="8000" placeholder="(Skip for decryption)"></textarea>
-          </label>
-          <p id="msgStatus">
-            <span id="msgCount">8000</span> more characters will fit.
-          </p>
-        </div>
-        <div class="inline">
-          <a class="write-button button primary black">Encrypt</a>
-          <a class="read-button button primary">Decrypt</a>
-          <span id="status"></span>
-        </div>
-      </form>
-
-      <div id="output" style="display: none;">
-        <h3>Output</h3>
-        <a href="" class="button" id="download">Download</a>
-        <span id="result"></span>
-        <img id="resultImg" />
+<div class="cell steganography-container callout secondary">
+  <h3>Steganography Tool</h3>
+  <form>
+    <div class="input-group">
+      <label for="cover-file">Step 1. Select image</label>
+      <input name="cover-file" type="file" id="cover-file" accept="image/*" />
+      <label for="cover-file">Choose a file
+        <span class="hide"></span>
+      </label>
+    </div>
+    <div class="input-group">
+      <label for="password">Step 2. Create or re-enter encryption password
+        <input name="password" type="password" id="password" value="" placeholder="(Optional)" />
+      </label>
+      <div class="inline">
+        <input type="checkbox" class="show-password">
+        <span>Show Password</span>
       </div>
     </div>
+    <div class="input-group">
+      <label for="message">Step 3: Enter a note to encrypt
+        <textarea name="message" id="message" maxlength="8000" placeholder="(Skip for decryption)"></textarea>
+      </label>
+      <p id="msgStatus">
+        <span id="msgCount">8000</span> more characters will fit.
+      </p>
+    </div>
+    <div class="inline">
+      <a class="write-button button primary black">Encrypt</a>
+      <a class="read-button button primary">Decrypt</a>
+      <span id="status"></span>
+    </div>
+  </form>
+
+  <div id="output" style="display: none;">
+    <h3>Output</h3>
+    <a href="" class="button" id="download">Download</a>
+    <span id="result"></span>
+    <img id="resultImg" />
   </div>
 </div>
 
