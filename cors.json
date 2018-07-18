@@ -1,8 +1,0 @@
-[
-  {
-    "origin": ["localhost", "scorched.site"],
-    "responseHeader": ["Content-Type"],
-    "method": ["PUT", "GET", "HEAD", "DELETE"],
-    "maxAgeSeconds": 3600
-  }
-]
