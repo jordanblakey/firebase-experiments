@@ -1,12 +1,11 @@
 <div class="cell small-12" id="macy-container">
-  <div class="callout secondary macy-item">
-    <span display="none" class="uid" data-uid="note-0000001" />
+
+  <div data-uid="note-0000001" class="callout secondary macy-item">
     <h4>To Do</h4>
     <h6>Authentication & Session</h6>
     <ul>
       <li>No login? Take your data with you?</li>
     </ul>
-
     <h6>Editor</h6>
     <ul>
       <li>Create feature: save current note as stego file. Load stego file to editor.</li>
@@ -14,7 +13,6 @@
       <li>Include cover image library and randomized selection if no image supplied.</li>
       <li>Create Firebase Storage list for images to link in notes or use as cover files</li>
     </ul>
-
     <h6>Note List</h6>
     <ul>
       <li>Implement labels.</li>
@@ -25,38 +23,35 @@
       <li>Fix saving to FB with newlines and as Markdown</li>
     </ul>
   </div>
-  <div class="callout secondary macy-item">
-    <span display="none" class="uid" data-uid="note-0000002" />
-    <h4>Bugs</h4>
-  </div>
-  <div class="callout secondary macy-item">
-    <span display="none" class="uid" data-uid="note-0000003" />
-    <h4>Note Sorting Ideation</h4>
-      <p>
-        let noteOrder = []
-        document.querySelectorAll('.macy-item .uid').forEach(x => noteOrder.push(x.dataset.uid))
-        localStorage.setItem('noteOrder', noteOrder)
-        localStorage.getItem('noteOrder').split(,)
-        window.onload=function(){
-          var container = document.querySelector('#macy-container'),
-              elm = document.querySelectorAll('.macy-item');
-          var elmArr = [].slice.call(elm).sort(function (a, b) {
-              return a.textContent > b.textContent ? 1 : -1;
-          });
-          elmArr.forEach(function (e) {
-              container.appendChild(e);
-          });
-      }
-      </p>
 
+  <div data-uid="note-0000002" class="callout secondary macy-item">
+    <h4>Features</h4>
+    <ul>Completely remove authentication and store all data in encrypted images?</ul>
   </div>
-  <div class="callout secondary macy-item">
-    <span display="none" class="uid" data-uid="note-0000004" />
+
+  <div data-uid="note-0000003" class="callout secondary macy-item">
+    <h4>Note Sorting Ideation</h4>
+    <p>
+      let noteOrder = [] document.querySelectorAll('.macy-item .uid').forEach(x => noteOrder.push(x.dataset.uid)) localStorage.setItem('noteOrder',
+      noteOrder) localStorage.getItem('noteOrder').split(,) window.onload=function(){ var container = document.querySelector('#macy-container'),
+      elm = document.querySelectorAll('.macy-item'); var elmArr = [].slice.call(elm).sort(function (a, b) { return a.textContent
+      > b.textContent ? 1 : -1; }); elmArr.forEach(function (e) { container.appendChild(e); }); }
+    </p>
+  </div>
+
+  <div data-uid="note-0000004" class="callout secondary macy-item">
     <h4>Note Title</h4>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit magnam aspernatur facilis exercitationem! Beatae dolor,
       ipsa illo, ut tempora earum odit sapiente hic, consequatur neque qui alias optio. Sit consequatur pariatur dignissimos,
       voluptatem ullam omnis quaerat temporibus. Tenetur quisquam temporibus voluptas dolores sunt vel necessitatibus cumque,
       quaerat modi ipsa repellendus sapiente eligendi explicabo facilis voluptatum facere similique, mollitia cupiditate
-      accusamus.</p>
+      accusamus.
+    </p>
   </div>
+
+  <!-- END MACY CONTAINER -->
 </div>
+
+  <div class="callout cell transparent">
+    <button class="button" id="reverse-notes">Reverse Notes</button>
+  </div>

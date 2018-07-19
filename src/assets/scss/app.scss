@@ -36,7 +36,7 @@ a {
   color: $warning-color;
 
   &:hover {
-    transition: color .1s ease-in-out;
+    transition: color 0.1s ease-in-out;
     color: $alert-color;
   }
 }
@@ -45,7 +45,8 @@ a {
   background: $light-gray;
 }
 
-code, kbd {
+code,
+kbd {
   border: 0;
   font-size: 14px;
   font-family: 'Roboto Mono', monospace;
@@ -96,16 +97,19 @@ span.badge {
   }
 }
 
-.progress, .progress-meter {
+.progress,
+.progress-meter {
   border-radius: 10rem;
   height: 6px;
 }
 
 // CALLOUT /////////////////////////////////////////////////////////////////////
 
-h4, h5, h6 {
+h4,
+h5,
+h6 {
   font-weight: 700;
-  color: $dark-gray
+  color: $dark-gray;
 }
 
 .callout {
@@ -115,9 +119,17 @@ h4, h5, h6 {
   color: $black;
   box-shadow: $global-shadow;
 
+  &.transparent {
+    box-shadow: none;
+    background: $lighter-gray;
+  }
+
   &.alert {
     background: $alert-color;
-    h4, h5, h6, p {
+    h4,
+    h5,
+    h6,
+    p {
       color: $white;
     }
     a {
@@ -137,13 +149,16 @@ h4, h5, h6 {
 }
 
 // BUTTONS /////////////////////////////////////////////////////////////////////
-a.button, .button-group a.button, button.button, .button-group button.button {
+a.button,
+.button-group a.button,
+button.button,
+.button-group button.button {
   margin: 0;
-  padding: 8px 16px 6px 16px;
+  padding: 8px 16px 8px 16px;
   border-radius: $global-radius;
   box-shadow: $global-shadow;
-  transition: all .1s ease-in-out !important;
-  font-size: .875rem;
+  transition: all 0.1s ease-in-out !important;
+  font-size: 0.875rem;
   background: $black;
   outline: none !important;
 
@@ -161,8 +176,12 @@ a.button, .button-group a.button, button.button, .button-group button.button {
     outline: none !important;
   }
 
-  &.primary, &.secondary, &.success, &.warning {
-    &:hover, &:focus {
+  &.primary,
+  &.secondary,
+  &.success,
+  &.warning {
+    &:hover,
+    &:focus {
       background: $alert-color !important;
       color: $white !important;
       outline: none !important;
@@ -186,8 +205,6 @@ a.button, .button-group a.button, button.button, .button-group button.button {
   &.black {
     background: $black;
   }
-
-
 }
 
 // FORMS ///////////////////////////////////////////////////////////////////////
@@ -196,27 +213,58 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-    transition: background-color 5500s ease-in-out 0s;
+  transition: background-color 5500s ease-in-out 0s;
 }
 
-[type=color]:focus, [type=date]:focus, [type=datetime-local]:focus, [type=datetime]:focus, [type=email]:focus, [type=month]:focus, [type=number]:focus, [type=password]:focus, [type=search]:focus, [type=tel]:focus, [type=text]:focus, [type=time]:focus, [type=url]:focus, [type=week]:focus, textarea:focus {
+[type='color']:focus,
+[type='date']:focus,
+[type='datetime-local']:focus,
+[type='datetime']:focus,
+[type='email']:focus,
+[type='month']:focus,
+[type='number']:focus,
+[type='password']:focus,
+[type='search']:focus,
+[type='tel']:focus,
+[type='text']:focus,
+[type='time']:focus,
+[type='url']:focus,
+[type='week']:focus,
+textarea:focus {
   @extend %scorched-background;
   box-shadow: none;
   border: 1px solid $light-gray;
 }
 
-input, textarea {
-  &::-webkit-input-placeholder { color: $medium-gray; }
-  &:focus::-webkit-input-placeholder { color: $dark-gray; }
+input,
+textarea {
+  &::-webkit-input-placeholder {
+    color: $medium-gray;
+  }
+  &:focus::-webkit-input-placeholder {
+    color: $dark-gray;
+  }
   /* Firefox < 19 */
-  &:-moz-placeholder { color: $medium-gray; }
-  &:focus:-moz-placeholder { color: $dark-gray; }
+  &:-moz-placeholder {
+    color: $medium-gray;
+  }
+  &:focus:-moz-placeholder {
+    color: $dark-gray;
+  }
   /* Firefox > 19 */
-  &::-moz-placeholder { color: $medium-gray; }
-  &:focus::-moz-placeholder { color: $dark-gray; }
+  &::-moz-placeholder {
+    color: $medium-gray;
+  }
+  &:focus::-moz-placeholder {
+    color: $dark-gray;
+  }
   /* Internet Explorer 10 */
-  &:-ms-input-placeholder { color: $medium-gray; }
-  &:focus:-ms-input-placeholder { color: $dark-gray; }
+  &:-ms-input-placeholder {
+    color: $medium-gray;
+  }
+  &:focus:-ms-input-placeholder {
+    color: $dark-gray;
+  }
 }
 
 // BREAKPOINT //////////////////////////////////////////////////////////////////

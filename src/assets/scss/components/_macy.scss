@@ -13,18 +13,17 @@
   }
 
   .macy-item {
+    opacity: 0;
     break-inside: avoid;
     margin-bottom: 10px;
     overflow: hidden;
-    // DISALLOW CONTENT SELECTION
-    // user-select: none;
     -khtml-user-drag: element;
     -webkit-user-drag: element;
 
     &:hover {
       box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
       transition: $global-transition;
-      cursor: grab;
+      cursor: -webkit-grab;
     }
 
     *:hover {
@@ -35,13 +34,12 @@
   .over {
     border: 2px dashed #666 !important;
     padding: calc(2rem - 2px);
-    opacity: 0.2;
+    opacity: 0.2 !important;
     background: #e5e5e5;
     transition: $global-transition;
 
     * {
       pointer-events: none;
     }
-
   }
 }

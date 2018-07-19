@@ -4,6 +4,7 @@
 
 // MACY INITIALIZATION /////////////////////////////////////////////////////////
 import Macy from 'macy'
+import notes from '../components/note-list'
 
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelector('#macy-container') ? initMacy() : null
@@ -29,6 +30,9 @@ function initMacy() {
     }
   })
 
+  restoreNoteOrder()
+  notes.listen()
+
   // MACY EVENT LISTENERS ////////////////////////////////////////////////////////
   let c = macy.constants
   let listen = (event, message) => {
@@ -40,6 +44,7 @@ function initMacy() {
       true
     )
   }
+
   // listen(c.EVENT_INITIALIZED, ': Macy instance initialized/reinitialized.')
   // listen(c.EVENT_RECALCULATED, ': Macy recalculated layout.')
   // listen(c.EVENT_IMAGE_LOAD, ': Macy detected that an image loaded.')
@@ -147,6 +152,7 @@ function initDragAndDrop() {
       this.innerHTML = e.dataTransfer.getData('text')
       e.dataTransfer.clearData()
       this.classList.remove('over')
+      saveNoteOrder()
       macy.reInit()
     }
     return false
@@ -159,4 +165,32 @@ function initDragAndDrop() {
       .querySelectorAll('.macy-item.over')
       .forEach(elm => elm.classList.remove('over'))
   }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// NOTE STATE
+////////////////////////////////////////////////////////////////////////////////
+
+// SAVE NOTE STATE //////////////////////////////////////////////////////////
+export function saveNoteOrder() {
+  localStorage.removeItem('macy-note-order')
+  localStorage.setItem(
+    'macy-note-order',
+    document.getElementById('macy-container').innerHTML
+  )
+}
+
+// RESTORE NOTE STATE //////////////////////////////////////////////////////////
+export function restoreNoteOrder() {
+  if (localStorage.getItem('macy-note-order') !== null) {
+    document.getElementById('macy-container').innerHTML = localStorage.getItem(
+      'macy-note-order'
+    )
+  }
+
+  macy.reInit()
+  let notes = document.querySelectorAll('.macy-item')
+  notes.forEach(note => note.classList.remove('over'))
+  notes.forEach(note => note.removeAttribute('style'))
+  notes.forEach(note => (note.style.opacity = '1'))
 }

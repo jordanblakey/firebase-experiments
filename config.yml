@@ -28,6 +28,7 @@ PATHS:
   entries:
     - "src/assets/js/app.js"
     - "src/assets/js/utils.js"
+    - "src/assets/js/components/steganography.js"
 
 # Compression settings tuned to balance process time and file size
 IMAGEMIN:

@@ -1,3 +1,81 @@
+import { saveNoteOrder, restoreNoteOrder } from '../modules/macy'
+
+let w = window,
+  d = document,
+  qs = x => {
+    document.querySelector(x)
+  },
+  l = x => {
+    console.log(x)
+  }
+;(w.qs = qs), (w.l = l), (w.d = d)
+
+const notes = {
+  order: {},
+
+  oarr: [],
+
+  getOrder: () => {
+    let nl = d.querySelectorAll('.macy-item')
+    nl[0].children[0].dataset.uid
+    notes.order = {}
+    nl.forEach((x, i) => (notes.order[i] = x.children[0].dataset.uid))
+    nl.forEach(x => notes.oarr.push(x.children[0].dataset.uid))
+  },
+
+  before: (elm, tgt) => {
+    tgt.parentNode.insertBefore(elm, tgt.nextSibling)
+  },
+
+  after: (elm, tgt) => {
+    tgt.parentNode.insertBefore(elm, tgt.nextSibling)
+  },
+
+  reverse: () => {
+    let store = document.querySelectorAll('.macy-item')
+    store = Array.prototype.slice.call(store, 0).reverse()
+    document.getElementById('macy-container').innerHTML = ''
+    store.forEach(elm =>
+      document.getElementById('macy-container').appendChild(elm)
+    )
+    saveNoteOrder()
+    macy.reInit()
+  },
+
+  listen: function() {
+    document
+      .querySelector('#reverse-notes')
+      .addEventListener('click', this.reverse)
+  }
+}
+
+export default notes
+w.notes = notes
+
+////////////////////////////////////////////////////////////////////////////////
+// APPEND TO CONTAINER ONE AT A TIME FROM ARRAY
+////////////////////////////////////////////////////////////////////////////////
+
+// push: par => {
+//   notes.getOrder()
+//   let promise = Promise.resolve()
+//   notes.oarr.reverse().forEach(x => {
+//     promise = promise.then(function() {
+//       document
+//       .querySelector(par)
+//       .appendChild(
+//         document.querySelector(`.macy-item div[data-uid = \'${x}\']`)
+//         .parentNode
+//       )
+//       return new Promise(res => setTimeout(res, 1000))
+//     })
+//     // promise.then(() => { console.log('Loop finished.') })
+//   })
+// },
+
+// notes.before(qs('.macy-item'), qs('input'))
+// qs('#macy-container').appendChild(qs('.macy-item div[data-uid = \'note-0000001\']').parentNode)
+
 // ////////////////////////////////////////////////////////////////////////////////
 // // UPDATE NOTE
 // ////////////////////////////////////////////////////////////////////////////////

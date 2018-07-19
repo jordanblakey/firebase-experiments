@@ -132,7 +132,6 @@ function sass() {
     cssnext({browsers: ["> 1%"]}),
     purify({
       content: [PATHS.build + '/**/*.js', PATHS.build + '/**/*.html'],
-      whitelist: [],
       purifyOptions: {
         info: true,
         rejected: false,
@@ -162,7 +161,6 @@ const webpackConfig = {
   }
 }
 function javascript() {
-  console.log(PLUGINS)
   return gulp
     .src(PATHS.entries)
     .pipe(named())
