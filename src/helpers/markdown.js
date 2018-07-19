@@ -4,7 +4,7 @@ import marked from 'marked'
  * Handlebars block helper that converts Markdown to HTML.
  * @param {object} options - Handlebars object.
  * @example
- * {{#markdown}}Welcome to [zombo.com](http://zombo.com){{/markdown}}
+ * {{#markdown}}Welcome to [zombo.com](https://zombo.com){{/markdown}}
  * @returns The Markdown inside the helper, converted to HTML.
  **/
 

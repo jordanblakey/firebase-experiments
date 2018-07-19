@@ -15,6 +15,11 @@ import { exec } from 'child_process'
 import webpackStream from 'webpack-stream'
 import webpack from 'webpack'
 
+import { stream as critical } from 'critical'
+import cssnext from 'postcss-cssnext'
+import cssnano from 'cssnano'
+import purify from 'postcss-purifycss'
+
 import panini from 'panini'
 
 import pngquant from 'imagemin-pngquant'
@@ -34,12 +39,14 @@ const {
   PORT,
   UIPORT,
   WPORT,
-  UNCSS_OPTIONS,
   PATHS,
-  IMAGEMIN
+  IMAGEMIN,
+  POSTCSS
 } = yaml.load(fs.readFileSync('config.yml', 'utf8'))
 
+
 // TASKS ///////////////////////////////////////////////////////////////////////
+
 gulp.task(
   'build',
   gulp.series(
@@ -48,7 +55,7 @@ gulp.task(
   )
 )
 
-gulp.task('default', gulp.series('build', server, watch))
+gulp.task('default', gulp.series('build', crit, server, watch))
 
 // UTILITY FUNCTIONS ///////////////////////////////////////////////////////////
 function clean(done) {
@@ -121,13 +128,25 @@ function resetPages(done) {
 
 // SASS ////////////////////////////////////////////////////////////////////////
 function sass() {
+  let plugins = [
+    cssnext({browsers: ["> 1%"]}),
+    purify({
+      content: [PATHS.build + '/**/*.js', PATHS.build + '/**/*.html'],
+      whitelist: [],
+      purifyOptions: {
+        info: true,
+        rejected: false,
+        whitelist: [],
+      }
+    }),
+    cssnano()
+  ]
+
   return gulp
     .src('src/assets/scss/app.scss')
     .pipe(plumber({ errorHandler: sassError }))
     .pipe(PLUGINS.sass({ includePaths: PATHS.sass }))
-    .pipe(PLUGINS.autoprefixer({ browsers: COMPAT }))
-    // .pipe(PLUGINS.if(PRODUCTION, PLUGINS.uncss(UNCSS_OPTIONS)))
-    .pipe(PLUGINS.if(PRODUCTION, PLUGINS.cleanCss({ compatibility: 'ie9' })))
+    .pipe(PLUGINS.if(PRODUCTION, PLUGINS.postcss(plugins)))
     .pipe(gulp.dest(PATHS.build + '/assets/css'))
     .pipe(browser.reload({ stream: true }))
 }
@@ -143,6 +162,7 @@ const webpackConfig = {
   }
 }
 function javascript() {
+  console.log(PLUGINS)
   return gulp
     .src(PATHS.entries)
     .pipe(named())
@@ -172,8 +192,28 @@ function images() {
     .pipe(gulp.dest(PATHS.build + '/assets/img'))
 }
 
+// CRITICAL PATH CSS ///////////////////////////////////////////////////////////
+function crit (done) {
+  if (PRODUCTION) {
+      return gulp.src(PATHS.build + '/**/*.html')
+      .pipe(critical({
+        base: PATHS.build,
+          css: [PATHS.build + '/assets/css/app.css'],
+          inline: true,
+          dimensions: [
+            { height: 200, width: 500 },
+            { height: 900, width: 1200 }
+          ]
+        }))
+        .on('error', function (err) { })
+        .pipe(gulp.dest(PATHS.build))
+  } else {
+    done()
+  }
+}
+
 // WATCH ///////////////////////////////////////////////////////////////////////
-function watch() {
+function watch(done) {
   gulp.watch(PATHS.assets, copy)
   gulp.watch(PATHS.root, copy)
   gulp.watch('src/pages/**/*.html').on('all', gulp.series(sass, pages, reload))
@@ -185,4 +225,5 @@ function watch() {
     .watch('src/assets/js/**/*.js')
     .on('all', gulp.series(javascript, gulp.parallel(test, reload)))
   gulp.watch('src/assets/img/**/*').on('all', gulp.series(images, reload))
+  done()
 }

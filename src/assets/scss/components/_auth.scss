@@ -178,4 +178,8 @@
 .firebaseui-textfield.mdl-textfield .firebaseui-label::after {display: none;}
 label.mdl-textfield__label.firebaseui-label { display: none; }
 .firebaseui-resend-container { @extend .button; box-shadow: $global-shadow; margin: 20px 0; text-align: center; font-size: 1rem; background: $white; padding: 8px 16px; border-radius: $global-radius; margin: 0; transition: $global-transition; a { color: $medium-gray !important; font-weight: 400; } &:hover{ background: $alert-color; a { color: $white !important; text-decoration: none; } } }
-
+.mdl-textfield .firebaseui-input {
+  padding: 0 8px;
+  border: 1px solid $medium-gray;
+  border-radius: $global-radius;
+}

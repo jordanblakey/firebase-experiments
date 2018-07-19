@@ -1,5 +1,5 @@
 // NANOBAR: Very lightweight progress bars /////////////////////////////////////
-// http://nanobar.jacoborus.codes/
+// https://nanobar.jacoborus.codes/
 
 import Nanobar from 'nanobar'
 

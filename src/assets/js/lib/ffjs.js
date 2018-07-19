@@ -72,7 +72,7 @@ const log = console.log
 // // log('elementIsVisibleInViewport:', browser.elementIsVisibleInViewport(el))
 // // log('elementIsVisibleInViewport:', browser.elementIsVisibleInViewport(el, true))
 // // log('getScrollPosition:', browser.getScrollPosition())
-// // log('getURLParameters:', browser.getURLParameters('http://url.com/page?name=Adam&surname=Smith'))
+// // log('getURLParameters:', browser.getURLParameters('https://url.com/page?name=Adam&surname=Smith'))
 // // log('redirect:', browser.redirect('https://google.com'))
 // // log('scrollToTop:', browser.scrollToTop())
 

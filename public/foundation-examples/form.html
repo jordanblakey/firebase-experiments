@@ -2,31 +2,65 @@
 <html class="no-js" lang="en">
 
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Form Examples</title>
+  <meta name="description" content="Note taking app emphasizing portability, security, and being fucking rad.">
+
+  <!-- PWA META -->
+  <meta name="application-name" content="Scorched">
+  <meta name="theme-color" content="#e5e5e5">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link async rel="manifest" href="../manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Scorched">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="msapplication-TileColor" content="#c4c4c4">
+  <meta name="msapplication-navbutton-color" content="#c4c4c4">
+  <meta name="msapplication-starturl" content="https://scorched.site">
+
+  <!-- FIREBASE -->
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-app.js"></script>
+
+  <script defer src="https://www.gstatic.com/firebasejs/5.2.0/firebase-auth.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/5.2.0/firebase-database.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/5.2.0/firebase-firestore.js"></script>
+  <!-- <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-messaging.js"></script> -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-functions.js"></script> -->
+
+  <!-- FIREBASEUI -->
+  <script defer src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+  <style>
+    @charset "UTF-8";button,input{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button{text-transform:none}button{-webkit-appearance:button}button::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring{outline:ButtonText dotted 1px}button,input{font-family:inherit}[type=date],[type=text]{-moz-appearance:none;-webkit-appearance:none;appearance:none;background-color:#fafafa;border:1px solid #c4c4c4;border-radius:3px;box-shadow:inset 0 1px 2px rgba(68,68,68,.1);box-sizing:border-box;color:#444;display:block;font-family:inherit;font-size:1rem;font-weight:400;height:2.4375rem;line-height:1.5;margin:0 0 1rem;padding:.5rem;width:100%}input::-ms-input-placeholder{color:#c4c4c4}div,form{margin:0;padding:0}input::-webkit-input-placeholder{color:#c4c4c4}input:-moz-placeholder{color:#c4c4c4}input::-moz-placeholder{color:#c4c4c4}input:-ms-input-placeholder{color:#c4c4c4}html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-family:sans-serif;line-height:1.15}header{display:block}a{-webkit-text-decoration-skip:objects;background-color:transparent}img{border-style:none}button,input,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button{overflow:visible}button,select{text-transform:none}[type=submit],button{-webkit-appearance:button}[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}input{overflow:visible}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;padding:0;white-space:normal}textarea{overflow:auto}html{box-sizing:border-box;font-size:100%}*,:after,:before{box-sizing:inherit}body{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;background:#fafafa;color:#444;font-family:Roboto Condensed,Roboto,Helvetica Neue,Helvetica,sans-serif;font-weight:400;line-height:1.5;margin:0;padding:0}img{-ms-interpolation-mode:bicubic;display:inline-block;height:auto;max-width:100%;vertical-align:middle}textarea{border-radius:3px;height:auto;min-height:50px}select{box-sizing:border-box;width:100%}button{-moz-appearance:none;-webkit-appearance:none;appearance:none;background:0 0;border:0;border-radius:3px;line-height:1;padding:0}button,input,select,textarea{font-family:inherit}@media print,screen and (min-width:40em){.medium-6{width:50%}}[type=date],[type=datetime-local],[type=email],[type=month],[type=number],[type=password],[type=search],[type=tel],[type=text],[type=time],[type=url],[type=week],textarea{-moz-appearance:none;-webkit-appearance:none;appearance:none;background-color:#fafafa;border:1px solid #c4c4c4;border-radius:3px;box-shadow:inset 0 1px 2px rgba(68,68,68,.1);box-sizing:border-box;color:#444;display:block;font-family:inherit;font-size:1rem;font-weight:400;height:2.4375rem;line-height:1.5;margin:0 0 1rem;padding:.5rem;width:100%}textarea{max-width:100%}textarea[rows]{height:auto}input::-ms-input-placeholder,textarea::-ms-input-placeholder{color:#c4c4c4}[type=submit]{-moz-appearance:none;-webkit-appearance:none;appearance:none;border-radius:3px}input[type=search]{box-sizing:border-box}[type=checkbox],[type=file],[type=radio]{margin:0 0 1rem}[type=checkbox]+label,[type=radio]+label{display:inline-block;margin-bottom:0;margin-left:.5rem;margin-right:1rem;vertical-align:baseline}[type=file]{width:100%}label{color:#444;display:block;font-size:.875rem;font-weight:400;line-height:1.8;margin:0}.help-text{color:#444;font-size:.8125rem;font-style:italic;margin-top:-.5rem}.input-group{align-items:stretch;display:flex;margin-bottom:1rem;width:100%}.input-group>:first-child{border-radius:3px 0 0 3px}.input-group>:last-child>*{border-radius:0 3px 3px 0}.input-group-button,.input-group-button input,.input-group-field,.input-group-label{margin:0;white-space:nowrap}.input-group-label{align-items:center;background:#e5e5e5;border:1px solid #c4c4c4;color:#444;display:flex;flex:0 0 auto;padding:0 1rem;text-align:center;white-space:nowrap}.input-group-label:first-child{border-right:0}.input-group-field{border-radius:0;flex:1 1 0px;height:auto;min-width:0}.input-group-button{display:flex;flex:0 0 auto;padding-bottom:0;padding-top:0;text-align:center}.input-group-button input{align-self:stretch;font-size:1rem;height:auto;padding-bottom:0;padding-top:0}fieldset{border:0;margin:0;padding:0}legend{margin-bottom:.5rem;max-width:100%}.fieldset{border:1px solid #c4c4c4;margin:1.125rem 0;padding:1.25rem}.fieldset legend{margin:0 0 0 -.1875rem;padding:0 .1875rem}select{-moz-appearance:none;-webkit-appearance:none;appearance:none;background-color:#fafafa;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%28102, 102, 102%29'></polygon></svg>");background-origin:content-box;background-position:right -1rem center;background-repeat:no-repeat;background-size:9px 6px;border:1px solid #c4c4c4;border-radius:3px;color:#444;font-family:inherit;font-size:1rem;font-weight:400;height:2.4375rem;line-height:1.5;margin:0 0 1rem;padding:.5rem 1.5rem .5rem .5rem}@media screen and (min-width:0\0){select{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAYAAACbU/80AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIpJREFUeNrEkckNgDAMBBfRkEt0ObRBBdsGXUDgmQfK4XhH2m8czQAAy27R3tsw4Qfe2x8uOO6oYLb6GlOor3GF+swURAOmUJ+RwtEJs9WvTGEYxBXqI1MQAZhCfUQKRzDMVj+TwrAIV6jvSUEkYAr1LSkcyTBb/V+KYfX7xAeusq3sLDtGH3kEGACPWIflNZfhRQAAAABJRU5ErkJggg==)}}select::-ms-expand{display:none}select[multiple]{background-image:none;height:auto}div,form,h3,p{margin:0;padding:0}p{font-size:inherit;line-height:1.6;margin-bottom:1rem;text-rendering:optimizeLegibility}h3{color:inherit;font-family:Roboto Condensed,Roboto,Helvetica Neue,Helvetica,sans-serif;font-style:normal;font-weight:400;text-rendering:optimizeLegibility}h3{font-size:1.1875rem}h3{line-height:1.4;margin-bottom:.5rem;margin-top:0}a{color:#666;line-height:inherit;text-decoration:none}a img{border:0}.button{-webkit-appearance:none;background-color:#666;border:1px solid transparent;border-radius:3px;color:#fafafa;display:inline-block;font-family:inherit;font-size:.9rem;line-height:1;margin:0 0 1rem;padding:.85em 1em;text-align:center;vertical-align:middle}.button.secondary{background-color:#e5e5e5;color:#444}.align-middle{align-items:center}.grid-container{margin:0 auto;max-width:75rem;padding-left:.625rem;padding-right:.625rem}.grid-x{display:flex;flex-flow:row wrap}.cell{flex:0 0 auto;min-height:0;min-width:0;width:100%}.grid-container:not(.full)>.grid-padding-x{margin-left:-.625rem;margin-right:-.625rem}.grid-padding-x>.cell{padding-left:.625rem;padding-right:.625rem}@media print,screen and (min-width:40em){h3{font-size:1.9375rem}.grid-container{padding-left:.5rem;padding-right:.5rem}.grid-x>.medium-6{flex-basis:auto}.grid-x>.medium-6{width:50%}.grid-container:not(.full)>.grid-padding-x{margin-left:-.5rem;margin-right:-.5rem}.grid-padding-x>.cell{padding-left:.5rem;padding-right:.5rem}.medium-up-1>.cell{width:100%}.medium-up-4>.cell{width:25%}}.show-for-sr{-webkit-clip-path:inset(50%);border:0;clip:rect(0,0,0,0);clip-path:inset(50%);height:1px;overflow:hidden;padding:0;position:absolute!important;white-space:nowrap;width:1px}input[type=file]{height:.1px;opacity:0;overflow:hidden;position:absolute;width:.1px;z-index:-1}.top-bar{background:#f0f0f0;height:3.5rem}.top-bar .cell{align-items:center;display:flex;justify-content:center}.top-bar .logo{outline:0!important}.top-bar .logo{height:2rem;margin:0 24px 8px 0}.top-bar #log-in-status{color:#c4c4c4;font-size:14px;margin-right:4px}.top-bar #log-in.button{background:#fafafa;color:#666;font-size:14px;margin:0 0 0 4px}body{background:#f8f8f8}a{color:#ff9326}button.button{background:#444;border-radius:3px;box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);font-size:.875rem;margin:0;outline:0!important;padding:8px 16px 6px}button.button:last-child{margin-right:0}button.button.secondary{background:#fafafa;box-shadow:0 1px 3px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.12);color:#c4c4c4}input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#c4c4c4}input:-moz-placeholder,textarea:-moz-placeholder{color:#c4c4c4}input::-moz-placeholder,textarea::-moz-placeholder{color:#c4c4c4}input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#c4c4c4}
+  </style>
+  <link async type="text/css" rel="preload" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link async type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css"></noscript>
 
   <!-- EDITOR -->
-  <link defer rel="stylesheet" href="//cdn.jsdelivr.net/editor/0.1.0/editor.css">
-  <script defer src="//cdn.jsdelivr.net/editor/0.1.0/editor.js"></script>
-  <script defer src="//cdn.jsdelivr.net/editor/0.1.0/marked.js"></script>
+  <link async rel="preload" href="https://cdn.jsdelivr.net/editor/0.1.0/editor.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link async rel="stylesheet" href="https://cdn.jsdelivr.net/editor/0.1.0/editor.css"></noscript>
+  <script defer src="https://cdn.jsdelivr.net/editor/0.1.0/editor.js"></script>
+  <script async src="https://cdn.jsdelivr.net/editor/0.1.0/marked.js"></script>
 
   <!-- STYLE -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,600" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300, 500, 700" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/app.css" />
+  <link async href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,600" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link async href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,600" rel="stylesheet"></noscript>
+  <link async href="https://fonts.googleapis.com/css?family=Roboto+Mono:300, 500, 700" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link async href="https://fonts.googleapis.com/css?family=Roboto+Mono:300, 500, 700" rel="stylesheet"></noscript>
+  <link async rel="preload" href="../assets/css/app.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link async rel="stylesheet" href="../assets/css/app.css"></noscript>
+  <script>!function(n){"use strict";n.loadCSS||(n.loadCSS=function(){});var o=loadCSS.relpreload={};if(o.support=function(){var e;try{e=n.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),o.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},o.poly=function(){if(!o.support())for(var t=n.document.getElementsByTagName("link"),e=0;e<t.length;e++){var a=t[e];"preload"!==a.rel||"style"!==a.getAttribute("as")||a.getAttribute("data-loadcss")||(a.setAttribute("data-loadcss",!0),o.bindMediaToggle(a))}},!o.support()){o.poly();var t=n.setInterval(o.poly,500);n.addEventListener?n.addEventListener("load",function(){o.poly(),n.clearInterval(t)}):n.attachEvent&&n.attachEvent("onload",function(){o.poly(),n.clearInterval(t)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:n.loadCSS=loadCSS}("undefined"!=typeof global?global:this);</script>
 
   <!-- ICONS -->
-  <link defer rel="shortcut icon" href="../assets/icon/favicon.ico">
-  <link defer rel="apple-touch-icon" sizes="180x180" href="../assets/icon/apple-touch-icon.png">
-  <link defer rel="icon" type="image/png" sizes="32x32" href="../assets/icon/favicon-32x32.png">
-  <link defer rel="icon" type="image/png" sizes="16x16" href="../assets/icon/favicon-16x16.png">
-  <link defer rel="manifest" href="site.webmanifest">
-  <link defer rel="mask-icon" href="../assets/icon/safari-pinned-tab.svg" color="#c4c4c4">
-  <meta name="msapplication-TileColor" content="#c4c4c4">
-  <meta name="theme-color" content="#e5e5e5">
+  <link async rel="shortcut icon" href="../assets/icon/favicon.ico">
+  <link async rel="icon" type="image/png" sizes="32x32" href="../assets/icon/favicon-32x32.png">
+  <link async rel="icon" type="image/png" sizes="16x16" href="../assets/icon/favicon-16x16.png">
+  <link async rel="apple-touch-icon" sizes="180x180" href="../assets/icon/apple-touch-icon.png">
+  <link async rel="mask-icon" href="../assets/icon/safari-pinned-tab.svg" color="#c4c4c4">
+
   <script>
+    // BOUNCE UNAUTHENTICATED
     if (
       sessionStorage.getItem('user') === null ||
       sessionStorage.getItem('accessToken') === null
@@ -46,7 +80,7 @@
     <div class="grid-x grid-padding-x top-bar align-middle">
       <div class="cell">
         <a href="../">
-          <img class="logo" src="../assets/img/logo-scorched-dark.svg">
+          <img class="logo" src="../assets/img/logo-scorched-dark.svg" alt="Scorched">
         </a>
         <span id="log-in-status">Loading...</span>
         <button id="log-in" class="button secondary">Log out</button>
@@ -98,7 +132,7 @@
       </div>
       <div class="cell">
         <label>url
-          <input type="url" placeholder="http://google.com"> </label>
+          <input type="url" placeholder="https://google.com"> </label>
       </div>
       <div class="cell">
         <label>week
@@ -181,7 +215,7 @@
     </form>
   </div>
 
-  <script src="../assets/js/polyfill.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js"></script>
   <script src="../assets/js/utils.js"></script>
   <script src="../assets/js/app.js"></script>
 

@@ -1,4 +1,3 @@
-import * as firebaseui from 'firebaseui'
 import { arrive, Arrive } from '../lib/arrive'
 const gebi = elm => document.getElementById(elm)
 const qs = elm => document.querySelector(elm)
@@ -6,74 +5,76 @@ const qs = elm => document.querySelector(elm)
 ////////////////////////////////////////////////////////////////////////////////
 // FIREBASEUI AUTH CONFIG
 ////////////////////////////////////////////////////////////////////////////////
-let uiConfig = {
-  callbacks: {
-    signInSuccessWithAuthResult: function(authResult, redirectUrl) {
-      let user = authResult.user
-      let credential = authResult.credential
-      let isNewUser = authResult.additionalUserInfo.isNewUser
-      let providerId = authResult.additionalUserInfo.providerId
-      let operationType = authResult.operationType
-      // Do something with the returned AuthResult.
-      // Return type determines whether we continue the redirect automatically
-      // or whether we leave that to developer to handle.
-      sessionStorage.setItem('accessToken', 'pending')
-      sessionStorage.setItem('user', JSON.stringify(user))
-      qs('body').insertAdjacentHTML('afterbegin', `<div id="splash"></div>`)
-      sessionStorage.setItem('fresh-login', true)
+window.addEventListener('DOMContentLoaded', () => {
+  let uiConfig = {
+    callbacks: {
+      signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+        let user = authResult.user
+        let credential = authResult.credential
+        let isNewUser = authResult.additionalUserInfo.isNewUser
+        let providerId = authResult.additionalUserInfo.providerId
+        let operationType = authResult.operationType
+        // Do something with the returned AuthResult.
+        // Return type determines whether we continue the redirect automatically
+        // or whether we leave that to developer to handle.
+        sessionStorage.setItem('accessToken', 'pending')
+        sessionStorage.setItem('user', JSON.stringify(user))
+        qs('body').insertAdjacentHTML('afterbegin', `<div id="splash"></div>`)
+        sessionStorage.setItem('fresh-login', true)
 
-      return true
-    },
-    signInFailure: function(error) {
-      // Some unrecoverable error occurred during log-in.
-      // Return a promise when error handling is completed and FirebaseUI
-      // will reset, clearing any UI. This commonly occurs for error code
-      // 'firebaseui/anonymous-upgrade-merge-conflict' when merge conflict
-      // occurs. Check below for more details on this.
-      return handleUIError(error)
-    },
-    uiShown: function() {
-      // The widget is rendered.
-      // Hide the loader.
-    }
-  },
-  credentialHelper: firebaseui.auth.CredentialHelper.ACCOUNT_CHOOSER_COM,
-  // Query parameter name for mode.
-  queryParameterForWidgetMode: 'mode',
-  // Query parameter name for sign in success url.
-  queryParameterForSignInSuccessUrl: 'signInSuccessUrl',
-  // Will use popup for IDP Providers log-in flow instead of the default, redirect.
-  signInFlow: 'popup',
-  signInSuccessUrl:
-    location.href.split('/')[0] + '//' + location.href.split('/')[2] + '/app',
-  signInOptions: [
-    // Leave the lines as is for the providers you want to offer your users.
-    firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-    // {
-    //   provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
-    //   // Whether the display name should be displayed in the Sign Up page.
-    //   requireDisplayName: true
-    // },
-    {
-      provider: firebase.auth.PhoneAuthProvider.PROVIDER_ID,
-      // Invisible reCAPTCHA with image challenge and bottom left badge.
-      recaptchaParameters: {
-        type: 'image',
-        size: 'invisible',
-        badge: 'bottomleft'
+        return true
+      },
+      signInFailure: function(error) {
+        // Some unrecoverable error occurred during log-in.
+        // Return a promise when error handling is completed and FirebaseUI
+        // will reset, clearing any UI. This commonly occurs for error code
+        // 'firebaseui/anonymous-upgrade-merge-conflict' when merge conflict
+        // occurs. Check below for more details on this.
+        return handleUIError(error)
+      },
+      uiShown: function() {
+        // The widget is rendered.
+        // Hide the loader.
       }
-    }
-  ],
-  // Terms of service url.
-  tosUrl: '',
-  privacyPolicyUrl: ''
-}
+    },
+    credentialHelper: firebaseui.auth.CredentialHelper.ACCOUNT_CHOOSER_COM,
+    // Query parameter name for mode.
+    queryParameterForWidgetMode: 'mode',
+    // Query parameter name for sign in success url.
+    queryParameterForSignInSuccessUrl: 'signInSuccessUrl',
+    // Will use popup for IDP Providers log-in flow instead of the default, redirect.
+    signInFlow: 'popup',
+    signInSuccessUrl:
+      location.href.split('/')[0] + '//' + location.href.split('/')[2] + '/app',
+    signInOptions: [
+      // Leave the lines as is for the providers you want to offer your users.
+      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+      // {
+      //   provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+      //   // Whether the display name should be displayed in the Sign Up page.
+      //   requireDisplayName: true
+      // },
+      {
+        provider: firebase.auth.PhoneAuthProvider.PROVIDER_ID,
+        // Invisible reCAPTCHA with image challenge and bottom left badge.
+        recaptchaParameters: {
+          type: 'image',
+          size: 'invisible',
+          badge: 'bottomleft'
+        }
+      }
+    ],
+    // Terms of service url.
+    tosUrl: '',
+    privacyPolicyUrl: ''
+  }
 
-if (gebi('firebaseui-auth-container') !== null) {
-  let ui = new firebaseui.auth.AuthUI(firebase.auth())
-  // The start method will wait until the DOM is loaded.
-  ui.start('#firebaseui-auth-container', uiConfig)
-}
+  if (gebi('firebaseui-auth-container') !== null) {
+    let ui = new firebaseui.auth.AuthUI(firebase.auth())
+    // The start method will wait until the DOM is loaded.
+    ui.start('#firebaseui-auth-container', uiConfig)
+  }
+})
 
 ////////////////////////////////////////////////////////////////////////////////
 // TRACK AUTH ACROSS PAGES

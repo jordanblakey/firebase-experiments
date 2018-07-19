@@ -1,6 +1,6 @@
 // FFJS ////////////////////////////////////////////////////////////////////////
 // https://github.com/jordanblakey/ffjs
-import ffjs from './lib/ffjs.js'
+// import ffjs from './lib/ffjs.js'
 
 // AXIOS ///////////////////////////////////////////////////////////////////////
 // https://www.npmjs.com/package/axios
@@ -27,7 +27,7 @@ import ffjs from './lib/ffjs.js'
 // import './lib/rellax.js'
 
 // NANOBAR: Very lightweight progress bars /////////////////////////////////////
-// http://nanobar.jacoborus.codes/
+// https://nanobar.jacoborus.codes/
 // import './lib/nanobar.js'
 
 // CLIPBOARDJS: Manage the clipboard with JS ///////////////////////////////////
@@ -35,7 +35,7 @@ import ffjs from './lib/ffjs.js'
 // import clipboard from 'clipboard'
 
 // PRISMJS: Code Highlighting for <pre> and <code> /////////////////////////////
-// http://prismjs.com
+// https://prismjs.com
 import './lib/prism.js'
 
 // WHATINPUT: Utility to track the current input method ////////////////////////

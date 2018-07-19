@@ -7,8 +7,6 @@ import './modules/auth'
 import renderEditor from './components/editor'
 import styleFileInputs from './components/file-uploader'
 import DBExplorer from './components/database-explorer'
-
-// import './components/steganography'
 import Scorch from './components/scorch'
 
 // HANDLE AUTH /////////////////////////////////////////////////////////////////
@@ -18,16 +16,22 @@ document.addEventListener('DOMContentLoaded', function() {
   renderPage()
 })
 
-////////////////////////////////////////////////////////////////////////////////
-// ALIASES
-////////////////////////////////////////////////////////////////////////////////
+// REGISTER SERVICE WORKER /////////////////////////////////////////////////////
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register('./../../service-worker.js', { scope: './' })
+    .then(() => {
+      console.log('Service Worker Registered: Caching assets for offline use.')
+    })
+}
+
+// ALIASES /////////////////////////////////////////////////////////////////////
 document.qs = sel => document.querySelector(sel)
 document.qsa = sel => document.querySelectorAll(sel)
 
 ////////////////////////////////////////////////////////////////////////////////
 // RENDER PAGE
 ////////////////////////////////////////////////////////////////////////////////
-
 export function renderPage() {
   let editorContainer = document.querySelector('#editor-container')
   renderEditor(editorContainer)

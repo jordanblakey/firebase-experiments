@@ -86,7 +86,7 @@ function initDragAndDrop() {
 
   let macyC = document.querySelector('#macy-container')
   let macyI = macyC.querySelectorAll('.macy-item')
-  console.log(macyC, macyI)
+  // console.log(macyC, macyI)
   ;[].forEach.call(macyI, function(macyI) {
     macyI.addEventListener('dragstart', handleDragStart, false)
     macyI.addEventListener('dragenter', handleDragEnter, false)
@@ -154,7 +154,7 @@ function initDragAndDrop() {
 
   function handleDragEnd(e) {
     // this e.target is the source node
-    console.log('Handle Drag End')
+    // console.log('Handle Drag End')
     document
       .querySelectorAll('.macy-item.over')
       .forEach(elm => elm.classList.remove('over'))

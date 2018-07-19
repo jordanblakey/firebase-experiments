@@ -1,8 +1,8 @@
-import firebase from 'firebase/app'
-import 'firebase/auth'
-import 'firebase/database'
-import 'firebase/firestore'
-import 'firebase/storage'
+// import firebase from 'firebase/app'
+// import 'firebase/auth'
+// import 'firebase/database'
+// import 'firebase/firestore'
+// import 'firebase/storage'
 import { config } from '../../../../firebase'
 
 firebase.initializeApp({
@@ -13,11 +13,7 @@ firebase.initializeApp({
   storageBucket: config.storageBucket,
   messagingSenderId: config.messagingSenderId
 })
-firebase.firestore().settings({ timestampsInSnapshots: true })
-
 window.firebase = firebase
-
-export default firebase
 
 // FOR INDEX PAGE ONLY /////////////////////////////////////////////////////////
 

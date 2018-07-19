@@ -9,18 +9,6 @@ COMPAT:
   - "ie >= 9"
   - "ios >= 7"
 
-# UnCSS will use these settings
-UNCSS_OPTIONS:
-  html:
-    - "src/**/*.html"
-  ignore:
-    - !!js/regexp .foundation-mq
-    - !!js/regexp ^\.is-.*
-    - !!js/regexp (.toolbar|.token|.comment)
-
-  timeout:
-    - 10000
-
 # Gulp will reference these paths when it copies files
 PATHS:
   # Path to build folder
@@ -38,7 +26,6 @@ PATHS:
     - "node_modules/motion-ui/src"
   # Paths to JavaScript entry points for webpack to bundle modules
   entries:
-    - "node_modules/babel-polyfill/dist/polyfill.js"
     - "src/assets/js/app.js"
     - "src/assets/js/utils.js"
 
