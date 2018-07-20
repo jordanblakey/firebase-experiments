@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
 
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Scorched: Secure, Portable Notes</title>
@@ -33,17 +33,26 @@
 
   <!-- FIREBASEUI -->
   <script defer src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
-  <link async type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+  <style>
+    @charset "UTF-8";div,h3,p{margin:0;padding:0}h3{color:inherit;font-family:Roboto Condensed,Roboto,Helvetica Neue,Helvetica,sans-serif;font-style:normal;font-weight:400;text-rendering:optimizeLegibility}h3{line-height:1.4;margin-bottom:.5rem;margin-top:0}.label{display:inline-block;font-size:.8rem;line-height:1;padding:.33333rem .5rem;white-space:nowrap}.label{background:#666;color:#fafafa}.label{border-radius:3px;font-size:14px;margin:0 4px;padding:8px 16px}a.button,button.button{background:#444;border:0;border-radius:3px;box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);font-size:.875rem;line-height:1.2;margin:0;outline:0!important;padding:8px 16px}button.button:last-child{margin-right:0}button.button.secondary{background:#fafafa;box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);color:#c4c4c4}html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-family:sans-serif;line-height:1.15}header{display:block}a{-webkit-text-decoration-skip:objects;background-color:transparent}img{border-style:none}button,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button{overflow:visible}button{text-transform:none}button{-webkit-appearance:button}button::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring{outline:ButtonText dotted 1px}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}textarea{overflow:auto}html{box-sizing:border-box;font-size:100%}*,:after,:before{box-sizing:inherit}body{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;background:#fafafa;color:#444;font-family:Roboto Condensed,Roboto,Helvetica Neue,Helvetica,sans-serif;font-weight:400;line-height:1.5;margin:0;padding:0}img{-ms-interpolation-mode:bicubic;display:inline-block;height:auto;max-width:100%;vertical-align:middle}textarea{border-radius:3px;height:auto;min-height:50px}button{-moz-appearance:none;-webkit-appearance:none;appearance:none;background:0 0;border:0;border-radius:3px;line-height:1;padding:0}button,textarea{font-family:inherit}.small-12{width:100%}textarea{-moz-appearance:none;-webkit-appearance:none;appearance:none;background-color:#fafafa;border:1px solid #c4c4c4;border-radius:3px;box-shadow:inset 0 1px 2px rgba(68,68,68,.1);box-sizing:border-box;color:#444;display:block;font-family:inherit;font-size:1rem;font-weight:400;height:2.4375rem;line-height:1.5;margin:0 0 1rem;padding:.5rem;width:100%}textarea{max-width:100%}textarea::-ms-input-placeholder{color:#c4c4c4}.input-group>:last-child>*{border-radius:0 3px 3px 0}div,h3,h4,h6,li,p,ul{margin:0;padding:0}p{font-size:inherit;line-height:1.6;margin-bottom:1rem;text-rendering:optimizeLegibility}h3,h4,h6{color:inherit;font-family:Roboto Condensed,Roboto,Helvetica Neue,Helvetica,sans-serif;font-style:normal;font-weight:400;text-rendering:optimizeLegibility}h3{font-size:1.1875rem}h3,h4{line-height:1.4;margin-bottom:.5rem;margin-top:0}h4{font-size:1.125rem}h6{line-height:1.4;margin-bottom:.5rem;margin-top:0}h6{font-size:1rem}@media print,screen and (min-width:40em){h3{font-size:1.9375rem}h4{font-size:1.5625rem}h6{font-size:1rem}}a{color:#666;line-height:inherit;text-decoration:none}a img{border:0}ul{line-height:1.6;list-style-position:outside;margin-bottom:1rem}li{font-size:inherit}ul{list-style-type:disc}ul{margin-left:1.25rem}.text-right{text-align:right}.button{-webkit-appearance:none;background-color:#666;border:1px solid transparent;border-radius:3px;color:#fafafa;display:inline-block;font-family:inherit;font-size:.9rem;line-height:1;margin:0 0 1rem;padding:.85em 1em;text-align:center;vertical-align:middle}.button.primary{background-color:#666;color:#fafafa}.button.secondary{background-color:#e5e5e5;color:#444}.button-group{align-items:stretch;display:flex;flex-wrap:nowrap;margin-bottom:1rem}.button-group:after,.button-group:before{content:" ";display:table;flex-basis:0;order:1}.button-group:after{clear:both}.button-group .button{flex:0 0 auto;font-size:.9rem;margin:0 1px 1px 0}.button-group .button:last-child{margin-right:0}.callout{background-color:#fefefe;border:1px solid rgba(68,68,68,.25);border-radius:3px;margin:0 0 10px;padding:1rem;position:relative}.callout>:first-child{margin-top:0}.callout>:last-child{margin-bottom:0}.callout.secondary{background-color:#fbfbfb;color:#444}.align-right{justify-content:flex-end}.align-middle{align-items:center}.grid-container{margin:0 auto;max-width:75rem;padding-left:.625rem;padding-right:.625rem}.grid-x{display:flex;flex-flow:row wrap}.cell{flex:0 0 auto;min-height:0;min-width:0;width:100%}.grid-x>.small-12{flex-basis:auto}.grid-x>.small-12{width:100%}.grid-margin-x{margin-left:-.625rem;margin-right:-.625rem}.grid-margin-x>.cell{margin-left:.625rem;margin-right:.625rem;width:calc(100% - 1.25rem)}@media print,screen and (min-width:40em){.grid-container{padding-left:.5rem;padding-right:.5rem}.grid-margin-x{margin-left:-.5rem;margin-right:-.5rem}.grid-margin-x>.cell{margin-left:.5rem;margin-right:.5rem;width:calc(100% - 1rem)}}.grid-margin-x>.small-12{width:calc(100% - 1.25rem)}.grid-padding-x>.cell{padding-left:.625rem;padding-right:.625rem}@media print,screen and (min-width:40em){.grid-margin-x>.small-12{width:calc(100% - 1rem)}.grid-padding-x>.cell{padding-left:.5rem;padding-right:.5rem}}.hide{display:none!important}.badge{border-radius:50%;display:inline-block;font-size:.6rem;min-width:2.1em;padding:.3em;text-align:center}.badge{background:#666;color:#fafafa}.badge.secondary{background:#e5e5e5;color:#444}.label,span.badge{display:inline-block;font-size:.8rem;line-height:1;padding:.33333rem .5rem;white-space:nowrap}.label,span.badge{background:#666;color:#fafafa}span.secondary.badge{background:#e5e5e5;color:#444}button[data-balloon]{overflow:visible}[data-balloon]{position:relative}[data-balloon]:after{background:#444;border-radius:3px;color:#fafafa;content:attr(data-balloon);line-height:1.2rem;padding:.5em 1em;white-space:nowrap}[data-balloon]:after,[data-balloon]:before{opacity:0;position:absolute;z-index:10}[data-balloon]:before{background:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='https://www.w3.org/2000/svg' width='36' height='12'%3E%3Cpath fill='%23444' d='M2.658 0h32.004c-6 0-11.627 12.002-16.002 12.002C14.285 12.002 8.594 0 2.658 0z'/%3E%3C/svg%3E") no-repeat;background-size:100% auto;content:"";height:6px;width:18px}[data-balloon][data-balloon-pos=up]:after{bottom:100%;left:50%;margin-bottom:11px;transform:translate(-50%,10px);transform-origin:top}[data-balloon][data-balloon-pos=up]:before{bottom:100%;left:50%;margin-bottom:5px;transform:translate(-50%,10px);transform-origin:top}[data-balloon][data-balloon-length=medium]:after{white-space:normal;width:150px}input[type=file]+label span{background:#666;border-radius:0 3px 3px 0;display:inline-block;flex:1;margin:-8px -16px -8px 16px;padding:8px 16px;z-index:2}.file-uploader-container .input-group .label.status{border-radius:3px;flex:1;line-height:20px;margin:0;opacity:1;padding:6px 16px;position:relative}.file-uploader-container .input-group .label.status.hidden{display:none;opacity:0;transform:translateX(-10px)}@media screen and (max-width:39.9375em){.file-uploader-container .input-group .label.status{border-radius:3px}.file-uploader-container .input-group .label.status.hidden{transform:translateY(-10);transform:translateX(0)}}.file-uploader-container .viewer{display:none;line-height:0}.top-bar{background:#f0f0f0;height:3.5rem}.top-bar .cell{align-items:center;display:flex;justify-content:center}.top-bar .logo{outline:0!important}.top-bar .logo{height:2rem;margin:0 24px 8px 0}.top-bar #log-in-status{color:#c4c4c4;font-size:14px;margin-right:4px;margin-top:2px}.editor-buttons-container{border-top:1px solid #e5e5e5}.editor-buttons-container .editor-buttons{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin:0 auto;max-width:75rem;padding:12px 0 1rem}.editor-buttons-container .editor-buttons div{display:flex;flex-grow:1;flex-shrink:1;flex-wrap:wrap;margin:.5rem}#editor{min-height:482px;visibility:hidden}#macy-container{column-count:1;column-gap:1rem;padding-bottom:10px}@media print,screen and (min-width:40em){#macy-container{column-count:2}}@media print,screen and (min-width:64em){#macy-container{column-count:3}}#macy-container .macy-item{-khtml-user-drag:element;-webkit-user-drag:element;break-inside:avoid;margin-bottom:10px;opacity:0;overflow:hidden}#output{border-top:1px solid #e5e5e5;margin-top:2rem;padding-top:1rem}#output #download{margin-right:8px}#output #resultImg{border:1px solid #e5e5e5;border-radius:3px;display:block;margin-top:1rem;max-height:200px}#account-details{display:flex}@media screen and (max-width:39.9375em){#account-details{flex-direction:column;justify-content:center}}#splash{background:#fafafa;background-image:url(../assets/img/logo-scorched.svg);background-position:50%;background-repeat:no-repeat;background-size:30vw auto;display:flex;height:100vh;opacity:1;position:fixed;top:0;width:100vw;z-index:1}body{background:#f8f8f8}a{color:#ff9326}.label,span.badge{border-radius:3px;font-size:14px;margin:0 4px;padding:8px 16px}span.badge{border-radius:10rem;font-size:14px;margin:0 4px;padding:8px 16px}span.badge.secondary{background-color:#f0f0f0;color:#c4c4c4}span.badge:first-child{margin-left:0}span.badge:last-child{margin-right:0}h4,h6{color:#666;font-weight:700}.callout{background-color:#e8e8e8;border:0;box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);color:#444;padding:2rem}.button-group button.button,a.button,button.button{background:#444;border:0;border-radius:3px;box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);font-size:.875rem;line-height:1.2;margin:0;outline:0!important;padding:8px 16px}.button-group button.button:first-child,button.button:first-child{margin-left:0}.button-group button.button:last-child,button.button:last-child{margin-right:0}.button-group button.button.secondary,button.button.secondary{background:#fafafa;box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);color:#c4c4c4}.button-group button.button.save-button,button.button.save-button{margin-left:4px}textarea::-webkit-input-placeholder{color:#c4c4c4}textarea:-moz-placeholder{color:#c4c4c4}textarea::-moz-placeholder{color:#c4c4c4}textarea:-ms-input-placeholder{color:#c4c4c4}
+  </style>
+  <link async type="text/css" rel="preload" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link async type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css"></noscript>
 
   <!-- EDITOR -->
-  <link async rel="stylesheet" href="https://cdn.jsdelivr.net/editor/0.1.0/editor.css">
+  <link async rel="preload" href="https://cdn.jsdelivr.net/editor/0.1.0/editor.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link async rel="stylesheet" href="https://cdn.jsdelivr.net/editor/0.1.0/editor.css"></noscript>
   <script defer src="https://cdn.jsdelivr.net/editor/0.1.0/editor.js"></script>
   <script async src="https://cdn.jsdelivr.net/editor/0.1.0/marked.js"></script>
 
   <!-- STYLE -->
-  <link async href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,600" rel="stylesheet">
-  <link async href="https://fonts.googleapis.com/css?family=Roboto+Mono:300, 500, 700" rel="stylesheet">
-  <link async rel="stylesheet" href="../assets/css/app.css" />
+  <link async href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,600" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link async href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,600" rel="stylesheet"></noscript>
+  <link async href="https://fonts.googleapis.com/css?family=Roboto+Mono:300, 500, 700" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link async href="https://fonts.googleapis.com/css?family=Roboto+Mono:300, 500, 700" rel="stylesheet"></noscript>
+  <link async rel="preload" href="../assets/css/app.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link async rel="stylesheet" href="../assets/css/app.css"></noscript>
+  <script>!function(n){"use strict";n.loadCSS||(n.loadCSS=function(){});var o=loadCSS.relpreload={};if(o.support=function(){var e;try{e=n.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),o.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},o.poly=function(){if(!o.support())for(var t=n.document.getElementsByTagName("link"),e=0;e<t.length;e++){var a=t[e];"preload"!==a.rel||"style"!==a.getAttribute("as")||a.getAttribute("data-loadcss")||(a.setAttribute("data-loadcss",!0),o.bindMediaToggle(a))}},!o.support()){o.poly();var t=n.setInterval(o.poly,500);n.addEventListener?n.addEventListener("load",function(){o.poly(),n.clearInterval(t)}):n.attachEvent&&n.attachEvent("onload",function(){o.poly(),n.clearInterval(t)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:n.loadCSS=loadCSS}("undefined"!=typeof global?global:this);</script>
 
   <!-- ICONS -->
   <link async rel="shortcut icon" href="../assets/icon/favicon.ico">
@@ -85,8 +94,7 @@
           <span class="badge secondary zen-shortcut">Zen: alt+z</span>
         </div>
         <div class="button-group text-right align-right">
-          <button data-balloon="Load the editor with a quick overview of Markdown" data-balloon-pos="up" data-balloon-length="medium"
-            class="markdown-tutorial-button button secondary">Tutorial</button>
+          <button data-balloon="Load the editor with a quick overview of Markdown" data-balloon-pos="up" data-balloon-length="medium" class="markdown-tutorial-button button secondary">Tutorial</button>
           <button class="save-button button primary">Save</button>
         </div>
       </div>
@@ -158,14 +166,14 @@
         <form>
           <div class="input-group">
             <label for="cover-file">Step 1. Select image</label>
-            <input name="cover-file" type="file" id="cover-file" accept="image/*" />
+            <input name="cover-file" type="file" id="cover-file" accept="image/*">
             <label for="cover-file">Choose a file
               <span class="hide"></span>
             </label>
           </div>
           <div class="input-group">
             <label for="password">Step 2. Create or re-enter encryption password
-              <input name="password" type="password" id="password" value="" placeholder="(Optional)" />
+              <input name="password" type="password" id="password" value="" placeholder="(Optional)">
             </label>
             <div class="inline">
               <input type="checkbox" class="show-password">
@@ -191,7 +199,7 @@
           <h3>Output</h3>
           <a href="" class="button" id="download">Download</a>
           <span id="result"></span>
-          <img id="resultImg" />
+          <img id="resultImg">
         </div>
       </div>
       
@@ -210,7 +218,7 @@
                 <button class="input-group-button button primary copy-button">Copy Path</button>
                 <button class="input-group-button button copy-json-button" data-clipboard-target=".output">Copy JSON</button>
               </div>
-              <input type="text" name="path-field" class="input-group-field path-field" />
+              <input type="text" name="path-field" class="input-group-field path-field">
             </form>
             <small>
               <pre>
@@ -225,13 +233,13 @@
       <div class="cell file-uploader-container callout secondary medium-12 large-6">
         <h3>Storage Upload</h3>
         <form class="input-group">
-          <input id="file" type="file" multiple class="file uploader" />
+          <input id="file" type="file" multiple class="file uploader">
           <label for="file">Choose a file
             <span class="hide"></span>
           </label>
           <p class="status label hidden">&nbsp;</p>
         </form>
-        <img class="viewer" src="" width="100%" />
+        <img class="viewer" src="" width="100%">
       </div>
       <div class="cell callout secondary medium-12 large-6">
         <h3>Manage Your Data <span class="subheader"></span></h3>

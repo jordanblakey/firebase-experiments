@@ -42,15 +42,15 @@ const notes = {
     store.forEach(elm =>
       document.getElementById('macy-container').appendChild(elm)
     )
-    saveNoteOrder()
     macy.reInit()
+    notes.store()
   },
 
   // INIT EVENT HANDLERS ///////////////////////////////////////////////////////
   listen: function() {
-    document
-      .querySelector('#reverse-notes')
-      .addEventListener('click', this.reverse)
+    document.querySelector('#reverse-notes').addEventListener('click', e => {
+      notes.reverse()
+    })
   },
 
   // STORE ENCRYPTED NOTES /////////////////////////////////////////////////////
@@ -89,16 +89,16 @@ const notes = {
       let plaintext = bytes.toString(CryptoJS.enc.Utf8)
       // console.log('Encrypted notes retrieved: ', plaintext.slice(0, 100))
       document.getElementById('macy-container').innerHTML = plaintext
-
-      macy.reInit()
-      setTimeout(() => {
-        macy.reInit()
-      }, 100)
-      let notes = document.querySelectorAll('.macy-item')
-      notes.forEach(note => note.classList.remove('over'))
-      notes.forEach(note => note.removeAttribute('style'))
-      notes.forEach(note => (note.style.opacity = '1'))
     }
+
+    macy.reInit()
+    setTimeout(() => {
+      macy.reInit()
+    }, 100)
+    let notes = document.querySelectorAll('.macy-item')
+    notes.forEach(note => note.classList.remove('over'))
+    notes.forEach(note => note.removeAttribute('style'))
+    notes.forEach(note => (note.style.opacity = '1'))
   }
 }
 
