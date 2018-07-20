@@ -5875,13 +5875,13 @@ pre div.toolbar > div.toolbar-item > a {
   to {
     background-position: 0 100%; } }
 
-.login-page .logo:hover, .top-bar a:hover .logo,
+#intro-panel .logo:hover, .top-bar a:hover .logo,
 .top-bar a:focus .logo {
   transition: filter .3s ease-in-out;
   filter: sepia(1) saturate(100) brightness(60%) hue-rotate(300deg);
   -webkit-filter: sepia(1) saturate(100) brightness(60%) hue-rotate(300deg); }
 
-.login-page .load, [type='color']:focus,
+#intro-panel .load, [type='color']:focus,
 [type='date']:focus,
 [type='datetime-local']:focus,
 [type='datetime']:focus,
@@ -6061,14 +6061,14 @@ input[type='file'] + label:hover {
     border: 1px solid #e5e5e5;
     border-radius: 3px; }
 
-.login-page {
+#intro-panel {
   padding-top: 4rem; }
-  .login-page .logo {
+  #intro-panel .logo {
     margin: 1rem 0 2.6rem 0;
     width: 60%; }
-  .login-page h5 {
+  #intro-panel h5 {
     margin-top: 2rem; }
-  .login-page .load {
+  #intro-panel .load {
     margin: 2rem -2rem -2rem -2rem;
     padding: 1rem 2rem;
     color: #c4c4c4;
@@ -6101,7 +6101,8 @@ input[type='file'] + label:hover {
     padding: 8px 16px;
     line-height: 1.2;
     font-size: 14px;
-    margin: 0 0 0 3px; }
+    margin: 0 0 0 3px;
+    height: 32px; }
     .top-bar #firebase-auth-container button.button:hover .button-text, .top-bar #firebase-auth-container #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.firebaseui-idp-button:hover .button-text, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .top-bar #firebase-auth-container button.firebaseui-idp-button:hover .button-text, .top-bar #firebase-auth-container button.firebaseui-resend-container:hover .button-text {
       color: white; }
     @media screen and (max-width: 39.9375em) {
@@ -6114,10 +6115,33 @@ input[type='file'] + label:hover {
         .top-bar #firebase-auth-container button.button span.button-text, .top-bar #firebase-auth-container #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.firebaseui-idp-button span.button-text, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .top-bar #firebase-auth-container button.firebaseui-idp-button span.button-text, .top-bar #firebase-auth-container button.firebaseui-resend-container span.button-text {
           display: none; } }
     .top-bar #firebase-auth-container button.button i::before, .top-bar #firebase-auth-container #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.firebaseui-idp-button i::before, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .top-bar #firebase-auth-container button.firebaseui-idp-button i::before, .top-bar #firebase-auth-container button.firebaseui-resend-container i::before {
-      font-size: 28px;
+      font-size: 26px;
       line-height: 1px;
       transform: translateY(5px);
       display: inline-block; }
+
+#login-signup-form-container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: #00000033;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s ease-in-out; }
+  #login-signup-form-container.invis {
+    opacity: 0;
+    pointer-events: none; }
+  #login-signup-form-container.vis {
+    opacity: 1;
+    pointer-events: all; }
+  #login-signup-form-container #status {
+    margin-top: 1rem;
+    color: #ff4c3c; }
+  #login-signup-form-container #login-signup-form {
+    margin: 0 0.5rem;
+    flex: 1; }
 
 #firebaseui-auth-container .firebaseui-container {
   max-width: unset;

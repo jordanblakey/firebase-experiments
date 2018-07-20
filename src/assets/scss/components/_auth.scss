@@ -1,8 +1,8 @@
 ////////////////////////////////////////////////////////////////////////////////
-// LOGIN PANEL
+// INTRO PANEL
 ////////////////////////////////////////////////////////////////////////////////
 
-.login-page {
+#intro-panel {
   padding-top: 4rem;
 
   .logo {
@@ -76,6 +76,7 @@
       line-height: 1.2;
       font-size: 14px;
       margin: 0 0 0 3px;
+      height: 32px;
       &:hover {
         .button-text {
           color: white;
@@ -94,12 +95,47 @@
       }
 
       i::before {
-        font-size: 28px;
+        font-size: 26px;
         line-height: 1px;
         transform: translateY(5px);
         display: inline-block;
       }
     }
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// LOGIN/SIGNUP WITH EMAIL MODAL
+////////////////////////////////////////////////////////////////////////////////
+
+#login-signup-form-container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: #00000033;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s ease-in-out;
+
+  &.invis {
+    opacity: 0;
+    pointer-events: none;
+  }
+  &.vis {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  #status {
+    margin-top: 1rem;
+    color: $alert-color;
+  }
+
+  #login-signup-form {
+    margin: 0 0.5rem;
+    flex: 1;
   }
 }
 

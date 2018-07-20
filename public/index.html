@@ -63,6 +63,10 @@
         <span id="log-in-status">Logged out</span>
         <div id="firebaseui-auth-container"></div>
         <div id="firebase-auth-container">
+          <button class="button secondary" id="email-login-button">
+            <i class="fi-at-sign"></i>
+            <span class="button-text">Log in</span>
+          </button>
           <button class="button secondary" id="anon-log-in">
             <i class="fi-universal-access"></i>
             <span class="button-text">Anon</span>
@@ -73,8 +77,9 @@
   </header>
   <div id="account-details" class="cell callout secondary" style="display: none;"></div>
   
-  <div class="grid-container login-page">
+  <div id="intro-panel" class="grid-container">
     <div class="grid-x align-center">
+  
       <div class="cell small-12 medium-7 large-5">
         <div class="callout secondary">
             <img class="logo" src="assets/img/logo-scorched.svg" alt="🔥Scorched">
@@ -111,6 +116,21 @@
       </div>
     </div>
   </div>
+  
+  <div id="login-signup-form-container" class="grid-x align-center invis">
+      <div id="login-signup-form" class="cell callout secondary small-12 medium-7 large-5">
+        <h5 class="secondary">Log In with Email</h5>
+        <label for="email">Email
+          <input id="email" type="email" name="email">
+        </label>
+        <label for="password">Password
+          <input id="password" type="password" name="password">
+        </label>
+        <button id="login" class="primary button">Log in</button>
+        <button id="signup" class="secondary button">Sign up</button>
+        <!-- <button id="logout" class="secondary button hidden">Log out</button> -->
+        <p id="status"></p>
+      </div></div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js"></script>
   <script src="assets/js/utils.js"></script>

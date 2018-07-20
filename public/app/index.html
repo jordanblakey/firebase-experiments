@@ -96,12 +96,9 @@
     <div class="grid-x grid-margin-x">
       <div class="cell small-12" id="macy-container">
       
-        <div data-uid="note-0000001" class="callout secondary macy-item">
-          <h4>To Do</h4>
+        <div class="callout secondary macy-item">
+          <h4 data-tags="todo" data-uid="note-0000001">To Do</h4>
           <h6>Authentication & Session</h6>
-          <ul>
-            <li>Take your data with you?</li>
-          </ul>
           <h6>Editor</h6>
           <ul>
             <li>Create feature: save current note as stego file. Load stego file to editor.</li>
@@ -120,13 +117,13 @@
           </ul>
         </div>
       
-        <div data-uid="note-0000002" class="callout secondary macy-item">
-          <h4>Features</h4>
+        <div class="callout secondary macy-item">
+          <h4 data-tags="todo" data-uid="note-0000002">Features</h4>
           <ul>Completely remove authentication and store all data in encrypted images?</ul>
         </div>
       
-        <div data-uid="note-0000003" class="callout secondary macy-item">
-          <h4>Note Sorting Ideation</h4>
+        <div class="callout secondary macy-item">
+          <h4 data-tags="code" data-uid="note-0000003">Note Sorting Ideation</h4>
           <p>
             let noteOrder = [] document.querySelectorAll('.macy-item .uid').forEach(x => noteOrder.push(x.dataset.uid)) localStorage.setItem('noteOrder',
             noteOrder) localStorage.getItem('noteOrder').split(,) window.onload=function(){ var container = document.querySelector('#macy-container'),
@@ -135,8 +132,8 @@
           </p>
         </div>
       
-        <div data-uid="note-0000004" class="callout secondary macy-item">
-          <h4>Note Title</h4>
+        <div class="callout secondary macy-item">
+          <h4 data-tags="code, etc" data-uid="note-0000004">Note Title</h4>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit magnam aspernatur facilis exercitationem! Beatae dolor,
             ipsa illo, ut tempora earum odit sapiente hic, consequatur neque qui alias optio. Sit consequatur pariatur dignissimos,
             voluptatem ullam omnis quaerat temporibus. Tenetur quisquam temporibus voluptas dolores sunt vel necessitatibus cumque,
