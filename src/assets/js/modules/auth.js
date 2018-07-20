@@ -1,6 +1,8 @@
 import { arrive, Arrive } from '../lib/arrive'
 const gebi = elm => document.getElementById(elm)
 const qs = elm => document.querySelector(elm)
+const appUrl =
+  location.href.split('/')[0] + '//' + location.href.split('/')[2] + '/app'
 
 ////////////////////////////////////////////////////////////////////////////////
 // FIREBASEUI AUTH CONFIG
@@ -9,54 +11,38 @@ window.addEventListener('DOMContentLoaded', () => {
   let uiConfig = {
     callbacks: {
       signInSuccessWithAuthResult: function(authResult, redirectUrl) {
-        let user = authResult.user
-        let credential = authResult.credential
-        let isNewUser = authResult.additionalUserInfo.isNewUser
-        let providerId = authResult.additionalUserInfo.providerId
-        let operationType = authResult.operationType
-        // Do something with the returned AuthResult.
-        // Return type determines whether we continue the redirect automatically
-        // or whether we leave that to developer to handle.
-        sessionStorage.setItem('accessToken', 'pending')
-        sessionStorage.setItem('user', JSON.stringify(user))
-        qs('body').insertAdjacentHTML('afterbegin', `<div id="splash"></div>`)
-        sessionStorage.setItem('fresh-login', true)
-
+        let { user, credential, operationType } = authResult.user
+        let { isNewUser, providerId } = authResult.additionalUserInfo
+        sessionStorage.setItem('user', user)
+        sessionStorage.setItem('credential', credential)
+        sessionStorage.setItem('operationType', operationType)
+        sessionStorage.setItem('isNewUser', isNewUser)
+        sessionStorage.setItem('providerId', providerId)
         return true
       },
       signInFailure: function(error) {
-        // Some unrecoverable error occurred during log-in.
-        // Return a promise when error handling is completed and FirebaseUI
-        // will reset, clearing any UI. This commonly occurs for error code
-        // 'firebaseui/anonymous-upgrade-merge-conflict' when merge conflict
-        // occurs. Check below for more details on this.
         return handleUIError(error)
       },
       uiShown: function() {
-        // The widget is rendered.
-        // Hide the loader.
+        // Rename buttons
+        document.arrive('.firebaseui-idp-text-long', elm => {
+          elm.innerHTML = 'Log ' + elm.innerHTML.split(' ')[1]
+        })
       }
     },
     credentialHelper: firebaseui.auth.CredentialHelper.ACCOUNT_CHOOSER_COM,
-    // Query parameter name for mode.
     queryParameterForWidgetMode: 'mode',
-    // Query parameter name for sign in success url.
     queryParameterForSignInSuccessUrl: 'signInSuccessUrl',
-    // Will use popup for IDP Providers log-in flow instead of the default, redirect.
     signInFlow: 'popup',
-    signInSuccessUrl:
-      location.href.split('/')[0] + '//' + location.href.split('/')[2] + '/app',
+    signInSuccessUrl: appUrl,
     signInOptions: [
-      // Leave the lines as is for the providers you want to offer your users.
       firebase.auth.GoogleAuthProvider.PROVIDER_ID,
       // {
       //   provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
-      //   // Whether the display name should be displayed in the Sign Up page.
       //   requireDisplayName: true
       // },
       {
         provider: firebase.auth.PhoneAuthProvider.PROVIDER_ID,
-        // Invisible reCAPTCHA with image challenge and bottom left badge.
         recaptchaParameters: {
           type: 'image',
           size: 'invisible',
@@ -64,7 +50,6 @@ window.addEventListener('DOMContentLoaded', () => {
         }
       }
     ],
-    // Terms of service url.
     tosUrl: '',
     privacyPolicyUrl: ''
   }
@@ -77,79 +62,63 @@ window.addEventListener('DOMContentLoaded', () => {
 })
 
 ////////////////////////////////////////////////////////////////////////////////
-// TRACK AUTH ACROSS PAGES
+// OBSERVE AUTH STATUS
 ////////////////////////////////////////////////////////////////////////////////
-window.addEventListener('DOMContentLoaded', initApp)
+window.addEventListener('DOMContentLoaded', observeAuthStatus)
 
-export function initApp() {
+export function observeAuthStatus() {
   firebase.auth().onAuthStateChanged(
-    user => {
-      // IF LOGGED IN ////////////////////////////////////////////////////////////////
+    function(user) {
       if (user) {
-        if (
-          gebi('log-in-status') !== null &&
-          gebi('log-in') !== null &&
-          gebi('account-details') !== null
-        ) {
-          user.getIdToken().then(function(accessToken) {
-            // TOP BAR: LOGGED IN
+        // console.log('LOGGED IN')
+        if (window.location.origin === window.location.href.slice(0, -1)) {
+          console.log("YOU'RE AT THE ORIGIN. GO INSIDE!")
+          window.location.href = appUrl
+        }
+
+        if (gebi('log-in-status') !== null && gebi('log-in') !== null) {
+          user.getIdToken().then(() => {
+            // UPDATE TOP BAR
             gebi('log-in-status').textContent = `Welcome, ${
               user.displayName !== null ? user.displayName : 'anon'
             }.`
+
+            // CLICK HANDLER FOR LOG OUT BUTTON
             gebi('log-in').textContent = 'Log out'
-            gebi('log-in').addEventListener('click', () => logout())
+            gebi('log-in').addEventListener('click', () => {
+              sessionStorage.clear()
+              firebase.auth().signOut()
+            })
+
             // RENDER ACCOUNT DETAILS
-            gebi('account-details').style.display = 'flex'
-            gebi('account-details').innerHTML = `<div class="avatar-name-row">
-            <img src="${user.photoURL}" />
-            <p><b>${user.displayName}</b></p>
-          </div>
-          <ul>
-            <li><span>Email</span><br>${user.email}</li>
-            <li><span>Verified</span><br>${
-              user.emailVerified ? 'Yes' : 'No'
-            }</li>
-            <li><span>Phone</span><br>${
-              user.phoneNumber ? user.phoneNumber : 'Not provided'
-            }</li>
-            <li><span>UID</span><br>${user.uid}</li>
-          </ul>`
-            // SET SESSION DATA
-            sessionStorage.setItem(
-              'providerData',
-              JSON.stringify(user.providerData[0], null, 3)
-            )
-            sessionStorage.setItem('accessToken', user.accessToken)
-            sessionStorage.setItem('user', JSON.stringify(user))
+            gebi('account-details') !== null ? renderAccountDetails(user) : null
           })
         }
-      }
+      } else {
+        // console.log('LOGGED OUT')
 
-      // IF LOGGED OUT ///////////////////////////////////////////////////////////////
-      else {
-        sessionStorage.removeItem('accessToken')
-        sessionStorage.removeItem('user')
-        let href = window.location.href
-        href = href.substring(0, href.length - 1)
-        href === window.location.origin ? null : (window.location.href = '/')
+        // BOUNCE TO ROOT
+        if (window.location.origin !== window.location.href.slice(0, -1)) {
+          window.location.href = window.location.origin
+        }
 
-        if (
-          gebi('log-in-status') !== null &&
-          gebi('log-in') !== null &&
-          gebi('account-details') !== null
-        ) {
-          // HIDE ACCOUNT DETAILS
-          gebi('account-details').style.display = 'none'
-          // TOP BAR: LOGGED OUT
+        // UPDATE TOP BAR
+        if (gebi('log-in-status') !== null && gebi('log-in') !== null) {
           gebi('log-in-status').textContent = 'Logged out'
           document.querySelectorAll('.firebaseui-idp-text-long').forEach(n => {
             let arr = n.innerHTML.split(' ')
             n.innerHTML = 'Log ' + arr[1]
           })
         }
+
+        // CLICK HANDLER FOR ANON LOGIN BUTTON
+        document.getElementById('anon-log-in').addEventListener('click', () => {
+          gebi('log-in-status').textContent = `Authenticating...`
+          firebase.auth().signInAnonymously()
+        })
       }
     },
-    error => console.log(error)
+    err => console.log(err)
   )
 }
 
@@ -157,38 +126,22 @@ export function initApp() {
 // FUNCTIONS
 ////////////////////////////////////////////////////////////////////////////////
 
-export function logout() {
-  firebase
-    .auth()
-    .signOut()
-    .then(() => {
-      sessionStorage.clear()
-      window.location.href = '/'
-    })
-    .catch(error => console.log(error))
+export function renderAccountDetails(user) {
+  gebi('account-details').style.display = 'flex'
+  gebi('account-details').innerHTML = `
+    <div class="avatar-name-row">
+      <img
+        style="border:${user.photoURL ? null : '4px solid #e5e5e5'};"
+        src="${user.photoURL ? user.photoURL : '../assets/img/logo.svg'}"
+      />
+      <p><b>${user.displayName !== null ? user.displayName : 'anon'}</b></p>
+    </div>
+  <ul>
+    <li><span>Email</span><br>${user.email ? user.email : 'None'}</li>
+    <li><span>Verified</span><br>${user.emailVerified ? 'Yes' : 'No'}</li>
+    <li><span>Phone</span><br>${
+      user.phoneNumber ? user.phoneNumber : 'None'
+    }</li>
+    <li><span>UID</span><br>${user.uid}</li>
+  </ul>`
 }
-
-document.arrive('.firebaseui-idp-text-long', elm => {
-  let arr = elm.innerHTML.split(' ')
-  elm.innerHTML = 'Log ' + arr[1]
-  document.unbindArrive('.firebaseui-idp-text-long')
-})
-
-document.arrive('.firebaseui-idp-button', elm => {
-  if (elm.querySelector('.firebaseui-idp-text-short').innerText === 'Google') {
-    elm.addEventListener('click', () => {
-      qs('body').insertAdjacentHTML('afterbegin', `<div id="splash"></div>`)
-    })
-    document.unbindArrive('.firebaseui-idp-button')
-  }
-})
-
-document.arrive('.firebaseui-id-submit', elm => {
-  if (elm.innerText === 'Continue') {
-    console.log('FOUND YOU PHONE')
-    elm.addEventListener('click', () => {
-      qs('body').insertAdjacentHTML('afterbegin', `<div id="splash"></div>`)
-    })
-  }
-  document.unbindArrive('.firebaseui-id-submit')
-})

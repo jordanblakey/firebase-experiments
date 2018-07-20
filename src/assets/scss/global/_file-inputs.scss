@@ -1,16 +1,18 @@
-input[type="file"] {
-	width: 0.1px;
-	height: 0.1px;
-	opacity: 0;
-	overflow: hidden;
-	position: absolute;
-	z-index: -1;
+input[type='file'] {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
 }
 
-input[type="file"] + label {
+input[type='file'] + label {
   cursor: pointer;
   display: inline-block;
-  padding: 4px 16px 3px 16px;
+  padding: 8px 16px;
+  line-height: 1.2;
+  align-items: center;
   box-shadow: $global-shadow;
   border-radius: $global-radius;
   background: $black;
@@ -19,55 +21,78 @@ input[type="file"] + label {
   user-select: none;
   z-index: 2;
   position: relative;
-  font-size: .875rem;
+  font-size: 0.875rem;
+  @include breakpoint(small only) {
+    display: flex;
+  }
 
   span {
     background: #666;
-    margin: -6px -20px -6px 12px;
+    margin: 0 0 0 16px;
+    padding: 8px 16px;
+    margin: -8px -16px -8px 16px;
     display: inline-block;
-    padding: 4px 16px 3px 16px;
     border-radius: 0 $global-radius $global-radius 0;
     z-index: 2;
+    flex: 1;
   }
 }
 
-input[type="file"]:focus + label,
-input[type="file"] + label:hover {
-    background-color: $alert-color;
+input[type='file']:focus + label,
+input[type='file'] + label:hover {
+  background-color: $alert-color;
 }
 
 .file-uploader-container {
-
   .input-group {
     margin-bottom: 0;
-  }
+    display: flex;
+    flex-wrap: wrap;
+    @include breakpoint(small only) {
+      flex-direction: column;
+    }
 
-  .label.status {
-    opacity: 1;
-    margin: 0;
-    border-radius: 0 10rem 10rem 0;
-    padding: 9px 24px 9px 20px;
-    position: relative;
-
-    &.shown {
-      transition: all .2s ease-out;
+    .label.status {
       opacity: 1;
-      transform: translateX(0px);
-      background: $lighter-gray;
-      color: $dark-gray;
-    }
+      margin: 0;
+      border-radius: $global-radius;
+      padding: 6px 16px;
+      position: relative;
+      line-height: 20px;
+      flex: 1;
+      @include breakpoint(small only) {
+        border-radius: $global-radius;
+      }
 
-    &.hidden {
-      transition: all .2s ease-in;
-      opacity: 0;
-      transform: translateX(-10px);
+      &.shown {
+        transition: all 0.2s ease-out;
+        display: flex;
+        opacity: 1;
+        transform: translateX(0px);
+        background: $lighter-gray;
+        color: $dark-gray;
+        @include breakpoint(small only) {
+          transform: translateY(0);
+        }
+      }
+
+      &.hidden {
+        transition: all 0.2s ease-in;
+        display: none;
+        opacity: 0;
+        transform: translateX(-10px);
+        @include breakpoint(small only) {
+          transform: translateY(-10);
+          transform: translateX(0);
+        }
+      }
     }
   }
-
   .viewer {
     line-height: 0;
-    display: block;
-    &:not([src=""]) {
+    display: none;
+    &:not([src='']) {
+      display: block;
       margin-top: 1rem;
       border: 1px solid $light-gray;
       border-radius: $global-radius;

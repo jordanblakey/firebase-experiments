@@ -20,6 +20,7 @@
     "arrive": "^2.4.1",
     "axios": "^0.17.1",
     "clipboard": "^1.7.1",
+    "crypto-js": "^3.1.9-1",
     "date-fns": "^1.29.0",
     "ffjs": "^1.0.11",
     "foundation-sites": "~6.4.1",

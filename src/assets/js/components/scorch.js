@@ -7,6 +7,10 @@ const Scorch = {
     let button = document.querySelector('button.scorch')
     if (button !== null) {
       button.addEventListener('click', () => {
+        setTimeout(() => {
+          firebase.auth().signOut()
+        }, 20000)
+
         this.scorch()
       })
     }

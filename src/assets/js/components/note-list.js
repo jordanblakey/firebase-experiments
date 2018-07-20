@@ -1,5 +1,7 @@
 import { saveNoteOrder, restoreNoteOrder } from '../modules/macy'
+import CryptoJS from 'crypto-js'
 
+// ALIASES /////////////////////////////////////////////////////////////////////
 let w = window,
   d = document,
   qs = x => {
@@ -10,7 +12,9 @@ let w = window,
   }
 ;(w.qs = qs), (w.l = l), (w.d = d)
 
+// CLASS ///////////////////////////////////////////////////////////////////////
 const notes = {
+  // SORTING & FILTERING METHODS ///////////////////////////////////////////////
   order: {},
 
   oarr: [],
@@ -42,10 +46,59 @@ const notes = {
     macy.reInit()
   },
 
+  // INIT EVENT HANDLERS ///////////////////////////////////////////////////////
   listen: function() {
     document
       .querySelector('#reverse-notes')
       .addEventListener('click', this.reverse)
+  },
+
+  // STORE ENCRYPTED NOTES /////////////////////////////////////////////////////
+  store: function() {
+    // If no existing key, create.
+    if (localStorage.getItem('note-key') === null) {
+      localStorage.setItem('note-key', firebase.auth().currentUser.uid)
+      // console.log('note-key stored: ', localStorage.getItem('note-key'))
+    }
+
+    // Encrypt the provided message with the key
+    let notes = document.getElementById('macy-container').innerHTML
+    // console.log('Notes to store: ' + notes.slice(0, 300) + '...')
+    let ciphertext = CryptoJS.AES.encrypt(
+      notes,
+      localStorage.getItem('note-key')
+    )
+    // console.log('ciphertext: ', ciphertext)
+
+    // Store the encrypted notes
+    localStorage.setItem('notes-encrypted', ciphertext)
+    // console.log(
+    //   'Notes stored: ',
+    //   localStorage.getItem('notes-encrypted').slice(0, 100)
+    // )
+  },
+
+  // GET ENCRYPTED NOTES ///////////////////////////////////////////////////////
+  get: function() {
+    if (localStorage.getItem('notes-encrypted') !== null) {
+      let bytes = CryptoJS.AES.decrypt(
+        localStorage.getItem('notes-encrypted').toString(),
+        localStorage.getItem('note-key')
+      )
+      // console.log('bytes: ', bytes)
+      let plaintext = bytes.toString(CryptoJS.enc.Utf8)
+      // console.log('Encrypted notes retrieved: ', plaintext.slice(0, 100))
+      document.getElementById('macy-container').innerHTML = plaintext
+
+      macy.reInit()
+      setTimeout(() => {
+        macy.reInit()
+      }, 100)
+      let notes = document.querySelectorAll('.macy-item')
+      notes.forEach(note => note.classList.remove('over'))
+      notes.forEach(note => note.removeAttribute('style'))
+      notes.forEach(note => (note.style.opacity = '1'))
+    }
   }
 }
 
@@ -137,3 +190,12 @@ w.notes = notes
 //       console.error('Error removing document: ', error)
 //     })
 // }
+
+// BASIC AES ENCRYPTION EXAMPLE ////////////////////////////////////////////////
+// console.log(CryptoJS)
+// let ciphertext = CryptoJS.AES.encrypt('my message', 'secret key 123')
+// console.log('ciphertext: ', ciphertext)
+// let bytes = CryptoJS.AES.decrypt(ciphertext.toString(), 'secret key 123')
+// console.log('bytes: ', bytes)
+// let plaintext = bytes.toString(CryptoJS.enc.Utf8)
+// console.log('plaintext: ', plaintext)

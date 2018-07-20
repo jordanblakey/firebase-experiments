@@ -29,6 +29,7 @@ PATHS:
     - "src/assets/js/app.js"
     - "src/assets/js/utils.js"
     - "src/assets/js/components/steganography.js"
+    - "src/assets/js/modules/firebase-init.js"
 
 # Compression settings tuned to balance process time and file size
 IMAGEMIN:

@@ -9,9 +9,9 @@ title: "Scorched: Secure, Portable Notes"
 
 <div class="grid-container login-page">
   <div class="grid-x align-center">
-    <div class="cell small-12 medium-5">
+    <div class="cell small-12 medium-7 large-5">
       <div class="callout secondary">
-          <img class="logo" src="{{root}}assets/img/logo-scorched.svg" alt="Scorched 🔥">
+          <img class="logo" src="{{root}}assets/img/logo-scorched.svg" alt="🔥Scorched">
           <h3>Secure, Portable Notes.</h3>
           <p>Currently in pre-alpha.
             <br> Built with Firebase and React Native.
@@ -28,6 +28,18 @@ title: "Scorched: Secure, Portable Notes"
               <a href="https://github.com/jordanblakey/scorched-site">Github</a>
             </li>
           </ul>
+          <script>
+            document.addEventListener('DOMContentLoaded', () => {
+              let app = firebase.app()
+              let features = ['auth', 'database', 'messaging', 'storage'].filter(
+                f => typeof app[f] === 'function'
+              )
+              features = features.map(f => f.charAt(0).toUpperCase() + f.substr(1))
+              document.querySelector('.load').innerHTML = `Firebase SDK: ${features.join(
+                ', '
+              )} loaded.`
+            })
+            </script>
           <p class="load">Firebase SDK Loading&hellip;</p>
       </div>
     </div>

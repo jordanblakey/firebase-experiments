@@ -26,6 +26,8 @@
 @import './components/database-explorer';
 @import './components/scorch';
 @import './components/steganography';
+@import './components/account-details';
+@import './components/splash';
 
 // TYPOGRAPHY //////////////////////////////////////////////////////////////////
 body {
@@ -155,6 +157,8 @@ button.button,
 .button-group button.button {
   margin: 0;
   padding: 8px 16px 8px 16px;
+  line-height: 1.2;
+  border: 0;
   border-radius: $global-radius;
   box-shadow: $global-shadow;
   transition: all 0.1s ease-in-out !important;
@@ -180,8 +184,7 @@ button.button,
   &.secondary,
   &.success,
   &.warning {
-    &:hover,
-    &:focus {
+    &:hover {
       background: $alert-color !important;
       color: $white !important;
       outline: none !important;
@@ -191,7 +194,19 @@ button.button,
   &.secondary {
     background: $white;
     color: $medium-gray;
-    box-shadow: $global-shadow-light;
+    box-shadow: $global-shadow;
+    &:focus {
+      background: $white;
+      color: $medium-gray;
+      span.button-text {
+        color: $dark-gray;
+      }
+    }
+    &:active {
+      span.button-text {
+        color: white !important;
+      }
+    }
   }
 
   &.alert {

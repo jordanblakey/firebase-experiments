@@ -1,0 +1,61 @@
+////////////////////////////////////////////////////////////////////////////////
+// ACCOUNT DETAILS
+////////////////////////////////////////////////////////////////////////////////
+#account-details {
+  display: flex;
+  // @extend %scorched-background;
+  @include breakpoint(small only) {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .avatar-name-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-right: 2rem;
+    @include breakpoint(small only) {
+      margin: 0 0 1.4rem 0;
+      align-items: center;
+    }
+    p {
+      font-size: 1.4rem;
+      text-align: center;
+      margin: 0.6rem 0;
+    }
+
+    img {
+      border-radius: 20rem;
+      margin-right: 1rem;
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex: 3;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    margin-left: 0;
+
+    li {
+      line-height: 1.2rem;
+      margin: 4px 1rem;
+      @include breakpoint(small only) {
+        flex-basis: 100%;
+        margin: 4px 0;
+      }
+
+      span {
+        display: inline-block;
+        margin-right: 8px;
+        font-size: 0.875rem;
+        color: #999;
+      }
+    }
+  }
+}

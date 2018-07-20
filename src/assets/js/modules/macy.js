@@ -30,7 +30,7 @@ function initMacy() {
     }
   })
 
-  restoreNoteOrder()
+  notes.get()
   notes.listen()
 
   // MACY EVENT LISTENERS ////////////////////////////////////////////////////////
@@ -152,8 +152,11 @@ function initDragAndDrop() {
       this.innerHTML = e.dataTransfer.getData('text')
       e.dataTransfer.clearData()
       this.classList.remove('over')
-      saveNoteOrder()
+      notes.store()
       macy.reInit()
+      setTimeout(() => {
+        macy.reInit()
+      }, 100)
     }
     return false
   }
@@ -165,32 +168,4 @@ function initDragAndDrop() {
       .querySelectorAll('.macy-item.over')
       .forEach(elm => elm.classList.remove('over'))
   }
-}
-
-////////////////////////////////////////////////////////////////////////////////
-// NOTE STATE
-////////////////////////////////////////////////////////////////////////////////
-
-// SAVE NOTE STATE //////////////////////////////////////////////////////////
-export function saveNoteOrder() {
-  localStorage.removeItem('macy-note-order')
-  localStorage.setItem(
-    'macy-note-order',
-    document.getElementById('macy-container').innerHTML
-  )
-}
-
-// RESTORE NOTE STATE //////////////////////////////////////////////////////////
-export function restoreNoteOrder() {
-  if (localStorage.getItem('macy-note-order') !== null) {
-    document.getElementById('macy-container').innerHTML = localStorage.getItem(
-      'macy-note-order'
-    )
-  }
-
-  macy.reInit()
-  let notes = document.querySelectorAll('.macy-item')
-  notes.forEach(note => note.classList.remove('over'))
-  notes.forEach(note => note.removeAttribute('style'))
-  notes.forEach(note => (note.style.opacity = '1'))
 }

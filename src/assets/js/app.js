@@ -1,5 +1,4 @@
 // MODULES /////////////////////////////////////////////////////////////////////
-import './modules/firebase-init'
 import './modules/macy'
 import './modules/auth'
 

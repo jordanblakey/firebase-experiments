@@ -85,7 +85,9 @@ function uploadFile(e, status, viewer, filename) {
           viewer.src = downloadURL
         }
         e.target.value = ''
-        status.innerHTML = `Success.&nbsp;&nbsp;<a href="${downloadURL}">Download</a>`
+        status.innerHTML = `Success.&nbsp;&nbsp;<a download="${
+          file.name
+        }" href="${downloadURL}">Download</a>`
         status.classList.remove('hidden')
         status.classList.add('shown')
       })

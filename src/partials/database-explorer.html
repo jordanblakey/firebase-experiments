@@ -2,16 +2,12 @@
       <h3>Realtime Database Explorer</h3>
       <form class="input-group">
         <label for="path-field" class="input-group-label">Click JSON keys to append</label>
+        <div class="group">
+          <button class="input-group-button button secondary clear-button">Clear</button>
+          <button class="input-group-button button primary copy-button">Copy Path</button>
+          <button class="input-group-button button copy-json-button" data-clipboard-target=".output">Copy JSON</button>
+        </div>
         <input type="text" name="path-field" class="input-group-field path-field" />
-        <div class="input-group-button">
-          <button class="button secondary clear-button">Clear</button>
-        </div>
-        <div class="input-group-button">
-          <button class="button primary copy-button">Copy Path</button>
-        </div>
-        <div class="input-group-button">
-          <button class="button copy-json-button" data-clipboard-target=".output">Copy JSON</button>
-        </div>
       </form>
       <small>
         <pre>
