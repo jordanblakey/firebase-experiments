@@ -15,6 +15,7 @@
   .macy-item {
     opacity: 0;
     break-inside: avoid;
+    word-wrap: break-word;
     margin-bottom: 10px;
     overflow: hidden;
     -khtml-user-drag: element;

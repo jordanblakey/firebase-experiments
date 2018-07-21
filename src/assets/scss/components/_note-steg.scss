@@ -1,8 +1,150 @@
+.editor-buttons-container .editor-buttons {
+  padding-bottom: 8px;
+}
+
+@include breakpoint(small only) {
+  .editor-buttons-container .editor-buttons div:nth-child(2) {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    justify-content: stretch;
+    &::before,
+    &::after {
+      display: none;
+    }
+    button.button {
+      flex: 1;
+    }
+  }
+}
+
 #note-steg {
-  .cell.steganography {
+  span#status {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    background: #e5e5e5dd;
+    font-size: 2rem;
+    background-image: url('../img/crypt.gif');
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-family: 'Roboto Mono';
+    font-weight: 700;
+    color: white;
+    transition: $global-transition;
+    &.vis {
+      opacity: 1;
+    }
+    &.invis {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+  @include breakpoint(small only) {
+    padding: 8px 0;
+  }
+  .cell.steganography-container {
+    padding: 1rem;
+    @include breakpoint(small only) {
+      padding: 1rem 0.5rem;
+    }
     form {
       flex-direction: row;
       display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      .msgWarn {
+        color: $warning-color !important;
+      }
+      .msgAlert {
+        color: $alert-color !important;
+      }
+      @include breakpoint(small only) {
+        justify-content: center;
+        align-items: stretch;
+        .button-group {
+          display: flex;
+          padding: 0;
+          margin: 0;
+          button.button {
+            flex: 1;
+            &:first-child {
+              margin-left: 0;
+            }
+          }
+        }
+        .input-group {
+          margin: 0 0 4px 0 !important;
+          width: 100% !important;
+          &:nth-child(1) {
+            text-align: center;
+          }
+          #cover-file + label {
+            width: 100% !important;
+          }
+        }
+        label[for='password'] {
+          margin-right: 0;
+          width: 100%;
+        }
+        input#password {
+          width: 100% !important;
+        }
+      }
+      #cover-file + label {
+        background: $white;
+        color: $medium-gray;
+        &:hover {
+          background: $alert-color;
+          color: $white;
+        }
+      }
+    }
+    input[type='file'] + label span {
+      background: $light-gray;
+      color: $dark-gray;
+    }
+    label[for='password'] {
+      margin-right: 4px;
+    }
+    .input-group:nth-child(1) {
+      margin-right: 12px;
+      justify-self: flex-end;
+      text-align: right;
+      p {
+        margin: 0;
+        line-height: 1.2rem;
+        font-size: 14px;
+        color: $medium-gray;
+      }
+    }
+    .input-group:nth-child(2) {
+      margin-right: 10px;
+    }
+    .input-group,
+    .button-group {
+      margin-bottom: 0;
+      display: flex;
+      width: auto;
+      input[type='checkbox'],
+      input[type='password'],
+      input[type='text'] {
+        margin-bottom: 0;
+        margin-top: 1px;
+        height: 33px;
+        font-size: 14px;
+      }
+      button {
+        margin-left: 6px;
+      }
     }
   }
 }

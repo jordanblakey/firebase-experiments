@@ -1,30 +1,30 @@
 <div class="cell steganography-container callout secondary transparent">
+    <span id="status" class="invis">W O R K I N G</span>
     <form>
       <div class="input-group">
-        <label for="cover-file">Image to encrypt to, or decrypt from</label>
+        <!-- <p for="cover-file">Encrypt to, or decrypt from.</p> -->
+        <p id="msgStatus"><span id="msgCount">8000</span> more characters will fit.</p>
+      </div>
+      <div class="input-group">
         <input name="cover-file" type="file" id="cover-file" accept="image/*" />
-        <label for="cover-file">Choose image
+        <label for="cover-file">Image
           <span class="hide"></span>
         </label>
       </div>
       <div class="input-group">
-        <label for="password">Encryption password
-          <input name="password" type="password" id="password" value="" placeholder="(Optional)" />
+        <label for="password">
+          <input name="password" type="password" id="password" value="" placeholder="Encryption password" />
         </label>
-        <div class="inline">
+        <!-- <div class="inline">
           <input type="checkbox" class="show-password">
-          <span>Show Password</span>
-        </div>
+          <span>Show</span>
+        </div> -->
       </div>
       <div class="input-group">
-        <p id="msgStatus">
-          <span id="msgCount">8000</span> more characters will fit.
-        </p>
-      </div>
-      <div class="inline">
-        <a class="write-button button secondary">Encrypt</a>
-        <a class="read-button button secondary">Decrypt</a>
-        <span id="status"></span>
+        <div class="button-group">
+          <button class="write-button button secondary">Encrypt</button>
+          <button class="read-button button secondary">Decrypt</button>
+        </div>
       </div>
     </form>
 
@@ -55,11 +55,15 @@
     }
 
     if (qs('.read-button')) {
-      qs('.read-button').addEventListener('click', readIMG)
+      qs('.read-button').addEventListener('click', (e) => {
+        readIMG(e)
+      })
     }
 
     if (qs('.write-button')) {
-      qs('.write-button').addEventListener('click', writeIMG)
+      qs('.write-button').addEventListener('click', (e) => {
+        writeIMG(e)
+      })
     }
 
 
@@ -75,9 +79,16 @@
       let charsLeft
       charsLeft = maxLen - msgLength
       qs('#msgCount').innerHTML = charsLeft
-      charsLeft <= 0
-        ? (qs('#msgStatus').className = 'msgWarn')
-        : (qs('#msgStatus').className = '')
+      console.log(charsLeft)
+
+      if (charsLeft <= 500 && charsLeft > 0) {
+        qs('#msgStatus').className = 'msgWarn'
+      } else if (charsLeft <= 0) {
+        qs('#msgStatus').className = 'msgAlert'
+      } else {
+        qs('#msgStatus').className = ''
+      }
+
       if (msgLength >= maxLen) {
         console.log(
           'Maximum length exceeded: ' + maxLen,
@@ -91,9 +102,12 @@
   // ENCRYPTION AND DECRYPTION
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-  function writeIMG() {
+  function writeIMG(e) {
+    e.preventDefault()
     qs('#resultImg').src = ''
-    qs('#status').innerHTML = 'Processing...'
+
+    qs('#status').classList.add('vis')
+    qs('#status').classList.remove('invis')
 
     function writefunc() {
       let t = writeMsgToCanvas(
@@ -106,28 +120,43 @@
         let myCanvas = qs('#canvas')
         let image = myCanvas.toDataURL('image/png')
         qs('#resultImg').src = image
-        qs('#status').innerHTML = 'Successfully encrypted note in image.'
+
+        qs('#status').classList.add('invis')
+        qs('#status').classList.remove('vis')
+
         qs('#result').innerHTML =
           'To read or edit this later, select the file, enter your password, and press "Decrypt".'
         qs('#output').style.display = 'block'
         qs('#download').href = qs('#resultImg').src
         qs('#download').download = 'download.png'
+      } else {
+        console.log('Encryption Error: Message too long.')
       }
     }
     loadIMGtoCanvas('cover-file', 'canvas', writefunc, 500)
   }
 
-  function readIMG() {
+  function readIMG(e) {
+    e.preventDefault()
     qs('#output').style.display = 'none'
     qs('#result').value = ''
-    qs('#status').innerHTML = 'Processing...'
+
+    qs('#status').classList.add('vis')
+    qs('#status').classList.remove('invis')
+
     function readfunc() {
       let t = readMsgFromCanvas('canvas', qs('#password').value)
       if (t != null) {
-        qs('#status').innerHTML = 'Successfully decrypted note from image:'
+
+
         editor.codemirror.setValue(t)
+        qs('#status').classList.add('invis')
+        qs('#status').classList.remove('vis')
       } else {
-        qs('#status').innerHTML = 'Error decypting message.'
+        editor.codemirror.setValue('Error decypting message.')
+        qs('#status').classList.add('invis')
+        qs('#status').classList.remove('vis')
+
       }
     }
     loadIMGtoCanvas('cover-file', 'canvas', readfunc)
