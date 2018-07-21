@@ -60,26 +60,26 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 59);
+/******/ 	return __webpack_require__(__webpack_require__.s = 63);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 59:
+/***/ 63:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(60);
+module.exports = __webpack_require__(64);
 
 
 /***/ }),
 
-/***/ 60:
+/***/ 64:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _firebase = __webpack_require__(61);
+var _firebase = __webpack_require__(65);
 
 firebase.initializeApp({
   apiKey: _firebase.config.apiKey,
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
-/***/ 61:
+/***/ 65:
 /***/ (function(module, exports) {
 
 module.exports = {"database":{"rules":"database.rules.json"},"hosting":{"public":"public","ignore":["firebase.json","**/.*","**/node_modules/**"],"rewrites":[{"source":"**","destination":"/index.html"}]},"config":{"apiKey":"AIzaSyAakqO1sf8VTyo7FaeWiEfYq3rB0NnQD2c","authDomain":"scorched-e89ee.firebaseapp.com","databaseURL":"https://scorched-e89ee.firebaseio.com","projectId":"scorched-e89ee","storageBucket":"scorched-e89ee.appspot.com","messagingSenderId":"722743307747"}}

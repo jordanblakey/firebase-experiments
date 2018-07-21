@@ -2952,7 +2952,7 @@ ul.no-bullet, ol.no-bullet {
 .fi-zoom-out:before {
   content: '\f21a'; }
 
-.button, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button, .firebaseui-resend-container {
+.button {
   display: inline-block;
   vertical-align: middle;
   margin: 0 0 1rem 0;
@@ -2968,217 +2968,217 @@ ul.no-bullet, ol.no-bullet {
   cursor: pointer;
   background-color: #666;
   color: #fafafa; }
-  [data-whatinput='mouse'] .button, [data-whatinput='mouse'] #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item [data-whatinput='mouse'] .firebaseui-idp-button, [data-whatinput='mouse'] .firebaseui-resend-container {
+  [data-whatinput='mouse'] .button {
     outline: 0; }
-  .button:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button:hover, .firebaseui-resend-container:hover, .button:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button:focus, .firebaseui-resend-container:focus {
+  .button:hover, .button:focus {
     background-color: #575757;
     color: #fafafa; }
-  .button.tiny, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .tiny.firebaseui-idp-button, .tiny.firebaseui-resend-container {
+  .button.tiny {
     font-size: 0.6rem; }
-  .button.small, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .small.firebaseui-idp-button, .small.firebaseui-resend-container {
+  .button.small {
     font-size: 0.75rem; }
-  .button.large, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .large.firebaseui-idp-button, .large.firebaseui-resend-container {
+  .button.large {
     font-size: 1.25rem; }
-  .button.expanded, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .expanded.firebaseui-idp-button, .expanded.firebaseui-resend-container {
+  .button.expanded {
     display: block;
     width: 100%;
     margin-right: 0;
     margin-left: 0; }
-  .button.primary, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .primary.firebaseui-idp-button, .mdl-card form .firebaseui-card-actions .firebaseui-id-submit, .primary.firebaseui-resend-container {
+  .button.primary {
     background-color: #666;
     color: #fafafa; }
-    .button.primary:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .primary.firebaseui-idp-button:hover, .mdl-card form .firebaseui-card-actions .firebaseui-id-submit:hover, .primary.firebaseui-resend-container:hover, .button.primary:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .primary.firebaseui-idp-button:focus, .mdl-card form .firebaseui-card-actions .firebaseui-id-submit:focus, .primary.firebaseui-resend-container:focus {
+    .button.primary:hover, .button.primary:focus {
       background-color: #525252;
       color: #fafafa; }
-  .button.secondary, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .secondary.firebaseui-idp-button, .mdl-card form .firebaseui-card-actions .firebaseui-id-secondary-link, .secondary.firebaseui-resend-container {
+  .button.secondary {
     background-color: #e5e5e5;
     color: #444; }
-    .button.secondary:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .secondary.firebaseui-idp-button:hover, .mdl-card form .firebaseui-card-actions .firebaseui-id-secondary-link:hover, .secondary.firebaseui-resend-container:hover, .button.secondary:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .secondary.firebaseui-idp-button:focus, .mdl-card form .firebaseui-card-actions .firebaseui-id-secondary-link:focus, .secondary.firebaseui-resend-container:focus {
+    .button.secondary:hover, .button.secondary:focus {
       background-color: #b7b7b7;
       color: #444; }
-  .button.success, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .success.firebaseui-idp-button, .success.firebaseui-resend-container {
+  .button.success {
     background-color: #666;
     color: #fafafa; }
-    .button.success:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .success.firebaseui-idp-button:hover, .success.firebaseui-resend-container:hover, .button.success:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .success.firebaseui-idp-button:focus, .success.firebaseui-resend-container:focus {
+    .button.success:hover, .button.success:focus {
       background-color: #525252;
       color: #fafafa; }
-  .button.warning, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .warning.firebaseui-idp-button, .warning.firebaseui-resend-container {
+  .button.warning {
     background-color: #FF9326;
     color: #444; }
-    .button.warning:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .warning.firebaseui-idp-button:hover, .warning.firebaseui-resend-container:hover, .button.warning:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .warning.firebaseui-idp-button:focus, .warning.firebaseui-resend-container:focus {
+    .button.warning:hover, .button.warning:focus {
       background-color: #ea7600;
       color: #444; }
-  .button.alert, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .alert.firebaseui-idp-button, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button.callout.success, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button.callout.warning, .alert.firebaseui-resend-container, .firebaseui-resend-container.callout.success, .firebaseui-resend-container.callout.warning, .button.callout.success, .button.callout.warning {
+  .button.alert, .button.callout.success, .button.callout.warning {
     background-color: #ff4c3c;
     color: #fafafa; }
-    .button.alert:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .alert.firebaseui-idp-button:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button.callout.success:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button.callout.warning:hover, .alert.firebaseui-resend-container:hover, .firebaseui-resend-container.callout.success:hover, .firebaseui-resend-container.callout.warning:hover, .button.callout.success:hover, .button.callout.warning:hover, .button.alert:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .alert.firebaseui-idp-button:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button.callout.success:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button.callout.warning:focus, .alert.firebaseui-resend-container:focus, .firebaseui-resend-container.callout.success:focus, .firebaseui-resend-container.callout.warning:focus, .button.callout.success:focus, .button.callout.warning:focus {
+    .button.alert:hover, .button.callout.success:hover, .button.callout.warning:hover, .button.alert:focus, .button.callout.success:focus, .button.callout.warning:focus {
       background-color: #fc1500;
       color: #fafafa; }
-  .button.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .disabled.firebaseui-idp-button, .disabled.firebaseui-resend-container, .button[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button[disabled], .firebaseui-resend-container[disabled] {
+  .button.disabled, .button[disabled] {
     opacity: 0.25;
     cursor: not-allowed; }
-    .button.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .disabled.firebaseui-idp-button, .disabled.firebaseui-resend-container, .button.disabled:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .disabled.firebaseui-idp-button:hover, .disabled.firebaseui-resend-container:hover, .button.disabled:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .disabled.firebaseui-idp-button:focus, .disabled.firebaseui-resend-container:focus, .button[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button[disabled], .firebaseui-resend-container[disabled], .button[disabled]:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button[disabled]:hover, .firebaseui-resend-container[disabled]:hover, .button[disabled]:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button[disabled]:focus, .firebaseui-resend-container[disabled]:focus {
+    .button.disabled, .button.disabled:hover, .button.disabled:focus, .button[disabled], .button[disabled]:hover, .button[disabled]:focus {
       background-color: #666;
       color: #fafafa; }
-    .button.disabled.primary, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .disabled.primary.firebaseui-idp-button, .mdl-card form .firebaseui-card-actions .disabled.firebaseui-id-submit, .disabled.primary.firebaseui-resend-container, .button[disabled].primary, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button[disabled].primary, .mdl-card form .firebaseui-card-actions .firebaseui-id-submit[disabled], .firebaseui-resend-container[disabled].primary {
+    .button.disabled.primary, .button[disabled].primary {
       opacity: 0.25;
       cursor: not-allowed; }
-      .button.disabled.primary, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .disabled.primary.firebaseui-idp-button, .mdl-card form .firebaseui-card-actions .disabled.firebaseui-id-submit, .disabled.primary.firebaseui-resend-container, .button.disabled.primary:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .disabled.primary.firebaseui-idp-button:hover, .mdl-card form .firebaseui-card-actions .disabled.firebaseui-id-submit:hover, .disabled.primary.firebaseui-resend-container:hover, .button.disabled.primary:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .disabled.primary.firebaseui-idp-button:focus, .mdl-card form .firebaseui-card-actions .disabled.firebaseui-id-submit:focus, .disabled.primary.firebaseui-resend-container:focus, .button[disabled].primary, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button[disabled].primary, .mdl-card form .firebaseui-card-actions .firebaseui-id-submit[disabled], .firebaseui-resend-container[disabled].primary, .button[disabled].primary:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button[disabled].primary:hover, .mdl-card form .firebaseui-card-actions .firebaseui-id-submit[disabled]:hover, .firebaseui-resend-container[disabled].primary:hover, .button[disabled].primary:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button[disabled].primary:focus, .mdl-card form .firebaseui-card-actions .firebaseui-id-submit[disabled]:focus, .firebaseui-resend-container[disabled].primary:focus {
+      .button.disabled.primary, .button.disabled.primary:hover, .button.disabled.primary:focus, .button[disabled].primary, .button[disabled].primary:hover, .button[disabled].primary:focus {
         background-color: #666;
         color: #fafafa; }
-    .button.disabled.secondary, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .disabled.secondary.firebaseui-idp-button, .mdl-card form .firebaseui-card-actions .disabled.firebaseui-id-secondary-link, .disabled.secondary.firebaseui-resend-container, .button[disabled].secondary, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button[disabled].secondary, .mdl-card form .firebaseui-card-actions .firebaseui-id-secondary-link[disabled], .firebaseui-resend-container[disabled].secondary {
+    .button.disabled.secondary, .button[disabled].secondary {
       opacity: 0.25;
       cursor: not-allowed; }
-      .button.disabled.secondary, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .disabled.secondary.firebaseui-idp-button, .mdl-card form .firebaseui-card-actions .disabled.firebaseui-id-secondary-link, .disabled.secondary.firebaseui-resend-container, .button.disabled.secondary:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .disabled.secondary.firebaseui-idp-button:hover, .mdl-card form .firebaseui-card-actions .disabled.firebaseui-id-secondary-link:hover, .disabled.secondary.firebaseui-resend-container:hover, .button.disabled.secondary:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .disabled.secondary.firebaseui-idp-button:focus, .mdl-card form .firebaseui-card-actions .disabled.firebaseui-id-secondary-link:focus, .disabled.secondary.firebaseui-resend-container:focus, .button[disabled].secondary, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button[disabled].secondary, .mdl-card form .firebaseui-card-actions .firebaseui-id-secondary-link[disabled], .firebaseui-resend-container[disabled].secondary, .button[disabled].secondary:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button[disabled].secondary:hover, .mdl-card form .firebaseui-card-actions .firebaseui-id-secondary-link[disabled]:hover, .firebaseui-resend-container[disabled].secondary:hover, .button[disabled].secondary:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button[disabled].secondary:focus, .mdl-card form .firebaseui-card-actions .firebaseui-id-secondary-link[disabled]:focus, .firebaseui-resend-container[disabled].secondary:focus {
+      .button.disabled.secondary, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
         background-color: #e5e5e5;
         color: #444; }
-    .button.disabled.success, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .disabled.success.firebaseui-idp-button, .disabled.success.firebaseui-resend-container, .button[disabled].success, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button[disabled].success, .firebaseui-resend-container[disabled].success {
+    .button.disabled.success, .button[disabled].success {
       opacity: 0.25;
       cursor: not-allowed; }
-      .button.disabled.success, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .disabled.success.firebaseui-idp-button, .disabled.success.firebaseui-resend-container, .button.disabled.success:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .disabled.success.firebaseui-idp-button:hover, .disabled.success.firebaseui-resend-container:hover, .button.disabled.success:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .disabled.success.firebaseui-idp-button:focus, .disabled.success.firebaseui-resend-container:focus, .button[disabled].success, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button[disabled].success, .firebaseui-resend-container[disabled].success, .button[disabled].success:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button[disabled].success:hover, .firebaseui-resend-container[disabled].success:hover, .button[disabled].success:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button[disabled].success:focus, .firebaseui-resend-container[disabled].success:focus {
+      .button.disabled.success, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success, .button[disabled].success:hover, .button[disabled].success:focus {
         background-color: #666;
         color: #fafafa; }
-    .button.disabled.warning, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .disabled.warning.firebaseui-idp-button, .disabled.warning.firebaseui-resend-container, .button[disabled].warning, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button[disabled].warning, .firebaseui-resend-container[disabled].warning {
+    .button.disabled.warning, .button[disabled].warning {
       opacity: 0.25;
       cursor: not-allowed; }
-      .button.disabled.warning, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .disabled.warning.firebaseui-idp-button, .disabled.warning.firebaseui-resend-container, .button.disabled.warning:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .disabled.warning.firebaseui-idp-button:hover, .disabled.warning.firebaseui-resend-container:hover, .button.disabled.warning:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .disabled.warning.firebaseui-idp-button:focus, .disabled.warning.firebaseui-resend-container:focus, .button[disabled].warning, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button[disabled].warning, .firebaseui-resend-container[disabled].warning, .button[disabled].warning:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button[disabled].warning:hover, .firebaseui-resend-container[disabled].warning:hover, .button[disabled].warning:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button[disabled].warning:focus, .firebaseui-resend-container[disabled].warning:focus {
+      .button.disabled.warning, .button.disabled.warning:hover, .button.disabled.warning:focus, .button[disabled].warning, .button[disabled].warning:hover, .button[disabled].warning:focus {
         background-color: #FF9326;
         color: #444; }
-    .button.disabled.alert, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .disabled.alert.firebaseui-idp-button, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .disabled.firebaseui-idp-button.callout.success, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .disabled.firebaseui-idp-button.callout.warning, .disabled.alert.firebaseui-resend-container, .disabled.firebaseui-resend-container.callout.success, .disabled.firebaseui-resend-container.callout.warning, .button.disabled.callout.success, .button.disabled.callout.warning, .button[disabled].alert, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button[disabled].alert, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button.callout.success[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button.callout.warning[disabled], .firebaseui-resend-container[disabled].alert, .firebaseui-resend-container.callout.success[disabled], .firebaseui-resend-container.callout.warning[disabled], .button.callout.success[disabled], .button.callout.warning[disabled] {
+    .button.disabled.alert, .button.disabled.callout.success, .button.disabled.callout.warning, .button[disabled].alert, .button.callout.success[disabled], .button.callout.warning[disabled] {
       opacity: 0.25;
       cursor: not-allowed; }
-      .button.disabled.alert, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .disabled.alert.firebaseui-idp-button, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .disabled.firebaseui-idp-button.callout.success, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .disabled.firebaseui-idp-button.callout.warning, .disabled.alert.firebaseui-resend-container, .disabled.firebaseui-resend-container.callout.success, .disabled.firebaseui-resend-container.callout.warning, .button.disabled.callout.success, .button.disabled.callout.warning, .button.disabled.alert:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .disabled.alert.firebaseui-idp-button:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .disabled.firebaseui-idp-button.callout.success:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .disabled.firebaseui-idp-button.callout.warning:hover, .disabled.alert.firebaseui-resend-container:hover, .disabled.firebaseui-resend-container.callout.success:hover, .disabled.firebaseui-resend-container.callout.warning:hover, .button.disabled.callout.success:hover, .button.disabled.callout.warning:hover, .button.disabled.alert:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .disabled.alert.firebaseui-idp-button:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .disabled.firebaseui-idp-button.callout.success:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .disabled.firebaseui-idp-button.callout.warning:focus, .disabled.alert.firebaseui-resend-container:focus, .disabled.firebaseui-resend-container.callout.success:focus, .disabled.firebaseui-resend-container.callout.warning:focus, .button.disabled.callout.success:focus, .button.disabled.callout.warning:focus, .button[disabled].alert, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button[disabled].alert, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button.callout.success[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button.callout.warning[disabled], .firebaseui-resend-container[disabled].alert, .firebaseui-resend-container.callout.success[disabled], .firebaseui-resend-container.callout.warning[disabled], .button.callout.success[disabled], .button.callout.warning[disabled], .button[disabled].alert:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button[disabled].alert:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button.callout.success[disabled]:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button.callout.warning[disabled]:hover, .firebaseui-resend-container[disabled].alert:hover, .firebaseui-resend-container.callout.success[disabled]:hover, .firebaseui-resend-container.callout.warning[disabled]:hover, .button.callout.success[disabled]:hover, .button.callout.warning[disabled]:hover, .button[disabled].alert:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button[disabled].alert:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button.callout.success[disabled]:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button.callout.warning[disabled]:focus, .firebaseui-resend-container[disabled].alert:focus, .firebaseui-resend-container.callout.success[disabled]:focus, .firebaseui-resend-container.callout.warning[disabled]:focus, .button.callout.success[disabled]:focus, .button.callout.warning[disabled]:focus {
+      .button.disabled.alert, .button.disabled.callout.success, .button.disabled.callout.warning, .button.disabled.alert:hover, .button.disabled.callout.success:hover, .button.disabled.callout.warning:hover, .button.disabled.alert:focus, .button.disabled.callout.success:focus, .button.disabled.callout.warning:focus, .button[disabled].alert, .button.callout.success[disabled], .button.callout.warning[disabled], .button[disabled].alert:hover, .button.callout.success[disabled]:hover, .button.callout.warning[disabled]:hover, .button[disabled].alert:focus, .button.callout.success[disabled]:focus, .button.callout.warning[disabled]:focus {
         background-color: #ff4c3c;
         color: #fafafa; }
-  .button.hollow, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.firebaseui-idp-button, .hollow.firebaseui-resend-container {
+  .button.hollow {
     border: 1px solid #666;
     color: #666; }
-    .button.hollow, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.firebaseui-idp-button, .hollow.firebaseui-resend-container, .button.hollow:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.firebaseui-idp-button:hover, .hollow.firebaseui-resend-container:hover, .button.hollow:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.firebaseui-idp-button:focus, .hollow.firebaseui-resend-container:focus {
+    .button.hollow, .button.hollow:hover, .button.hollow:focus {
       background-color: transparent; }
-    .button.hollow.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.disabled.firebaseui-idp-button, .hollow.disabled.firebaseui-resend-container, .button.hollow.disabled:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.disabled.firebaseui-idp-button:hover, .hollow.disabled.firebaseui-resend-container:hover, .button.hollow.disabled:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.disabled.firebaseui-idp-button:focus, .hollow.disabled.firebaseui-resend-container:focus, .button.hollow[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.firebaseui-idp-button[disabled], .hollow.firebaseui-resend-container[disabled], .button.hollow[disabled]:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.firebaseui-idp-button[disabled]:hover, .hollow.firebaseui-resend-container[disabled]:hover, .button.hollow[disabled]:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.firebaseui-idp-button[disabled]:focus, .hollow.firebaseui-resend-container[disabled]:focus {
+    .button.hollow.disabled, .button.hollow.disabled:hover, .button.hollow.disabled:focus, .button.hollow[disabled], .button.hollow[disabled]:hover, .button.hollow[disabled]:focus {
       background-color: transparent; }
-    .button.hollow:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.firebaseui-idp-button:hover, .hollow.firebaseui-resend-container:hover, .button.hollow:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.firebaseui-idp-button:focus, .hollow.firebaseui-resend-container:focus {
+    .button.hollow:hover, .button.hollow:focus {
       border-color: #333333;
       color: #333333; }
-      .button.hollow:hover.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.firebaseui-idp-button:hover.disabled, .hollow.firebaseui-resend-container:hover.disabled, .button.hollow:hover[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.firebaseui-idp-button:hover[disabled], .hollow.firebaseui-resend-container:hover[disabled], .button.hollow:focus.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.firebaseui-idp-button:focus.disabled, .hollow.firebaseui-resend-container:focus.disabled, .button.hollow:focus[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.firebaseui-idp-button:focus[disabled], .hollow.firebaseui-resend-container:focus[disabled] {
+      .button.hollow:hover.disabled, .button.hollow:hover[disabled], .button.hollow:focus.disabled, .button.hollow:focus[disabled] {
         border: 1px solid #666;
         color: #666; }
-    .button.hollow.primary, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.primary.firebaseui-idp-button, .mdl-card form .firebaseui-card-actions .hollow.firebaseui-id-submit, .hollow.primary.firebaseui-resend-container {
+    .button.hollow.primary {
       border: 1px solid #666;
       color: #666; }
-      .button.hollow.primary:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.primary.firebaseui-idp-button:hover, .mdl-card form .firebaseui-card-actions .hollow.firebaseui-id-submit:hover, .hollow.primary.firebaseui-resend-container:hover, .button.hollow.primary:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.primary.firebaseui-idp-button:focus, .mdl-card form .firebaseui-card-actions .hollow.firebaseui-id-submit:focus, .hollow.primary.firebaseui-resend-container:focus {
+      .button.hollow.primary:hover, .button.hollow.primary:focus {
         border-color: #333333;
         color: #333333; }
-        .button.hollow.primary:hover.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.primary.firebaseui-idp-button:hover.disabled, .mdl-card form .firebaseui-card-actions .hollow.firebaseui-id-submit:hover.disabled, .hollow.primary.firebaseui-resend-container:hover.disabled, .button.hollow.primary:hover[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.primary.firebaseui-idp-button:hover[disabled], .mdl-card form .firebaseui-card-actions .hollow.firebaseui-id-submit:hover[disabled], .hollow.primary.firebaseui-resend-container:hover[disabled], .button.hollow.primary:focus.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.primary.firebaseui-idp-button:focus.disabled, .mdl-card form .firebaseui-card-actions .hollow.firebaseui-id-submit:focus.disabled, .hollow.primary.firebaseui-resend-container:focus.disabled, .button.hollow.primary:focus[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.primary.firebaseui-idp-button:focus[disabled], .mdl-card form .firebaseui-card-actions .hollow.firebaseui-id-submit:focus[disabled], .hollow.primary.firebaseui-resend-container:focus[disabled] {
+        .button.hollow.primary:hover.disabled, .button.hollow.primary:hover[disabled], .button.hollow.primary:focus.disabled, .button.hollow.primary:focus[disabled] {
           border: 1px solid #666;
           color: #666; }
-    .button.hollow.secondary, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.secondary.firebaseui-idp-button, .mdl-card form .firebaseui-card-actions .hollow.firebaseui-id-secondary-link, .hollow.secondary.firebaseui-resend-container {
+    .button.hollow.secondary {
       border: 1px solid #e5e5e5;
       color: #e5e5e5; }
-      .button.hollow.secondary:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.secondary.firebaseui-idp-button:hover, .mdl-card form .firebaseui-card-actions .hollow.firebaseui-id-secondary-link:hover, .hollow.secondary.firebaseui-resend-container:hover, .button.hollow.secondary:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.secondary.firebaseui-idp-button:focus, .mdl-card form .firebaseui-card-actions .hollow.firebaseui-id-secondary-link:focus, .hollow.secondary.firebaseui-resend-container:focus {
+      .button.hollow.secondary:hover, .button.hollow.secondary:focus {
         border-color: #737373;
         color: #737373; }
-        .button.hollow.secondary:hover.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.secondary.firebaseui-idp-button:hover.disabled, .mdl-card form .firebaseui-card-actions .hollow.firebaseui-id-secondary-link:hover.disabled, .hollow.secondary.firebaseui-resend-container:hover.disabled, .button.hollow.secondary:hover[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.secondary.firebaseui-idp-button:hover[disabled], .mdl-card form .firebaseui-card-actions .hollow.firebaseui-id-secondary-link:hover[disabled], .hollow.secondary.firebaseui-resend-container:hover[disabled], .button.hollow.secondary:focus.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.secondary.firebaseui-idp-button:focus.disabled, .mdl-card form .firebaseui-card-actions .hollow.firebaseui-id-secondary-link:focus.disabled, .hollow.secondary.firebaseui-resend-container:focus.disabled, .button.hollow.secondary:focus[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.secondary.firebaseui-idp-button:focus[disabled], .mdl-card form .firebaseui-card-actions .hollow.firebaseui-id-secondary-link:focus[disabled], .hollow.secondary.firebaseui-resend-container:focus[disabled] {
+        .button.hollow.secondary:hover.disabled, .button.hollow.secondary:hover[disabled], .button.hollow.secondary:focus.disabled, .button.hollow.secondary:focus[disabled] {
           border: 1px solid #e5e5e5;
           color: #e5e5e5; }
-    .button.hollow.success, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.success.firebaseui-idp-button, .hollow.success.firebaseui-resend-container {
+    .button.hollow.success {
       border: 1px solid #666;
       color: #666; }
-      .button.hollow.success:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.success.firebaseui-idp-button:hover, .hollow.success.firebaseui-resend-container:hover, .button.hollow.success:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.success.firebaseui-idp-button:focus, .hollow.success.firebaseui-resend-container:focus {
+      .button.hollow.success:hover, .button.hollow.success:focus {
         border-color: #333333;
         color: #333333; }
-        .button.hollow.success:hover.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.success.firebaseui-idp-button:hover.disabled, .hollow.success.firebaseui-resend-container:hover.disabled, .button.hollow.success:hover[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.success.firebaseui-idp-button:hover[disabled], .hollow.success.firebaseui-resend-container:hover[disabled], .button.hollow.success:focus.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.success.firebaseui-idp-button:focus.disabled, .hollow.success.firebaseui-resend-container:focus.disabled, .button.hollow.success:focus[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.success.firebaseui-idp-button:focus[disabled], .hollow.success.firebaseui-resend-container:focus[disabled] {
+        .button.hollow.success:hover.disabled, .button.hollow.success:hover[disabled], .button.hollow.success:focus.disabled, .button.hollow.success:focus[disabled] {
           border: 1px solid #666;
           color: #666; }
-    .button.hollow.warning, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.warning.firebaseui-idp-button, .hollow.warning.firebaseui-resend-container {
+    .button.hollow.warning {
       border: 1px solid #FF9326;
       color: #FF9326; }
-      .button.hollow.warning:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.warning.firebaseui-idp-button:hover, .hollow.warning.firebaseui-resend-container:hover, .button.hollow.warning:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.warning.firebaseui-idp-button:focus, .hollow.warning.firebaseui-resend-container:focus {
+      .button.hollow.warning:hover, .button.hollow.warning:focus {
         border-color: #934a00;
         color: #934a00; }
-        .button.hollow.warning:hover.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.warning.firebaseui-idp-button:hover.disabled, .hollow.warning.firebaseui-resend-container:hover.disabled, .button.hollow.warning:hover[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.warning.firebaseui-idp-button:hover[disabled], .hollow.warning.firebaseui-resend-container:hover[disabled], .button.hollow.warning:focus.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.warning.firebaseui-idp-button:focus.disabled, .hollow.warning.firebaseui-resend-container:focus.disabled, .button.hollow.warning:focus[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.warning.firebaseui-idp-button:focus[disabled], .hollow.warning.firebaseui-resend-container:focus[disabled] {
+        .button.hollow.warning:hover.disabled, .button.hollow.warning:hover[disabled], .button.hollow.warning:focus.disabled, .button.hollow.warning:focus[disabled] {
           border: 1px solid #FF9326;
           color: #FF9326; }
-    .button.hollow.alert, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.alert.firebaseui-idp-button, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.firebaseui-idp-button.callout.success, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.firebaseui-idp-button.callout.warning, .hollow.alert.firebaseui-resend-container, .hollow.firebaseui-resend-container.callout.success, .hollow.firebaseui-resend-container.callout.warning, .button.hollow.callout.success, .button.hollow.callout.warning {
+    .button.hollow.alert, .button.hollow.callout.success, .button.hollow.callout.warning {
       border: 1px solid #ff4c3c;
       color: #ff4c3c; }
-      .button.hollow.alert:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.alert.firebaseui-idp-button:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.firebaseui-idp-button.callout.success:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.firebaseui-idp-button.callout.warning:hover, .hollow.alert.firebaseui-resend-container:hover, .hollow.firebaseui-resend-container.callout.success:hover, .hollow.firebaseui-resend-container.callout.warning:hover, .button.hollow.callout.success:hover, .button.hollow.callout.warning:hover, .button.hollow.alert:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.alert.firebaseui-idp-button:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.firebaseui-idp-button.callout.success:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.firebaseui-idp-button.callout.warning:focus, .hollow.alert.firebaseui-resend-container:focus, .hollow.firebaseui-resend-container.callout.success:focus, .hollow.firebaseui-resend-container.callout.warning:focus, .button.hollow.callout.success:focus, .button.hollow.callout.warning:focus {
+      .button.hollow.alert:hover, .button.hollow.callout.success:hover, .button.hollow.callout.warning:hover, .button.hollow.alert:focus, .button.hollow.callout.success:focus, .button.hollow.callout.warning:focus {
         border-color: #9e0d00;
         color: #9e0d00; }
-        .button.hollow.alert:hover.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.alert.firebaseui-idp-button:hover.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.firebaseui-idp-button.callout.success:hover.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.firebaseui-idp-button.callout.warning:hover.disabled, .hollow.alert.firebaseui-resend-container:hover.disabled, .hollow.firebaseui-resend-container.callout.success:hover.disabled, .hollow.firebaseui-resend-container.callout.warning:hover.disabled, .button.hollow.callout.success:hover.disabled, .button.hollow.callout.warning:hover.disabled, .button.hollow.alert:hover[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.alert.firebaseui-idp-button:hover[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.firebaseui-idp-button.callout.success:hover[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.firebaseui-idp-button.callout.warning:hover[disabled], .hollow.alert.firebaseui-resend-container:hover[disabled], .hollow.firebaseui-resend-container.callout.success:hover[disabled], .hollow.firebaseui-resend-container.callout.warning:hover[disabled], .button.hollow.callout.success:hover[disabled], .button.hollow.callout.warning:hover[disabled], .button.hollow.alert:focus.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.alert.firebaseui-idp-button:focus.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.firebaseui-idp-button.callout.success:focus.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.firebaseui-idp-button.callout.warning:focus.disabled, .hollow.alert.firebaseui-resend-container:focus.disabled, .hollow.firebaseui-resend-container.callout.success:focus.disabled, .hollow.firebaseui-resend-container.callout.warning:focus.disabled, .button.hollow.callout.success:focus.disabled, .button.hollow.callout.warning:focus.disabled, .button.hollow.alert:focus[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.alert.firebaseui-idp-button:focus[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.firebaseui-idp-button.callout.success:focus[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .hollow.firebaseui-idp-button.callout.warning:focus[disabled], .hollow.alert.firebaseui-resend-container:focus[disabled], .hollow.firebaseui-resend-container.callout.success:focus[disabled], .hollow.firebaseui-resend-container.callout.warning:focus[disabled], .button.hollow.callout.success:focus[disabled], .button.hollow.callout.warning:focus[disabled] {
+        .button.hollow.alert:hover.disabled, .button.hollow.callout.success:hover.disabled, .button.hollow.callout.warning:hover.disabled, .button.hollow.alert:hover[disabled], .button.hollow.callout.success:hover[disabled], .button.hollow.callout.warning:hover[disabled], .button.hollow.alert:focus.disabled, .button.hollow.callout.success:focus.disabled, .button.hollow.callout.warning:focus.disabled, .button.hollow.alert:focus[disabled], .button.hollow.callout.success:focus[disabled], .button.hollow.callout.warning:focus[disabled] {
           border: 1px solid #ff4c3c;
           color: #ff4c3c; }
-  .button.clear, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button, .clear.firebaseui-resend-container {
+  .button.clear {
     border: 1px solid #666;
     color: #666; }
-    .button.clear, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button, .clear.firebaseui-resend-container, .button.clear:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button:hover, .clear.firebaseui-resend-container:hover, .button.clear:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button:focus, .clear.firebaseui-resend-container:focus {
+    .button.clear, .button.clear:hover, .button.clear:focus {
       background-color: transparent; }
-    .button.clear.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.disabled.firebaseui-idp-button, .clear.disabled.firebaseui-resend-container, .button.clear.disabled:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.disabled.firebaseui-idp-button:hover, .clear.disabled.firebaseui-resend-container:hover, .button.clear.disabled:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.disabled.firebaseui-idp-button:focus, .clear.disabled.firebaseui-resend-container:focus, .button.clear[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button[disabled], .clear.firebaseui-resend-container[disabled], .button.clear[disabled]:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button[disabled]:hover, .clear.firebaseui-resend-container[disabled]:hover, .button.clear[disabled]:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button[disabled]:focus, .clear.firebaseui-resend-container[disabled]:focus {
+    .button.clear.disabled, .button.clear.disabled:hover, .button.clear.disabled:focus, .button.clear[disabled], .button.clear[disabled]:hover, .button.clear[disabled]:focus {
       background-color: transparent; }
-    .button.clear:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button:hover, .clear.firebaseui-resend-container:hover, .button.clear:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button:focus, .clear.firebaseui-resend-container:focus {
+    .button.clear:hover, .button.clear:focus {
       border-color: #333333;
       color: #333333; }
-      .button.clear:hover.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button:hover.disabled, .clear.firebaseui-resend-container:hover.disabled, .button.clear:hover[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button:hover[disabled], .clear.firebaseui-resend-container:hover[disabled], .button.clear:focus.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button:focus.disabled, .clear.firebaseui-resend-container:focus.disabled, .button.clear:focus[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button:focus[disabled], .clear.firebaseui-resend-container:focus[disabled] {
+      .button.clear:hover.disabled, .button.clear:hover[disabled], .button.clear:focus.disabled, .button.clear:focus[disabled] {
         border: 1px solid #666;
         color: #666; }
-    .button.clear, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button, .clear.firebaseui-resend-container, .button.clear.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.disabled.firebaseui-idp-button, .clear.disabled.firebaseui-resend-container, .button.clear[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button[disabled], .clear.firebaseui-resend-container[disabled], .button.clear:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button:hover, .clear.firebaseui-resend-container:hover, .button.clear:hover.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button:hover.disabled, .clear.firebaseui-resend-container:hover.disabled, .button.clear:hover[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button:hover[disabled], .clear.firebaseui-resend-container:hover[disabled], .button.clear:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button:focus, .clear.firebaseui-resend-container:focus, .button.clear:focus.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button:focus.disabled, .clear.firebaseui-resend-container:focus.disabled, .button.clear:focus[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button:focus[disabled], .clear.firebaseui-resend-container:focus[disabled] {
+    .button.clear, .button.clear.disabled, .button.clear[disabled], .button.clear:hover, .button.clear:hover.disabled, .button.clear:hover[disabled], .button.clear:focus, .button.clear:focus.disabled, .button.clear:focus[disabled] {
       border-color: transparent; }
-    .button.clear.primary, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.primary.firebaseui-idp-button, .mdl-card form .firebaseui-card-actions .clear.firebaseui-id-submit, .clear.primary.firebaseui-resend-container {
+    .button.clear.primary {
       border: 1px solid #666;
       color: #666; }
-      .button.clear.primary:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.primary.firebaseui-idp-button:hover, .mdl-card form .firebaseui-card-actions .clear.firebaseui-id-submit:hover, .clear.primary.firebaseui-resend-container:hover, .button.clear.primary:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.primary.firebaseui-idp-button:focus, .mdl-card form .firebaseui-card-actions .clear.firebaseui-id-submit:focus, .clear.primary.firebaseui-resend-container:focus {
+      .button.clear.primary:hover, .button.clear.primary:focus {
         border-color: #333333;
         color: #333333; }
-        .button.clear.primary:hover.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.primary.firebaseui-idp-button:hover.disabled, .mdl-card form .firebaseui-card-actions .clear.firebaseui-id-submit:hover.disabled, .clear.primary.firebaseui-resend-container:hover.disabled, .button.clear.primary:hover[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.primary.firebaseui-idp-button:hover[disabled], .mdl-card form .firebaseui-card-actions .clear.firebaseui-id-submit:hover[disabled], .clear.primary.firebaseui-resend-container:hover[disabled], .button.clear.primary:focus.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.primary.firebaseui-idp-button:focus.disabled, .mdl-card form .firebaseui-card-actions .clear.firebaseui-id-submit:focus.disabled, .clear.primary.firebaseui-resend-container:focus.disabled, .button.clear.primary:focus[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.primary.firebaseui-idp-button:focus[disabled], .mdl-card form .firebaseui-card-actions .clear.firebaseui-id-submit:focus[disabled], .clear.primary.firebaseui-resend-container:focus[disabled] {
+        .button.clear.primary:hover.disabled, .button.clear.primary:hover[disabled], .button.clear.primary:focus.disabled, .button.clear.primary:focus[disabled] {
           border: 1px solid #666;
           color: #666; }
-      .button.clear.primary, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.primary.firebaseui-idp-button, .mdl-card form .firebaseui-card-actions .clear.firebaseui-id-submit, .clear.primary.firebaseui-resend-container, .button.clear.primary.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.primary.disabled.firebaseui-idp-button, .mdl-card form .firebaseui-card-actions .clear.disabled.firebaseui-id-submit, .clear.primary.disabled.firebaseui-resend-container, .button.clear.primary[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.primary.firebaseui-idp-button[disabled], .mdl-card form .firebaseui-card-actions .clear.firebaseui-id-submit[disabled], .clear.primary.firebaseui-resend-container[disabled], .button.clear.primary:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.primary.firebaseui-idp-button:hover, .mdl-card form .firebaseui-card-actions .clear.firebaseui-id-submit:hover, .clear.primary.firebaseui-resend-container:hover, .button.clear.primary:hover.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.primary.firebaseui-idp-button:hover.disabled, .mdl-card form .firebaseui-card-actions .clear.firebaseui-id-submit:hover.disabled, .clear.primary.firebaseui-resend-container:hover.disabled, .button.clear.primary:hover[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.primary.firebaseui-idp-button:hover[disabled], .mdl-card form .firebaseui-card-actions .clear.firebaseui-id-submit:hover[disabled], .clear.primary.firebaseui-resend-container:hover[disabled], .button.clear.primary:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.primary.firebaseui-idp-button:focus, .mdl-card form .firebaseui-card-actions .clear.firebaseui-id-submit:focus, .clear.primary.firebaseui-resend-container:focus, .button.clear.primary:focus.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.primary.firebaseui-idp-button:focus.disabled, .mdl-card form .firebaseui-card-actions .clear.firebaseui-id-submit:focus.disabled, .clear.primary.firebaseui-resend-container:focus.disabled, .button.clear.primary:focus[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.primary.firebaseui-idp-button:focus[disabled], .mdl-card form .firebaseui-card-actions .clear.firebaseui-id-submit:focus[disabled], .clear.primary.firebaseui-resend-container:focus[disabled] {
+      .button.clear.primary, .button.clear.primary.disabled, .button.clear.primary[disabled], .button.clear.primary:hover, .button.clear.primary:hover.disabled, .button.clear.primary:hover[disabled], .button.clear.primary:focus, .button.clear.primary:focus.disabled, .button.clear.primary:focus[disabled] {
         border-color: transparent; }
-    .button.clear.secondary, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.secondary.firebaseui-idp-button, .mdl-card form .firebaseui-card-actions .clear.firebaseui-id-secondary-link, .clear.secondary.firebaseui-resend-container {
+    .button.clear.secondary {
       border: 1px solid #e5e5e5;
       color: #e5e5e5; }
-      .button.clear.secondary:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.secondary.firebaseui-idp-button:hover, .mdl-card form .firebaseui-card-actions .clear.firebaseui-id-secondary-link:hover, .clear.secondary.firebaseui-resend-container:hover, .button.clear.secondary:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.secondary.firebaseui-idp-button:focus, .mdl-card form .firebaseui-card-actions .clear.firebaseui-id-secondary-link:focus, .clear.secondary.firebaseui-resend-container:focus {
+      .button.clear.secondary:hover, .button.clear.secondary:focus {
         border-color: #737373;
         color: #737373; }
-        .button.clear.secondary:hover.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.secondary.firebaseui-idp-button:hover.disabled, .mdl-card form .firebaseui-card-actions .clear.firebaseui-id-secondary-link:hover.disabled, .clear.secondary.firebaseui-resend-container:hover.disabled, .button.clear.secondary:hover[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.secondary.firebaseui-idp-button:hover[disabled], .mdl-card form .firebaseui-card-actions .clear.firebaseui-id-secondary-link:hover[disabled], .clear.secondary.firebaseui-resend-container:hover[disabled], .button.clear.secondary:focus.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.secondary.firebaseui-idp-button:focus.disabled, .mdl-card form .firebaseui-card-actions .clear.firebaseui-id-secondary-link:focus.disabled, .clear.secondary.firebaseui-resend-container:focus.disabled, .button.clear.secondary:focus[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.secondary.firebaseui-idp-button:focus[disabled], .mdl-card form .firebaseui-card-actions .clear.firebaseui-id-secondary-link:focus[disabled], .clear.secondary.firebaseui-resend-container:focus[disabled] {
+        .button.clear.secondary:hover.disabled, .button.clear.secondary:hover[disabled], .button.clear.secondary:focus.disabled, .button.clear.secondary:focus[disabled] {
           border: 1px solid #e5e5e5;
           color: #e5e5e5; }
-      .button.clear.secondary, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.secondary.firebaseui-idp-button, .mdl-card form .firebaseui-card-actions .clear.firebaseui-id-secondary-link, .clear.secondary.firebaseui-resend-container, .button.clear.secondary.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.secondary.disabled.firebaseui-idp-button, .mdl-card form .firebaseui-card-actions .clear.disabled.firebaseui-id-secondary-link, .clear.secondary.disabled.firebaseui-resend-container, .button.clear.secondary[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.secondary.firebaseui-idp-button[disabled], .mdl-card form .firebaseui-card-actions .clear.firebaseui-id-secondary-link[disabled], .clear.secondary.firebaseui-resend-container[disabled], .button.clear.secondary:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.secondary.firebaseui-idp-button:hover, .mdl-card form .firebaseui-card-actions .clear.firebaseui-id-secondary-link:hover, .clear.secondary.firebaseui-resend-container:hover, .button.clear.secondary:hover.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.secondary.firebaseui-idp-button:hover.disabled, .mdl-card form .firebaseui-card-actions .clear.firebaseui-id-secondary-link:hover.disabled, .clear.secondary.firebaseui-resend-container:hover.disabled, .button.clear.secondary:hover[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.secondary.firebaseui-idp-button:hover[disabled], .mdl-card form .firebaseui-card-actions .clear.firebaseui-id-secondary-link:hover[disabled], .clear.secondary.firebaseui-resend-container:hover[disabled], .button.clear.secondary:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.secondary.firebaseui-idp-button:focus, .mdl-card form .firebaseui-card-actions .clear.firebaseui-id-secondary-link:focus, .clear.secondary.firebaseui-resend-container:focus, .button.clear.secondary:focus.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.secondary.firebaseui-idp-button:focus.disabled, .mdl-card form .firebaseui-card-actions .clear.firebaseui-id-secondary-link:focus.disabled, .clear.secondary.firebaseui-resend-container:focus.disabled, .button.clear.secondary:focus[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.secondary.firebaseui-idp-button:focus[disabled], .mdl-card form .firebaseui-card-actions .clear.firebaseui-id-secondary-link:focus[disabled], .clear.secondary.firebaseui-resend-container:focus[disabled] {
+      .button.clear.secondary, .button.clear.secondary.disabled, .button.clear.secondary[disabled], .button.clear.secondary:hover, .button.clear.secondary:hover.disabled, .button.clear.secondary:hover[disabled], .button.clear.secondary:focus, .button.clear.secondary:focus.disabled, .button.clear.secondary:focus[disabled] {
         border-color: transparent; }
-    .button.clear.success, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.success.firebaseui-idp-button, .clear.success.firebaseui-resend-container {
+    .button.clear.success {
       border: 1px solid #666;
       color: #666; }
-      .button.clear.success:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.success.firebaseui-idp-button:hover, .clear.success.firebaseui-resend-container:hover, .button.clear.success:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.success.firebaseui-idp-button:focus, .clear.success.firebaseui-resend-container:focus {
+      .button.clear.success:hover, .button.clear.success:focus {
         border-color: #333333;
         color: #333333; }
-        .button.clear.success:hover.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.success.firebaseui-idp-button:hover.disabled, .clear.success.firebaseui-resend-container:hover.disabled, .button.clear.success:hover[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.success.firebaseui-idp-button:hover[disabled], .clear.success.firebaseui-resend-container:hover[disabled], .button.clear.success:focus.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.success.firebaseui-idp-button:focus.disabled, .clear.success.firebaseui-resend-container:focus.disabled, .button.clear.success:focus[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.success.firebaseui-idp-button:focus[disabled], .clear.success.firebaseui-resend-container:focus[disabled] {
+        .button.clear.success:hover.disabled, .button.clear.success:hover[disabled], .button.clear.success:focus.disabled, .button.clear.success:focus[disabled] {
           border: 1px solid #666;
           color: #666; }
-      .button.clear.success, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.success.firebaseui-idp-button, .clear.success.firebaseui-resend-container, .button.clear.success.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.success.disabled.firebaseui-idp-button, .clear.success.disabled.firebaseui-resend-container, .button.clear.success[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.success.firebaseui-idp-button[disabled], .clear.success.firebaseui-resend-container[disabled], .button.clear.success:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.success.firebaseui-idp-button:hover, .clear.success.firebaseui-resend-container:hover, .button.clear.success:hover.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.success.firebaseui-idp-button:hover.disabled, .clear.success.firebaseui-resend-container:hover.disabled, .button.clear.success:hover[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.success.firebaseui-idp-button:hover[disabled], .clear.success.firebaseui-resend-container:hover[disabled], .button.clear.success:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.success.firebaseui-idp-button:focus, .clear.success.firebaseui-resend-container:focus, .button.clear.success:focus.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.success.firebaseui-idp-button:focus.disabled, .clear.success.firebaseui-resend-container:focus.disabled, .button.clear.success:focus[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.success.firebaseui-idp-button:focus[disabled], .clear.success.firebaseui-resend-container:focus[disabled] {
+      .button.clear.success, .button.clear.success.disabled, .button.clear.success[disabled], .button.clear.success:hover, .button.clear.success:hover.disabled, .button.clear.success:hover[disabled], .button.clear.success:focus, .button.clear.success:focus.disabled, .button.clear.success:focus[disabled] {
         border-color: transparent; }
-    .button.clear.warning, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.warning.firebaseui-idp-button, .clear.warning.firebaseui-resend-container {
+    .button.clear.warning {
       border: 1px solid #FF9326;
       color: #FF9326; }
-      .button.clear.warning:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.warning.firebaseui-idp-button:hover, .clear.warning.firebaseui-resend-container:hover, .button.clear.warning:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.warning.firebaseui-idp-button:focus, .clear.warning.firebaseui-resend-container:focus {
+      .button.clear.warning:hover, .button.clear.warning:focus {
         border-color: #934a00;
         color: #934a00; }
-        .button.clear.warning:hover.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.warning.firebaseui-idp-button:hover.disabled, .clear.warning.firebaseui-resend-container:hover.disabled, .button.clear.warning:hover[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.warning.firebaseui-idp-button:hover[disabled], .clear.warning.firebaseui-resend-container:hover[disabled], .button.clear.warning:focus.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.warning.firebaseui-idp-button:focus.disabled, .clear.warning.firebaseui-resend-container:focus.disabled, .button.clear.warning:focus[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.warning.firebaseui-idp-button:focus[disabled], .clear.warning.firebaseui-resend-container:focus[disabled] {
+        .button.clear.warning:hover.disabled, .button.clear.warning:hover[disabled], .button.clear.warning:focus.disabled, .button.clear.warning:focus[disabled] {
           border: 1px solid #FF9326;
           color: #FF9326; }
-      .button.clear.warning, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.warning.firebaseui-idp-button, .clear.warning.firebaseui-resend-container, .button.clear.warning.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.warning.disabled.firebaseui-idp-button, .clear.warning.disabled.firebaseui-resend-container, .button.clear.warning[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.warning.firebaseui-idp-button[disabled], .clear.warning.firebaseui-resend-container[disabled], .button.clear.warning:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.warning.firebaseui-idp-button:hover, .clear.warning.firebaseui-resend-container:hover, .button.clear.warning:hover.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.warning.firebaseui-idp-button:hover.disabled, .clear.warning.firebaseui-resend-container:hover.disabled, .button.clear.warning:hover[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.warning.firebaseui-idp-button:hover[disabled], .clear.warning.firebaseui-resend-container:hover[disabled], .button.clear.warning:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.warning.firebaseui-idp-button:focus, .clear.warning.firebaseui-resend-container:focus, .button.clear.warning:focus.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.warning.firebaseui-idp-button:focus.disabled, .clear.warning.firebaseui-resend-container:focus.disabled, .button.clear.warning:focus[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.warning.firebaseui-idp-button:focus[disabled], .clear.warning.firebaseui-resend-container:focus[disabled] {
+      .button.clear.warning, .button.clear.warning.disabled, .button.clear.warning[disabled], .button.clear.warning:hover, .button.clear.warning:hover.disabled, .button.clear.warning:hover[disabled], .button.clear.warning:focus, .button.clear.warning:focus.disabled, .button.clear.warning:focus[disabled] {
         border-color: transparent; }
-    .button.clear.alert, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.alert.firebaseui-idp-button, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button.callout.success, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button.callout.warning, .clear.alert.firebaseui-resend-container, .clear.firebaseui-resend-container.callout.success, .clear.firebaseui-resend-container.callout.warning, .button.clear.callout.success, .button.clear.callout.warning {
+    .button.clear.alert, .button.clear.callout.success, .button.clear.callout.warning {
       border: 1px solid #ff4c3c;
       color: #ff4c3c; }
-      .button.clear.alert:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.alert.firebaseui-idp-button:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button.callout.success:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button.callout.warning:hover, .clear.alert.firebaseui-resend-container:hover, .clear.firebaseui-resend-container.callout.success:hover, .clear.firebaseui-resend-container.callout.warning:hover, .button.clear.callout.success:hover, .button.clear.callout.warning:hover, .button.clear.alert:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.alert.firebaseui-idp-button:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button.callout.success:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button.callout.warning:focus, .clear.alert.firebaseui-resend-container:focus, .clear.firebaseui-resend-container.callout.success:focus, .clear.firebaseui-resend-container.callout.warning:focus, .button.clear.callout.success:focus, .button.clear.callout.warning:focus {
+      .button.clear.alert:hover, .button.clear.callout.success:hover, .button.clear.callout.warning:hover, .button.clear.alert:focus, .button.clear.callout.success:focus, .button.clear.callout.warning:focus {
         border-color: #9e0d00;
         color: #9e0d00; }
-        .button.clear.alert:hover.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.alert.firebaseui-idp-button:hover.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button.callout.success:hover.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button.callout.warning:hover.disabled, .clear.alert.firebaseui-resend-container:hover.disabled, .clear.firebaseui-resend-container.callout.success:hover.disabled, .clear.firebaseui-resend-container.callout.warning:hover.disabled, .button.clear.callout.success:hover.disabled, .button.clear.callout.warning:hover.disabled, .button.clear.alert:hover[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.alert.firebaseui-idp-button:hover[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button.callout.success:hover[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button.callout.warning:hover[disabled], .clear.alert.firebaseui-resend-container:hover[disabled], .clear.firebaseui-resend-container.callout.success:hover[disabled], .clear.firebaseui-resend-container.callout.warning:hover[disabled], .button.clear.callout.success:hover[disabled], .button.clear.callout.warning:hover[disabled], .button.clear.alert:focus.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.alert.firebaseui-idp-button:focus.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button.callout.success:focus.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button.callout.warning:focus.disabled, .clear.alert.firebaseui-resend-container:focus.disabled, .clear.firebaseui-resend-container.callout.success:focus.disabled, .clear.firebaseui-resend-container.callout.warning:focus.disabled, .button.clear.callout.success:focus.disabled, .button.clear.callout.warning:focus.disabled, .button.clear.alert:focus[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.alert.firebaseui-idp-button:focus[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button.callout.success:focus[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button.callout.warning:focus[disabled], .clear.alert.firebaseui-resend-container:focus[disabled], .clear.firebaseui-resend-container.callout.success:focus[disabled], .clear.firebaseui-resend-container.callout.warning:focus[disabled], .button.clear.callout.success:focus[disabled], .button.clear.callout.warning:focus[disabled] {
+        .button.clear.alert:hover.disabled, .button.clear.callout.success:hover.disabled, .button.clear.callout.warning:hover.disabled, .button.clear.alert:hover[disabled], .button.clear.callout.success:hover[disabled], .button.clear.callout.warning:hover[disabled], .button.clear.alert:focus.disabled, .button.clear.callout.success:focus.disabled, .button.clear.callout.warning:focus.disabled, .button.clear.alert:focus[disabled], .button.clear.callout.success:focus[disabled], .button.clear.callout.warning:focus[disabled] {
           border: 1px solid #ff4c3c;
           color: #ff4c3c; }
-      .button.clear.alert, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.alert.firebaseui-idp-button, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button.callout.success, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button.callout.warning, .clear.alert.firebaseui-resend-container, .clear.firebaseui-resend-container.callout.success, .clear.firebaseui-resend-container.callout.warning, .button.clear.callout.success, .button.clear.callout.warning, .button.clear.alert.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.alert.disabled.firebaseui-idp-button, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.disabled.firebaseui-idp-button.callout.success, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.disabled.firebaseui-idp-button.callout.warning, .clear.alert.disabled.firebaseui-resend-container, .clear.disabled.firebaseui-resend-container.callout.success, .clear.disabled.firebaseui-resend-container.callout.warning, .button.clear.disabled.callout.success, .button.clear.disabled.callout.warning, .button.clear.alert[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.alert.firebaseui-idp-button[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button.callout.success[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button.callout.warning[disabled], .clear.alert.firebaseui-resend-container[disabled], .clear.firebaseui-resend-container.callout.success[disabled], .clear.firebaseui-resend-container.callout.warning[disabled], .button.clear.callout.success[disabled], .button.clear.callout.warning[disabled], .button.clear.alert:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.alert.firebaseui-idp-button:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button.callout.success:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button.callout.warning:hover, .clear.alert.firebaseui-resend-container:hover, .clear.firebaseui-resend-container.callout.success:hover, .clear.firebaseui-resend-container.callout.warning:hover, .button.clear.callout.success:hover, .button.clear.callout.warning:hover, .button.clear.alert:hover.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.alert.firebaseui-idp-button:hover.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button.callout.success:hover.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button.callout.warning:hover.disabled, .clear.alert.firebaseui-resend-container:hover.disabled, .clear.firebaseui-resend-container.callout.success:hover.disabled, .clear.firebaseui-resend-container.callout.warning:hover.disabled, .button.clear.callout.success:hover.disabled, .button.clear.callout.warning:hover.disabled, .button.clear.alert:hover[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.alert.firebaseui-idp-button:hover[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button.callout.success:hover[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button.callout.warning:hover[disabled], .clear.alert.firebaseui-resend-container:hover[disabled], .clear.firebaseui-resend-container.callout.success:hover[disabled], .clear.firebaseui-resend-container.callout.warning:hover[disabled], .button.clear.callout.success:hover[disabled], .button.clear.callout.warning:hover[disabled], .button.clear.alert:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.alert.firebaseui-idp-button:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button.callout.success:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button.callout.warning:focus, .clear.alert.firebaseui-resend-container:focus, .clear.firebaseui-resend-container.callout.success:focus, .clear.firebaseui-resend-container.callout.warning:focus, .button.clear.callout.success:focus, .button.clear.callout.warning:focus, .button.clear.alert:focus.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.alert.firebaseui-idp-button:focus.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button.callout.success:focus.disabled, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button.callout.warning:focus.disabled, .clear.alert.firebaseui-resend-container:focus.disabled, .clear.firebaseui-resend-container.callout.success:focus.disabled, .clear.firebaseui-resend-container.callout.warning:focus.disabled, .button.clear.callout.success:focus.disabled, .button.clear.callout.warning:focus.disabled, .button.clear.alert:focus[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.alert.firebaseui-idp-button:focus[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button.callout.success:focus[disabled], #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .clear.firebaseui-idp-button.callout.warning:focus[disabled], .clear.alert.firebaseui-resend-container:focus[disabled], .clear.firebaseui-resend-container.callout.success:focus[disabled], .clear.firebaseui-resend-container.callout.warning:focus[disabled], .button.clear.callout.success:focus[disabled], .button.clear.callout.warning:focus[disabled] {
+      .button.clear.alert, .button.clear.callout.success, .button.clear.callout.warning, .button.clear.alert.disabled, .button.clear.disabled.callout.success, .button.clear.disabled.callout.warning, .button.clear.alert[disabled], .button.clear.callout.success[disabled], .button.clear.callout.warning[disabled], .button.clear.alert:hover, .button.clear.callout.success:hover, .button.clear.callout.warning:hover, .button.clear.alert:hover.disabled, .button.clear.callout.success:hover.disabled, .button.clear.callout.warning:hover.disabled, .button.clear.alert:hover[disabled], .button.clear.callout.success:hover[disabled], .button.clear.callout.warning:hover[disabled], .button.clear.alert:focus, .button.clear.callout.success:focus, .button.clear.callout.warning:focus, .button.clear.alert:focus.disabled, .button.clear.callout.success:focus.disabled, .button.clear.callout.warning:focus.disabled, .button.clear.alert:focus[disabled], .button.clear.callout.success:focus[disabled], .button.clear.callout.warning:focus[disabled] {
         border-color: transparent; }
-  .button.dropdown::after, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .dropdown.firebaseui-idp-button::after, .dropdown.firebaseui-resend-container::after {
+  .button.dropdown::after {
     display: block;
     width: 0;
     height: 0;
@@ -3192,24 +3192,24 @@ ul.no-bullet, ol.no-bullet {
     display: inline-block;
     float: right;
     margin-left: 1em; }
-  .button.dropdown.hollow::after, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .dropdown.hollow.firebaseui-idp-button::after, .dropdown.hollow.firebaseui-resend-container::after {
+  .button.dropdown.hollow::after {
     border-top-color: #666; }
-  .button.dropdown.hollow.primary::after, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .dropdown.hollow.primary.firebaseui-idp-button::after, .mdl-card form .firebaseui-card-actions .dropdown.hollow.firebaseui-id-submit::after, .dropdown.hollow.primary.firebaseui-resend-container::after {
+  .button.dropdown.hollow.primary::after {
     border-top-color: #666; }
-  .button.dropdown.hollow.secondary::after, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .dropdown.hollow.secondary.firebaseui-idp-button::after, .mdl-card form .firebaseui-card-actions .dropdown.hollow.firebaseui-id-secondary-link::after, .dropdown.hollow.secondary.firebaseui-resend-container::after {
+  .button.dropdown.hollow.secondary::after {
     border-top-color: #e5e5e5; }
-  .button.dropdown.hollow.success::after, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .dropdown.hollow.success.firebaseui-idp-button::after, .dropdown.hollow.success.firebaseui-resend-container::after {
+  .button.dropdown.hollow.success::after {
     border-top-color: #666; }
-  .button.dropdown.hollow.warning::after, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .dropdown.hollow.warning.firebaseui-idp-button::after, .dropdown.hollow.warning.firebaseui-resend-container::after {
+  .button.dropdown.hollow.warning::after {
     border-top-color: #FF9326; }
-  .button.dropdown.hollow.alert::after, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .dropdown.hollow.alert.firebaseui-idp-button::after, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .dropdown.hollow.firebaseui-idp-button.callout.success::after, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .dropdown.hollow.firebaseui-idp-button.callout.warning::after, .dropdown.hollow.alert.firebaseui-resend-container::after, .dropdown.hollow.firebaseui-resend-container.callout.success::after, .dropdown.hollow.firebaseui-resend-container.callout.warning::after, .button.dropdown.hollow.callout.success::after, .button.dropdown.hollow.callout.warning::after {
+  .button.dropdown.hollow.alert::after, .button.dropdown.hollow.callout.success::after, .button.dropdown.hollow.callout.warning::after {
     border-top-color: #ff4c3c; }
-  .button.arrow-only::after, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .arrow-only.firebaseui-idp-button::after, .arrow-only.firebaseui-resend-container::after {
+  .button.arrow-only::after {
     top: -0.1em;
     float: none;
     margin-left: 0; }
 
-a.button:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.firebaseui-idp-button:hover, a.firebaseui-resend-container:hover, a.button:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.firebaseui-idp-button:focus, a.firebaseui-resend-container:focus {
+a.button:hover, a.button:focus {
   text-decoration: none; }
 
 .button-group {
@@ -3224,70 +3224,70 @@ a.button:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-car
     order: 1; }
   .button-group::after {
     clear: both; }
-  .button-group .button, .button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group .firebaseui-idp-button, .button-group .firebaseui-resend-container {
+  .button-group .button {
     margin: 0;
     margin-right: 1px;
     margin-bottom: 1px;
     font-size: 0.9rem;
     flex: 0 0 auto; }
-    .button-group .button:last-child, .button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button:last-child, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group .firebaseui-idp-button:last-child, .button-group .firebaseui-resend-container:last-child {
+    .button-group .button:last-child {
       margin-right: 0; }
-  .button-group.tiny .button, .button-group.tiny #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group.tiny .firebaseui-idp-button, .button-group.tiny .firebaseui-resend-container {
+  .button-group.tiny .button {
     font-size: 0.6rem; }
-  .button-group.small .button, .button-group.small #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group.small .firebaseui-idp-button, .button-group.small .firebaseui-resend-container {
+  .button-group.small .button {
     font-size: 0.75rem; }
-  .button-group.large .button, .button-group.large #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group.large .firebaseui-idp-button, .button-group.large .firebaseui-resend-container {
+  .button-group.large .button {
     font-size: 1.25rem; }
-  .button-group.expanded .button, .button-group.expanded #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group.expanded .firebaseui-idp-button, .button-group.expanded .firebaseui-resend-container {
+  .button-group.expanded .button {
     flex: 1 1 0px; }
-  .button-group.primary .button, .button-group.primary #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group.primary .firebaseui-idp-button, .button-group.primary .firebaseui-resend-container {
+  .button-group.primary .button {
     background-color: #666;
     color: #fafafa; }
-    .button-group.primary .button:hover, .button-group.primary #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group.primary .firebaseui-idp-button:hover, .button-group.primary .firebaseui-resend-container:hover, .button-group.primary .button:focus, .button-group.primary #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group.primary .firebaseui-idp-button:focus, .button-group.primary .firebaseui-resend-container:focus {
+    .button-group.primary .button:hover, .button-group.primary .button:focus {
       background-color: #525252;
       color: #fafafa; }
-  .button-group.secondary .button, .button-group.secondary #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group.secondary .firebaseui-idp-button, .button-group.secondary .firebaseui-resend-container {
+  .button-group.secondary .button {
     background-color: #e5e5e5;
     color: #444; }
-    .button-group.secondary .button:hover, .button-group.secondary #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group.secondary .firebaseui-idp-button:hover, .button-group.secondary .firebaseui-resend-container:hover, .button-group.secondary .button:focus, .button-group.secondary #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group.secondary .firebaseui-idp-button:focus, .button-group.secondary .firebaseui-resend-container:focus {
+    .button-group.secondary .button:hover, .button-group.secondary .button:focus {
       background-color: #b7b7b7;
       color: #444; }
-  .button-group.success .button, .button-group.success #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group.success .firebaseui-idp-button, .button-group.success .firebaseui-resend-container {
+  .button-group.success .button {
     background-color: #666;
     color: #fafafa; }
-    .button-group.success .button:hover, .button-group.success #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group.success .firebaseui-idp-button:hover, .button-group.success .firebaseui-resend-container:hover, .button-group.success .button:focus, .button-group.success #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group.success .firebaseui-idp-button:focus, .button-group.success .firebaseui-resend-container:focus {
+    .button-group.success .button:hover, .button-group.success .button:focus {
       background-color: #525252;
       color: #fafafa; }
-  .button-group.warning .button, .button-group.warning #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group.warning .firebaseui-idp-button, .button-group.warning .firebaseui-resend-container {
+  .button-group.warning .button {
     background-color: #FF9326;
     color: #444; }
-    .button-group.warning .button:hover, .button-group.warning #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group.warning .firebaseui-idp-button:hover, .button-group.warning .firebaseui-resend-container:hover, .button-group.warning .button:focus, .button-group.warning #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group.warning .firebaseui-idp-button:focus, .button-group.warning .firebaseui-resend-container:focus {
+    .button-group.warning .button:hover, .button-group.warning .button:focus {
       background-color: #ea7600;
       color: #444; }
-  .button-group.alert .button, .button-group.callout.success .button, .button-group.callout.warning .button, .button-group.alert #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group.alert .firebaseui-idp-button, .button-group.callout.success #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group.callout.success .firebaseui-idp-button, .button-group.callout.warning #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group.callout.warning .firebaseui-idp-button, .button-group.alert .firebaseui-resend-container, .button-group.callout.success .firebaseui-resend-container, .button-group.callout.warning .firebaseui-resend-container {
+  .button-group.alert .button, .button-group.callout.success .button, .button-group.callout.warning .button {
     background-color: #ff4c3c;
     color: #fafafa; }
-    .button-group.alert .button:hover, .button-group.callout.success .button:hover, .button-group.callout.warning .button:hover, .button-group.alert #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group.alert .firebaseui-idp-button:hover, .button-group.callout.success #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group.callout.success .firebaseui-idp-button:hover, .button-group.callout.warning #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group.callout.warning .firebaseui-idp-button:hover, .button-group.alert .firebaseui-resend-container:hover, .button-group.callout.success .firebaseui-resend-container:hover, .button-group.callout.warning .firebaseui-resend-container:hover, .button-group.alert .button:focus, .button-group.callout.success .button:focus, .button-group.callout.warning .button:focus, .button-group.alert #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group.alert .firebaseui-idp-button:focus, .button-group.callout.success #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group.callout.success .firebaseui-idp-button:focus, .button-group.callout.warning #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group.callout.warning .firebaseui-idp-button:focus, .button-group.alert .firebaseui-resend-container:focus, .button-group.callout.success .firebaseui-resend-container:focus, .button-group.callout.warning .firebaseui-resend-container:focus {
+    .button-group.alert .button:hover, .button-group.callout.success .button:hover, .button-group.callout.warning .button:hover, .button-group.alert .button:focus, .button-group.callout.success .button:focus, .button-group.callout.warning .button:focus {
       background-color: #fc1500;
       color: #fafafa; }
   .button-group.stacked, .button-group.stacked-for-small, .button-group.stacked-for-medium {
     flex-wrap: wrap; }
-    .button-group.stacked .button, .button-group.stacked #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group.stacked .firebaseui-idp-button, .button-group.stacked .firebaseui-resend-container, .button-group.stacked-for-small .button, .button-group.stacked-for-small #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group.stacked-for-small .firebaseui-idp-button, .button-group.stacked-for-small .firebaseui-resend-container, .button-group.stacked-for-medium .button, .button-group.stacked-for-medium #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group.stacked-for-medium .firebaseui-idp-button, .button-group.stacked-for-medium .firebaseui-resend-container {
+    .button-group.stacked .button, .button-group.stacked-for-small .button, .button-group.stacked-for-medium .button {
       flex: 0 0 100%; }
-      .button-group.stacked .button:last-child, .button-group.stacked #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button:last-child, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group.stacked .firebaseui-idp-button:last-child, .button-group.stacked .firebaseui-resend-container:last-child, .button-group.stacked-for-small .button:last-child, .button-group.stacked-for-small #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button:last-child, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group.stacked-for-small .firebaseui-idp-button:last-child, .button-group.stacked-for-small .firebaseui-resend-container:last-child, .button-group.stacked-for-medium .button:last-child, .button-group.stacked-for-medium #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button:last-child, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group.stacked-for-medium .firebaseui-idp-button:last-child, .button-group.stacked-for-medium .firebaseui-resend-container:last-child {
+      .button-group.stacked .button:last-child, .button-group.stacked-for-small .button:last-child, .button-group.stacked-for-medium .button:last-child {
         margin-bottom: 0; }
   @media print, screen and (min-width: 40em) {
-    .button-group.stacked-for-small .button, .button-group.stacked-for-small #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group.stacked-for-small .firebaseui-idp-button, .button-group.stacked-for-small .firebaseui-resend-container {
+    .button-group.stacked-for-small .button {
       flex: 1 1 0px;
       margin-bottom: 0; } }
   @media print, screen and (min-width: 64em) {
-    .button-group.stacked-for-medium .button, .button-group.stacked-for-medium #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group.stacked-for-medium .firebaseui-idp-button, .button-group.stacked-for-medium .firebaseui-resend-container {
+    .button-group.stacked-for-medium .button {
       flex: 1 1 0px;
       margin-bottom: 0; } }
   @media screen and (max-width: 39.9375em) {
     .button-group.stacked-for-small.expanded {
       display: block; }
-      .button-group.stacked-for-small.expanded .button, .button-group.stacked-for-small.expanded #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group.stacked-for-small.expanded .firebaseui-idp-button, .button-group.stacked-for-small.expanded .firebaseui-resend-container {
+      .button-group.stacked-for-small.expanded .button {
         display: block;
         margin-right: 0; } }
 
@@ -5309,10 +5309,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   [data-whatinput='mouse'] .menu li {
     outline: 0; }
   .menu a,
-  .menu .button,
-  .menu #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .menu .firebaseui-idp-button,
-  .menu .firebaseui-resend-container {
+  .menu .button {
     line-height: 1;
     text-decoration: none;
     display: block;
@@ -6093,31 +6090,33 @@ input[type='file'] + label:hover {
     font-size: 14px;
     margin-right: 4px;
     margin-top: 2px; }
-  .top-bar .firebaseui-provider-sign-in-footer {
-    display: none; }
-  .top-bar span.firebaseui-idp-text.firebaseui-idp-text-long {
-    font-family: 'Roboto Condensed'; }
-  .top-bar #firebase-auth-container button.button, .top-bar #firebase-auth-container #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.firebaseui-idp-button, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .top-bar #firebase-auth-container button.firebaseui-idp-button, .top-bar #firebase-auth-container button.firebaseui-resend-container {
+  .top-bar #firebase-auth-container button.button {
     padding: 8px 16px;
     line-height: 1.2;
     font-size: 14px;
     margin: 0 0 0 3px;
     height: 32px; }
-    .top-bar #firebase-auth-container button.button:hover .button-text, .top-bar #firebase-auth-container #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.firebaseui-idp-button:hover .button-text, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .top-bar #firebase-auth-container button.firebaseui-idp-button:hover .button-text, .top-bar #firebase-auth-container button.firebaseui-resend-container:hover .button-text {
+    .top-bar #firebase-auth-container button.button:hover .button-text {
       color: white; }
     @media screen and (max-width: 39.9375em) {
-      .top-bar #firebase-auth-container button.button, .top-bar #firebase-auth-container #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.firebaseui-idp-button, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .top-bar #firebase-auth-container button.firebaseui-idp-button, .top-bar #firebase-auth-container button.firebaseui-resend-container {
+      .top-bar #firebase-auth-container button.button {
         padding: 0 8px; } }
-    .top-bar #firebase-auth-container button.button span.button-text, .top-bar #firebase-auth-container #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.firebaseui-idp-button span.button-text, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .top-bar #firebase-auth-container button.firebaseui-idp-button span.button-text, .top-bar #firebase-auth-container button.firebaseui-resend-container span.button-text {
+    .top-bar #firebase-auth-container button.button span.button-text {
       margin: 0 0 0 4px;
       color: #666; }
       @media screen and (max-width: 39.9375em) {
-        .top-bar #firebase-auth-container button.button span.button-text, .top-bar #firebase-auth-container #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.firebaseui-idp-button span.button-text, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .top-bar #firebase-auth-container button.firebaseui-idp-button span.button-text, .top-bar #firebase-auth-container button.firebaseui-resend-container span.button-text {
+        .top-bar #firebase-auth-container button.button span.button-text {
           display: none; } }
-    .top-bar #firebase-auth-container button.button i::before, .top-bar #firebase-auth-container #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.firebaseui-idp-button i::before, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .top-bar #firebase-auth-container button.firebaseui-idp-button i::before, .top-bar #firebase-auth-container button.firebaseui-resend-container i::before {
-      font-size: 26px;
+    .top-bar #firebase-auth-container button.button#google-login-button:hover img {
+      filter: grayscale(1) contrast(0%) brightness(200%); }
+    .top-bar #firebase-auth-container button.button#google-login-button img {
+      height: 18px;
+      transform: translateY(-1px);
+      filter: grayscale(1) contrast(0%) brightness(155%); }
+    .top-bar #firebase-auth-container button.button i::before {
+      font-size: 24px;
       line-height: 1px;
-      transform: translateY(5px);
+      transform: translateY(4px);
       display: inline-block; }
 
 #login-signup-form-container,
@@ -6167,176 +6166,6 @@ input[type='file'] + label:hover {
 
 #phone-auth-container .vis {
   display: block; }
-
-#firebaseui-auth-container .firebaseui-container {
-  max-width: unset;
-  width: unset;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end; }
-  @media screen and (max-width: 39.9375em) {
-    #firebaseui-auth-container .firebaseui-container {
-      display: block; } }
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content {
-    padding: 0; }
-    #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list {
-      display: flex; }
-      #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item {
-        margin: 0 3px; }
-        #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button {
-          background: #fafafa !important;
-          max-width: unset;
-          min-width: unset;
-          min-height: unset;
-          padding: 7px 16px !important; }
-          @media screen and (max-width: 39.9375em) {
-            #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button {
-              padding: 8px 8px 6px !important; } }
-          #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button:hover .firebaseui-idp-icon {
-            filter: saturate(0) brightness(1000%) contrast(100%) !important;
-            -webkit-filter: saturate(0) brightness(1000%) contrast(100%) !important; }
-          #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button:hover .firebaseui-idp-text {
-            color: #fafafa;
-            padding-left: 8px; }
-          #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button .firebaseui-idp-icon-wrapper .firebaseui-idp-icon {
-            filter: saturate(0) brightness(1000%) contrast(60%);
-            -webkit-filter: saturate(0) brightness(1000%) contrast(60%); }
-          #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button .firebaseui-idp-text {
-            color: #666;
-            padding-left: 8px; }
-            @media screen and (max-width: 39.9375em) {
-              #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .firebaseui-idp-button .firebaseui-idp-text {
-                display: none !important; } }
-
-.mdl-card {
-  display: flex !important;
-  position: absolute;
-  height: 100vh;
-  width: 100% !important;
-  left: 0;
-  top: 0;
-  align-items: center !important;
-  justify-content: center !important;
-  background: #e5e5e599; }
-  .mdl-card form {
-    background: #fafafa;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    margin: 1rem;
-    padding: 2rem;
-    border-radius: 3px;
-    font-family: 'Roboto Condensed', sans-serif; }
-    .mdl-card form strong {
-      color: #444; }
-    .mdl-card form .firebaseui-card-header {
-      padding: 0;
-      margin: 0 0 2rem 0 !important; }
-      .mdl-card form .firebaseui-card-header h1 {
-        color: #444;
-        font-size: 2rem;
-        padding: 0; }
-    .mdl-card form .firebaseui-card-content label[for='phoneNumber'] {
-      display: none; }
-    .mdl-card form .firebaseui-card-content .firebaseui-id-country-selector {
-      margin: 0;
-      align-self: center;
-      border-bottom: 0; }
-    .mdl-card form .firebaseui-card-content .firebaseui-flag {
-      filter: grayscale(1); }
-    .mdl-card form .firebaseui-card-actions {
-      padding: 0; }
-      .mdl-card form .firebaseui-card-actions .firebaseui-id-secondary-link {
-        text-transform: none;
-        font-size: 1rem;
-        color: #666; }
-        .mdl-card form .firebaseui-card-actions .firebaseui-id-secondary-link:hover {
-          background: none; }
-      .mdl-card form .firebaseui-card-actions .firebaseui-id-submit {
-        text-transform: none;
-        font-size: 1rem; }
-        .mdl-card form .firebaseui-card-actions .firebaseui-id-submit:focus {
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
-    .mdl-card form .firebaseui-tos {
-      margin: 2rem 0 0 0;
-      color: #c4c4c4; }
-
-.mdl-textfield {
-  padding: 0;
-  margin-bottom: 0; }
-  .mdl-textfield .mdl-textfield__input {
-    margin-bottom: 0; }
-
-.firebaseui-id-country-selector {
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-
-.firebaseui-link {
-  color: #ff4c3c;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-weight: 700; }
-
-.firebaseui-info-bar {
-  background: #c4c4c4;
-  border: 0;
-  box-shadow: none;
-  border-radius: 0 0 3px 3px; }
-  .firebaseui-info-bar .firebaseui-info-bar-message {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 0.875rem;
-    margin: 0;
-    padding: 6px;
-    color: #444; }
-
-.firebaseui-id-list-box-dialog-button {
-  padding: 4px 1rem;
-  min-height: unset; }
-
-.firebaseui-textfield.mdl-textfield .firebaseui-label::after {
-  display: none; }
-
-label.mdl-textfield__label.firebaseui-label {
-  display: none; }
-
-.firebaseui-resend-container {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  font-family: 'Roboto Condensed';
-  margin: 20px 0;
-  text-align: center;
-  font-size: 1rem;
-  background: #fafafa;
-  padding: 10px 16px 8px;
-  border-radius: 3px;
-  margin: 0;
-  transition: all 0.1s ease-in-out; }
-  .firebaseui-resend-container a {
-    color: #c4c4c4 !important;
-    font-weight: 400; }
-  .firebaseui-resend-container:hover {
-    background: #ff4c3c; }
-    .firebaseui-resend-container:hover a {
-      color: #fafafa !important;
-      text-decoration: none; }
-
-.mdl-textfield .firebaseui-input {
-  padding: 0 8px;
-  border: 1px solid #c4c4c4;
-  border-radius: 3px; }
-
-button.firebaseui-button {
-  font-family: 'Roboto Condensed', sans-serif !important; }
-
-.mdl-dialog.firebaseui-dialog {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  color: #444;
-  font: 16px 'Roboto Condensed', Roboto, sans-serif;
-  padding: 24px 24px 12px;
-  background: #c4c4c4;
-  border-radius: 0 0 3px 3px;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  .mdl-dialog.firebaseui-dialog .firebaseui-dialog-icon-wrapper {
-    filter: grayscale(1); }
 
 /*//////////////////////////////////////////////////////////////////////////////
 // EDITOR OVERRIDES
@@ -6596,9 +6425,9 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket,
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     margin-left: 2px; }
 
-.db-explorer-container a.button.copy-json-button, .db-explorer-container #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.copy-json-button.firebaseui-idp-button, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .db-explorer-container a.copy-json-button.firebaseui-idp-button, .db-explorer-container a.copy-json-button.firebaseui-resend-container {
+.db-explorer-container a.button.copy-json-button {
   color: #fafafa !important; }
-  .db-explorer-container a.button.copy-json-button:hover, .db-explorer-container #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.copy-json-button.firebaseui-idp-button:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .db-explorer-container a.copy-json-button.firebaseui-idp-button:hover, .db-explorer-container a.copy-json-button.firebaseui-resend-container:hover {
+  .db-explorer-container a.button.copy-json-button:hover {
     background: #ff4c3c;
     color: #fafafa; }
 
@@ -6888,18 +6717,10 @@ h6 {
   .callout.warning {
     background: #FF9326; }
 
-a.button, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.firebaseui-idp-button, a.firebaseui-resend-container,
+a.button,
 .button-group a.button,
-.button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.firebaseui-idp-button,
-#firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group a.firebaseui-idp-button,
-.button-group a.firebaseui-resend-container,
 button.button,
-#firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.firebaseui-idp-button,
-button.firebaseui-resend-container,
-.button-group button.button,
-.button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.firebaseui-idp-button,
-#firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group button.firebaseui-idp-button,
-.button-group button.firebaseui-resend-container {
+.button-group button.button {
   margin: 0;
   padding: 8px 16px 8px 16px;
   line-height: 1.2;
@@ -6910,240 +6731,82 @@ button.firebaseui-resend-container,
   font-size: 0.875rem;
   background: #444;
   outline: none !important; }
-  a.button:first-child, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.firebaseui-idp-button:first-child, a.firebaseui-resend-container:first-child,
+  a.button:first-child,
   .button-group a.button:first-child,
-  .button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.firebaseui-idp-button:first-child,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group a.firebaseui-idp-button:first-child,
-  .button-group a.firebaseui-resend-container:first-child,
   button.button:first-child,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.firebaseui-idp-button:first-child,
-  button.firebaseui-resend-container:first-child,
-  .button-group button.button:first-child,
-  .button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.firebaseui-idp-button:first-child,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group button.firebaseui-idp-button:first-child,
-  .button-group button.firebaseui-resend-container:first-child {
+  .button-group button.button:first-child {
     margin-left: 0; }
-  a.button:last-child, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.firebaseui-idp-button:last-child, a.firebaseui-resend-container:last-child,
+  a.button:last-child,
   .button-group a.button:last-child,
-  .button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.firebaseui-idp-button:last-child,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group a.firebaseui-idp-button:last-child,
-  .button-group a.firebaseui-resend-container:last-child,
   button.button:last-child,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.firebaseui-idp-button:last-child,
-  button.firebaseui-resend-container:last-child,
-  .button-group button.button:last-child,
-  .button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.firebaseui-idp-button:last-child,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group button.firebaseui-idp-button:last-child,
-  .button-group button.firebaseui-resend-container:last-child {
+  .button-group button.button:last-child {
     margin-right: 0; }
-  a.button:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.firebaseui-idp-button:hover, a.firebaseui-resend-container:hover,
+  a.button:hover,
   .button-group a.button:hover,
-  .button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.firebaseui-idp-button:hover,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group a.firebaseui-idp-button:hover,
-  .button-group a.firebaseui-resend-container:hover,
   button.button:hover,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.firebaseui-idp-button:hover,
-  button.firebaseui-resend-container:hover,
-  .button-group button.button:hover,
-  .button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.firebaseui-idp-button:hover,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group button.firebaseui-idp-button:hover,
-  .button-group button.firebaseui-resend-container:hover {
+  .button-group button.button:hover {
     background: #ff4c3c !important;
     color: #fafafa;
     outline: none !important; }
-  a.button.primary:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.primary.firebaseui-idp-button:hover, .mdl-card form .firebaseui-card-actions a.firebaseui-id-submit:hover, a.primary.firebaseui-resend-container:hover, a.button.secondary:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.secondary.firebaseui-idp-button:hover, .mdl-card form .firebaseui-card-actions a.firebaseui-id-secondary-link:hover, a.secondary.firebaseui-resend-container:hover, a.button.success:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.success.firebaseui-idp-button:hover, a.success.firebaseui-resend-container:hover, a.button.warning:hover, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.warning.firebaseui-idp-button:hover, a.warning.firebaseui-resend-container:hover,
+  a.button.primary:hover, a.button.secondary:hover, a.button.success:hover, a.button.warning:hover,
   .button-group a.button.primary:hover,
-  .button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.primary.firebaseui-idp-button:hover,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group a.primary.firebaseui-idp-button:hover,
-  .button-group .mdl-card form .firebaseui-card-actions a.firebaseui-id-submit:hover,
-  .mdl-card form .firebaseui-card-actions .button-group a.firebaseui-id-submit:hover,
-  .button-group a.primary.firebaseui-resend-container:hover,
   .button-group a.button.secondary:hover,
-  .button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.secondary.firebaseui-idp-button:hover,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group a.secondary.firebaseui-idp-button:hover,
-  .button-group .mdl-card form .firebaseui-card-actions a.firebaseui-id-secondary-link:hover,
-  .mdl-card form .firebaseui-card-actions .button-group a.firebaseui-id-secondary-link:hover,
-  .button-group a.secondary.firebaseui-resend-container:hover,
   .button-group a.button.success:hover,
-  .button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.success.firebaseui-idp-button:hover,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group a.success.firebaseui-idp-button:hover,
-  .button-group a.success.firebaseui-resend-container:hover,
   .button-group a.button.warning:hover,
-  .button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.warning.firebaseui-idp-button:hover,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group a.warning.firebaseui-idp-button:hover,
-  .button-group a.warning.firebaseui-resend-container:hover,
   button.button.primary:hover,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.primary.firebaseui-idp-button:hover,
-  .mdl-card form .firebaseui-card-actions button.firebaseui-id-submit:hover,
-  button.primary.firebaseui-resend-container:hover,
   button.button.secondary:hover,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.secondary.firebaseui-idp-button:hover,
-  .mdl-card form .firebaseui-card-actions button.firebaseui-id-secondary-link:hover,
-  button.secondary.firebaseui-resend-container:hover,
   button.button.success:hover,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.success.firebaseui-idp-button:hover,
-  button.success.firebaseui-resend-container:hover,
   button.button.warning:hover,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.warning.firebaseui-idp-button:hover,
-  button.warning.firebaseui-resend-container:hover,
   .button-group button.button.primary:hover,
-  .button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.primary.firebaseui-idp-button:hover,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group button.primary.firebaseui-idp-button:hover,
-  .button-group .mdl-card form .firebaseui-card-actions button.firebaseui-id-submit:hover,
-  .mdl-card form .firebaseui-card-actions .button-group button.firebaseui-id-submit:hover,
-  .button-group button.primary.firebaseui-resend-container:hover,
   .button-group button.button.secondary:hover,
-  .button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.secondary.firebaseui-idp-button:hover,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group button.secondary.firebaseui-idp-button:hover,
-  .button-group .mdl-card form .firebaseui-card-actions button.firebaseui-id-secondary-link:hover,
-  .mdl-card form .firebaseui-card-actions .button-group button.firebaseui-id-secondary-link:hover,
-  .button-group button.secondary.firebaseui-resend-container:hover,
   .button-group button.button.success:hover,
-  .button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.success.firebaseui-idp-button:hover,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group button.success.firebaseui-idp-button:hover,
-  .button-group button.success.firebaseui-resend-container:hover,
-  .button-group button.button.warning:hover,
-  .button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.warning.firebaseui-idp-button:hover,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group button.warning.firebaseui-idp-button:hover,
-  .button-group button.warning.firebaseui-resend-container:hover {
+  .button-group button.button.warning:hover {
     background: #ff4c3c !important;
     color: #fafafa !important;
     outline: none !important; }
-  a.button.secondary, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.secondary.firebaseui-idp-button, .mdl-card form .firebaseui-card-actions a.firebaseui-id-secondary-link, a.secondary.firebaseui-resend-container,
+  a.button.secondary,
   .button-group a.button.secondary,
-  .button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.secondary.firebaseui-idp-button,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group a.secondary.firebaseui-idp-button,
-  .button-group .mdl-card form .firebaseui-card-actions a.firebaseui-id-secondary-link,
-  .mdl-card form .firebaseui-card-actions .button-group a.firebaseui-id-secondary-link,
-  .button-group a.secondary.firebaseui-resend-container,
   button.button.secondary,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.secondary.firebaseui-idp-button,
-  .mdl-card form .firebaseui-card-actions button.firebaseui-id-secondary-link,
-  button.secondary.firebaseui-resend-container,
-  .button-group button.button.secondary,
-  .button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.secondary.firebaseui-idp-button,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group button.secondary.firebaseui-idp-button,
-  .button-group .mdl-card form .firebaseui-card-actions button.firebaseui-id-secondary-link,
-  .mdl-card form .firebaseui-card-actions .button-group button.firebaseui-id-secondary-link,
-  .button-group button.secondary.firebaseui-resend-container {
+  .button-group button.button.secondary {
     background: #fafafa;
     color: #c4c4c4;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
-    a.button.secondary:focus, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.secondary.firebaseui-idp-button:focus, .mdl-card form .firebaseui-card-actions a.firebaseui-id-secondary-link:focus, a.secondary.firebaseui-resend-container:focus,
+    a.button.secondary:focus,
     .button-group a.button.secondary:focus,
-    .button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.secondary.firebaseui-idp-button:focus,
-    #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group a.secondary.firebaseui-idp-button:focus,
-    .button-group .mdl-card form .firebaseui-card-actions a.firebaseui-id-secondary-link:focus,
-    .mdl-card form .firebaseui-card-actions .button-group a.firebaseui-id-secondary-link:focus,
-    .button-group a.secondary.firebaseui-resend-container:focus,
     button.button.secondary:focus,
-    #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.secondary.firebaseui-idp-button:focus,
-    .mdl-card form .firebaseui-card-actions button.firebaseui-id-secondary-link:focus,
-    button.secondary.firebaseui-resend-container:focus,
-    .button-group button.button.secondary:focus,
-    .button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.secondary.firebaseui-idp-button:focus,
-    #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group button.secondary.firebaseui-idp-button:focus,
-    .button-group .mdl-card form .firebaseui-card-actions button.firebaseui-id-secondary-link:focus,
-    .mdl-card form .firebaseui-card-actions .button-group button.firebaseui-id-secondary-link:focus,
-    .button-group button.secondary.firebaseui-resend-container:focus {
+    .button-group button.button.secondary:focus {
       background: #fafafa;
       color: #c4c4c4; }
-      a.button.secondary:focus span.button-text, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.secondary.firebaseui-idp-button:focus span.button-text, .mdl-card form .firebaseui-card-actions a.firebaseui-id-secondary-link:focus span.button-text, a.secondary.firebaseui-resend-container:focus span.button-text,
+      a.button.secondary:focus span.button-text,
       .button-group a.button.secondary:focus span.button-text,
-      .button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.secondary.firebaseui-idp-button:focus span.button-text,
-      #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group a.secondary.firebaseui-idp-button:focus span.button-text,
-      .button-group .mdl-card form .firebaseui-card-actions a.firebaseui-id-secondary-link:focus span.button-text,
-      .mdl-card form .firebaseui-card-actions .button-group a.firebaseui-id-secondary-link:focus span.button-text,
-      .button-group a.secondary.firebaseui-resend-container:focus span.button-text,
       button.button.secondary:focus span.button-text,
-      #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.secondary.firebaseui-idp-button:focus span.button-text,
-      .mdl-card form .firebaseui-card-actions button.firebaseui-id-secondary-link:focus span.button-text,
-      button.secondary.firebaseui-resend-container:focus span.button-text,
-      .button-group button.button.secondary:focus span.button-text,
-      .button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.secondary.firebaseui-idp-button:focus span.button-text,
-      #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group button.secondary.firebaseui-idp-button:focus span.button-text,
-      .button-group .mdl-card form .firebaseui-card-actions button.firebaseui-id-secondary-link:focus span.button-text,
-      .mdl-card form .firebaseui-card-actions .button-group button.firebaseui-id-secondary-link:focus span.button-text,
-      .button-group button.secondary.firebaseui-resend-container:focus span.button-text {
+      .button-group button.button.secondary:focus span.button-text {
         color: #666; }
-    a.button.secondary:active span.button-text, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.secondary.firebaseui-idp-button:active span.button-text, .mdl-card form .firebaseui-card-actions a.firebaseui-id-secondary-link:active span.button-text, a.secondary.firebaseui-resend-container:active span.button-text,
+    a.button.secondary:active span.button-text,
     .button-group a.button.secondary:active span.button-text,
-    .button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.secondary.firebaseui-idp-button:active span.button-text,
-    #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group a.secondary.firebaseui-idp-button:active span.button-text,
-    .button-group .mdl-card form .firebaseui-card-actions a.firebaseui-id-secondary-link:active span.button-text,
-    .mdl-card form .firebaseui-card-actions .button-group a.firebaseui-id-secondary-link:active span.button-text,
-    .button-group a.secondary.firebaseui-resend-container:active span.button-text,
     button.button.secondary:active span.button-text,
-    #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.secondary.firebaseui-idp-button:active span.button-text,
-    .mdl-card form .firebaseui-card-actions button.firebaseui-id-secondary-link:active span.button-text,
-    button.secondary.firebaseui-resend-container:active span.button-text,
-    .button-group button.button.secondary:active span.button-text,
-    .button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.secondary.firebaseui-idp-button:active span.button-text,
-    #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group button.secondary.firebaseui-idp-button:active span.button-text,
-    .button-group .mdl-card form .firebaseui-card-actions button.firebaseui-id-secondary-link:active span.button-text,
-    .mdl-card form .firebaseui-card-actions .button-group button.firebaseui-id-secondary-link:active span.button-text,
-    .button-group button.secondary.firebaseui-resend-container:active span.button-text {
+    .button-group button.button.secondary:active span.button-text {
       color: white !important; }
-  a.button.alert, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.alert.firebaseui-idp-button, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.firebaseui-idp-button.callout.success, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.firebaseui-idp-button.callout.warning, a.alert.firebaseui-resend-container, a.firebaseui-resend-container.callout.success, a.firebaseui-resend-container.callout.warning, a.button.callout.success, a.button.callout.warning,
+  a.button.alert, a.button.callout.success, a.button.callout.warning,
   .button-group a.button.alert,
-  .button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.alert.firebaseui-idp-button,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group a.alert.firebaseui-idp-button,
-  .button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.firebaseui-idp-button.callout.success,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group a.firebaseui-idp-button.callout.success,
-  .button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.firebaseui-idp-button.callout.warning,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group a.firebaseui-idp-button.callout.warning,
-  .button-group a.alert.firebaseui-resend-container,
-  .button-group a.firebaseui-resend-container.callout.success,
-  .button-group a.firebaseui-resend-container.callout.warning,
   .button-group a.button.callout.success,
   .button-group a.button.callout.warning,
   button.button.alert,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.alert.firebaseui-idp-button,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.firebaseui-idp-button.callout.success,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.firebaseui-idp-button.callout.warning,
-  button.alert.firebaseui-resend-container,
-  button.firebaseui-resend-container.callout.success,
-  button.firebaseui-resend-container.callout.warning,
   button.button.callout.success,
   button.button.callout.warning,
   .button-group button.button.alert,
-  .button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.alert.firebaseui-idp-button,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group button.alert.firebaseui-idp-button,
-  .button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.firebaseui-idp-button.callout.success,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group button.firebaseui-idp-button.callout.success,
-  .button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.firebaseui-idp-button.callout.warning,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group button.firebaseui-idp-button.callout.warning,
-  .button-group button.alert.firebaseui-resend-container,
-  .button-group button.firebaseui-resend-container.callout.success,
-  .button-group button.firebaseui-resend-container.callout.warning,
   .button-group button.button.callout.success,
   .button-group button.button.callout.warning {
     color: #fafafa; }
-  a.button.save-button, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.save-button.firebaseui-idp-button, a.save-button.firebaseui-resend-container,
+  a.button.save-button,
   .button-group a.button.save-button,
-  .button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.save-button.firebaseui-idp-button,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group a.save-button.firebaseui-idp-button,
-  .button-group a.save-button.firebaseui-resend-container,
   button.button.save-button,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.save-button.firebaseui-idp-button,
-  button.save-button.firebaseui-resend-container,
-  .button-group button.button.save-button,
-  .button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.save-button.firebaseui-idp-button,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group button.save-button.firebaseui-idp-button,
-  .button-group button.save-button.firebaseui-resend-container {
+  .button-group button.button.save-button {
     margin-left: 4px; }
-  a.button.black, #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.black.firebaseui-idp-button, a.black.firebaseui-resend-container,
+  a.button.black,
   .button-group a.button.black,
-  .button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item a.black.firebaseui-idp-button,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group a.black.firebaseui-idp-button,
-  .button-group a.black.firebaseui-resend-container,
   button.button.black,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.black.firebaseui-idp-button,
-  button.black.firebaseui-resend-container,
-  .button-group button.button.black,
-  .button-group #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item button.black.firebaseui-idp-button,
-  #firebaseui-auth-container .firebaseui-container .firebaseui-card-content .firebaseui-idp-list .firebaseui-list-item .button-group button.black.firebaseui-idp-button,
-  .button-group button.black.firebaseui-resend-container {
+  .button-group button.button.black {
     background: #444; }
 
 input:-webkit-autofill,

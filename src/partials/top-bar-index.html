@@ -2,15 +2,18 @@
   <div class="grid-x grid-padding-x top-bar align-middle">
     <div class="cell">
       <span id="log-in-status">Logged out</span>
-      <div id="firebaseui-auth-container"></div>
       <div id="firebase-auth-container">
+        <button id="google-login-button" class="button secondary">
+          <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="">
+          <span class="button-text">Google</span>
+        </button>
         <button id="email-login-button" class="button secondary">
           <i class="fi-at-sign"></i>
-          <span class="button-text">Log in</span>
+          <span class="button-text">Email</span>
         </button>
         <button id="phone-login-button" class="button secondary">
           <i class="fi-telephone"></i>
-          <span class="button-text">Log In</span>
+          <span class="button-text">Phone</span>
         </button>
         <button id="anon-log-in" class="button secondary">
           <i class="fi-universal-access"></i>
