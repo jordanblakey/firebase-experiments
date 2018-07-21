@@ -3,42 +3,45 @@
   <div class="callout secondary macy-item">
     <h4 data-tags="todo" data-uid="note-0000001">To Do</h4>
     <h6>Authentication & Session</h6>
-    <h6>Editor</h6>
+    <h6>Alpha</h6>
     <ul>
-      <li>Create feature: save current note as stego file. Load stego file to editor.</li>
-      <li>Integrate library to handle MD -> HTML conversion for note list.</li>
-      <li>Include cover image library and randomized selection if no image supplied.</li>
-      <li>Create Firebase Storage list for images to link in notes or use as cover files</li>
-    </ul>
-    <h6>Note List</h6>
-    <ul>
-      <li>Implement labels.</li>
-      <li>Implement sorting by labels, modified, created.</li>
-      <li>Import/Export encrypted archive.</li>
-      <li>Generate prefixed UID</li>
-      <li>Save to FB as doc:UID - Editor and title contents, w/current timestamp</li>
-      <li>Fix saving to FB with newlines and as Markdown</li>
+      <li>Add persistence warning for anonymous users.</li>
+      <li>Save Note to list</li>
+      <li>Load note from list</li>
+      <li>Delete Note</li>
+      <li>Implement MD -> HTML conversion for note list.</li>
+      <li>Tie authentication to note storage encryption key.</li>
+      <li>Include cover image library and randomized selection if no image supplied. https://stackoverflow.com/questions/25690641/img-url-to-dataurl-using-javascript</li>
+      <li>Import/Export encrypted archive for all notes. https://www.html5rocks.com/en/tutorials/file/filesystem/, https://tutorialzine.com/2013/11/javascript-file-encrypter</li>
+      <li>Account & data deletion via scorch.</li>
     </ul>
   </div>
 
   <div class="callout secondary macy-item">
-    <h4 data-tags="todo" data-uid="note-0000002">Features</h4>
-    <ul>Completely remove authentication and store all data in encrypted images?</ul>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit magnam aspernatur facilis exercitationem! Beatae dolor,
+        ipsa illo, ut tempora earum odit sapiente hic, consequatur neque qui alias optio. Sit consequatur pariatur dignissimos,
+        voluptatem ullam omnis quaerat temporibus. Tenetur quisquam temporibus voluptas dolores sunt vel necessitatibus cumque,
+        quaerat modi ipsa repellendus sapiente eligendi explicabo facilis voluptatum facere similique, mollitia cupiditate
+        accusamus.
+      </p>
   </div>
 
   <div class="callout secondary macy-item">
     <h4 data-tags="code" data-uid="note-0000003">Note Sorting Ideation</h4>
     <p>
-      let noteOrder = [] document.querySelectorAll('.macy-item .uid').forEach(x => noteOrder.push(x.dataset.uid)) localStorage.setItem('noteOrder',
-      noteOrder) localStorage.getItem('noteOrder').split(,) window.onload=function(){ var container = document.querySelector('#macy-container'),
-      elm = document.querySelectorAll('.macy-item'); var elmArr = [].slice.call(elm).sort(function (a, b) { return a.textContent
-      > b.textContent ? 1 : -1; }); elmArr.forEach(function (e) { container.appendChild(e); }); }
-    </p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit magnam aspernatur facilis exercitationem! Beatae dolor,
+        ipsa illo, ut tempora earum odit sapiente hic, consequatur neque qui alias optio. Sit consequatur pariatur dignissimos,
+        voluptatem ullam omnis quaerat temporibus. Tenetur quisquam temporibus voluptas dolores sunt vel necessitatibus cumque,
+        quaerat modi ipsa repellendus sapiente eligendi explicabo facilis voluptatum facere similique, mollitia cupiditate
+        accusamus.
+      </p>
   </div>
 
   <div class="callout secondary macy-item">
     <h4 data-tags="code, etc" data-uid="note-0000004">Note Title</h4>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit magnam aspernatur facilis exercitationem! Beatae dolor,
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit magnam aspernatur facilis exercitationem! Beatae dolor,
       ipsa illo, ut tempora earum odit sapiente hic, consequatur neque qui alias optio. Sit consequatur pariatur dignissimos,
       voluptatem ullam omnis quaerat temporibus. Tenetur quisquam temporibus voluptas dolores sunt vel necessitatibus cumque,
       quaerat modi ipsa repellendus sapiente eligendi explicabo facilis voluptatum facere similique, mollitia cupiditate
