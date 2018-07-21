@@ -1,0 +1,51 @@
+<!-- EMAIL AUTH FORM -->
+<div id="login-signup-form-container" class="grid-container-full invis">
+  <div class="grid-x grid-margin-x align-center">
+    <div id="login-signup-form" class="cell callout secondary small-12 medium-7 large-5">
+      <h5 class="secondary">Log In with Email</h5>
+      <label for="email">Email
+        <input id="email" type="email" name="email">
+      </label>
+      <label for="password">Password
+        <input id="password" type="password" name="password">
+      </label>
+      <button id="login" class="primary button">Log in</button>
+      <button id="signup" class="secondary button">Sign up</button>
+      <p id="status"></p>
+    </div>
+  </div>
+</div>
+
+
+<!-- PHONE AUTH FORM -->
+<div id="phone-auth-container" class="grid-container-full invis">
+  <div class="grid-x grid-margin-x">
+
+    <div id="phone-login-form" class="cell callout secondary small-12 medium-7 large-5 invis">
+      <h5>Enter Phone Number</h5>
+      <p>Anyone who can receive SMS messages at this number will be able to log in.</p>
+        <label for="tel">Phone Number:
+          <input type="tel" name="tel" id="tel" placeholder="(555) 555-5555" maxlength="14">
+        </label>
+        <button id="phone-auth-button" class="button">
+          Get Verification SMS
+        </button>
+      <p id="tel-status"></p>
+    </div>
+
+    <div id="phone-verification-form" class="cell callout secondary small-12 medium-7 large-5 invis">
+      <h5>Enter Verification Code</h5>
+      <p>An SMS was sent to the phone number provided. Please enter the 6 digit verification code from that SMS.</p>
+        <label for="code">Verification Code:
+          <input type="text" name="code" id="code" placeholder="555555" maxlength="6">
+        </label>
+        <button id="phone-verification-button" class="button">
+          Log In
+        </button>
+      <p id="verification-status"></p>
+    </div>
+
+    <div id="recaptcha-container"></div>
+
+  </div>
+</div>

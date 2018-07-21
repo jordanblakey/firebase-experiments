@@ -108,34 +108,56 @@
 // LOGIN/SIGNUP WITH EMAIL MODAL
 ////////////////////////////////////////////////////////////////////////////////
 
-#login-signup-form-container {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
+#login-signup-form-container,
+#phone-auth-container {
+  position: fixed;
   top: 0;
   left: 0;
-  background: #00000033;
+  right: 0;
+  bottom: 0;
+  background: #e5e5e599;
   display: flex;
   align-items: center;
-  transition: opacity 0.2s ease-in-out;
+  padding: 0.5rem;
 
-  &.invis {
-    opacity: 0;
-    pointer-events: none;
-  }
-  &.vis {
-    opacity: 1;
-    pointer-events: all;
+  .grid-margin-x {
+    flex: 1;
   }
 
-  #status {
+  #status,
+  #tel-status,
+  #verification-status {
     margin-top: 1rem;
     color: $alert-color;
   }
 
   #login-signup-form {
-    margin: 0 0.5rem;
-    flex: 1;
+    max-width: 480px;
+  }
+}
+
+.invis {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.vis {
+  opacity: 1;
+  pointer-events: all;
+  transition: opacity 0.2s ease-in-out;
+}
+
+#phone-auth-container {
+  .grid-x {
+    flex-direction: column;
+    align-items: center;
+  }
+  .invis {
+    display: none;
+  }
+  .vis {
+    display: block;
   }
 }
 
