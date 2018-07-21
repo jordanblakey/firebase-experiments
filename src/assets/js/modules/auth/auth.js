@@ -1,8 +1,8 @@
-import { arrive, Arrive } from '../lib/arrive'
-import './auth/google'
-import './auth/email'
-import './auth/phone'
-import './auth/anon'
+import { arrive, Arrive } from '../../lib/arrive'
+import './google'
+import './email'
+import './phone'
+import './anon'
 
 ////////////////////////////////////////////////////////////////////////////////
 // OBSERVE AUTH STATUS

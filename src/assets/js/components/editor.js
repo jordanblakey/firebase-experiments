@@ -66,20 +66,26 @@ export function configEditor() {
   window.editor.codemirror.setOption('cursorHeight', 1)
   window.editor.redo() // Focuses the editor
 
-  qs('.preview-shortcut').addEventListener('click', () =>
-    editor.togglePreview()
-  )
-  qs('.zen-shortcut').addEventListener('click', () => editor.toggleFullScreen())
-  qs('.markdown-tutorial-button').addEventListener('click', () =>
-    loadMarkdownTutorial()
-  )
-  qs('.save-button').addEventListener('click', () => saveNote())
+  document
+    .querySelector('.preview-shortcut')
+    .addEventListener('click', () => editor.togglePreview())
+  document
+    .querySelector('.zen-shortcut')
+    .addEventListener('click', () => editor.toggleFullScreen())
+  document
+    .querySelector('.markdown-tutorial-button')
+    .addEventListener('click', () => loadMarkdownTutorial())
+  document
+    .querySelector('.save-button')
+    .addEventListener('click', () => saveNote())
 
   // DOM MANIPULATION ////////////////////////////////////////////////////////////
-  qs('.editor-buttons .align-left').appendChild(qs('.editor-statusbar'))
+  document
+    .querySelector('.editor-buttons .align-left')
+    .appendChild(document.querySelector('.editor-statusbar'))
 
   // SCROLLBARS //////////////////////////////////////////////////////////////////
-  let child = qs('.CodeMirror-scroll')
+  let child = document.querySelector('.CodeMirror-scroll')
   let parent = child.parentNode
   let clippingMask = document.createElement('div')
   clippingMask.className = 'CodeMirror-clipping-mask'
@@ -87,7 +93,7 @@ export function configEditor() {
   clippingMask.appendChild(child)
 
   // TOOLBAR BORDER BOTTTOM ////////////////////////////////////////////////////
-  child = qs('.editor-toolbar')
+  child = document.querySelector('.editor-toolbar')
   parent = child.parentNode
   clippingMask = document.createElement('div')
   clippingMask.className = 'editor-toolbar-container'
@@ -95,16 +101,19 @@ export function configEditor() {
   clippingMask.appendChild(child)
 
   // TOOLBAR BORDER BOTTTOM ////////////////////////////////////////////////////
-  qs('.editor-toolbar .icon-bold').title = 'Bold'
-  qs('.editor-toolbar .icon-italic').title = 'Italic'
-  qs('.editor-toolbar .icon-quote').title = 'Blockquote'
-  qs('.editor-toolbar .icon-unordered-list').title = 'Unordered List'
-  qs('.editor-toolbar .icon-ordered-list').title = 'Ordered List'
-  qs('.editor-toolbar .icon-link').title = 'Link'
-  qs('.editor-toolbar .icon-image').title = 'Image'
-  qs('.editor-toolbar .icon-info').title = 'Markdown Reference'
-  qs('.editor-toolbar .icon-preview').title = 'Preview'
-  qs('.editor-toolbar .icon-fullscreen').title = 'Zen'
+  document.querySelector('.editor-toolbar .icon-bold').title = 'Bold'
+  document.querySelector('.editor-toolbar .icon-italic').title = 'Italic'
+  document.querySelector('.editor-toolbar .icon-quote').title = 'Blockquote'
+  document.querySelector('.editor-toolbar .icon-unordered-list').title =
+    'Unordered List'
+  document.querySelector('.editor-toolbar .icon-ordered-list').title =
+    'Ordered List'
+  document.querySelector('.editor-toolbar .icon-link').title = 'Link'
+  document.querySelector('.editor-toolbar .icon-image').title = 'Image'
+  document.querySelector('.editor-toolbar .icon-info').title =
+    'Markdown Reference'
+  document.querySelector('.editor-toolbar .icon-preview').title = 'Preview'
+  document.querySelector('.editor-toolbar .icon-fullscreen').title = 'Zen'
 }
 
 ////////////////////////////////////////////////////////////////////////////////

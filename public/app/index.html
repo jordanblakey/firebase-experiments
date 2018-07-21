@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Scorched: Secure, Portable Notes</title>
@@ -30,22 +30,14 @@
   <script src="../assets/js/firebase-init.js"></script>
 
   <!-- EDITOR -->
-  <style>
-    @charset "UTF-8";div,h3,p{margin:0;padding:0}h3{color:inherit;font-family:Roboto Condensed,Roboto,Helvetica Neue,Helvetica,sans-serif;font-style:normal;font-weight:400;text-rendering:optimizeLegibility}h3{line-height:1.4;margin-bottom:.5rem;margin-top:0}.label{display:inline-block;font-size:.8rem;line-height:1;padding:.33333rem .5rem;white-space:nowrap}.label{background:#666;color:#fafafa}.label{border-radius:3px;font-size:14px;margin:0 4px;padding:8px 16px}a.button,button.button{background:#444;border:0;border-radius:3px;box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);font-size:.875rem;line-height:1.2;margin:0;outline:0!important;padding:8px 16px}button.button:last-child{margin-right:0}button.button.secondary{background:#fafafa;box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);color:#c4c4c4}html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-family:sans-serif;line-height:1.15}header{display:block}a{-webkit-text-decoration-skip:objects;background-color:transparent}img{border-style:none}button,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button{overflow:visible}button{text-transform:none}button{-webkit-appearance:button}button::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring{outline:ButtonText dotted 1px}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}textarea{overflow:auto}html{box-sizing:border-box;font-size:100%}*,:after,:before{box-sizing:inherit}body{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;background:#fafafa;color:#444;font-family:Roboto Condensed,Roboto,Helvetica Neue,Helvetica,sans-serif;font-weight:400;line-height:1.5;margin:0;padding:0}img{-ms-interpolation-mode:bicubic;display:inline-block;height:auto;max-width:100%;vertical-align:middle}textarea{border-radius:3px;height:auto;min-height:50px}button{-moz-appearance:none;-webkit-appearance:none;appearance:none;background:0 0;border:0;border-radius:3px;line-height:1;padding:0}button,textarea{font-family:inherit}.small-12{width:100%}textarea{-moz-appearance:none;-webkit-appearance:none;appearance:none;background-color:#fafafa;border:1px solid #c4c4c4;border-radius:3px;box-shadow:inset 0 1px 2px rgba(68,68,68,.1);box-sizing:border-box;color:#444;display:block;font-family:inherit;font-size:1rem;font-weight:400;height:2.4375rem;line-height:1.5;margin:0 0 1rem;padding:.5rem;width:100%}textarea{max-width:100%}textarea::-ms-input-placeholder{color:#c4c4c4}.input-group>:last-child>*{border-radius:0 3px 3px 0}div,h3,h4,h6,li,p,ul{margin:0;padding:0}p{font-size:inherit;line-height:1.6;margin-bottom:1rem;text-rendering:optimizeLegibility}h3,h4,h6{color:inherit;font-family:Roboto Condensed,Roboto,Helvetica Neue,Helvetica,sans-serif;font-style:normal;font-weight:400;text-rendering:optimizeLegibility}h3{font-size:1.1875rem}h3,h4{line-height:1.4;margin-bottom:.5rem;margin-top:0}h4{font-size:1.125rem}h6{line-height:1.4;margin-bottom:.5rem;margin-top:0}h6{font-size:1rem}@media print,screen and (min-width:40em){h3{font-size:1.9375rem}h4{font-size:1.5625rem}h6{font-size:1rem}}a{color:#666;line-height:inherit;text-decoration:none}a img{border:0}ul{line-height:1.6;list-style-position:outside;margin-bottom:1rem}li{font-size:inherit}ul{list-style-type:disc}ul{margin-left:1.25rem}.text-right{text-align:right}.button{-webkit-appearance:none;background-color:#666;border:1px solid transparent;border-radius:3px;color:#fafafa;display:inline-block;font-family:inherit;font-size:.9rem;line-height:1;margin:0 0 1rem;padding:.85em 1em;text-align:center;vertical-align:middle}.button.primary{background-color:#666;color:#fafafa}.button.secondary{background-color:#e5e5e5;color:#444}.button-group{align-items:stretch;display:flex;flex-wrap:nowrap;margin-bottom:1rem}.button-group:after,.button-group:before{content:" ";display:table;flex-basis:0;order:1}.button-group:after{clear:both}.button-group .button{flex:0 0 auto;font-size:.9rem;margin:0 1px 1px 0}.button-group .button:last-child{margin-right:0}.callout{background-color:#fefefe;border:1px solid rgba(68,68,68,.25);border-radius:3px;margin:0 0 10px;padding:1rem;position:relative}.callout>:first-child{margin-top:0}.callout>:last-child{margin-bottom:0}.callout.secondary{background-color:#fbfbfb;color:#444}.align-right{justify-content:flex-end}.align-middle{align-items:center}.grid-container{margin:0 auto;max-width:75rem;padding-left:.625rem;padding-right:.625rem}.grid-x{display:flex;flex-flow:row wrap}.cell{flex:0 0 auto;min-height:0;min-width:0;width:100%}.grid-x>.small-12{flex-basis:auto}.grid-x>.small-12{width:100%}.grid-margin-x{margin-left:-.625rem;margin-right:-.625rem}.grid-margin-x>.cell{margin-left:.625rem;margin-right:.625rem;width:calc(100% - 1.25rem)}@media print,screen and (min-width:40em){.grid-container{padding-left:.5rem;padding-right:.5rem}.grid-margin-x{margin-left:-.5rem;margin-right:-.5rem}.grid-margin-x>.cell{margin-left:.5rem;margin-right:.5rem;width:calc(100% - 1rem)}}.grid-margin-x>.small-12{width:calc(100% - 1.25rem)}.grid-padding-x>.cell{padding-left:.625rem;padding-right:.625rem}@media print,screen and (min-width:40em){.grid-margin-x>.small-12{width:calc(100% - 1rem)}.grid-padding-x>.cell{padding-left:.5rem;padding-right:.5rem}}.hide{display:none!important}.badge{border-radius:50%;display:inline-block;font-size:.6rem;min-width:2.1em;padding:.3em;text-align:center}.badge{background:#666;color:#fafafa}.badge.secondary{background:#e5e5e5;color:#444}.label,span.badge{display:inline-block;font-size:.8rem;line-height:1;padding:.33333rem .5rem;white-space:nowrap}.label,span.badge{background:#666;color:#fafafa}span.secondary.badge{background:#e5e5e5;color:#444}button[data-balloon]{overflow:visible}[data-balloon]{position:relative}[data-balloon]:after{background:#444;border-radius:3px;color:#fafafa;content:attr(data-balloon);line-height:1.2rem;padding:.5em 1em;white-space:nowrap}[data-balloon]:after,[data-balloon]:before{opacity:0;position:absolute;z-index:10}[data-balloon]:before{background:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='https://www.w3.org/2000/svg' width='36' height='12'%3E%3Cpath fill='%23444' d='M2.658 0h32.004c-6 0-11.627 12.002-16.002 12.002C14.285 12.002 8.594 0 2.658 0z'/%3E%3C/svg%3E") no-repeat;background-size:100% auto;content:"";height:6px;width:18px}[data-balloon][data-balloon-pos=up]:after{bottom:100%;left:50%;margin-bottom:11px;transform:translate(-50%,10px);transform-origin:top}[data-balloon][data-balloon-pos=up]:before{bottom:100%;left:50%;margin-bottom:5px;transform:translate(-50%,10px);transform-origin:top}[data-balloon][data-balloon-length=medium]:after{white-space:normal;width:150px}input[type=file]+label span{background:#666;border-radius:0 3px 3px 0;display:inline-block;flex:1;margin:-8px -16px -8px 16px;padding:8px 16px;z-index:2}.file-uploader-container .input-group .label.status{border-radius:3px;flex:1;line-height:20px;margin:0;opacity:1;padding:6px 16px;position:relative}.file-uploader-container .input-group .label.status.hidden{display:none;opacity:0;transform:translateX(-10px)}@media screen and (max-width:39.9375em){.file-uploader-container .input-group .label.status{border-radius:3px}.file-uploader-container .input-group .label.status.hidden{transform:translateY(-10);transform:translateX(0)}}.file-uploader-container .viewer{display:none;line-height:0}.top-bar{background:#f0f0f0;height:3.5rem}.top-bar .cell{align-items:center;display:flex;justify-content:center}.top-bar .logo{outline:0!important}.top-bar .logo{height:2rem;margin:0 24px 8px 0}.top-bar #log-in-status{color:#c4c4c4;font-size:14px;margin-right:4px;margin-top:2px}.editor-buttons-container{border-top:1px solid #e5e5e5}.editor-buttons-container .editor-buttons{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin:0 auto;max-width:75rem;padding:12px 0 1rem}.editor-buttons-container .editor-buttons div{display:flex;flex-grow:1;flex-shrink:1;flex-wrap:wrap;margin:.5rem}#editor{min-height:482px;visibility:hidden}#macy-container{column-count:1;column-gap:1rem;padding-bottom:10px}@media print,screen and (min-width:40em){#macy-container{column-count:2}}@media print,screen and (min-width:64em){#macy-container{column-count:3}}#macy-container .macy-item{-khtml-user-drag:element;-webkit-user-drag:element;break-inside:avoid;margin-bottom:10px;opacity:0;overflow:hidden}#output{border-top:1px solid #e5e5e5;margin-top:2rem;padding-top:1rem}#output #download{margin-right:8px}#output #resultImg{border:1px solid #e5e5e5;border-radius:3px;display:block;margin-top:1rem;max-height:200px}#account-details{display:flex}@media screen and (max-width:39.9375em){#account-details{flex-direction:column;justify-content:center}}body{background:#f8f8f8}a{color:#ff9326}.label,span.badge{border-radius:3px;font-size:14px;margin:0 4px;padding:8px 16px}span.badge{border-radius:10rem;font-size:14px;margin:0 4px;padding:8px 16px}span.badge.secondary{background-color:#f0f0f0;color:#c4c4c4}span.badge:first-child{margin-left:0}span.badge:last-child{margin-right:0}h4,h6{color:#666;font-weight:700}.callout{background-color:#e8e8e8;border:0;box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);color:#444;padding:2rem}.button-group button.button,a.button,button.button{background:#444;border:0;border-radius:3px;box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);font-size:.875rem;line-height:1.2;margin:0;outline:0!important;padding:8px 16px}.button-group button.button:first-child,button.button:first-child{margin-left:0}.button-group button.button:last-child,button.button:last-child{margin-right:0}.button-group button.button.secondary,button.button.secondary{background:#fafafa;box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);color:#c4c4c4}.button-group button.button.save-button,button.button.save-button{margin-left:4px}textarea::-webkit-input-placeholder{color:#c4c4c4}textarea:-moz-placeholder{color:#c4c4c4}textarea::-moz-placeholder{color:#c4c4c4}textarea:-ms-input-placeholder{color:#c4c4c4}
-  </style>
-  <link async rel="preload" href="https://cdn.jsdelivr.net/editor/0.1.0/editor.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link async rel="stylesheet" href="https://cdn.jsdelivr.net/editor/0.1.0/editor.css"></noscript>
+  <link async rel="stylesheet" href="https://cdn.jsdelivr.net/editor/0.1.0/editor.css">
   <script defer src="https://cdn.jsdelivr.net/editor/0.1.0/editor.js"></script>
   <script async src="https://cdn.jsdelivr.net/editor/0.1.0/marked.js"></script>
 
   <!-- STYLE -->
-  <link async href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,600" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link async href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,600" rel="stylesheet"></noscript>
-  <link async href="https://fonts.googleapis.com/css?family=Roboto+Mono:300, 500, 700" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link async href="https://fonts.googleapis.com/css?family=Roboto+Mono:300, 500, 700" rel="stylesheet"></noscript>
-  <link async rel="preload" href="../assets/css/app.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link async rel="stylesheet" href="../assets/css/app.css"></noscript>
-  <script>!function(n){"use strict";n.loadCSS||(n.loadCSS=function(){});var o=loadCSS.relpreload={};if(o.support=function(){var e;try{e=n.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),o.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},o.poly=function(){if(!o.support())for(var t=n.document.getElementsByTagName("link"),e=0;e<t.length;e++){var a=t[e];"preload"!==a.rel||"style"!==a.getAttribute("as")||a.getAttribute("data-loadcss")||(a.setAttribute("data-loadcss",!0),o.bindMediaToggle(a))}},!o.support()){o.poly();var t=n.setInterval(o.poly,500);n.addEventListener?n.addEventListener("load",function(){o.poly(),n.clearInterval(t)}):n.attachEvent&&n.attachEvent("onload",function(){o.poly(),n.clearInterval(t)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:n.loadCSS=loadCSS}("undefined"!=typeof global?global:this);</script>
+  <link async href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,600" rel="stylesheet">
+  <link async href="https://fonts.googleapis.com/css?family=Roboto+Mono:300, 500, 700" rel="stylesheet">
+  <link async rel="stylesheet" href="../assets/css/app.css" />
 
   <!-- ICONS -->
   <link async rel="shortcut icon" href="../assets/icon/favicon.ico">
@@ -78,12 +70,158 @@
           <span class="badge secondary zen-shortcut">Zen: alt+z</span>
         </div>
         <div class="button-group text-right align-right">
-          <button data-balloon="Load the editor with a quick overview of Markdown" data-balloon-pos="up" data-balloon-length="medium" class="markdown-tutorial-button button secondary">Tutorial</button>
-          <button class="save-button button primary">Save</button>
+          <button data-balloon="Load the editor with a quick overview of Markdown" data-balloon-pos="up" data-balloon-length="medium"
+            class="markdown-tutorial-button button secondary">Tutorial</button>
+          <button class="save-button button primary">Add to List</button>
         </div>
       </div>
     </div>
   </div>
+  <div class="grid-container" id="note-steg">
+    <div class="grid-x grid-margin-x">
+      <div class="cell steganography-container callout secondary transparent">
+          <form>
+            <div class="input-group">
+              <label for="cover-file">Image to encrypt to, or decrypt from</label>
+              <input name="cover-file" type="file" id="cover-file" accept="image/*" />
+              <label for="cover-file">Choose image
+                <span class="hide"></span>
+              </label>
+            </div>
+            <div class="input-group">
+              <label for="password">Encryption password
+                <input name="password" type="password" id="password" value="" placeholder="(Optional)" />
+              </label>
+              <div class="inline">
+                <input type="checkbox" class="show-password">
+                <span>Show Password</span>
+              </div>
+            </div>
+            <div class="input-group">
+              <p id="msgStatus">
+                <span id="msgCount">8000</span> more characters will fit.
+              </p>
+            </div>
+            <div class="inline">
+              <a class="write-button button secondary">Encrypt</a>
+              <a class="read-button button secondary">Decrypt</a>
+              <span id="status"></span>
+            </div>
+          </form>
+      
+          <div id="output" style="display: none;">
+            <h3>Here's Your Note</h3>
+            <a href="" class="button" id="download">Download</a>
+            <span id="result"></span>
+            <img id="resultImg" />
+          </div>
+        </div>
+      
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+          ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+          // ALIASES
+          ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+          window.qs = s => document.querySelector(s)
+      
+          ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+          // TEXTAREA FILL STATUS
+          ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      
+          if (qs('.show-password')) {
+            qs('.show-password').addEventListener('click', () => {
+              let elm = qs('#password')
+              elm.type === 'password' ? (elm.type = 'text') : (elm.type = 'password')
+            })
+          }
+      
+          if (qs('.read-button')) {
+            qs('.read-button').addEventListener('click', readIMG)
+          }
+      
+          if (qs('.write-button')) {
+            qs('.write-button').addEventListener('click', writeIMG)
+          }
+      
+      
+          document.addEventListener('keyup', () => {
+            let msgLength
+      	    console.log(editor.codemirror.getValue().length)
+            msgLength = editor.codemirror.getValue().length
+            chkLen(msgLength)
+          })
+      
+          function chkLen(msgLength) {
+            let maxLen = 8000
+            let charsLeft
+            charsLeft = maxLen - msgLength
+            qs('#msgCount').innerHTML = charsLeft
+            charsLeft <= 0
+              ? (qs('#msgStatus').className = 'msgWarn')
+              : (qs('#msgStatus').className = '')
+            if (msgLength >= maxLen) {
+              console.log(
+                'Maximum length exceeded: ' + maxLen,
+                '\nText has been shortened!'
+              )
+            }
+          }
+        })
+      
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        // ENCRYPTION AND DECRYPTION
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      
+        function writeIMG() {
+          qs('#resultImg').src = ''
+          qs('#status').innerHTML = 'Processing...'
+      
+          function writefunc() {
+            let t = writeMsgToCanvas(
+              'canvas',
+              editor.codemirror.getValue(),
+              qs('#password').value
+            )
+      
+            if (t != null) {
+              let myCanvas = qs('#canvas')
+              let image = myCanvas.toDataURL('image/png')
+              qs('#resultImg').src = image
+              qs('#status').innerHTML = 'Successfully encrypted note in image.'
+              qs('#result').innerHTML =
+                'To read or edit this later, select the file, enter your password, and press "Decrypt".'
+              qs('#output').style.display = 'block'
+              qs('#download').href = qs('#resultImg').src
+              qs('#download').download = 'download.png'
+            }
+          }
+          loadIMGtoCanvas('cover-file', 'canvas', writefunc, 500)
+        }
+      
+        function readIMG() {
+          qs('#output').style.display = 'none'
+          qs('#result').value = ''
+          qs('#status').innerHTML = 'Processing...'
+          function readfunc() {
+            let t = readMsgFromCanvas('canvas', qs('#password').value)
+            if (t != null) {
+              qs('#status').innerHTML = 'Successfully decrypted note from image:'
+              editor.codemirror.setValue(t)
+            } else {
+              qs('#status').innerHTML = 'Error decypting message.'
+            }
+          }
+          loadIMGtoCanvas('cover-file', 'canvas', readfunc)
+        }
+      </script>
+      
+      <script>
+        /* Jeffery 2017-09-18 AGPL-3.0 license for commercial purposes. MIT for non-commercial purposes */
+        eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){while(c--){d[c]=k[c]||c}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('21 113=113||27(17,72){21 68={},53=68.226={},49=27(){},66=53.251={101:27(17){49.213=40;21 39=71 49;17&&39.264(17);39.207("56")||(39.56=27(){39.84.56.172(40,216)});39.56.213=39;39.84=40;33 39},205:27(){21 17=40.101();17.56.172(17,216);33 17},56:27(){},264:27(17){38(21 39 465 17)17.207(39)&&(40[39]=17[39]);17.207("139")&&(40.139=17.139)},94:27(){33 40.56.213.101(40)}},73=53.186=66.101({56:27(17,39){17=40.87=17||[];40.89=39!=72?39:4*17.52},139:27(17){33(17||76).144(40)},278:27(17){21 39=40.87,47=17.87,34=40.89;17=17.89;40.242();77(34%4)38(21 37=0;37<17;37++)39[34+37>>>2]|=(47[37>>>2]>>>24-8*(37%4)&255)<<24-8*((34+37)%4);112 77(423<47.52)38(37=0;37<17;37+=4)39[34+37>>>2]=47[37>>>2];112 39.44.172(39,47);40.89+=17;33 40},242:27(){21 78=40.87,39=40.89;78[39>>>2]&=422<<32-8*(39%4);78.52=17.279(39/4)},94:27(){21 17=66.94.155(40);17.87=40.87.249(0);33 17},222:27(78){38(21 39=[],47=0;47<78;47+=4)39.44(239*17.222()|0);33 71 73.56(39,78)}}),58=68.421={},76=58.418={144:27(17){21 39=17.87;17=17.89;38(21 47=[],34=0;34<17;34++){21 37=39[34>>>2]>>>24-8*(34%4)&255;47.44((37>>>4).139(16));47.44((37&15).139(16))}33 47.197("")},153:27(17){38(21 39=17.52,47=[],34=0;34<39;34+=2)47[34>>>3]|=168(17.420(34,2),16)<<24-4*(34%8);33 71 73.56(47,39/2)}},137=58.425={144:27(17){21 39=17.87;17=17.89;38(21 47=[],34=0;34<17;34++)47.44(111.174(39[34>>>2]>>>24-8*(34%4)&255));33 47.197("")},153:27(17){38(21 39=17.52,47=[],34=0;34<39;34++)47[34>>>2]|=(17.116(34)&255)<<24-8*(34%4);33 71 73.56(47,39)}},271=58.401={144:27(17){444{33 445(436(137.144(17)))}459(39){461 462("463 458-8 55")}},153:27(17){33 137.153(457(452(17)))}},41=53.453=66.101({164:27(){40.141=71 73.56;40.209=0},202:27(17){"411"==409 17&&(17=271.153(17));40.141.278(17);40.209+=17.89},214:27(78){21 39=40.141,47=39.87,34=39.89,37=40.188,66=34/(4*37),66=78?17.279(66):17.405((66|0)-40.234,0);78=66*37;34=17.407(4*78,34);77(78){38(21 41=0;41<78;41+=37)40.248(47,41);41=47.406(0,78);39.89-=34}33 71 73.56(41,34)},94:27(){21 17=66.94.155(40);17.141=40.141.94();33 17},234:0});53.243=41.101({215:66.101(),56:27(17){40.215=40.215.101(17);40.164()},164:27(){41.164.155(40);40.227()},508:27(17){40.202(17);40.214();33 40},203:27(17){17&&40.202(17);33 40.241()},188:16,235:27(17){33 27(39,47){33(71 17.56(47)).203(39)}},258:27(17){33 27(39,47){33(71 252.509.56(17,47)).203(39)}}});21 252=68.256={};33 68}(48);(27(17){21 72=113,68=72.226,53=68.251,49=68.186,72=72.253={};72.262=53.101({56:27(17,73){40.60=17;40.59=73}});72.186=53.101({56:27(66,73){66=40.87=66||[];40.89=73!=17?73:8*66.52},266:27(){38(21 17=40.87,73=17.52,53=[],76=0;76<73;76++){21 137=17[76];53.44(137.60);53.44(137.59)}33 49.205(53,40.89)},94:27(){38(21 17=53.94.155(40),73=17.87=40.87.249(0),49=73.52,76=0;76<49;76++)73[76]=73[76].94();33 17}})})();(27(){27 17(){33 49.205.172(49,216)}38(21 72=113,68=72.226.243,53=72.253,49=53.262,66=53.186,53=72.256,73=[17(377,376),17(373,386),17(346,340),17(353,364),17(360,371),17(359,358),17(357,355),17(356,361),17(362,367),17(366,365),17(363,354),17(343,344),17(342,341),17(339,345),17(351,352),17(350,349),17(347,348),17(368,369),17(390,391),17(389,388),17(392,393),17(398,397),17(396,394),17(395,385),17(384,374),17(375,372),17(370,338),17(382,383),17(381,380),17(378,379),17(399,294),17(300,280),17(290,285),17(286,287),17(306,337),17(327,326),17(324,308),17(331,336),17(333,313),17(314,311),17(309,315),17(321,320),17(318,325),17(317,319),17(316,310),17(312,322),17(323,332),17(334,335),17(330,329),17(328,288),17(289,292),17(283,284),17(281,282),17(291,307),17(303,302),17(293,305),17(295,296),17(297,298),17(301,304),17(387,527),17(486,487),17(485,484),17(482,483),17(488,489),17(494,495),17(493,492),17(490,491),17(481,480),17(470,471),17(469,468),17(466,467),17(472,473),17(478,479),17(477,476),17(474,475),17(496,497),17(518,519),17(517,516),17(514,515),17(520,521)],58=[],76=0;80>76;76++)58[76]=17();53=53.121=68.101({227:27(){40.154=71 66.56([71 49.56(526,525),71 49.56(524,522),71 49.56(523,513),71 49.56(512,502),71 49.56(503,501),71 49.56(500,498),71 49.56(400,504),71 49.56(505,510)])},248:27(17,53){38(21 41=40.154.87,49=41[0],78=41[1],39=41[2],47=41[3],34=41[4],37=41[5],66=41[6],41=41[7],76=49.60,72=49.59,68=78.60,150=78.59,212=39.60,158=39.59,$=47.60,149=47.59,199=34.60,148=34.59,211=37.60,151=37.59,210=66.60,156=66.59,208=41.60,146=41.59,61=76,84=72,136=68,125=150,134=212,124=158,170=$,135=149,51=199,91=148,147=211,140=151,152=210,142=156,166=208,143=146,65=0;80>65;65++){21 115=58[65];77(16>65)21 57=115.60=17[53+2*65]|0,46=115.59=17[53+2*65+1]|0;112{21 57=58[65-15],46=57.60,98=57.59,57=(46>>>1|98<<31)^(46>>>8|98<<24)^46>>>7,98=(98>>>1|46<<31)^(98>>>8|46<<24)^(98>>>7|46<<25),118=58[65-2],46=118.60,42=118.59,118=(46>>>19|42<<13)^(46<<3|42>>>29)^46>>>6,42=(42>>>19|46<<13)^(42<<3|46>>>29)^(42>>>6|46<<26),46=58[65-7],187=46.60,106=58[65-16],102=106.60,106=106.59,46=98+46.59,57=57+187+(46>>>0<98>>>0?1:0),46=46+42,57=57+118+(46>>>0<42>>>0?1:0),46=46+106,57=57+102+(46>>>0<106>>>0?1:0);115.60=57;115.59=46}21 187=51&147^~51&152,106=91&140^~91&142,115=61&136^61&134^136&134,254=84&125^84&124^125&124,98=(61>>>28|84<<4)^(61<<30|84>>>2)^(61<<25|84>>>7),118=(84>>>28|61<<4)^(84<<30|61>>>2)^(84<<25|61>>>7),42=73[65],246=42.60,201=42.59,42=143+((91>>>14|51<<18)^(91>>>18|51<<14)^(91<<23|51>>>9)),102=166+((51>>>14|91<<18)^(51>>>18|91<<14)^(51<<23|91>>>9))+(42>>>0<143>>>0?1:0),42=42+106,102=102+187+(42>>>0<106>>>0?1:0),42=42+201,102=102+246+(42>>>0<201>>>0?1:0),42=42+46,102=102+57+(42>>>0<46>>>0?1:0),46=118+254,115=98+115+(46>>>0<118>>>0?1:0),166=152,143=142,152=147,142=140,147=51,140=91,91=135+42|0,51=170+102+(91>>>0<135>>>0?1:0)|0,170=134,135=124,134=136,124=125,136=61,125=84,84=42+46|0,61=102+115+(84>>>0<42>>>0?1:0)|0}72=49.59=72+84;49.60=76+61+(72>>>0<84>>>0?1:0);150=78.59=150+125;78.60=68+136+(150>>>0<125>>>0?1:0);158=39.59=158+124;39.60=212+134+(158>>>0<124>>>0?1:0);149=47.59=149+135;47.60=$+170+(149>>>0<135>>>0?1:0);148=34.59=148+91;34.60=199+51+(148>>>0<91>>>0?1:0);151=37.59=151+140;37.60=211+147+(151>>>0<140>>>0?1:0);156=66.59=156+142;66.60=210+152+(156>>>0<142>>>0?1:0);146=41.59=146+143;41.60=208+166+(146>>>0<143>>>0?1:0)},241:27(){21 17=40.141,53=17.87,41=8*40.209,49=8*17.89;53[49>>>5]|=128<<24-49%32;53[(49+128>>>10<<5)+30]=48.86(41/239);53[(49+128>>>10<<5)+31]=41;17.89=4*53.52;40.214();33 40.154.266()},94:27(){21 17=68.94.155(40);17.154=40.154.94();33 17},188:32});72.121=68.235(53);72.416=68.258(53)})();27 228(108){21 157=[],88=0,52=108.52,34,167,198;193(88<52){34=108[88];167=108[88+1];198=108[88+2];77(128>34){157.44(111.174(34));88+=1}112 77(191<34&&34<224){157.44(111.174(((34&31)<<6)|(167&63)));88+=2}112{157.44(111.174(((34&15)<<12)|((167&63)<<6)|(198&63)));88+=3}}33 157.197(\'\')}27 259(83){21 108=[],88=0,52,132;83=404(83);52=83.52;193(88<52){132=83[88];88+=1;77(\'%\'!==132){108.44(132.116(0))}112{132=83[88]+83[88+1];108.44(168(132,16));88+=2}}33 108}27 276(274,272){33(274.403(272)!=-1)}27 277(68,49,39){36=82();36.44(0.299*68+0.408*49+0.114*39);36.44(128-0.414*68-0.415*49+0.5*39);36.44(128+0.5*68-0.413*49-0.412*39);33 36}27 267(58,192,190){36=82();36.44(58+1.402*(190-128));36.44(58-0.433*(192-128)-0.434*(190-128));36.44(58+1.455*(192-128));33 36}27 181(83,119,117){21 36=0;21 17=0;38(21 22=1;22<20;22++)17+=83.116(22);36+=17*456;17=0;38(21 22=30;22<50;22++)17+=83.116(22);36+=17*454;17=0;38(21 22=70;22<90;22++)17+=83.116(22);36+=17*451;17=0;38(21 22=100;22<110;22++)17+=83.116(22);36+=17*419;38(21 22=20;22<29;22++)36+=83.116(22);38(21 22=90;22<99;22++)36+=83.116(22);36=36%119;193(276(117,36))36=(36+1)%119;117.44(36);33 36}27 221(126,145){145=(145===95)?105:145;27 81(126){36=82();38(21 22=0;22<64;22++)36.44(82());38(21 92=0;92<3;92++)38(21 57=0;57<8;57++)38(21 61=0;61<8;61++){21 169=(57==0)?1/48.175(2):1;21 179=(61==0)?1/48.175(2):1;21 131=0;38(21 65=0;65<8;65++)38(21 58=0;58<8;58++){131+=126[65*8+58][92]*48.176((2*65+1)*57*48.184/16)*48.176((2*58+1)*61*48.184/16)}36[57*8+61].44((1/4)*169*179*131)}33 36}27 275(126){36=82();38(21 22=0;22<64;22++)36.44(82());38(21 92=0;92<3;92++)38(21 65=0;65<8;65++)38(21 58=0;58<8;58++){21 131=0;38(21 57=0;57<8;57++)38(21 61=0;61<8;61++){21 169=(57==0)?1/48.175(2):1;21 179=(61==0)?1/48.175(2):1;131+=169*179*126[57*8+61][92]*48.176((2*65+1)*57*48.184/16)*48.176((2*58+1)*61*48.184/16)}36[65*8+58].44((1/4)*131)}33 36}33(145)?275(126):81(126)}27 196(45,85,96){21 67=8;21 183=48.86(85/67);21 185=48.86(96/67);21 36=82();38(21 41=0;41<185;41++)38(21 51=0;51<183;51++){21 75=82();38(21 22=0;22<67;22++)38(21 37=0;37<67;37++){75.44(277(45[((41*67+22)*85+51*67+37)*4],45[((41*67+22)*85+51*67+37)*4+1],45[((41*67+22)*85+51*67+37)*4+2]))}36.44(221(75))}33 36}27 165(17,54){33(48.230(17/54)%2==1)?74:105}27 231(45){21 36=82();38(21 22=0;22<45.55.52;22+=4){36.44((45.55[22]%2==1)?74:105);36.44((45.55[22+1]%2==1)?74:105);36.44((45.55[22+2]%2==1)?74:105)}33 36}27 225(133,43,79){27 238(17){21 223=17.52;21 130=0;38(21 22=0;22<223;22++)77(17[22])130++;77(130>=(223/2))33 74;112 33 105}21 123=133.52;43=111(113.121(43));117=82();21 119=123;21 220=82();21 55;21 237=48.86(48.86(123/79)/8);38(21 22=0;22<237;22++){55=0;75=128;38(21 37=0;37<8;37++){21 217=82();38(21 42=0;42<79;42++){217.44(133[181(43,119,117)]);43=111(113.121(43))}55+=((238(217))?1:0)*75;75=48.86(75/2)}77(55==255)437;220.44(55)}33 220}27 229(62,54){21 36=82();21 219=62.52;38(21 22=0;22<219;22++){36.44(165(62[22][0][0],54));36.44(165(62[22][0][1],54));36.44(165(62[22][0][2],54))}33 36}27 127(69,43,81,79,54){81=(81===95)?105:81;43=(43===95)?\'\':43;79=(79===95)?5:79;54=(54===95)?30:54;21 34=138.200(69);21 160=34.194("189");21 45=160.268(0,0,34.85,34.96);21 62=(81)?196(45.55,34.85,34.96):122;21 133=(81)?229(62,54):231(45);21 218=(81)?225(133,43,79):225(133,43,1);77(218==122)33 122;33 228(218)}27 260(83){21 171=259(83);21 36=82();21 257=171.52;38(21 22=0;22<257;22++){38(21 37=128;37>0;37=48.86(37/2)){77(48.86(171[22]/37)){36.44(74);171[22]-=37}112 36.44(105)}}33 36}27 163(42){33(42%2==1)?42-1:42}27 162(42){33(42%2==1)?42:42+1}27 178(42,54){21 75=48.86(42/54);33(75%2==1)?75*54:(75+1)*54}27 177(42,54){21 75=48.86(42/54);33(75%2==1)?(75-1)*54:75*54}27 232(45,161){21 37=0;38(21 22=0;22<45.55.52;22+=4){45.55[22]=(161[37])?162(45.55[22]):163(45.55[22]);45.55[22+1]=(161[37+1])?162(45.55[22+1]):163(45.55[22+1]);45.55[22+2]=(161[37+2])?162(45.55[22+2]):163(45.55[22+2]);45.55[22+3]=255;37+=3}}27 245(52){36=82();38(21 22=0;22<52;22++){36.44((48.86(48.222()*2))?74:105)}33 36}27 195(123,261,43,79){21 182=260(261);77((182.52+24)*79>123){269(\'447 448 446!\');33 122}21 36=245(123);21 244=182.52;43=111(113.121(43));21 117=82();21 119=123;38(21 22=0;22<244;22++)38(21 37=0;37<79;37++){36[181(43,119,117)]=182[22];43=111(113.121(43))}38(21 37=0;37<24;37++)38(21 22=0;22<79;22++){36[181(43,119,117)]=74;43=111(113.121(43))}33 36}27 240(45,62,85,96,109,54){27 273(17){17=48.230(17);17=(17>255)?255:17;33(17<0)?0:17}21 219=62.52;21 159=109.52/3;38(21 22=0;22<159;22++){62[22][0][0]=(109[22*3])?178(62[22][0][0],54):177(62[22][0][0],54);62[22][0][1]=(109[22*3+1])?178(62[22][0][1],54):177(62[22][0][1],54);62[22][0][2]=(109[22*3+2])?178(62[22][0][2],54):177(62[22][0][2],54)}21 67=8;21 183=48.86(85/67);21 185=48.86(96/67);21 36=82();21 130=0;38(21 41=0;41<185;41++)38(21 51=0;51<183;51++){21 75=221(62[130],74);38(21 22=0;22<67;22++)38(21 37=0;37<67;37++){21 270=267(75[22*67+37][0],75[22*67+37][1],75[22*67+37][2]);38(21 92=0;92<3;92++)45[((41*67+22)*85+51*67+37)*4+92]=273(270[92])}130++}38(21 22=0;22<45.52;22+=4){45[22+3]=255}}27 129(69,103,43,81,79,54){81=(81===95)?105:81;43=(43===95)?\'\':43;79=(79===95)?5:79;54=(54===95)?30:54;21 34=138.200(69);21 160=34.194("189");21 45=160.268(0,0,34.85,34.96);21 62=(81)?196(45.55,34.85,34.96):122;21 159=(81)?62.52*3:48.86(45.55.52/4)*3;21 109=(81)?195(159,103,43,79):195(159,103,43,1);77(109==122)33 122;(81)?240(45.55,62,34.85,34.96,109,54):232(45,109);160.430(45,0,0);33 1}27 431(69,103,43,104){104=(104===95)?0:168(104);265(104){93 1:33 129(69,103,43,74,11,15);93 2:33 129(69,103,43,74,9,20);93 3:33 129(69,103,43,74,5,30);93 4:33 129(69,103,43,74,5,35);93 5:33 129(69,103,43,74,5,50);93 0:263:33 129(69,103,43)}}27 426(69,43,104){104=(104===95)?0:168(104);265(104){93 1:33 127(69,43,74,11,15);93 2:33 127(69,43,74,9,20);93 3:33 127(69,43,74,5,30);93 4:33 127(69,43,74,5,35);93 5:33 127(69,43,74,5,50);93 0:263:33 127(69,43)}}27 506(250,69,247,97){97=(97===95)?0:97;21 180=138.200(250);77(180.204&&180.204[0]){21 53=180.204[0];21 206=71 511();206.233=27(46){21 55=46.464.36;21 120=71 428();120.233=27(){21 51=120.85;21 41=120.96;77(97>0){77(51>97){41=41*(97/51);51=97}77(41>97){51=51*(97/41);41=97}51=48.86(51);41=48.86(41)}21 107=138.449(\'107\');107.438=69;107.85=51;107.96=41;107.443.435="440";21 173=138.439("173")[0];173.450(107);21 236=107.194(\'189\');236.429(120,0,0,120.85,120.96,0,0,51,41);247();138.173.507(107)};120.427=55};206.432(53)}112{269(\'460 499 442 441\');33\'410 417 424!\'}}',10,528,'|||||||||||||||||a||||var|i|||||function||||||return|c||result|j|for|b|this|h|k|pass|push|imgData|e|d|Math|g||w|length|f|lim|data|init|u|y|low|high|v|dctdata|||x|l|blocksize|r|canvasid||new|m|p|true|tmp|q|if|n|copy||dct|Array|str|s|width|floor|words|offset|sigBytes||t|chann|case|clone|undefined|height|maxsize|z|||extend|A|msg|mode|false|C|canvas|bytes|setarray||String|else|CryptoJS||B|charCodeAt|taken|D|modval|image|SHA512|null|imgdatalength|F|E|dataArray|readMsgFromCanvas_single||writeMsgToCanvas_single|count|sum|char|bitarray|I|J|H|G|document|toString|K|_0|L|M|stringify|isIdct|T|U|Q|P|N|R|V|parse|_1|call|S|chars|O|datalength|ctx|setdata|setbit|unsetbit|reset|cbit|X|c2|parseInt|cu|W|utf8array|apply|body|fromCharCode|sqrt|cos|dct_unsetbit|dct_setbit|cv|input|gethashval|info|w_ite|PI|h_ite|WordArray|Y|blockSize|2d|cr||cb|while|getContext|generate_pass|dctconvert|join|c3|aa|getElementById|ea|_2|finalize|files|create|reader|hasOwnProperty|da|_3|ca|ba|Z|prototype|_4|cfg|arguments|tmpArray|msgArray|dctdatalength|msgarray|imagedct|random|len||extractMsgArray_pass|lib|_5|utf8Decode|extractBitArraydct|round|extractBitArray|setimgdata|onload|_6|_8|context|msgarraylen|comb|4294967296|dctset|_9|clamp|Hasher|infolen|initialize|ia|callback|_10|slice|inputid|Base|ga|x64|ha||algo|utf8strlen|_7|utf8Encode|bitconvert|information|Word|default|mixIn|switch|toX32|ycbcrtorgb|getImageData|alert|rgb|fa|obj|norm|arr|idct|isInclude|rgbtoycbcr|concat|ceil|168717936|958139571|3318307427|883997877|3785050280|1188179964|773529912|1546045734|1363258195|659060556|666307205|1322822218|3750685593|1747873779|3758326383|1955562222|1575990012|2024104815|1125592928||338241895|2227730452|2003034995|1537002063|2716904306|3602036899|1294757372|3812723403|2343527390|2730485921|3606008344|344077627|3600352804|1206759142|2456956037|1290863460|3516065817|3345764771|3259730800|106217008|3158454273|2820302411|1432725776|4094571909|1695183700|3505952657|2643833823|1396182291|506948616|3100823752|430227734|1986661051|1467031594|2177026350|275423344|851169720|1014477480|1522805485|2566594879|2162078206|3964484399|4068182383|1925078388|1426881987|3590304994|991336113|3049323471|3835390401|2666613458|3479774868|3248222580|2614888103|633803317|3921009573|1323610764|2937671579|2870763221|2453635748|3053834265|1508970993|961987163|3664609560|3624381080|607225278|2173295548|1164996542|310598401|2734883394|4022224774|944711139|2952996808|4081628472|766784016|1899447441|3999719339|2821834349|3609767458|1116352408|3584528711|2466948901|1034457026|3336571891|3210313671|3203337956|2554220882|2198950837|602891725|2361852424|2007800933|604807628|264347078|2341262773|770255983|1495990901|3175218132|1996064986|1555081692|1856431235|1249150122|113926993|528734635|Utf8||indexOf|encodeURI|max|splice|min|587|typeof|ERROR|string|081312|418688|168736|331264|HmacSHA512|PROCESSING|Hex||substr|enc|4294967295|65535|IMAGE|Latin1|readMsgFromCanvas|src|Image|drawImage|putImageData|writeMsgToCanvas|readAsDataURL|344136|714136|display|escape|break|id|getElementsByTagName|none|SELECTED|FILE|style|try|decodeURIComponent|LONG|TEXT|TOO|createElement|appendChild|41940|encodeURIComponent|BufferedBlockAlgorithm|4194000|772|419430000|unescape|UTF|catch|NO|throw|Error|Malformed|target|in|289380356|3203993006|2731055270|174292421|116418474|1914138554|460393269|320620315|1017036298|365543100|1086792851|852142971|685471733|587496836|4000239992|4118630271|3204031479|2999351573|3733110249|2756734187|2428436474|593698344|3329325298|3815920427|3940187606|3454069534|566280711|3515267271|3391569614|3928383900|1126000580|2618297676|725511199|IMG|2600822924|2917565137|1595750129|1359893119|4215389547|1541459225|loadIMGtoCanvas|removeChild|update|HMAC|327033209|FileReader|2773480762|4271175723|1607167915|987167468|4234509866|1501505948|1288033470|3409855158|1816402316|1246189591|2227873595|1013904242|3144134277|4089235720|1779033703|442776044'.split('|'),0,{}))
+      </script>
+    </div>
+  </div>
+  
   <div class="grid-container" id="notes-container">
     <div class="grid-x grid-margin-x">
       <div class="cell small-12" id="macy-container">
@@ -145,54 +283,6 @@
   
   <div class="grid-container">
     <div class="grid-x grid-margin-x">
-      <div class="cell steganography-container callout secondary">
-        <h3>Steganography Tool</h3>
-        <form>
-          <div class="input-group">
-            <label for="cover-file">Step 1. Select image</label>
-            <input name="cover-file" type="file" id="cover-file" accept="image/*">
-            <label for="cover-file">Choose a file
-              <span class="hide"></span>
-            </label>
-          </div>
-          <div class="input-group">
-            <label for="password">Step 2. Create or re-enter encryption password
-              <input name="password" type="password" id="password" value="" placeholder="(Optional)">
-            </label>
-            <div class="inline">
-              <input type="checkbox" class="show-password">
-              <span>Show Password</span>
-            </div>
-          </div>
-          <div class="input-group">
-            <label for="message">Step 3: Enter a note to encrypt
-              <textarea name="message" id="message" maxlength="8000" placeholder="(Skip for decryption)"></textarea>
-            </label>
-            <p id="msgStatus">
-              <span id="msgCount">8000</span> more characters will fit.
-            </p>
-          </div>
-          <div class="inline">
-            <a class="write-button button primary black">Encrypt</a>
-            <a class="read-button button primary">Decrypt</a>
-            <span id="status"></span>
-          </div>
-        </form>
-      
-        <div id="output" style="display: none;">
-          <h3>Output</h3>
-          <a href="" class="button" id="download">Download</a>
-          <span id="result"></span>
-          <img id="resultImg">
-        </div>
-      </div>
-      
-      <script src="../assets/js/steganography.js"></script>
-    </div>
-  </div>
-  
-  <div class="grid-container">
-    <div class="grid-x grid-margin-x">
           <div class="cell db-explorer-container callout secondary">
             <h3>Realtime Database Explorer</h3>
             <form class="input-group">
@@ -202,7 +292,7 @@
                 <button class="input-group-button button primary copy-button">Copy Path</button>
                 <button class="input-group-button button copy-json-button" data-clipboard-target=".output">Copy JSON</button>
               </div>
-              <input type="text" name="path-field" class="input-group-field path-field">
+              <input type="text" name="path-field" class="input-group-field path-field" />
             </form>
             <small>
               <pre>
@@ -217,13 +307,13 @@
       <div class="cell file-uploader-container callout secondary medium-12 large-6">
         <h3>Storage Upload</h3>
         <form class="input-group">
-          <input id="file" type="file" multiple class="file uploader">
+          <input id="file" type="file" multiple class="file uploader" />
           <label for="file">Choose a file
             <span class="hide"></span>
           </label>
           <p class="status label hidden">&nbsp;</p>
         </form>
-        <img class="viewer" src="" width="100%">
+        <img class="viewer" src="" width="100%" />
       </div>
       <div class="cell callout secondary medium-12 large-6">
         <h3>Manage Your Data <span class="subheader"></span></h3>
