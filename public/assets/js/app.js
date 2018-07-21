@@ -8204,19 +8204,20 @@ window.addEventListener('DOMContentLoaded', function () {
     queryParameterForSignInSuccessUrl: 'signInSuccessUrl',
     signInFlow: 'popup',
     signInSuccessUrl: appUrl,
-    signInOptions: [firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+    signInOptions: [firebase.auth.GoogleAuthProvider.PROVIDER_ID
     // {
     //   provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
     //   requireDisplayName: true
     // },
-    {
-      provider: firebase.auth.PhoneAuthProvider.PROVIDER_ID,
-      recaptchaParameters: {
-        type: 'image',
-        size: 'invisible',
-        badge: 'bottomleft'
-      }
-    }],
+    // {
+    //   provider: firebase.auth.PhoneAuthProvider.PROVIDER_ID,
+    //   recaptchaParameters: {
+    //     type: 'image',
+    //     size: 'invisible',
+    //     badge: 'bottomleft'
+    //   }
+    // }
+    ],
     tosUrl: '',
     privacyPolicyUrl: ''
   };
@@ -8229,7 +8230,7 @@ window.addEventListener('DOMContentLoaded', function () {
 });
 
 ////////////////////////////////////////////////////////////////////////////////
-// EMAIL LOGIN FORM
+// PHONE LOGIN FORM
 ////////////////////////////////////////////////////////////////////////////////
 
 if (document.querySelector('#phone-login-button') !== null) {
@@ -8255,11 +8256,12 @@ function showPhoneAuth() {
   document.getElementById('phone-auth-container').classList.remove('invis');
   document.getElementById('phone-auth-container').classList.add('vis');
   document.getElementById('phone-login-form').classList.remove('invis');
-  document.getElementById('phone-login-form').classList.add('vis');
 
   // Add Event Listeners
   var isOverPhoneAuthModal = false;
-  document.querySelector('#phone-auth-button').addEventListener('click', submitPhoneAuth);
+  document.querySelector('#phone-auth-button').addEventListener('click', function (e) {
+    return submitPhoneAuth(e);
+  });
   document.getElementById('phone-auth-container').addEventListener('click', hidePhoneAuth);
   document.getElementById('phone-login-form').addEventListener('mouseenter', function () {
     isOverPhoneAuthModal = true;
@@ -8272,6 +8274,18 @@ function showPhoneAuth() {
   });
   document.getElementById('phone-verification-form').addEventListener('mouseleave', function () {
     isOverPhoneAuthModal = false;
+  });
+  document.addEventListener('keyup', function (e) {
+    if (e.keyCode == 27) {
+      document.querySelector('.top-bar').style.filter = 'none';
+      document.querySelector('#intro-panel').style.filter = 'none';
+      document.querySelector('#phone-auth-container').classList.remove('vis');
+      document.querySelector('#phone-auth-container').classList.add('invis');
+      document.getElementById('phone-login-form').classList.remove('vis');
+      document.getElementById('phone-login-form').classList.add('invis');
+      document.getElementById('phone-verification-form').classList.remove('vis');
+      document.getElementById('phone-verification-form').classList.add('invis');
+    }
   });
 
   function hidePhoneAuth() {
@@ -8286,7 +8300,9 @@ function showPhoneAuth() {
     }
   }
 
-  function submitPhoneAuth() {
+  function submitPhoneAuth(e) {
+    e.preventDefault();
+
     // Click handler that submits phone number.
     var phoneNumber = document.getElementById('tel').value;
     var status = document.getElementById('tel-status');
@@ -8320,9 +8336,11 @@ function showPhoneAuth() {
       document.getElementById('phone-login-form').classList.add('invis');
       document.getElementById('phone-verification-form').classList.remove('invis');
       document.getElementById('phone-verification-form').classList.add('vis');
+      document.querySelector('#phone-verification-form #code').focus();
 
       // Click handler to submit the verification code.
       document.getElementById('phone-verification-button').addEventListener('click', function (e) {
+        e.preventDefault();
         var code = document.getElementById('code').value;
         var status = document.getElementById('verification-status');
 

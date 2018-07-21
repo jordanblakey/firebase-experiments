@@ -36,19 +36,19 @@ window.addEventListener('DOMContentLoaded', () => {
     signInFlow: 'popup',
     signInSuccessUrl: appUrl,
     signInOptions: [
-      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+      firebase.auth.GoogleAuthProvider.PROVIDER_ID
       // {
       //   provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
       //   requireDisplayName: true
       // },
-      {
-        provider: firebase.auth.PhoneAuthProvider.PROVIDER_ID,
-        recaptchaParameters: {
-          type: 'image',
-          size: 'invisible',
-          badge: 'bottomleft'
-        }
-      }
+      // {
+      //   provider: firebase.auth.PhoneAuthProvider.PROVIDER_ID,
+      //   recaptchaParameters: {
+      //     type: 'image',
+      //     size: 'invisible',
+      //     badge: 'bottomleft'
+      //   }
+      // }
     ],
     tosUrl: '',
     privacyPolicyUrl: ''
@@ -62,7 +62,7 @@ window.addEventListener('DOMContentLoaded', () => {
 })
 
 ////////////////////////////////////////////////////////////////////////////////
-// EMAIL LOGIN FORM
+// PHONE LOGIN FORM
 ////////////////////////////////////////////////////////////////////////////////
 
 if (document.querySelector('#phone-login-button') !== null) {
@@ -93,13 +93,12 @@ function showPhoneAuth() {
   document.getElementById('phone-auth-container').classList.remove('invis')
   document.getElementById('phone-auth-container').classList.add('vis')
   document.getElementById('phone-login-form').classList.remove('invis')
-  document.getElementById('phone-login-form').classList.add('vis')
 
   // Add Event Listeners
   let isOverPhoneAuthModal = false
   document
     .querySelector('#phone-auth-button')
-    .addEventListener('click', submitPhoneAuth)
+    .addEventListener('click', e => submitPhoneAuth(e))
   document
     .getElementById('phone-auth-container')
     .addEventListener('click', hidePhoneAuth)
@@ -123,6 +122,18 @@ function showPhoneAuth() {
     .addEventListener('mouseleave', () => {
       isOverPhoneAuthModal = false
     })
+  document.addEventListener('keyup', e => {
+    if (e.keyCode == 27) {
+      document.querySelector('.top-bar').style.filter = 'none'
+      document.querySelector('#intro-panel').style.filter = 'none'
+      document.querySelector('#phone-auth-container').classList.remove('vis')
+      document.querySelector('#phone-auth-container').classList.add('invis')
+      document.getElementById('phone-login-form').classList.remove('vis')
+      document.getElementById('phone-login-form').classList.add('invis')
+      document.getElementById('phone-verification-form').classList.remove('vis')
+      document.getElementById('phone-verification-form').classList.add('invis')
+    }
+  })
 
   function hidePhoneAuth() {
     // Click handler. Deactivates the modal.
@@ -136,7 +147,9 @@ function showPhoneAuth() {
     }
   }
 
-  function submitPhoneAuth() {
+  function submitPhoneAuth(e) {
+    e.preventDefault()
+
     // Click handler that submits phone number.
     let phoneNumber = document.getElementById('tel').value
     let status = document.getElementById('tel-status')
@@ -176,11 +189,13 @@ function showPhoneAuth() {
         .getElementById('phone-verification-form')
         .classList.remove('invis')
       document.getElementById('phone-verification-form').classList.add('vis')
+      document.querySelector('#phone-verification-form #code').focus()
 
       // Click handler to submit the verification code.
       document
         .getElementById('phone-verification-button')
         .addEventListener('click', e => {
+          e.preventDefault()
           let code = document.getElementById('code').value
           let status = document.getElementById('verification-status')
 

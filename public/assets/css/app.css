@@ -6143,7 +6143,9 @@ input[type='file'] + label:hover {
     margin-top: 1rem;
     color: #ff4c3c; }
   #login-signup-form-container #login-signup-form,
-  #phone-auth-container #login-signup-form {
+  #login-signup-form-container #phone-login-form,
+  #phone-auth-container #login-signup-form,
+  #phone-auth-container #phone-login-form {
     max-width: 480px; }
 
 .invis {

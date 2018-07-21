@@ -24,24 +24,28 @@
     <div id="phone-login-form" class="cell callout secondary small-12 medium-7 large-5 invis">
       <h5>Enter Phone Number</h5>
       <p>Anyone who can receive SMS messages at this number will be able to log in.</p>
-        <label for="tel">Phone Number:
-          <input type="tel" name="tel" id="tel" placeholder="(555) 555-5555" maxlength="14">
-        </label>
-        <button id="phone-auth-button" class="button">
-          Get Verification SMS
-        </button>
+        <form>
+          <label for="tel">Phone Number:
+            <input type="tel" name="tel" id="tel" placeholder="(555) 123-1234" maxlength="14">
+          </label>
+          <button id="phone-auth-button" class="button">
+            Get Verification SMS
+          </button>
+        </form>
       <p id="tel-status"></p>
     </div>
 
     <div id="phone-verification-form" class="cell callout secondary small-12 medium-7 large-5 invis">
       <h5>Enter Verification Code</h5>
       <p>An SMS was sent to the phone number provided. Please enter the 6 digit verification code from that SMS.</p>
-        <label for="code">Verification Code:
-          <input type="text" name="code" id="code" placeholder="555555" maxlength="6">
-        </label>
-        <button id="phone-verification-button" class="button">
-          Log In
-        </button>
+        <form>
+          <label for="code">Verification Code:
+            <input type="text" name="code" id="code" placeholder="555555" maxlength="6">
+          </label>
+          <button id="phone-verification-button" class="button">
+            Log In
+          </button>
+        </form>
       <p id="verification-status"></p>
     </div>
 
