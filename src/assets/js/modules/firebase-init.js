@@ -13,5 +13,4 @@ window.firebase = firebase
 
 document.addEventListener('DOMContentLoaded', function() {
   firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION) // SESSION, LOCAL, NONE
-  firebase.firestore().settings({ timestampsInSnapshots: true })
 })

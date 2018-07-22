@@ -22,6 +22,26 @@
     -webkit-user-drag: element;
     position: relative;
 
+    h1 {
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+    h2 {
+      font-size: 1.8rem;
+      line-height: 1.2;
+    }
+    h3 {
+      font-size: 1.6rem;
+      line-height: 1.2;
+    }
+    h4 {
+      font-weight: 400;
+    }
+
+    a {
+      cursor: pointer !important;
+    }
+
     #note-actions {
       position: absolute;
       top: 0;

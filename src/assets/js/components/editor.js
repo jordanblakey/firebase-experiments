@@ -20,7 +20,7 @@ export default function renderEditor(editorContainer) {
 export function loadMarkdownTutorial() {
   editor.codemirror.setValue(`# Scorched Uses Markdown
 
-### Here's a quick formatting to get you up and running.
+### Here's a quick formatting tutorial to get you up and running.
 
 If you need to **bold** something, *consider italics instead*.
 

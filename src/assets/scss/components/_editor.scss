@@ -184,7 +184,7 @@
 
 // CURSOR //////////////////////////////////////////////////////////////////////
 .CodeMirror div.CodeMirror-cursor {
-  border-left: 1px solid #000;
+  border-left: 3px solid $warning-color;
   z-index: 3;
   animation: opacityPulse 1s ease-out;
   animation-iteration-count: infinite;
