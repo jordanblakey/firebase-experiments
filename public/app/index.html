@@ -72,7 +72,7 @@
         <div class="button-group text-right align-right">
           <button data-balloon="Load the editor with a quick overview of Markdown" data-balloon-pos="up" data-balloon-length="medium"
             class="markdown-tutorial-button button secondary">Tutorial</button>
-            <button id="stash-button" class="save-button button secondary">Stash</button>
+            <button id="stash-button" data-balloon="Temoprarily save note to note list" data-balloon-pos="up" data-balloon-length="medium"  class="save-button button secondary">Stash</button>
           <button id="save-as-image" data-balloon="Save/load to/from encrypted image" data-balloon-pos="up" data-balloon-length="medium" class="button primary">Save/Load</button>
         </div>
       </div>
@@ -163,7 +163,7 @@
             })
           }
       
-          // document.addEventListener('keyup', chkLen)
+          document.addEventListener('keyup', chkLen)
           function chkLen() {
             let msgLength = editor.codemirror.getValue().length
             let maxLen = 8000

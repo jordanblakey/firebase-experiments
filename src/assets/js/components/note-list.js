@@ -1,9 +1,13 @@
 import { initDragAndDrop } from '../modules/macy'
 import showdown from 'showdown'
+import TurndownSevice from 'turndown'
 import CryptoJS from 'crypto-js'
 
 // CLASS ///////////////////////////////////////////////////////////////////////
 const notes = {
+  mdConverter: new showdown.Converter(),
+  htmlConverter: new TurndownSevice(),
+
   reverse: () => {
     let store = document.querySelectorAll('.macy-item')
     store = Array.prototype.slice.call(store, 0).reverse()
@@ -24,28 +28,126 @@ const notes = {
     document.querySelector('#stash-button').addEventListener('click', e => {
       notes.stash()
     })
+
+    document.querySelectorAll('.macy-item').forEach(elm => {
+      notes.createNoteActions(elm)
+    })
+  },
+
+  // INIT EVENT HANDLERS ///////////////////////////////////////////////////////
+  createNoteActions: function(elm) {
+    if (elm.querySelector('#note-actions')) {
+      let na = elm.querySelector('#note-actions')
+      na.parentNode.removeChild(na)
+    }
+    create(elm)
+
+    function create(elm) {
+      let container = document.createElement('div')
+      container.id = 'note-actions'
+      container.classList.add('button-group')
+
+      let del = document.createElement('button')
+      del.classList.add('button', 'secondary')
+      del.innerHTML = '<i class="fi-trash"></i>'
+      del.addEventListener('click', () => {
+        elm.innerHTML = '<span style="color: white;">Note deleted.</span>'
+        elm.style.background = '#444'
+        setTimeout(() => {
+          elm.parentNode.removeChild(elm)
+          notes.store()
+          macy.reInit()
+        }, 3000)
+        macy.reInit()
+      })
+
+      let edit = document.createElement('button')
+      edit.classList.add('button', 'secondary')
+      edit.innerHTML = '<i class="fi-pencil"></i>'
+      edit.addEventListener('click', () => {
+        let conversion = new Promise((resolve, reject) => {
+          resolve(notes.htmlConverter.turndown(elm.innerHTML))
+          reject(null)
+        })
+
+        conversion.then(resolution => {
+          editor.codemirror.setValue(resolution)
+          elm.innerHTML = '<span style="color: white;">Loaded to editor.</span>'
+          elm.style.background = '#444'
+          setTimeout(() => {
+            elm.parentNode.removeChild(elm)
+            notes.store()
+            macy.reInit()
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            })
+            setTimeout(() => {
+              editor.codemirror.focus()
+              editor.codemirror.setCursor(editor.codemirror.lineCount(), 0)
+            }, 1000)
+          }, 1000)
+          macy.reInit()
+        })
+      })
+
+      container.appendChild(del)
+      container.appendChild(edit)
+      elm.appendChild(container)
+    }
   },
 
   // STASH A NOTE TO THE LIST //////////////////////////////////////////////////
   stash: function() {
-    let converter = new showdown.Converter()
     let elm = document.createElement('div')
     elm.classList.add('macy-item', 'callout', 'secondary')
     elm.style.opacity = '1'
 
     let conversion = new Promise((resolve, reject) => {
-      resolve(converter.makeHtml(editor.codemirror.getValue()))
+      resolve(notes.mdConverter.makeHtml(editor.codemirror.getValue()))
       reject(null)
     })
 
     conversion.then(resolution => {
       elm.innerHTML = resolution
-      document.querySelector('#macy-container').appendChild(elm)
+      document
+        .querySelector('#macy-container')
+        .insertAdjacentElement('afterbegin', elm)
+      notes.createNoteActions(elm)
       notes.store()
       macy.reInit()
       initDragAndDrop()
     })
   },
+
+  delete: function() {
+    document.querySelectorAll('.macy-item .delete-button').forEach(elm => {
+      let parent = elm.parentNode
+      let dfunc = document.querySelector('#macy-container').removeChild(parent)
+      elm.addEventListener('click', dfunc)
+    })
+  },
+
+  // // edit a note from the list /////////////////////////////////////////////////
+  // edit: function(elm) {
+  //   let htmlConverter = new turndownService()
+  //   let elm = document.createElement('div')
+  //   elm.classList.add('macy-item', 'callout', 'secondary')
+  //   elm.style.opacity = '1'
+
+  //   let conversion = new Promise((resolve, reject) => {
+  //     resolve(htmlConverter(editor.codemirror.getValue()))
+  //     reject(null)
+  //   })
+
+  //   conversion.then(resolution => {
+  //     elm.innerHTML = resolution
+  //     document.querySelector('#macy-container').appendChild(elm)
+  //     notes.store()
+  //     macy.reInit()
+  //     initDragAndDrop()
+  //   })
+  // },
 
   // STORE ENCRYPTED NOTES /////////////////////////////////////////////////////
   store: function() {

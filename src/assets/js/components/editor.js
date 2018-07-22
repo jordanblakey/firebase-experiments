@@ -113,7 +113,7 @@ export function configEditor() {
   parent.replaceChild(clippingMask, child)
   clippingMask.appendChild(child)
 
-  // TOOLBAR BORDER BOTTTOM ////////////////////////////////////////////////////
+  // TOOLBAR TIPS ////////////////////////////////////////////////////
   document.querySelector('.editor-toolbar .icon-bold').title = 'Bold'
   document.querySelector('.editor-toolbar .icon-italic').title = 'Italic'
   document.querySelector('.editor-toolbar .icon-quote').title = 'Blockquote'
