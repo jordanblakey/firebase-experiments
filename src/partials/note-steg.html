@@ -3,11 +3,11 @@
     <form>
       <div class="input-group">
         <!-- <p for="cover-file">Encrypt to, or decrypt from.</p> -->
-        <p id="msgStatus"><span id="msgCount">8000</span> more characters will fit.</p>
+        <p id="msgStatus"><span id="msgCount">8000</span> more characters will safely fit.</p>
       </div>
       <div class="input-group">
         <input name="cover-file" type="file" id="cover-file" accept="image/*" />
-        <label for="cover-file">Image
+        <label for="cover-file">Select Image
           <span class="hide"></span>
         </label>
       </div>
@@ -19,8 +19,8 @@
       </div>
       <div class="input-group">
         <div class="button-group">
-          <button class="write-button button secondary">Encrypt</button>
-          <button class="read-button button secondary">Decrypt</button>
+          <button class="write-button button">Encrypt</button>
+          <button class="read-button button">Decrypt</button>
         </div>
       </div>
     </form>
@@ -52,6 +52,7 @@
           qs('#note-steg').classList.add('vis')
           qs('#save-as-image').innerText = 'Cancel Save'
           saveAsImageToggle = true
+          chkLen()
         }
         else {
           qs('#note-steg').classList.remove('vis')
@@ -81,28 +82,6 @@
       })
     }
 
-    document.addEventListener('keyup', chkLen)
-    function chkLen() {
-      let msgLength = editor.codemirror.getValue().length
-      let maxLen = 8000
-      let charsLeft = maxLen - msgLength
-      qs('#msgCount').innerHTML = charsLeft
-
-      if (charsLeft <= 500 && charsLeft > 0) {
-        qs('#msgStatus').className = 'msgWarn'
-      } else if (charsLeft <= 0) {
-        qs('#msgStatus').className = 'msgAlert'
-      } else {
-        qs('#msgStatus').className = ''
-      }
-
-      if (msgLength >= maxLen) {
-        console.log(
-          'Maximum length exceeded: ' + maxLen,
-          '\nText has been shortened!'
-        )
-      }
-    }
   })
 
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -110,13 +89,34 @@
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   function writeIMG(e) {
-    // click
     e.preventDefault()
     qs('#resultImg').src = ''
-    qs('#status').classList.add('vis')
-    qs('#status').classList.remove('invis')
 
-    loadIMGtoCanvas('cover-file', 'canvas', writefunc, 500)
+    let promise = new Promise((res, rej) => {
+      if (loadIMGtoCanvas('cover-file', 'canvas', writefunc, 1000) === undefined) {
+        res('resolved')
+      } else {
+        rej('rejected')
+      }
+    })
+
+    qs('#status').classList.remove('invis')
+    qs('#status').classList.add('vis')
+
+    promise.then((resolution) => {
+      console.log(resolution)
+
+    }, (rejection) => {
+      console.log(rejection)
+      qs('#status').classList.remove('vis')
+      qs('#status').classList.add('invis')
+    })
+
+
+
+    out = loadIMGtoCanvas('cover-file', 'canvas', writefunc, 1000)
+    console.log(out)
+    // loadIMGtoCanvas('cover-file', 'canvas', writefunc, 500)
 
     function writefunc() {
       let t = writeMsgToCanvas(
@@ -126,13 +126,12 @@
       )
 
       if (t !== null) {
+        qs('#status').classList.remove('vis')
+        qs('#status').classList.add('invis')
+
         let myCanvas = qs('#canvas')
         let image = myCanvas.toDataURL('image/png')
         qs('#resultImg').src = image
-
-        qs('#status').classList.add('invis')
-        qs('#status').classList.remove('vis')
-
         qs('#result').innerHTML =
           'To read or edit this later, select the file, enter your password, and press "Decrypt".'
         qs('#output').style.display = 'block'

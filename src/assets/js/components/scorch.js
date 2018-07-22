@@ -7,11 +7,8 @@ const Scorch = {
     let button = document.querySelector('button.scorch')
     if (button !== null) {
       button.addEventListener('click', () => {
-        setTimeout(() => {
-          firebase.auth().signOut()
-        }, 20000)
-
         this.scorch()
+        setTimeout(this.home, 10000)
       })
     }
   },
@@ -64,6 +61,14 @@ D  E  L  E  T  I  O  N    E  V  E  N  T
 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥</pre>`
+  },
+
+  home: function() {
+    sessionStorage.clear()
+    localStorage.clear()
+    let user = firebase.auth().currentUser
+    user.delete()
+    window.location.href = window.location.origin
   }
 }
 

@@ -39,6 +39,9 @@
       #stash-button {
         background: $medium-gray;
         color: $white;
+        &:hover {
+          background: $alert-color;
+        }
       }
     }
 

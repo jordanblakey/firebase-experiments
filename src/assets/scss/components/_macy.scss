@@ -20,11 +20,36 @@
     overflow: hidden;
     -khtml-user-drag: element;
     -webkit-user-drag: element;
+    position: relative;
+
+    #note-actions {
+      position: absolute;
+      top: 0;
+      right: 0;
+      .del,
+      .edit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        height: 2rem;
+        width: 2rem;
+        opacity: 0;
+        font-size: 16px;
+      }
+    }
 
     &:hover {
       box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
       transition: $global-transition;
       cursor: -webkit-grab;
+
+      #note-actions {
+        .del,
+        .edit {
+          opacity: 1;
+        }
+      }
     }
 
     *:hover {

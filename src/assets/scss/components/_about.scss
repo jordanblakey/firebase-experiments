@@ -1,0 +1,49 @@
+#about-scorched {
+  cursor: pointer;
+}
+
+#about-splash {
+  background: #fafafa;
+  min-height: calc(100vh - 17px);
+  width: calc(100% - 17px);
+  margin: 0;
+  padding: 0;
+  z-index: 9;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 30vw auto;
+  transition: opacity 0.2s ease-in;
+  display: flex;
+  justify-content: center;
+
+  .invis {
+    opacity: 0;
+  }
+  .vis {
+    opacity: 1;
+  }
+  .grid-x {
+    .callout {
+      background: #e5e5e533;
+      margin-bottom: 0;
+      padding: 4rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      p {
+        margin-bottom: 2rem;
+        line-height: 1.8;
+        &:first-child {
+          margin-top: 0;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(small only) {
+    background-size: 60vw auto;
+  }
+}

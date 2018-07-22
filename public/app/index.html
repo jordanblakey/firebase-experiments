@@ -54,14 +54,82 @@
   <header class="grid-container-full">
     <div class="grid-x grid-padding-x top-bar align-middle">
       <div class="cell">
-        <a href="../">
-          <img class="logo" src="../assets/img/logo-scorched-dark.svg" alt="🔥Scorched">
+        <a>
+          <img id="about-scorched" class="logo" src="../assets/img/logo-scorched-dark.svg" alt="🔥Scorched">
         </a>
         <span id="log-in-status">Loading...</span>
         <button id="log-in" class="button secondary">Log out</button>
       </div>
     </div>
-  </header><div class="grid-container-full" id="editor-container">
+  </header>
+  
+  <script>
+    document.querySelector('#about-scorched') ? initAbout() : null
+  
+    function initAbout() {
+    document.querySelector('#about-scorched').addEventListener('click', () => {
+      let about = document.createElement('div')
+      about.innerHTML =
+  `
+  <style>
+    body > :not(#about-splash) {
+      display: none;
+    }
+  </style>
+  <div class="grid-x grid-margin-x align-center">
+    <div class="callout small-12 medium-8 large-6 transparent">
+      <p>
+        Scorched is an open source note taking application focused on privacy.
+        Major note taking apps like Evernote and Keep store your notes in the cloud and make exporting easy.
+        They are fantastic tools. Scorched is not meant to compete with, or replace them.
+      </p>
+  
+      <p>
+        I created Scorched to explore decoupling notes from the cloud.
+        All data in Scorched exists only on your device, though feels like a cloud app.
+        When you clear your cache, or delete the app, it's all gone.
+        If you want to make a local copy, you can--as a password-protected, encrypted image.
+        Incidentally, this is fantastic for safely storing network configurations, security questions, etc.
+      </p>
+  
+      <p>
+        Notes feel very private, to me--like an extension of the brain.
+        Full of half formed ideas and working assumptions.
+        Not meant to be evaluated by anyone else. Ever.
+        I believe it's very important for humans to have this kind of breathing room.
+      </p>
+  
+      <p>
+        Thanks for checking out Scorched.<br>
+        Hope you find it interesting.<br>
+        Maybe even useful.
+      </p>
+    </div>
+  </div>
+  `
+  
+      about.id = 'about-splash'
+      about.className = 'invis'
+      about.style.backgroundImage = `url(${window.location.origin}/assets/img/logo-scorched.svg)`
+      about.addEventListener('click', () => {
+        about.className = ''
+        about.classList.add('invis')
+        setTimeout(() => {
+          about.parentNode.removeChild(about)
+        }, 200)
+  
+      })
+      document.querySelector('body').insertAdjacentElement('afterbegin', about)
+      setTimeout(() => {
+        about.className = 'vis'
+      }, 1)
+    })
+    }
+  
+  </script>
+  
+  
+  <div class="grid-container-full" id="editor-container">
     <textarea id="editor"></textarea>
     <div class="cell small-12 editor-buttons-container">
       <div class="editor-buttons">
@@ -85,11 +153,11 @@
           <form>
             <div class="input-group">
               <!-- <p for="cover-file">Encrypt to, or decrypt from.</p> -->
-              <p id="msgStatus"><span id="msgCount">8000</span> more characters will fit.</p>
+              <p id="msgStatus"><span id="msgCount">8000</span> more characters will safely fit.</p>
             </div>
             <div class="input-group">
               <input name="cover-file" type="file" id="cover-file" accept="image/*" />
-              <label for="cover-file">Image
+              <label for="cover-file">Select Image
                 <span class="hide"></span>
               </label>
             </div>
@@ -101,8 +169,8 @@
             </div>
             <div class="input-group">
               <div class="button-group">
-                <button class="write-button button secondary">Encrypt</button>
-                <button class="read-button button secondary">Decrypt</button>
+                <button class="write-button button">Encrypt</button>
+                <button class="read-button button">Decrypt</button>
               </div>
             </div>
           </form>
@@ -134,6 +202,7 @@
                 qs('#note-steg').classList.add('vis')
                 qs('#save-as-image').innerText = 'Cancel Save'
                 saveAsImageToggle = true
+                chkLen()
               }
               else {
                 qs('#note-steg').classList.remove('vis')
@@ -163,28 +232,6 @@
             })
           }
       
-          document.addEventListener('keyup', chkLen)
-          function chkLen() {
-            let msgLength = editor.codemirror.getValue().length
-            let maxLen = 8000
-            let charsLeft = maxLen - msgLength
-            qs('#msgCount').innerHTML = charsLeft
-      
-            if (charsLeft <= 500 && charsLeft > 0) {
-              qs('#msgStatus').className = 'msgWarn'
-            } else if (charsLeft <= 0) {
-              qs('#msgStatus').className = 'msgAlert'
-            } else {
-              qs('#msgStatus').className = ''
-            }
-      
-            if (msgLength >= maxLen) {
-              console.log(
-                'Maximum length exceeded: ' + maxLen,
-                '\nText has been shortened!'
-              )
-            }
-          }
         })
       
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -192,13 +239,34 @@
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
       
         function writeIMG(e) {
-          // click
           e.preventDefault()
           qs('#resultImg').src = ''
-          qs('#status').classList.add('vis')
-          qs('#status').classList.remove('invis')
       
-          loadIMGtoCanvas('cover-file', 'canvas', writefunc, 500)
+          let promise = new Promise((res, rej) => {
+            if (loadIMGtoCanvas('cover-file', 'canvas', writefunc, 1000) === undefined) {
+              res('resolved')
+            } else {
+              rej('rejected')
+            }
+          })
+      
+          qs('#status').classList.remove('invis')
+          qs('#status').classList.add('vis')
+      
+          promise.then((resolution) => {
+            console.log(resolution)
+      
+          }, (rejection) => {
+            console.log(rejection)
+            qs('#status').classList.remove('vis')
+            qs('#status').classList.add('invis')
+          })
+      
+      
+      
+          out = loadIMGtoCanvas('cover-file', 'canvas', writefunc, 1000)
+          console.log(out)
+          // loadIMGtoCanvas('cover-file', 'canvas', writefunc, 500)
       
           function writefunc() {
             let t = writeMsgToCanvas(
@@ -208,13 +276,12 @@
             )
       
             if (t !== null) {
+              qs('#status').classList.remove('vis')
+              qs('#status').classList.add('invis')
+      
               let myCanvas = qs('#canvas')
               let image = myCanvas.toDataURL('image/png')
               qs('#resultImg').src = image
-      
-              qs('#status').classList.add('invis')
-              qs('#status').classList.remove('vis')
-      
               qs('#result').innerHTML =
                 'To read or edit this later, select the file, enter your password, and press "Decrypt".'
               qs('#output').style.display = 'block'
@@ -271,10 +338,6 @@
           <h6>Alpha</h6>
           <ul>
             <li>Add persistence warning for anonymous users.</li>
-            <li>Save Note to list</li>
-            <li>Load note from list</li>
-            <li>Delete Note</li>
-            <li>Implement MD -> HTML conversion for note list.</li>
             <li>Tie authentication to note storage encryption key.</li>
             <li>Include cover image library and randomized selection if no image supplied. https://stackoverflow.com/questions/25690641/img-url-to-dataurl-using-javascript</li>
             <li>Import/Export encrypted archive for all notes. https://www.html5rocks.com/en/tutorials/file/filesystem/, https://tutorialzine.com/2013/11/javascript-file-encrypter</li>
@@ -317,52 +380,22 @@
         <!-- END MACY CONTAINER -->
       </div>
       
-        <div class="callout cell transparent">
-          <button class="button" id="reverse-notes">Reverse Notes</button>
-        </div>
     </div>
   </div>
   
   <div class="grid-container">
     <div class="grid-x grid-margin-x">
-          <div class="cell db-explorer-container callout secondary">
-            <h3>Realtime Database Explorer</h3>
-            <form class="input-group">
-              <label for="path-field" class="input-group-label">Click JSON keys to append</label>
-              <div class="group">
-                <button class="input-group-button button secondary clear-button">Clear</button>
-                <button class="input-group-button button primary copy-button">Copy Path</button>
-                <button class="input-group-button button copy-json-button" data-clipboard-target=".output">Copy JSON</button>
-              </div>
-              <input type="text" name="path-field" class="input-group-field path-field" />
-            </form>
-            <small>
-              <pre>
-                <code class="language-json output"></code>
-              </pre>
-            </small>
-          </div>  </div>
-  </div>
-  
-  <div class="grid-container">
-    <div class="grid-x grid-margin-x">
-      <div class="cell file-uploader-container callout secondary medium-12 large-6">
-        <h3>Storage Upload</h3>
-        <form class="input-group">
-          <input id="file" type="file" multiple class="file uploader" />
-          <label for="file">Choose a file
-            <span class="hide"></span>
-          </label>
-          <p class="status label hidden">&nbsp;</p>
-        </form>
-        <img class="viewer" src="" width="100%" />
+      <div class="callout cell transparent small-12 medium-6">
+          <h3>Organize</h3>
+          <button class="button secondary" id="reverse-sort"><i class="fi-loop"></i> Reverse</button>
+          <button class="button secondary" id="alpha-sort"><i class="fi-arrow-up"></i> Alpha</button>
+          <button class="button secondary" id="ralpha-sort"><i class="fi-arrow-down"></i> Alpha</button>
+        </div>    <div class="cell callout transparent small-12 medium-6">
+        <h3>Data <span class="subheader"></span></h3>
+        <button id="export-archive-button" class="button secondary" data-balloon="Not available" data-balloon-pos="up" data-balloon-length="medium">Export Encrypted Archive</button>
+        <button class="button alert scorch" data-balloon="Annihilate all data and delete your account." data-balloon-pos="up" data-balloon-length="medium">Scorch</button>
       </div>
-      <div class="cell callout secondary medium-12 large-6">
-        <h3>Manage Your Data <span class="subheader"></span></h3>
-        <button class="button alert scorch" data-balloon="Annihilate all data &amp; lock your account." data-balloon-pos="up" data-balloon-length="medium">Scorch</button>
-        <button class="button primary">Export Encrypted Archive</button>
-      </div>
-      <div id="account-details" class="cell callout secondary" style="display: none;"></div>
+      <div id="account-details" class="cell callout transparent" style="display: none;"></div>
     </div>
   </div>
 

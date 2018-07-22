@@ -19,10 +19,66 @@ const notes = {
     notes.store()
   },
 
+  alphabetical: () => {
+    let store = document.querySelectorAll('.macy-item')
+    store = Array.prototype.slice.call(store, 0)
+    store = store.sort(function(a, b) {
+      if (
+        a.innerText.replace(/[^A-Z0-9]/gi, '') <
+        b.innerText.replace(/[^A-Z0-9]/gi, '')
+      )
+        return -1
+      if (
+        a.innerText.replace(/[^A-Z0-9]/gi, '') >
+        b.innerText.replace(/[^A-Z0-9]/gi, '')
+      )
+        return 1
+      return 0
+    })
+    document.getElementById('macy-container').innerHTML = ''
+    store.forEach(elm =>
+      document.getElementById('macy-container').appendChild(elm)
+    )
+    macy.reInit()
+    notes.store()
+  },
+
+  ralphabetical: () => {
+    let store = document.querySelectorAll('.macy-item')
+    store = Array.prototype.slice.call(store, 0)
+    store = store.sort(function(a, b) {
+      if (
+        a.innerText.replace(/[^A-Z0-9]/gi, '') >
+        b.innerText.replace(/[^A-Z0-9]/gi, '')
+      )
+        return -1
+      if (
+        a.innerText.replace(/[^A-Z0-9]/gi, '') <
+        b.innerText.replace(/[^A-Z0-9]/gi, '')
+      )
+        return 1
+      return 0
+    })
+    document.getElementById('macy-container').innerHTML = ''
+    store.forEach(elm =>
+      document.getElementById('macy-container').appendChild(elm)
+    )
+    macy.reInit()
+    notes.store()
+  },
+
   // INIT EVENT HANDLERS ///////////////////////////////////////////////////////
   listen: function() {
-    document.querySelector('#reverse-notes').addEventListener('click', e => {
+    document.querySelector('#reverse-sort').addEventListener('click', e => {
       notes.reverse()
+    })
+
+    document.querySelector('#alpha-sort').addEventListener('click', e => {
+      notes.alphabetical()
+    })
+
+    document.querySelector('#ralpha-sort').addEventListener('click', e => {
+      notes.ralphabetical()
     })
 
     document.querySelector('#stash-button').addEventListener('click', e => {
@@ -47,29 +103,14 @@ const notes = {
       container.id = 'note-actions'
       container.classList.add('button-group')
 
-      let del = document.createElement('button')
-      del.classList.add('button', 'secondary')
-      del.innerHTML = '<i class="fi-trash"></i>'
-      del.addEventListener('click', () => {
-        elm.innerHTML = '<span style="color: white;">Note deleted.</span>'
-        elm.style.background = '#444'
-        setTimeout(() => {
-          elm.parentNode.removeChild(elm)
-          notes.store()
-          macy.reInit()
-        }, 3000)
-        macy.reInit()
-      })
-
       let edit = document.createElement('button')
-      edit.classList.add('button', 'secondary')
+      edit.classList.add('edit', 'button', 'secondary')
       edit.innerHTML = '<i class="fi-pencil"></i>'
       edit.addEventListener('click', () => {
         let conversion = new Promise((resolve, reject) => {
           resolve(notes.htmlConverter.turndown(elm.innerHTML))
           reject(null)
         })
-
         conversion.then(resolution => {
           editor.codemirror.setValue(resolution)
           elm.innerHTML = '<span style="color: white;">Loaded to editor.</span>'
@@ -91,9 +132,23 @@ const notes = {
         })
       })
 
-      container.appendChild(del)
+      let del = document.createElement('button')
+      del.classList.add('del', 'button', 'secondary')
+      del.innerHTML = '<i class="fi-trash"></i>'
+      del.addEventListener('click', () => {
+        elm.innerHTML = '<span style="color: white;">Note deleted.</span>'
+        elm.style.background = '#444'
+        setTimeout(() => {
+          elm.parentNode.removeChild(elm)
+          notes.store()
+          macy.reInit()
+        }, 3000)
+        macy.reInit()
+      })
+
       container.appendChild(edit)
-      elm.appendChild(container)
+      container.appendChild(del)
+      elm.insertAdjacentElement('afterbegin', container)
     }
   },
 
@@ -127,27 +182,6 @@ const notes = {
       elm.addEventListener('click', dfunc)
     })
   },
-
-  // // edit a note from the list /////////////////////////////////////////////////
-  // edit: function(elm) {
-  //   let htmlConverter = new turndownService()
-  //   let elm = document.createElement('div')
-  //   elm.classList.add('macy-item', 'callout', 'secondary')
-  //   elm.style.opacity = '1'
-
-  //   let conversion = new Promise((resolve, reject) => {
-  //     resolve(htmlConverter(editor.codemirror.getValue()))
-  //     reject(null)
-  //   })
-
-  //   conversion.then(resolution => {
-  //     elm.innerHTML = resolution
-  //     document.querySelector('#macy-container').appendChild(elm)
-  //     notes.store()
-  //     macy.reInit()
-  //     initDragAndDrop()
-  //   })
-  // },
 
   // STORE ENCRYPTED NOTES /////////////////////////////////////////////////////
   store: function() {

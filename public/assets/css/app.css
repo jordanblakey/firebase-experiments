@@ -6197,6 +6197,8 @@ input[type='file'] + label:hover {
       .editor-buttons-container .editor-buttons div #stash-button {
         background: #c4c4c4;
         color: #fafafa; }
+        .editor-buttons-container .editor-buttons div #stash-button:hover {
+          background: #ff4c3c; }
     .editor-buttons-container .editor-buttons .editor-statusbar {
       border: 0;
       padding: 6px 0;
@@ -6384,7 +6386,7 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket,
   #note-steg.invis {
     opacity: 0;
     pointer-events: none;
-    transform: translateY(-20px);
+    transform: translateY(-10px);
     height: 1px; }
   #note-steg .grid-x {
     flex: 1; }
@@ -6426,11 +6428,15 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket,
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-      justify-content: flex-end; }
-      #note-steg .cell.steganography-container form .msgWarn {
-        color: #FF9326 !important; }
-      #note-steg .cell.steganography-container form .msgAlert {
-        color: #ff4c3c !important; }
+      justify-content: center; }
+      #note-steg .cell.steganography-container form #msgStatus {
+        color: #666; }
+        #note-steg .cell.steganography-container form #msgStatus .msgWarn {
+          color: #FF9326 !important; }
+        #note-steg .cell.steganography-container form #msgStatus .msgAlert {
+          color: #ff4c3c !important; }
+      #note-steg .cell.steganography-container form #password {
+        color: #666 !important; }
       @media screen and (max-width: 39.9375em) {
         #note-steg .cell.steganography-container form {
           justify-content: center;
@@ -6455,12 +6461,9 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket,
             width: 100%; }
             #note-steg .cell.steganography-container form label[for='password'] input#password {
               width: 100% !important; } }
-      #note-steg .cell.steganography-container form #cover-file + label {
-        background: #fafafa;
-        color: #c4c4c4; }
-        #note-steg .cell.steganography-container form #cover-file + label:hover {
-          background: #ff4c3c;
-          color: #fafafa; }
+      #note-steg .cell.steganography-container form #cover-file + label:hover {
+        background: #ff4c3c;
+        color: #fafafa; }
     #note-steg .cell.steganography-container input[type='file'] + label span {
       background: #e5e5e5;
       color: #666; }
@@ -6525,11 +6528,29 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket,
     margin-bottom: 10px;
     overflow: hidden;
     -khtml-user-drag: element;
-    -webkit-user-drag: element; }
+    -webkit-user-drag: element;
+    position: relative; }
+    #macy-container .macy-item #note-actions {
+      position: absolute;
+      top: 0;
+      right: 0; }
+      #macy-container .macy-item #note-actions .del,
+      #macy-container .macy-item #note-actions .edit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        height: 2rem;
+        width: 2rem;
+        opacity: 0;
+        font-size: 16px; }
     #macy-container .macy-item:hover {
       box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
       transition: all 0.1s ease-in-out;
       cursor: -webkit-grab; }
+      #macy-container .macy-item:hover #note-actions .del,
+      #macy-container .macy-item:hover #note-actions .edit {
+        opacity: 1; }
     #macy-container .macy-item *:hover {
       cursor: auto; }
   #macy-container .over {
@@ -6606,117 +6627,6 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket,
   .db-explorer-container .code-toolbar .toolbar {
     display: none; }
 
-/* /////////////////////////////////////////////////////////////////////////////
-// SCORCHED BUTTON (ALL DATA DELETION)
-//////////////////////////////////////////////////////////////////////////////*/
-button.alert.scorch:hover, button.scorch.callout.success:hover, button.scorch.callout.warning:hover, button.alert.scorch:focus, button.scorch.callout.success:focus, button.scorch.callout.warning:focus {
-  background: #000 !important;
-  color: white;
-  transition: all 0.1s cubic-bezier(0.77, 0, 0.175, 1);
-  position: relative; }
-
-.scorched {
-  font-family: 'Roboto Mono';
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-  font-size: 3.2vw;
-  overflow: hidden;
-  animation-duration: 8s;
-  animation-fill-mode: both;
-  animation-name: fadeIn;
-  color: transparent;
-  text-shadow: 0 0 0 #666;
-  background: #f0f0f0; }
-
-.scorched-text {
-  color: #666;
-  animation-duration: 8s;
-  animation-fill-mode: both;
-  animation-name: fadeIn; }
-
-.scorched-text span {
-  color: #e5e5e5 !important; }
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    text-shadow: 0 0 0 #e5e5e5; }
-  45% {
-    opacity: 1;
-    background: #f0f0f0;
-    color: transparent;
-    opacity: 1;
-    transition: filter .3s ease-in-out;
-    filter: sepia(0) saturate(0) brightness(100%) hue-rotate(0deg); }
-  46% {
-    opacity: 1;
-    text-shadow: 0 0 0 #e5e5e5;
-    background: #f0f0f0;
-    filter: sepia(1) saturate(100) brightness(60%) hue-rotate(960deg); }
-  50% {
-    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    background: #000;
-    transition: filter .3s ease-in-out;
-    filter: sepia(1) saturate(1) brightness(100%) hue-rotate(0deg); }
-  97% {
-    transition: all .3s ease-out;
-    letter-spacing: 0px; }
-  99% {
-    opacity: 1;
-    letter-spacing: -1.9vw; }
-  100% {
-    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    background: #000;
-    opacity: 0;
-    color: transparent;
-    transition: all .3s ease-out;
-    letter-spacing: -1.9vw;
-    filter: sepia(1) saturate(1) brightness(100%) hue-rotate(0deg); } }
-
-#output {
-  margin-top: 2rem;
-  border-top: 1px solid #e5e5e5;
-  padding-top: 1rem; }
-  #output #download {
-    margin-right: 8px; }
-  #output #resultImg {
-    margin-top: 1rem;
-    max-height: 200px;
-    display: block;
-    border: 1px solid #e5e5e5;
-    border-radius: 3px; }
-
-.steganography-container > form #cover-file {
-  align-self: flex-start; }
-  .steganography-container > form #cover-file + label {
-    align-self: flex-start;
-    font-size: .875rem; }
-
-.steganography-container > form .inline #status {
-  margin-left: 8px; }
-
-.steganography-container > form .input-group {
-  flex-direction: column; }
-  .steganography-container > form .input-group label {
-    font-size: 1rem; }
-  .steganography-container > form .input-group #password {
-    margin-bottom: 8px; }
-  .steganography-container > form .input-group input#password-toggle {
-    margin-bottom: 0; }
-    .steganography-container > form .input-group input#password-toggle + span {
-      color: #c4c4c4; }
-  .steganography-container > form .input-group #message {
-    height: 200px;
-    margin-bottom: 4px; }
-  .steganography-container > form .input-group #msgStatus {
-    color: #c4c4c4;
-    margin-bottom: 0; }
-    .steganography-container > form .input-group #msgStatus.msgWarn {
-      color: #ff4c3c; }
-
 #account-details {
   display: flex; }
   @media screen and (max-width: 39.9375em) {
@@ -6763,23 +6673,123 @@ button.alert.scorch:hover, button.scorch.callout.success:hover, button.scorch.ca
         font-size: 0.875rem;
         color: #999; }
 
-#splash {
-  position: fixed;
-  top: 0;
-  display: flex;
+/* /////////////////////////////////////////////////////////////////////////////
+// EXPORT ENCRYPTED ARCHIVE
+//////////////////////////////////////////////////////////////////////////////*/
+#export-archive-button:hover {
   background: #fafafa;
+  color: #e5e5e5; }
+
+/* /////////////////////////////////////////////////////////////////////////////
+// SCORCHED BUTTON (ALL DATA DELETION)
+//////////////////////////////////////////////////////////////////////////////*/
+button.alert.scorch:hover, button.scorch.callout.success:hover, button.scorch.callout.warning:hover,
+button.alert.scorch:focus,
+button.scorch.callout.success:focus,
+button.scorch.callout.warning:focus {
+  background: #000 !important;
+  color: white;
+  transition: all 0.1s cubic-bezier(0.77, 0, 0.175, 1);
+  position: relative; }
+
+.scorched {
+  font-family: 'Roboto Mono';
+  display: flex;
+  flex-direction: column;
   height: 100vh;
-  width: 100vw;
-  z-index: 1;
-  background-image: url("../img/logo-scorched.svg");
+  align-items: center;
+  justify-content: center;
+  font-size: 3.2vw;
+  overflow: hidden;
+  animation-duration: 8s;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+  color: transparent;
+  text-shadow: 0 0 0 #666;
+  background: #f0f0f0; }
+
+.scorched-text {
+  color: #666;
+  animation-duration: 8s;
+  animation-fill-mode: both;
+  animation-name: fadeIn; }
+
+.scorched-text span {
+  color: #e5e5e5 !important; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    text-shadow: 0 0 0 #e5e5e5; }
+  45% {
+    opacity: 1;
+    background: #f0f0f0;
+    color: transparent;
+    opacity: 1;
+    transition: filter 0.3s ease-in-out;
+    filter: sepia(0) saturate(0) brightness(100%) hue-rotate(0deg); }
+  46% {
+    opacity: 1;
+    text-shadow: 0 0 0 #e5e5e5;
+    background: #f0f0f0;
+    filter: sepia(1) saturate(100) brightness(60%) hue-rotate(960deg); }
+  50% {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    background: #000;
+    transition: filter 0.3s ease-in-out;
+    filter: sepia(1) saturate(1) brightness(100%) hue-rotate(0deg); }
+  97% {
+    transition: all 0.3s ease-out;
+    letter-spacing: 0px; }
+  99% {
+    opacity: 1;
+    letter-spacing: -1.9vw; }
+  100% {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    background: #000;
+    opacity: 0;
+    color: transparent;
+    transition: all 0.3s ease-out;
+    letter-spacing: -1.9vw;
+    filter: sepia(1) saturate(1) brightness(100%) hue-rotate(0deg); } }
+
+#about-scorched {
+  cursor: pointer; }
+
+#about-splash {
+  background: #fafafa;
+  min-height: calc(100vh - 17px);
+  width: calc(100% - 17px);
+  margin: 0;
+  padding: 0;
+  z-index: 9;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 30vw auto;
-  pointer-events: none;
-  opacity: 1;
-  transition: opacity 0.2s ease-in; }
-  #splash.hidden {
+  transition: opacity 0.2s ease-in;
+  display: flex;
+  justify-content: center; }
+  #about-splash .invis {
     opacity: 0; }
+  #about-splash .vis {
+    opacity: 1; }
+  #about-splash .grid-x .callout {
+    background: #e5e5e533;
+    margin-bottom: 0;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    #about-splash .grid-x .callout p {
+      margin-bottom: 2rem;
+      line-height: 1.8; }
+      #about-splash .grid-x .callout p:first-child {
+        margin-top: 0; }
+      #about-splash .grid-x .callout p:last-child {
+        margin-bottom: 0; }
+  @media screen and (max-width: 39.9375em) {
+    #about-splash {
+      background-size: 60vw auto; } }
 
 body {
   background: #f8f8f8; }
@@ -6881,7 +6891,7 @@ button.button,
   border: 0;
   border-radius: 3px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 0.1s ease-in-out !important;
+  transition: all 0.1s ease-in-out;
   font-size: 0.875rem;
   background: #444;
   outline: none !important; }
@@ -6899,7 +6909,7 @@ button.button,
   .button-group a.button:hover,
   button.button:hover,
   .button-group button.button:hover {
-    background: #ff4c3c !important;
+    background: #ff4c3c;
     color: #fafafa;
     outline: none !important; }
   a.button.primary:hover, a.button.secondary:hover, a.button.success:hover, a.button.warning:hover,
@@ -6915,9 +6925,9 @@ button.button,
   .button-group button.button.secondary:hover,
   .button-group button.button.success:hover,
   .button-group button.button.warning:hover {
-    background: #ff4c3c !important;
-    color: #fafafa !important;
-    outline: none !important; }
+    background: #ff4c3c;
+    color: #fafafa;
+    outline: none; }
   a.button.secondary,
   .button-group a.button.secondary,
   button.button.secondary,

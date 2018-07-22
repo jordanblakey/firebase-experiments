@@ -19,14 +19,14 @@
 }
 
 #note-steg {
-  transition: $global-transition;
+  transition: all 0.1s ease-in-out;
   &.vis {
     opacity: 1;
   }
   &.invis {
     opacity: 0;
     pointer-events: none;
-    transform: translateY(-20px);
+    transform: translateY(-10px);
     height: 1px;
   }
   .grid-x {
@@ -73,12 +73,18 @@
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-      justify-content: flex-end;
-      .msgWarn {
-        color: $warning-color !important;
+      justify-content: center;
+      #msgStatus {
+        color: $dark-gray;
+        .msgWarn {
+          color: $warning-color !important;
+        }
+        .msgAlert {
+          color: $alert-color !important;
+        }
       }
-      .msgAlert {
-        color: $alert-color !important;
+      #password {
+        color: $dark-gray !important;
       }
       @include breakpoint(small only) {
         justify-content: center;
@@ -113,8 +119,8 @@
         }
       }
       #cover-file + label {
-        background: $white;
-        color: $medium-gray;
+        // background: $white;
+        // color: $medium-gray;
         &:hover {
           background: $alert-color;
           color: $white;

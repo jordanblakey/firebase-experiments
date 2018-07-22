@@ -133,6 +133,30 @@ export function configEditor() {
 // KEYBOARD SHORTCUTS
 ////////////////////////////////////////////////////////////////////////////////
 
+document.addEventListener('keyup', chkLen)
+function chkLen() {
+  let msgLength = editor.codemirror.getValue().length
+  let maxLen = 8000
+  let charsLeft = maxLen - msgLength
+  qs('#msgCount').innerHTML = charsLeft
+
+  if (charsLeft <= 500 && charsLeft > 0) {
+    qs('#msgStatus').className = 'msgWarn'
+  } else if (charsLeft <= 0) {
+    qs('#msgStatus').className = 'msgAlert'
+  } else {
+    qs('#msgStatus').className = ''
+  }
+
+  if (msgLength >= maxLen) {
+    console.log(
+      'Maximum length exceeded: ' + maxLen,
+      '\nText has been shortened!'
+    )
+  }
+}
+window.chkLen = chkLen
+
 // MAP KEY FOR ZEN MODE
 window.zenMode = false
 window.previewMode = false
