@@ -19,6 +19,19 @@
 }
 
 #note-steg {
+  transition: $global-transition;
+  &.vis {
+    opacity: 1;
+  }
+  &.invis {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-20px);
+    height: 1px;
+  }
+  .grid-x {
+    flex: 1;
+  }
   span#status {
     position: fixed;
     display: flex;
@@ -94,9 +107,9 @@
         label[for='password'] {
           margin-right: 0;
           width: 100%;
-        }
-        input#password {
-          width: 100% !important;
+          input#password {
+            width: 100% !important;
+          }
         }
       }
       #cover-file + label {
@@ -114,6 +127,7 @@
     }
     label[for='password'] {
       margin-right: 4px;
+      position: relative !important;
     }
     .input-group:nth-child(1) {
       margin-right: 12px;
@@ -147,4 +161,15 @@
       }
     }
   }
+}
+.fi-eye.show-password {
+  position: absolute !important;
+  width: 20px !important;
+  padding: 8px 8px 0 0 !important;
+  display: flex !important;
+  height: 36px;
+  font-size: 20px;
+  color: $medium-gray !important;
+  top: 0;
+  right: 0;
 }

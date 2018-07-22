@@ -72,7 +72,7 @@ function initMacy() {
 // DRAG AND DROP FUNCTIONALITY
 ////////////////////////////////////////////////////////////////////////////////
 
-function initDragAndDrop() {
+export function initDragAndDrop() {
   const masonryEnvironment = (function() {
     let testDragAndDropSupport = function() {
       return 'draggable' in document.createElement('span')

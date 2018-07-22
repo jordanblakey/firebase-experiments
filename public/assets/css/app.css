@@ -6186,11 +6186,17 @@ input[type='file'] + label:hover {
       flex-grow: 1;
       flex-shrink: 1;
       flex-wrap: wrap; }
-      .editor-buttons-container .editor-buttons div .zen-shortcut:hover, .editor-buttons-container .editor-buttons div .preview-shortcut:hover {
+      .editor-buttons-container .editor-buttons div .zen-shortcut:hover,
+      .editor-buttons-container .editor-buttons div .preview-shortcut:hover {
         background: #e5e5e5;
         color: #666;
         transition: all 0.1s ease-in-out;
         cursor: pointer; }
+      .editor-buttons-container .editor-buttons div #save-as-image {
+        margin-left: 4px; }
+      .editor-buttons-container .editor-buttons div #stash-button {
+        background: #c4c4c4;
+        color: #fafafa; }
     .editor-buttons-container .editor-buttons .editor-statusbar {
       border: 0;
       padding: 6px 0;
@@ -6273,10 +6279,12 @@ input[type='file'] + label:hover {
       background: none; }
     .editor-toolbar-container .editor-toolbar a:before {
       color: #c4c4c4; }
-    .editor-toolbar-container .editor-toolbar a.active, .editor-toolbar-container .editor-toolbar a:hover {
+    .editor-toolbar-container .editor-toolbar a.active,
+    .editor-toolbar-container .editor-toolbar a:hover {
       color: #ff4c3c !important;
       border: 0; }
-      .editor-toolbar-container .editor-toolbar a.active:before, .editor-toolbar-container .editor-toolbar a:hover:before {
+      .editor-toolbar-container .editor-toolbar a.active:before,
+      .editor-toolbar-container .editor-toolbar a:hover:before {
         color: #ff4c3c !important; }
     .editor-toolbar-container .editor-toolbar a.icon-fullscreen {
       position: absolute;
@@ -6369,115 +6377,136 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket,
     .editor-buttons-container .editor-buttons div:nth-child(2) button.button {
       flex: 1; } }
 
-#note-steg span#status {
-  position: fixed;
-  display: flex;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  z-index: 3;
-  background: #e5e5e5dd;
-  font-size: 2rem;
-  background-image: url("../img/crypt.gif");
-  background-blend-mode: multiply;
-  background-repeat: no-repeat;
-  background-position: center center;
-  font-family: 'Roboto Mono';
-  font-weight: 700;
-  color: white;
+#note-steg {
   transition: all 0.1s ease-in-out; }
-  #note-steg span#status.vis {
+  #note-steg.vis {
     opacity: 1; }
-  #note-steg span#status.invis {
+  #note-steg.invis {
     opacity: 0;
-    pointer-events: none; }
-
-@media screen and (max-width: 39.9375em) {
-  #note-steg {
-    padding: 8px 0; } }
-
-#note-steg .cell.steganography-container {
-  padding: 1rem; }
-  @media screen and (max-width: 39.9375em) {
-    #note-steg .cell.steganography-container {
-      padding: 1rem 0.5rem; } }
-  #note-steg .cell.steganography-container form {
-    flex-direction: row;
+    pointer-events: none;
+    transform: translateY(-20px);
+    height: 1px; }
+  #note-steg .grid-x {
+    flex: 1; }
+  #note-steg span#status {
+    position: fixed;
     display: flex;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    justify-content: flex-end; }
-    #note-steg .cell.steganography-container form .msgWarn {
-      color: #FF9326 !important; }
-    #note-steg .cell.steganography-container form .msgAlert {
-      color: #ff4c3c !important; }
+    z-index: 3;
+    background: #e5e5e5dd;
+    font-size: 2rem;
+    background-image: url("../img/crypt.gif");
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-family: 'Roboto Mono';
+    font-weight: 700;
+    color: white;
+    transition: all 0.1s ease-in-out; }
+    #note-steg span#status.vis {
+      opacity: 1; }
+    #note-steg span#status.invis {
+      opacity: 0;
+      pointer-events: none; }
+  @media screen and (max-width: 39.9375em) {
+    #note-steg {
+      padding: 8px 0; } }
+  #note-steg .cell.steganography-container {
+    padding: 1rem; }
     @media screen and (max-width: 39.9375em) {
-      #note-steg .cell.steganography-container form {
-        justify-content: center;
-        align-items: stretch; }
-        #note-steg .cell.steganography-container form .button-group {
-          display: flex;
-          padding: 0;
-          margin: 0; }
-          #note-steg .cell.steganography-container form .button-group button.button {
-            flex: 1; }
-            #note-steg .cell.steganography-container form .button-group button.button:first-child {
-              margin-left: 0; }
-        #note-steg .cell.steganography-container form .input-group {
-          margin: 0 0 4px 0 !important;
-          width: 100% !important; }
-          #note-steg .cell.steganography-container form .input-group:nth-child(1) {
-            text-align: center; }
-          #note-steg .cell.steganography-container form .input-group #cover-file + label {
+      #note-steg .cell.steganography-container {
+        padding: 1rem 0.5rem; } }
+    #note-steg .cell.steganography-container form {
+      flex-direction: row;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end; }
+      #note-steg .cell.steganography-container form .msgWarn {
+        color: #FF9326 !important; }
+      #note-steg .cell.steganography-container form .msgAlert {
+        color: #ff4c3c !important; }
+      @media screen and (max-width: 39.9375em) {
+        #note-steg .cell.steganography-container form {
+          justify-content: center;
+          align-items: stretch; }
+          #note-steg .cell.steganography-container form .button-group {
+            display: flex;
+            padding: 0;
+            margin: 0; }
+            #note-steg .cell.steganography-container form .button-group button.button {
+              flex: 1; }
+              #note-steg .cell.steganography-container form .button-group button.button:first-child {
+                margin-left: 0; }
+          #note-steg .cell.steganography-container form .input-group {
+            margin: 0 0 4px 0 !important;
             width: 100% !important; }
-        #note-steg .cell.steganography-container form label[for='password'] {
-          margin-right: 0;
-          width: 100%; }
-        #note-steg .cell.steganography-container form input#password {
-          width: 100% !important; } }
-    #note-steg .cell.steganography-container form #cover-file + label {
-      background: #fafafa;
-      color: #c4c4c4; }
-      #note-steg .cell.steganography-container form #cover-file + label:hover {
-        background: #ff4c3c;
-        color: #fafafa; }
-  #note-steg .cell.steganography-container input[type='file'] + label span {
-    background: #e5e5e5;
-    color: #666; }
-  #note-steg .cell.steganography-container label[for='password'] {
-    margin-right: 4px; }
-  #note-steg .cell.steganography-container .input-group:nth-child(1) {
-    margin-right: 12px;
-    justify-self: flex-end;
-    text-align: right; }
-    #note-steg .cell.steganography-container .input-group:nth-child(1) p {
-      margin: 0;
-      line-height: 1.2rem;
-      font-size: 14px;
-      color: #c4c4c4; }
-  #note-steg .cell.steganography-container .input-group:nth-child(2) {
-    margin-right: 10px; }
-  #note-steg .cell.steganography-container .input-group,
-  #note-steg .cell.steganography-container .button-group {
-    margin-bottom: 0;
-    display: flex;
-    width: auto; }
-    #note-steg .cell.steganography-container .input-group input[type='checkbox'],
-    #note-steg .cell.steganography-container .input-group input[type='password'],
-    #note-steg .cell.steganography-container .input-group input[type='text'],
-    #note-steg .cell.steganography-container .button-group input[type='checkbox'],
-    #note-steg .cell.steganography-container .button-group input[type='password'],
-    #note-steg .cell.steganography-container .button-group input[type='text'] {
+            #note-steg .cell.steganography-container form .input-group:nth-child(1) {
+              text-align: center; }
+            #note-steg .cell.steganography-container form .input-group #cover-file + label {
+              width: 100% !important; }
+          #note-steg .cell.steganography-container form label[for='password'] {
+            margin-right: 0;
+            width: 100%; }
+            #note-steg .cell.steganography-container form label[for='password'] input#password {
+              width: 100% !important; } }
+      #note-steg .cell.steganography-container form #cover-file + label {
+        background: #fafafa;
+        color: #c4c4c4; }
+        #note-steg .cell.steganography-container form #cover-file + label:hover {
+          background: #ff4c3c;
+          color: #fafafa; }
+    #note-steg .cell.steganography-container input[type='file'] + label span {
+      background: #e5e5e5;
+      color: #666; }
+    #note-steg .cell.steganography-container label[for='password'] {
+      margin-right: 4px;
+      position: relative !important; }
+    #note-steg .cell.steganography-container .input-group:nth-child(1) {
+      margin-right: 12px;
+      justify-self: flex-end;
+      text-align: right; }
+      #note-steg .cell.steganography-container .input-group:nth-child(1) p {
+        margin: 0;
+        line-height: 1.2rem;
+        font-size: 14px;
+        color: #c4c4c4; }
+    #note-steg .cell.steganography-container .input-group:nth-child(2) {
+      margin-right: 10px; }
+    #note-steg .cell.steganography-container .input-group,
+    #note-steg .cell.steganography-container .button-group {
       margin-bottom: 0;
-      margin-top: 1px;
-      height: 33px;
-      font-size: 14px; }
-    #note-steg .cell.steganography-container .input-group button,
-    #note-steg .cell.steganography-container .button-group button {
-      margin-left: 6px; }
+      display: flex;
+      width: auto; }
+      #note-steg .cell.steganography-container .input-group input[type='checkbox'],
+      #note-steg .cell.steganography-container .input-group input[type='password'],
+      #note-steg .cell.steganography-container .input-group input[type='text'],
+      #note-steg .cell.steganography-container .button-group input[type='checkbox'],
+      #note-steg .cell.steganography-container .button-group input[type='password'],
+      #note-steg .cell.steganography-container .button-group input[type='text'] {
+        margin-bottom: 0;
+        margin-top: 1px;
+        height: 33px;
+        font-size: 14px; }
+      #note-steg .cell.steganography-container .input-group button,
+      #note-steg .cell.steganography-container .button-group button {
+        margin-left: 6px; }
+
+.fi-eye.show-password {
+  position: absolute !important;
+  width: 20px !important;
+  padding: 8px 8px 0 0 !important;
+  display: flex !important;
+  height: 36px;
+  font-size: 20px;
+  color: #c4c4c4 !important;
+  top: 0;
+  right: 0; }
 
 #macy-container {
   column-gap: 1rem;

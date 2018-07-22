@@ -10,28 +10,9 @@ export default function renderEditor(editorContainer) {
       // shortcuts: {}
     })
 
-    window.editor.render()
+    editor.render()
     configEditor()
   }
-}
-
-////////////////////////////////////////////////////////////////////////////////
-
-export function saveNote() {
-  // Parse Title
-  let noteTitle = window.editor.codemirror.getLine(0)
-  console.log('Note Title:', noteTitle)
-
-  // Parse Body
-  let lines = []
-
-  window.editor.codemirror
-    .getDoc(0)
-    .children[0].lines.forEach(
-      (line, i) => (i > 0 ? lines.push(line.text) : null)
-    )
-  let noteBody = lines.join('\n')
-  console.log('Note Body:', noteBody)
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -62,14 +43,12 @@ If you need to **bold** something, *consider italics instead*.
 ////////////////////////////////////////////////////////////////////////////////
 
 export function configEditor() {
-  window.editor.codemirror.setOption('tabSize', 2)
-  window.editor.codemirror.setOption('lineWrapping', true)
-  window.editor.codemirror.setOption('cursorBlinkRate', 99999999999999999)
-
-  window.editor.redo() // Focuses the editor
+  editor.codemirror.setOption('tabSize', 2)
+  editor.codemirror.setOption('lineWrapping', true)
+  editor.codemirror.setOption('cursorBlinkRate', 99999999999999999)
   restoreAutosave()
-  document.querySelector('body').focus()
-  window.editor.codemirror.focus()
+  editor.codemirror.focus()
+  editor.codemirror.setCursor(editor.codemirror.lineCount(), 0)
 
   // AUTOSAVE //////////////////////////////////////////////////////////////////
   setInterval(autosave, 10000)
@@ -109,9 +88,9 @@ export function configEditor() {
   document
     .querySelector('.markdown-tutorial-button')
     .addEventListener('click', () => loadMarkdownTutorial())
-  document
-    .querySelector('.save-button')
-    .addEventListener('click', () => saveNote())
+  // document
+  //   .querySelector('.save-button')
+  //   .addEventListener('click', () => saveNote())
 
   // DOM MANIPULATION ////////////////////////////////////////////////////////////
   document
@@ -162,7 +141,7 @@ function checkKeyPressed(e) {
   if (e.keyCode === 90 && e.altKey) {
     if (window.zenMode === false) {
       window.zenMode = true
-      window.editor.toggleFullScreen()
+      editor.toggleFullScreen()
     } else {
       window.zenMode = false
       try {
@@ -179,10 +158,10 @@ function checkKeyPressed(e) {
   } else if (e.keyCode === 88 && e.altKey) {
     if (window.previewMode === false) {
       window.previewMode = true
-      window.editor.togglePreview()
+      editor.togglePreview()
     } else {
       window.previewMode = false
-      window.editor.togglePreview()
+      editor.togglePreview()
     }
   }
 }

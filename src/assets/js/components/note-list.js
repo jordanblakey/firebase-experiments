@@ -1,40 +1,9 @@
-import { saveNoteOrder, restoreNoteOrder } from '../modules/macy'
+import { initDragAndDrop } from '../modules/macy'
+import showdown from 'showdown'
 import CryptoJS from 'crypto-js'
-
-// ALIASES /////////////////////////////////////////////////////////////////////
-let w = window,
-  d = document,
-  qs = x => {
-    document.querySelector(x)
-  },
-  l = x => {
-    console.log(x)
-  }
-;(w.qs = qs), (w.l = l), (w.d = d)
 
 // CLASS ///////////////////////////////////////////////////////////////////////
 const notes = {
-  // SORTING & FILTERING METHODS ///////////////////////////////////////////////
-  order: {},
-
-  oarr: [],
-
-  getOrder: () => {
-    let nl = d.querySelectorAll('.macy-item')
-    nl[0].children[0].dataset.uid
-    notes.order = {}
-    nl.forEach((x, i) => (notes.order[i] = x.children[0].dataset.uid))
-    nl.forEach(x => notes.oarr.push(x.children[0].dataset.uid))
-  },
-
-  before: (elm, tgt) => {
-    tgt.parentNode.insertBefore(elm, tgt.nextSibling)
-  },
-
-  after: (elm, tgt) => {
-    tgt.parentNode.insertBefore(elm, tgt.nextSibling)
-  },
-
   reverse: () => {
     let store = document.querySelectorAll('.macy-item')
     store = Array.prototype.slice.call(store, 0).reverse()
@@ -50,6 +19,31 @@ const notes = {
   listen: function() {
     document.querySelector('#reverse-notes').addEventListener('click', e => {
       notes.reverse()
+    })
+
+    document.querySelector('#stash-button').addEventListener('click', e => {
+      notes.stash()
+    })
+  },
+
+  // STASH A NOTE TO THE LIST //////////////////////////////////////////////////
+  stash: function() {
+    let converter = new showdown.Converter()
+    let elm = document.createElement('div')
+    elm.classList.add('macy-item', 'callout', 'secondary')
+    elm.style.opacity = '1'
+
+    let conversion = new Promise((resolve, reject) => {
+      resolve(converter.makeHtml(editor.codemirror.getValue()))
+      reject(null)
+    })
+
+    conversion.then(resolution => {
+      elm.innerHTML = resolution
+      document.querySelector('#macy-container').appendChild(elm)
+      notes.store()
+      macy.reInit()
+      initDragAndDrop()
     })
   },
 
@@ -103,7 +97,51 @@ const notes = {
 }
 
 export default notes
-w.notes = notes
+window.notes = notes
+
+////////////////////////////////////////////////////////////////////////////////
+// PARSING NOTES
+////////////////////////////////////////////////////////////////////////////////
+
+// // Parse Title
+// let noteTitle = editor.codemirror.getLine(0)
+// // console.log('Note Title:', noteTitle)
+
+// // Parse Body
+// let lines = []
+
+// editor.codemirror
+//   .getDoc(0)
+//   .children[0].lines.forEach(
+//     (line, i) => (i > 0 ? lines.push(line.text) : null)
+//   )
+// let noteBody = lines.join('\n')
+// // console.log('Note Body:', noteBody)
+
+// elm.innerHTML += '<h4>' + noteTitle + '</h4>'
+// elm.innerHTML += noteBody
+
+////////////////////////////////////////////////////////////////////////////////
+// SORTING & FILTERING METHODS
+////////////////////////////////////////////////////////////////////////////////
+
+// order: {},
+// oarr: [],
+// getOrder: () => {
+//   let notelist = document.querySelectorAll('.macy-item')
+//   notelist[0].children[0].dataset.uid
+//   notes.order = {}
+//   notelist.forEach((x, i) => (notes.order[i] = x.children[0].dataset.uid))
+//   notelist.forEach(x => notes.oarr.push(x.children[0].dataset.uid))
+// },
+
+// before: (elm, targ) => {
+//   targ.parentNode.insertBefore(elm, targ.nextSibling)
+// },
+
+// after: (elm, targ) => {
+//   targ.parentNode.insertBefore(elm, targ.nextSibling)
+// },
 
 ////////////////////////////////////////////////////////////////////////////////
 // APPEND TO CONTAINER ONE AT A TIME FROM ARRAY
@@ -122,12 +160,12 @@ w.notes = notes
 //       )
 //       return new Promise(res => setTimeout(res, 1000))
 //     })
-//     // promise.then(() => { console.log('Loop finished.') })
+//     // promise.then(() => { console.log('Loop finishedocument.') })
 //   })
 // },
 
-// notes.before(qs('.macy-item'), qs('input'))
-// qs('#macy-container').appendChild(qs('.macy-item div[data-uid = \'note-0000001\']').parentNode)
+// notes.before(document.querySelector('.macy-item'), document.querySelector('input'))
+// document.querySelector('#macy-container').appendChild(document.querySelector('.macy-item div[data-uid = \'note-0000001\']').parentNode)
 
 // ////////////////////////////////////////////////////////////////////////////////
 // // UPDATE NOTE

@@ -72,12 +72,13 @@
         <div class="button-group text-right align-right">
           <button data-balloon="Load the editor with a quick overview of Markdown" data-balloon-pos="up" data-balloon-length="medium"
             class="markdown-tutorial-button button secondary">Tutorial</button>
-          <button class="save-button button primary">Add to List</button>
+            <button id="stash-button" class="save-button button secondary">Stash</button>
+          <button id="save-as-image" data-balloon="Save/load to/from encrypted image" data-balloon-pos="up" data-balloon-length="medium" class="button primary">Save/Load</button>
         </div>
       </div>
     </div>
   </div>
-  <div class="grid-container" id="note-steg">
+  <div class="grid-container invis" id="note-steg">
     <div class="grid-x grid-margin-x">
       <div class="cell steganography-container callout secondary transparent">
           <span id="status" class="invis">W O R K I N G</span>
@@ -95,11 +96,8 @@
             <div class="input-group">
               <label for="password">
                 <input name="password" type="password" id="password" value="" placeholder="Encryption password" />
+                <i class="fi-eye show-password"></i>
               </label>
-              <!-- <div class="inline">
-                <input type="checkbox" class="show-password">
-                <span>Show</span>
-              </div> -->
             </div>
             <div class="input-group">
               <div class="button-group">
@@ -127,6 +125,24 @@
           ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
           // TEXTAREA FILL STATUS
           ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      
+          let saveAsImageToggle = false
+          if (qs('#save-as-image')) {
+            qs('#save-as-image').addEventListener('click', () => {
+              if (saveAsImageToggle === false) {
+                qs('#note-steg').classList.remove('invis')
+                qs('#note-steg').classList.add('vis')
+                qs('#save-as-image').innerText = 'Cancel Save'
+                saveAsImageToggle = true
+              }
+              else {
+                qs('#note-steg').classList.remove('vis')
+                qs('#note-steg').classList.add('invis')
+                qs('#save-as-image').innerText = 'Save as Image'
+                saveAsImageToggle = false
+              }
+            })
+          }
       
           if (qs('.show-password')) {
             qs('.show-password').addEventListener('click', () => {

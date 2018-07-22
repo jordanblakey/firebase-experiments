@@ -22,13 +22,23 @@
       flex-shrink: 1;
       flex-wrap: wrap;
 
-      .zen-shortcut, .preview-shortcut {
+      .zen-shortcut,
+      .preview-shortcut {
         &:hover {
           background: $light-gray;
           color: $dark-gray;
           transition: $global-transition;
           cursor: pointer;
         }
+      }
+
+      #save-as-image {
+        margin-left: 4px;
+      }
+
+      #stash-button {
+        background: $medium-gray;
+        color: $white;
       }
     }
 
@@ -153,10 +163,11 @@
       color: $medium-gray;
     }
 
-    a.active, a:hover {
+    a.active,
+    a:hover {
       color: $alert-color !important;
       border: 0;
-      &:before{
+      &:before {
         color: $alert-color !important;
       }
     }

@@ -14,11 +14,8 @@
       <div class="input-group">
         <label for="password">
           <input name="password" type="password" id="password" value="" placeholder="Encryption password" />
+          <i class="fi-eye show-password"></i>
         </label>
-        <!-- <div class="inline">
-          <input type="checkbox" class="show-password">
-          <span>Show</span>
-        </div> -->
       </div>
       <div class="input-group">
         <div class="button-group">
@@ -46,6 +43,24 @@
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // TEXTAREA FILL STATUS
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    let saveAsImageToggle = false
+    if (qs('#save-as-image')) {
+      qs('#save-as-image').addEventListener('click', () => {
+        if (saveAsImageToggle === false) {
+          qs('#note-steg').classList.remove('invis')
+          qs('#note-steg').classList.add('vis')
+          qs('#save-as-image').innerText = 'Cancel Save'
+          saveAsImageToggle = true
+        }
+        else {
+          qs('#note-steg').classList.remove('vis')
+          qs('#note-steg').classList.add('invis')
+          qs('#save-as-image').innerText = 'Save as Image'
+          saveAsImageToggle = false
+        }
+      })
+    }
 
     if (qs('.show-password')) {
       qs('.show-password').addEventListener('click', () => {
