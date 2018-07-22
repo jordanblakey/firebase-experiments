@@ -56,9 +56,9 @@ const notes = {
   // STORE ENCRYPTED NOTES /////////////////////////////////////////////////////
   store: function() {
     // If no existing key, create.
-    if (localStorage.getItem('note-key') === null) {
-      localStorage.setItem('note-key', firebase.auth().currentUser.uid)
-      // console.log('note-key stored: ', localStorage.getItem('note-key'))
+    if (localStorage.getItem('scorched-note-key') === null) {
+      localStorage.setItem('scorched-note-key', firebase.auth().currentUser.uid)
+      // console.log('scorched-note-key stored: ', localStorage.getItem('scorched-note-key'))
     }
 
     // Encrypt the provided message with the key
@@ -66,24 +66,24 @@ const notes = {
     // console.log('Notes to store: ' + notes.slice(0, 300) + '...')
     let ciphertext = CryptoJS.AES.encrypt(
       notes,
-      localStorage.getItem('note-key')
+      localStorage.getItem('scorched-note-key')
     )
     // console.log('ciphertext: ', ciphertext)
 
     // Store the encrypted notes
-    localStorage.setItem('notes-encrypted', ciphertext)
+    localStorage.setItem('scorched-notes-encrypted', ciphertext)
     // console.log(
     //   'Notes stored: ',
-    //   localStorage.getItem('notes-encrypted').slice(0, 100)
+    //   localStorage.getItem('scorched-notes-encrypted').slice(0, 100)
     // )
   },
 
   // GET ENCRYPTED NOTES ///////////////////////////////////////////////////////
   get: function() {
-    if (localStorage.getItem('notes-encrypted') !== null) {
+    if (localStorage.getItem('scorched-notes-encrypted') !== null) {
       let bytes = CryptoJS.AES.decrypt(
-        localStorage.getItem('notes-encrypted').toString(),
-        localStorage.getItem('note-key')
+        localStorage.getItem('scorched-notes-encrypted').toString(),
+        localStorage.getItem('scorched-note-key')
       )
       // console.log('bytes: ', bytes)
       let plaintext = bytes.toString(CryptoJS.enc.Utf8)

@@ -1,3 +1,5 @@
+import CryptoJS from 'crypto-js'
+
 export default function renderEditor(editorContainer) {
   if (editorContainer !== null) {
     window.editor = new Editor({
@@ -63,9 +65,41 @@ export function configEditor() {
   window.editor.codemirror.setOption('tabSize', 2)
   window.editor.codemirror.setOption('lineWrapping', true)
   window.editor.codemirror.setOption('cursorBlinkRate', 99999999999999999)
-  window.editor.codemirror.setOption('cursorHeight', 1)
-  window.editor.redo() // Focuses the editor
 
+  window.editor.redo() // Focuses the editor
+  restoreAutosave()
+  document.querySelector('body').focus()
+  window.editor.codemirror.focus()
+
+  // AUTOSAVE //////////////////////////////////////////////////////////////////
+  setInterval(autosave, 10000)
+  function autosave() {
+    if (localStorage.getItem('scorched-autosave-key') === null) {
+      localStorage.setItem(
+        'scorched-autosave-key',
+        firebase.auth().currentUser.uid
+      )
+    }
+    let ciphertext = CryptoJS.AES.encrypt(
+      editor.codemirror.getValue(),
+      localStorage.getItem('scorched-autosave-key')
+    )
+    localStorage.setItem('scorched-autosave', ciphertext)
+  }
+
+  // RESTORE AUTOSAVE //////////////////////////////////////////////////////////
+  function restoreAutosave() {
+    if (localStorage.getItem('scorched-autosave') !== null) {
+      let bytes = CryptoJS.AES.decrypt(
+        localStorage.getItem('scorched-autosave').toString(),
+        localStorage.getItem('scorched-autosave-key')
+      )
+      let plaintext = bytes.toString(CryptoJS.enc.Utf8)
+      editor.codemirror.setValue(plaintext)
+    }
+  }
+
+  // BOTTOM TOOLBAR ////////////////////////////////////////////////////////////
   document
     .querySelector('.preview-shortcut')
     .addEventListener('click', () => editor.togglePreview())
@@ -134,12 +168,12 @@ function checkKeyPressed(e) {
       try {
         document.exitFullscreen()
       } catch (err) {
-        console.log(null)
+        console.log(err)
       }
       try {
         document.webkitExitFullscreen()
       } catch (err) {
-        console.log(null)
+        console.log(err)
       }
     }
   } else if (e.keyCode === 88 && e.altKey) {

@@ -15,13 +15,13 @@ document.addEventListener('DOMContentLoaded', function() {
 })
 
 // REGISTER SERVICE WORKER /////////////////////////////////////////////////////
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker
-    .register('./../../service-worker.js', { scope: './' })
-    .then(() => {
-      // console.log('Service Worker Registered: Caching assets for offline use.')
-    })
-}
+// if ('serviceWorker' in navigator) {
+//   navigator.serviceWorker
+//     .register('./../../service-worker.js', { scope: './' })
+//     .then(() => {
+//       // console.log('Service Worker Registered: Caching assets for offline use.')
+//     })
+// }
 
 ////////////////////////////////////////////////////////////////////////////////
 // RENDER PAGE
